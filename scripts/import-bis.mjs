@@ -384,8 +384,10 @@ async function main() {
       const text = await readFile(file, "utf8");
       const spec = specOverride ? specsData.specs.find((s) => s.id === specOverride) : specFromText(text, file, specsData.specs);
       if (!spec) { failed++; console.log(`✗ ${name}: can't tell the spec; name the file like outlaw-rogue.txt, add a "Spec: Outlaw Rogue" line, or pass --spec <id>`); continue; }
-      const { entries, skipped, patch, hero } = parsePasted(text, spec, items);
-      if (hero && !spec.heroTalents?.includes(hero)) { failed++; console.log(`✗ ${name}: "${hero}" isn't a ${spec.spec} ${spec.class} hero talent (${spec.heroTalents?.join(", ")})`); continue; }
+      const { entries, skipped, patch, hero: heroText } = parsePasted(text, spec, items);
+      // Match the hero name loosely, like item names (case, curly apostrophes).
+      const hero = heroText ? spec.heroTalents?.find((h) => norm(h) === norm(heroText)) : null;
+      if (heroText && !hero) { failed++; console.log(`✗ ${name}: "${heroText}" isn't a ${spec.spec} ${spec.class} hero talent (${spec.heroTalents?.join(", ")})`); continue; }
       const bisItems = toBisItems(entries, items);
       const drops = bisItems.filter((b) => dropIds.has(b.id));
       if (patch && cmpPatch(patch, cfg.minPatch) < 0 && !FORCE) { failed++; console.log(`✗ ${name}: says patch ${patch}, older than ${cfg.minPatch}`); continue; }
