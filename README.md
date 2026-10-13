@@ -10,8 +10,8 @@ WoW gear optimizer: a Midnight Season 2 gear farm tool (web app first, in-game a
 | `scripts/fetch-data.mjs` | Pulls every boss drop from the Blizzard Game Data API and writes `data/`. |
 | `scripts/verify-rogue.mjs` | Cross-checks `data/items.json` against the rogue farm list in `web/index.html`. |
 | `scripts/build-docs.mjs` | Copies `data/*.json` into `docs/data/` for the website. |
-| `scripts/import-bis.mjs` | Imports BiS lists from BiS pages saved in a browser (see "Best in slot lists"). |
-| `scripts/check-import.mjs` | Tests for the importer, against hand-written sample pages in `scripts/fixtures/bis/`. |
+| `scripts/import-bis.mjs` | Imports BiS lists from pasted Wowhead table text or saved pages (see "Best in slot lists"). |
+| `scripts/check-import.mjs` | Tests for the importer, against hand-written samples in `scripts/fixtures/bis/`. |
 | `config/bis.json` | Which site each spec takes its BiS list from, and the minimum patch accepted. |
 | `scripts/check-app.mjs` | Sanity checks: curated stat data is complete and cited, equip rules hold, the rogue list is reproduced. |
 | `data/items.json` | One record per (item, boss) drop. Generated; do not edit by hand. |
@@ -73,7 +73,7 @@ WoW gear optimizer: a Midnight Season 2 gear farm tool (web app first, in-game a
            "date": "2026-10-20", "patch": "12.1.5",
            "items": [{ "slot": "Neck", "name": "Aqirbane Reliquary", "id": 268265, "lists": ["Overall", "Mythic+"] }] }
   ```
-  `id` is the item ID. Items that aren't in `data/items.json` (crafted, tier, catalyst) are kept and shown separately. `lists` says which of the page's lists it's on: `Overall`, `Raid`, `Mythic+`. `npm run check` fails if a listed drop's name doesn't match its ID or the spec can't use it.
+  `id` is the item ID, or `null` for pasted items that aren't Season drops. Items that aren't in `data/items.json` (crafted, tier, catalyst) are kept and shown separately. `lists` says which of the page's lists it's on: `Overall`, `Raid`, `Mythic+`. `npm run check` fails if a listed drop's name doesn't match its ID or the spec can't use it.
 
 The journal lists each legacy BfA Azerite piece from Kings' Rest and Temple of Sethraliss twice: the old item with no secondaries in the API, and its current re-issue with real stats. The app shows only the re-issue.
 
@@ -103,20 +103,35 @@ Requirements: Node 22.21+ (no npm dependencies).
 
 ## Best in slot lists
 
-Wowhead, Icy Veins and Archon block automated downloads, so BiS lists come from pages you save in your browser:
+`npm run import-bis` reads every `.txt` and `.html` file in `bis-pages/` (git-ignored) and writes each spec's `bis` list. Preview with `npm run import-bis -- --dry-run`, then run `npm run check` and commit `data/specs.json` and `docs/data/`.
 
-1. Open the spec's BiS page and check it says Patch 12.1+ / Midnight Season 2. Wowhead is the default source: `https://www.wowhead.com/guide/classes/<class>/<spec>/bis-gear`.
-2. Save it with Ctrl+S / Cmd+S → "Webpage, HTML only" into `bis-pages/` (git-ignored). The file name doesn't matter.
-3. Run `npm run import-bis` (or `npm run import-bis -- --dry-run` to preview). Then `npm run check` and commit `data/specs.json` and `docs/data/`.
+### Pasted text (quickest)
 
-For each file the importer:
+1. On the spec's Wowhead BiS page (`https://www.wowhead.com/guide/classes/<class>/<spec>/bis-gear`), check it's for Patch 12.1+ / Midnight Season 2.
+2. Select a BiS table (Slot, Item, Source) and copy it. Paste it into a text file in `bis-pages/` named after the spec, e.g. `outlaw-rogue.txt` or `260.txt`. Put several tables in one file with a heading line before each:
+   ```
+   Patch 12.1.5
+   Overall BiS
+   Slot	Item	Source
+   Head	Gaze of the Coiled Watcher	Ula'tek (The Venomous Abyss)
+   Chest	Chosen Bloodslayer's Vest	Tier / Catalyst
+   Mythic+ BiS
+   Hands	Gauntlets of Fevered Defense	Kystia Manaheart (Murder Row)
+   ```
+   The `Patch` line is optional; if present it must be 12.1 or later. Headings containing "Raid" or "Mythic+" start those lists. Anything else is "Overall".
+
+Each line is matched by finding the name of a Season drop the spec can use inside it, so the spacing between columns doesn't matter. Lines that name no drop but start with a slot (crafted, tier, catalyst) are kept as "not from Season drops". With tabs between columns their name is exact; with single spaces the source text stays attached to it. The importer prints every non-drop and every skipped line, so check the output. A file where no line names a usable Season drop is rejected as probably stale.
+
+### Saved pages
+
+Pages saved with Ctrl+S / Cmd+S → "Webpage, HTML only" also work, from Wowhead, Icy Veins or Archon. The importer:
 - reads the page URL saved in the file to tell the site and spec (`--spec <id>` if it can't);
 - skips pages from a site other than the spec's chosen source. The default is Wowhead; set others per spec in `config/bis.json`, e.g. `"bySpec": { "260": "Icy Veins" }`, or pass `--any-source`;
 - rejects pages it can't confirm as current: PTR/beta pages, pages whose title or text names nothing newer than `minPatch` (12.1) or Midnight Season 2, and pages where no BiS item is a current Season drop. `--force` overrides;
 - reads the Overall / Raid / Mythic+ BiS tables (not trinket tier lists, alternatives, gems or enchants). For Archon, it takes items flagged "BiS";
-- replaces that spec's `bis` with the new list, looks up missing item names in the Blizzard API, and refreshes `docs/data/`.
+- looks up missing item names in the Blizzard API.
 
-The parser was written without access to the real pages. It is tested against hand-made samples (`scripts/fixtures/bis/`) that follow each site's usual layout. If a real page imports badly, add it as a fixture and adjust `scripts/import-bis.mjs`.
+The saved-page parser was written without access to the real pages and is tested only against hand-made samples in `scripts/fixtures/bis/`. If a real page imports badly, add it as a fixture and adjust `scripts/import-bis.mjs`.
 
 ## Web app
 

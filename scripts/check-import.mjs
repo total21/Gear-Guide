@@ -7,7 +7,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { pageUrl, siteOf, specFromUrl, walk, wowheadMarkupToHtml, extractBis, toBisItems, versionOf, versionOk } from "./import-bis.mjs";
+import { pageUrl, siteOf, specFromUrl, walk, wowheadMarkupToHtml, extractBis, toBisItems, versionOf, versionOk, specFromText, parsePasted } from "./import-bis.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const { items } = JSON.parse(await readFile(path.join(ROOT, "data/items.json"), "utf8"));
@@ -48,6 +48,33 @@ p = await parse("stale-wowhead.html");
 eq("stale page rejected", [p.spec, p.version.ok], ["Fury Warrior", false]);
 p = await parse("ptr-archon.html");
 eq("ptr page rejected", [p.version.ok, p.version.why], [false, "PTR/beta page"]);
+
+// Pasted Wowhead table text, tab-separated and single-spaced.
+async function pasted(file) {
+  const text = await readFile(path.join(ROOT, "scripts/fixtures/bis", file), "utf8");
+  const spec = specFromText(text, file, specs);
+  const r = parsePasted(text, spec, items);
+  return { spec: spec && `${spec.spec} ${spec.class}`, patch: r.patch, skipped: r.skipped, bis: toBisItems(r.entries, items) };
+}
+let t = await pasted("outlaw-rogue.txt");
+eq("pasted tabs spec/patch", [t.spec, t.patch], ["Outlaw Rogue", "12.1.5"]);
+eq("pasted tabs items", brief(t.bis), [
+  [271875, "Head", "Overall"], [268265, "Neck", "Overall"], [251223, "Shoulders", "Overall"], [null, "Chest", "Overall"],
+  [251130, "Legs", "Overall"], [251128, "Main Hand", "Overall"], [251180, "Off Hand", "Overall"], [273792, "Ring 1", "Overall"],
+  [270173, "Trinket 1", "Overall"], [270175, "Trinket 2", "Overall"],
+  [251135, "Wrist", "Mythic+"], [251124, "Hands", "Mythic+"], [159327, "Feet", "Mythic+"],
+]);
+eq("pasted non-drop name", t.bis.find((b) => b.id === null)?.name, "Chosen Bloodslayer's Vest");
+eq("pasted nothing skipped", t.skipped, []);
+t = await pasted("havoc-demon-hunter-spaced.txt");
+eq("pasted spaces spec", t.spec, "Havoc Demon Hunter");
+eq("pasted spaces items", brief(t.bis), [
+  [251132, "Back", "Overall"], [273792, "Ring", "Overall"], [273793, "Main Hand", "Overall"], [null, "Head", "Overall"],
+  [273791, "Chest", "Overall"], [268265, "Neck", "Raid"],
+]);
+eq("pasted unusable item skipped", t.skipped.length, 1);
+eq("spec from file name", specFromText("Head\tGaze of the Coiled Watcher", "bis-pages/frost-mage.txt", specs)?.id, 64);
+eq("spec from id file name", specFromText("", "260.txt", specs)?.id, 260);
 
 // Spec slugs resolve for every spec on every site.
 for (const s of specs) {
