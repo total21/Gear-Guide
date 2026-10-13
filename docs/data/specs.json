@@ -1006,10 +1006,166 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/demon-hunter/vengeance/bis-gear",
+        "date": "2026-10-13",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Weapon",
+            "name": "Aman'muso, Warlord's Vengeance",
+            "id": 268209,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Offhand",
+            "name": "Spellbreaker's Warglaive",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafted"
+          },
+          {
+            "slot": "Head",
+            "name": "Abyssal Doomhound's Relentless Stare",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Ula'tek"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Abyssal Doomhound's Jaws",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Voidscar Arena"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Abyssal Doomhound's Coreguard",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "The Unbinding of Kith'ix"
+          },
+          {
+            "slot": "Wrist",
+            "name": "Silvermoon Agent's Deflectors",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafted"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Abyssal Doomhound's Studded Gauntlets",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Murder Row"
+          },
+          {
+            "slot": "Belt",
+            "name": "Sash of the Forlorn Vessel",
+            "id": 268256,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Legs",
+            "name": "Abyssal Doomhound's Legwraps",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "The Coiled Altar"
+          },
+          {
+            "slot": "Boots",
+            "name": "Arctic Explorer's Legwraps",
+            "id": 251153,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Apex Brute's Claw Ring",
+            "id": 268252,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Ritual Binder's Ring",
+            "id": 159459,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Twisted Horror's Tendril",
+            "id": 281215,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Voracious Heart of Ula'tek",
+            "id": 270175,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Zul'jin's Guillotine Technique",
+            "id": 270173,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Raw Damage"
+          },
+          {
+            "slot": "Trinket",
+            "name": "Lightbearer's Shield Fragment",
+            "id": 280617,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Group Defensive"
+          }
+        ]
       }
     },
     {

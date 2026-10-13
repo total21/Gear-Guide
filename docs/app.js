@@ -78,6 +78,7 @@ function itemRow(it, topPair, spec, specName) {
     <div class="name"><a href="https://www.wowhead.com/item=${it.id}" target="_blank" rel="noopener">${esc(it.name)}</a>${top ? `<span class="badge b-top" title="Best stat pair for ${esc(specName)}">Top pair</span>` : ""}${it.bis ? `<span class="badge b-bis" title="Best in slot (${esc(it.bis.join(", "))})">${it.bis.includes("Overall") ? "BiS" : `BiS · ${esc(it.bis.join(" / "))}`}</span>` : ""}</div>
     <div class="stats">${prim}${it.stats.map(statChip).join("")}</div>
     <div class="type">${esc(type)}</div>
+    ${it.bisNote ? `<div class="craft">BiS: ${esc(it.bisNote)}</div>` : ""}
     ${it.effects?.length ? `<ul class="fx">${it.effects.map(effectLine).join("")}</ul>` : ""}
     ${notes.map((n) => `<div class="note">${esc(n)}</div>`).join("")}
   </li>`;

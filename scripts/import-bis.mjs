@@ -222,6 +222,7 @@ export function toBisItems(entries, items) {
       slot: e.slot ?? drop?.slot ?? null, name: drop?.name ?? e.name ?? `Item ${e.id}`, id: e.id, lists: [],
       ...(e.source && !drop && { source: e.source }),
       ...(e.crafting?.length && { crafting: e.crafting }),
+      ...(e.note && { note: e.note }),
     };
     if (!m.lists.includes(e.list)) m.lists.push(e.list);
     merged.set(key, m);
@@ -323,8 +324,9 @@ export function parsePasted(text, spec, items) {
       const before = n.slice(0, n.indexOf(` ${name} `)).trim();
       const slotCol = cols.length > 1 && !norm(cols[0]).includes(name) ? cols[0] : null;
       const slot = slotCol ? noParens(slotCol) : before ? before.replace(/\b\w/g, (c) => c.toUpperCase()) : it.slot;
-      const crafting = slotCol ? parens(slotCol) : [];
-      entries.push({ id: it.id, name: it.name, slot, list, ...(crafting.length && { crafting }) });
+      // On a drop, parentheses are a usage note ("Trinket (Raw Damage)"), not crafting.
+      const note = slotCol ? parens(slotCol).join("; ") : "";
+      entries.push({ id: it.id, name: it.name, slot, list, ...(note && { note }) });
       continue;
     }
     if (/^slot\b/i.test(line) && /\bitem\b/i.test(line)) continue; // table header

@@ -99,7 +99,7 @@ export function priorityForHero(spec, hero) {
 // journal order (items.json is written instance by instance, boss by boss).
 export function groupForSpec(items, spec, { priority, pair = "all", slot = "all", source = "all", sort = "boss", bis: bisList } = {}) {
   const prio = priority ?? spec.statPriority;
-  const bis = new Map(((bisList ?? spec.bis)?.items ?? []).filter((b) => b.id != null).map((b) => [b.id, b.lists ?? ["Overall"]]));
+  const bis = new Map(((bisList ?? spec.bis)?.items ?? []).filter((b) => b.id != null).map((b) => [b.id, b]));
   const out = [];
   const byInstance = new Map();
   for (const item of dropAzeriteTwins(items)) {
@@ -118,7 +118,8 @@ export function groupForSpec(items, spec, { priority, pair = "all", slot = "all"
     if (slot !== "all" && slotGroup(item) !== slot) continue;
     let b = g.bosses.find((x) => x.boss === item.boss);
     if (!b) g.bosses.push((b = { boss: item.boss, items: [] }));
-    b.items.push({ ...item, ...st, bis: bis.get(item.id) ?? null });
+    const entry = bis.get(item.id);
+    b.items.push({ ...item, ...st, bis: entry ? entry.lists ?? ["Overall"] : null, bisNote: entry?.note ?? null });
   }
   if (sort === "stats") for (const g of out) for (const b of g.bosses) b.items.sort((x, y) => y.score - x.score);
   if (source === "BIS") return out.filter((g) => g.bosses.length);

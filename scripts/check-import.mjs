@@ -97,6 +97,13 @@ eq("spec from id file name", specFromText("", "260.txt", specs)?.id, 260);
   eq("real paste skipped", r.skipped, []);
 }
 
+// Parentheses on a drop's slot are a usage note, not crafting.
+{
+  const spec = specs.find((x) => x.id === 581);
+  const r = parsePasted("Trinket (Raw Damage)\tZul'jin's Guillotine Technique Zul'jin's Guillotine Technique\tThe Coiled Altar", spec, items);
+  eq("drop slot note", r.entries.map((e) => [e.id, e.slot, e.note ?? null, e.crafting ?? null]), [[270173, "Trinket", "Raw Damage", null]]);
+}
+
 // Spec slugs resolve for every spec on every site.
 for (const s of specs) {
   const c = s.class.toLowerCase().replace(/ /g, "-"), n = s.spec.toLowerCase().replace(/ /g, "-");
