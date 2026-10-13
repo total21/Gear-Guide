@@ -28,12 +28,11 @@ for (const s of specs) {
   if (!s.weapons?.slots?.length) fail(`${name(s)}: no weapon slots`);
   if (s.bis?.items?.length && !(s.bis.source && s.bis.url && s.bis.date)) fail(`${name(s)}: BiS items without source/url/date`);
   for (const b of s.bis?.items ?? []) {
-    if (!b.name) fail(`${name(s)}: BiS entry without a name`);
-    if (b.id == null) continue; // crafted, tier, catalyst: not a drop in items.json
+    if (!Number.isInteger(b.id) || !b.name || !b.lists?.length) fail(`${name(s)}: BiS entry needs id, name and lists: ${JSON.stringify(b)}`);
     const hit = items.find((i) => i.id === b.id);
-    if (!hit) fail(`${name(s)}: BiS item ${b.id} (${b.name}) not in items.json`);
-    else if (hit.name !== b.name) fail(`${name(s)}: BiS item ${b.id} is ${hit.name}, not ${b.name}`);
-    else if (!usableBy(s, hit)) fail(`${name(s)}: BiS item ${b.name} is not usable by this spec`);
+    if (!hit) continue; // crafted, tier, catalyst: not a Season drop
+    if (hit.name !== b.name) fail(`${name(s)}: BiS item ${b.id} is ${hit.name}, not ${b.name}`);
+    if (!usableBy(s, hit)) fail(`${name(s)}: BiS item ${b.name} is not usable by this spec`);
   }
 }
 

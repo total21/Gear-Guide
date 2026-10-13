@@ -71,7 +71,7 @@ function itemRow(it, topPair, spec, specName) {
     ? `<span class="stat prim" title="Base ${esc(spec.primaryStat)} on this trinket">+${esc(spec.primaryStat.slice(0, 3))}</span>` : "";
   const type = typeLabel(it) + (it.tag ? ` · ${it.tag}` : "");
   return `<li class="${top ? "top" : ""}${it.bis ? " bis" : ""}">
-    <div class="name"><a href="https://www.wowhead.com/item=${it.id}" target="_blank" rel="noopener">${esc(it.name)}</a>${top ? `<span class="badge b-top" title="Best stat pair for ${esc(specName)}">Top pair</span>` : ""}${it.bis ? `<span class="badge b-bis">BiS</span>` : ""}</div>
+    <div class="name"><a href="https://www.wowhead.com/item=${it.id}" target="_blank" rel="noopener">${esc(it.name)}</a>${top ? `<span class="badge b-top" title="Best stat pair for ${esc(specName)}">Top pair</span>` : ""}${it.bis ? `<span class="badge b-bis" title="Best in slot (${esc(it.bis.join(", "))})">${it.bis.includes("Overall") ? "BiS" : `BiS · ${esc(it.bis.join(" / "))}`}</span>` : ""}</div>
     <div class="stats">${prim}${it.stats.map(statChip).join("")}</div>
     <div class="type">${esc(type)}</div>
     ${it.effects?.length ? `<ul class="fx">${it.effects.map(effectLine).join("")}</ul>` : ""}
@@ -139,15 +139,18 @@ function render() {
     html += `</section>`;
   }
   $("list").innerHTML = html || `<div class="none">No drops match these filters.</div>`;
-  if (state.source === "BIS" && spec.bis?.items?.some((b) => !b.id))
-    $("list").innerHTML += `<div class="none">BiS items that don't drop in Mythic+ or the raid (crafted, tier, catalyst): ${esc(spec.bis.items.filter((b) => !b.id).map((b) => `${b.name}${b.slot ? ` (${b.slot})` : ""}`).join(", "))}.</div>`;
+  const dropIds = new Set(items.map((i) => i.id));
+  const other = (spec.bis?.items ?? []).filter((b) => !dropIds.has(b.id));
+  if (state.source === "BIS" && other.length)
+    $("list").innerHTML += `<section><h2>Not from Season drops<span>${other.length} item${other.length === 1 ? "" : "s"}</span></h2><div class="none">Crafted, tier, catalyst or other sources.</div><ul>${other.map((b) =>
+      `<li><div class="name"><a href="https://www.wowhead.com/item=${b.id}" target="_blank" rel="noopener">${esc(b.name)}</a></div><div class="type">${esc(b.slot ?? "")}${b.lists?.length ? ` · ${esc(b.lists.join(" / "))}` : ""}</div></li>`).join("")}</ul></section>`;
   $("count").textContent = `${n} item${n === 1 ? "" : "s"} shown` + (topPair ? ` · ${nTop} with the top pair` : "");
 
   const bis = spec.bis ?? {};
   $("foot").innerHTML =
     `<p>Stat chips are ranked for this spec: <span class="stat r1">#1</span> best, then <span class="stat r2">#2</span>, <span class="stat r3">#3</span>, <span class="stat r4">#4</span>. Highlighted rows have the spec's two best stats.</p>` +
     `<p>${bis.items?.length
-      ? `BiS markers from <a href="${esc(bis.url ?? "#")}" target="_blank" rel="noopener">${esc(bis.source)}</a>, checked ${esc(bis.date)}.`
+      ? `BiS from <a href="${esc(bis.url ?? "#")}" target="_blank" rel="noopener">${esc(bis.source)}</a>${bis.patch ? ` (${esc(bis.patch)})` : ""}, imported ${esc(bis.date)}.`
       : `BiS markers are not filled in for ${esc(label)} yet.`}</p>` +
     `<p>Effect numbers come from the game data API at the item's preview item level; in-season values are higher.</p>` +
     `<p>Drops from the Blizzard Game Data API (${esc(meta.generatedAt?.slice(0, 10) ?? "")}). Item names link to Wowhead. Stat values scale with item level, so only stat types are shown.</p>`;
