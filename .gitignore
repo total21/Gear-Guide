@@ -3,3 +3,6 @@ node_modules/
 .env.*
 *.token
 token*
+# Saved BiS pages for scripts/import-bis.mjs (third-party content, not committed)
+bis-pages/*
+!bis-pages/README.md

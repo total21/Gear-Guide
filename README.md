@@ -10,6 +10,9 @@ WoW gear optimizer: a Midnight Season 2 gear farm tool (web app first, in-game a
 | `scripts/fetch-data.mjs` | Pulls every boss drop from the Blizzard Game Data API and writes `data/`. |
 | `scripts/verify-rogue.mjs` | Cross-checks `data/items.json` against the rogue farm list in `web/index.html`. |
 | `scripts/build-docs.mjs` | Copies `data/*.json` into `docs/data/` for the website. |
+| `scripts/import-bis.mjs` | Imports BiS lists from BiS pages saved in a browser (see "Best in slot lists"). |
+| `scripts/check-import.mjs` | Tests for the importer, against hand-written sample pages in `scripts/fixtures/bis/`. |
+| `config/bis.json` | Which site each spec takes its BiS list from, and the minimum patch accepted. |
 | `scripts/check-app.mjs` | Sanity checks: curated stat data is complete and cited, equip rules hold, the rogue list is reproduced. |
 | `data/items.json` | One record per (item, boss) drop. Generated; do not edit by hand. |
 | `data/specs.json` | Every retail spec: class, role, armor type, primary stat, plus hand-curated stat priority and BiS. |
@@ -64,13 +67,13 @@ WoW gear optimizer: a Midnight Season 2 gear farm tool (web app first, in-game a
   - `statPriority` is the secondary stat order, best first. `statPriorityLabel` names that build when the source gives more than one; the others go in `statVariants`, and the app offers them as a "Build" choice.
   - A spec whose full order could not be confirmed has a shorter list and says "Partial" in `statNotes` (currently Balance Druid: Mastery first, the rest unranked).
   - `statSource.checked` is the date the order was read. Change it whenever you re-check.
-- `bis` is the spec's best-in-slot list, with its source:
+- `bis` is the spec's best-in-slot list, written by `npm run import-bis` (see below):
   ```json
-  "bis": { "source": "Wowhead", "url": "https://www.wowhead.com/guide/classes/rogue/outlaw/bis-gear", "date": "2026-10-20",
-           "items": [{ "slot": "Neck", "name": "Aqirbane Reliquary", "id": 268265 },
-                     { "slot": "Chest", "name": "Some Crafted Chest", "id": null }] }
+  "bis": { "source": "Wowhead", "url": "https://www.wowhead.com/guide/classes/rogue/outlaw/bis-gear",
+           "date": "2026-10-20", "patch": "12.1.5",
+           "items": [{ "slot": "Neck", "name": "Aqirbane Reliquary", "id": 268265, "lists": ["Overall", "Mythic+"] }] }
   ```
-  `id` is the item ID from `data/items.json`, or `null` for BiS items that don't drop in the season's dungeons or raid (crafted, tier, catalyst). The app badges BiS drops in the list, and the "Best in Slot" filter shows only those, with the non-drop items listed underneath. `npm run check` fails if the list has no source, URL or date, or if an `id` doesn't match its name or isn't usable by the spec.
+  `id` is the item ID. Items that aren't in `data/items.json` (crafted, tier, catalyst) are kept and shown separately. `lists` says which of the page's lists it's on: `Overall`, `Raid`, `Mythic+`. `npm run check` fails if a listed drop's name doesn't match its ID or the spec can't use it.
 
 The journal lists each legacy BfA Azerite piece from Kings' Rest and Temple of Sethraliss twice: the old item with no secondaries in the API, and its current re-issue with real stats. The app shows only the re-issue.
 
@@ -98,6 +101,23 @@ Requirements: Node 22.21+ (no npm dependencies).
    The script resolves instance IDs by name, so new patches need no ID changes. It warns about any drop missing secondaries in the API.
 4. **Verify:** run `npm run verify` and `npm run check`, then review `git diff data/` before committing. A new patch typically shows up as changed item IDs, retuned secondary stats, or added bosses. `npm run fetch` also refreshes `docs/data/`; after editing `data/specs.json` by hand, run `npm run build`.
 
+## Best in slot lists
+
+Wowhead, Icy Veins and Archon block automated downloads, so BiS lists come from pages you save in your browser:
+
+1. Open the spec's BiS page and check it says Patch 12.1+ / Midnight Season 2. Wowhead is the default source: `https://www.wowhead.com/guide/classes/<class>/<spec>/bis-gear`.
+2. Save it with Ctrl+S / Cmd+S → "Webpage, HTML only" into `bis-pages/` (git-ignored). The file name doesn't matter.
+3. Run `npm run import-bis` (or `npm run import-bis -- --dry-run` to preview). Then `npm run check` and commit `data/specs.json` and `docs/data/`.
+
+For each file the importer:
+- reads the page URL saved in the file to tell the site and spec (`--spec <id>` if it can't);
+- skips pages from a site other than the spec's chosen source. The default is Wowhead; set others per spec in `config/bis.json`, e.g. `"bySpec": { "260": "Icy Veins" }`, or pass `--any-source`;
+- rejects pages it can't confirm as current: PTR/beta pages, pages whose title or text names nothing newer than `minPatch` (12.1) or Midnight Season 2, and pages where no BiS item is a current Season drop. `--force` overrides;
+- reads the Overall / Raid / Mythic+ BiS tables (not trinket tier lists, alternatives, gems or enchants). For Archon, it takes items flagged "BiS";
+- replaces that spec's `bis` with the new list, looks up missing item names in the Blizzard API, and refreshes `docs/data/`.
+
+The parser was written without access to the real pages. It is tested against hand-made samples (`scripts/fixtures/bis/`) that follow each site's usual layout. If a real page imports badly, add it as a fixture and adjust `scripts/import-bis.mjs`.
+
 ## Web app
 
 `docs/` is a static site with no build tooling. To run it locally:
@@ -109,7 +129,7 @@ npm run serve   # http://localhost:8000
 
 Opening `docs/index.html` straight from disk will not work: browsers block loading the JSON from `file://`.
 
-The page uses a dark theme. Pick a spec to see every Season 2 Mythic+ and raid drop it can use: its armor type, its primary stat (or no primary, e.g. jewelry), and weapons and off-hands it can equip. Each item's secondary stats are tagged #1 to #4 by the spec's priority. Items with the spec's two best stats are highlighted. Trinkets show the base primary stat they give the spec and their effect text. Filter by stat pair, slot, and Mythic+, raid or Best in Slot, and sort by boss order or by best stats. The last spec, build choice and filters are remembered in the browser. A link like `.../#spec=260` opens a spec directly. Spec IDs are listed in `data/specs.json`.
+The page uses a dark theme. Pick a spec to see every Season 2 Mythic+ and raid drop it can use: its armor type, its primary stat (or no primary, e.g. jewelry), and weapons and off-hands it can equip. Each item's secondary stats are tagged #1 to #4 by the spec's priority. Items with the spec's two best stats are highlighted. Trinkets show the base primary stat they give the spec and their effect text. BiS items are badged (with "Mythic+" or "Raid" when they're only on that list). Filter by stat pair, slot, and Mythic+, raid or Best in Slot, and sort by boss order or by best stats. The last spec, build choice and filters are remembered in the browser. A link like `.../#spec=260` opens a spec directly. Spec IDs are listed in `data/specs.json`.
 
 ### Publishing with GitHub Pages
 
