@@ -588,10 +588,139 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/death-knight/unholy/bis-gear",
+        "date": "2026-10-13",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Weapon",
+            "name": "Maze-roa, Warlord's Fury",
+            "id": 268213,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Head",
+            "name": "Baleful Grave-Knight's Casque",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Baleful Grave-Knight's Gibbets",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Baleful Grave-Knight's Breastplate",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Wrist",
+            "name": "Spellbreaker's Bracers",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Baleful Grave-Knight's Deathgrips",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Belt",
+            "name": "Girdle of Toxic Regret",
+            "id": 268259,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Legs",
+            "name": "Chausses of Unbound Rancor",
+            "id": 271878,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Boots",
+            "name": "Spellbreaker's March",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting"
+          },
+          {
+            "slot": "Ring",
+            "name": "Band of the Swarmcaller",
+            "id": 281029,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Band of the Amani Warlord",
+            "id": 273792,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Voracious Heart of Ula'tek",
+            "id": 270175,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Zul'jin's Guillotine Technique",
+            "id": 270173,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {
