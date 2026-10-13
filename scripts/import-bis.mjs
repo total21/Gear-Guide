@@ -1,9 +1,11 @@
 #!/usr/bin/env node
-// Imports best-in-slot lists from BiS pages saved in a browser (Wowhead,
-// Icy Veins or Archon) into data/specs.json, then refreshes docs/data/.
+// Imports best-in-slot lists into data/specs.json, then refreshes docs/data/.
+// Two inputs:
+//   - BiS table text copied from Wowhead and pasted into a .txt file (the quick way);
+//   - BiS pages saved in a browser (Wowhead, Icy Veins or Archon) as .html.
 //
 // Usage: node scripts/import-bis.mjs [files or folders...] [--dry-run] [--force] [--any-source] [--spec <id>]
-//   Default input: bis-pages/ (every .html / .htm file in it).
+//   Default input: bis-pages/ (every .txt / .html / .htm file in it).
 //   --dry-run     parse and report, write nothing.
 //   --force       import even if the page's patch/season can't be confirmed.
 //   --any-source  import even if the page's site isn't the spec's chosen source.
@@ -19,6 +21,7 @@ import { readFile, writeFile, readdir, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
+import { usableBy, dropAzeriteTwins } from "../docs/gear.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -214,9 +217,10 @@ export function toBisItems(entries, items) {
   const merged = new Map();
   for (const e of entries) {
     const drop = byId.get(e.id);
-    const m = merged.get(e.id) ?? { slot: e.slot ?? drop?.slot ?? null, name: drop?.name ?? e.name ?? `Item ${e.id}`, id: e.id, lists: [] };
+    const key = e.id ?? `name:${norm(e.name ?? "")}`;
+    const m = merged.get(key) ?? { slot: e.slot ?? drop?.slot ?? null, name: drop?.name ?? e.name ?? `Item ${e.id}`, id: e.id, lists: [] };
     if (!m.lists.includes(e.list)) m.lists.push(e.list);
-    merged.set(e.id, m);
+    merged.set(key, m);
   }
   return [...merged.values()];
 }
@@ -243,12 +247,88 @@ async function lookUpNames(bisItems, region = "us", locale = "en_US") {
   }
 }
 
+// ---------------------------------------------------------------- pasted text
+
+// "Gaze of the Coiled Watcher" and "gaze of the coiled watcher’s" both -> "gaze of the coiled watcher"
+export const norm = (s) => s.toLowerCase().replace(/[\u2018\u2019'`]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+
+const SLOT_WORDS = /^(head|helm|neck|shoulders?|back|cloak|chest|wrists?|bracers|hands|gloves|waist|belt|legs|feet|boots|rings?|finger|trinkets?|main[ -]?hand|off[ -]?hand|weapons?|two[ -]?hand(?:ed)?|one[ -]?hand(?:ed)?|ranged|dagger|staff)\b/i;
+const LIST_HEADER = /\b(overall|raid|mythic|m\+|dungeons?)\b/i;
+
+// Spec named in the text ("Spec: Outlaw Rogue", or a line like "Outlaw Rogue BiS")
+// or in the file name ("outlaw-rogue.txt", "260.txt").
+export function specFromText(text, file, specs) {
+  const names = specs.map((s) => ({ s, a: norm(`${s.spec} ${s.class}`), b: norm(`${s.class} ${s.spec}`) }));
+  for (const line of text.split(/\r?\n/).slice(0, 5)) {
+    const n = ` ${norm(line.replace(/^\s*spec\s*:/i, ""))} `;
+    const hit = names.filter(({ a, b }) => n.includes(` ${a} `) || n.includes(` ${b} `));
+    if (hit.length === 1) return hit[0].s;
+  }
+  const base = norm(path.basename(file ?? "").replace(/\.[a-z]+$/i, ""));
+  return specs.find((s) => String(s.id) === base) ?? names.find(({ a, b }) => base === a || base === b)?.s ?? null;
+}
+
+// Parse pasted BiS table text: one item per line, "Slot  Item  Source" (tabs or
+// spaces). Each line is matched to a Season drop the spec can use by looking
+// for the item's name in it; the longest name wins. Lines naming no drop but
+// starting with a slot become non-drop entries (crafted, tier, catalyst).
+// Headings like "Overall BiS", "Raid", "Mythic+" start a new list.
+export function parsePasted(text, spec, items) {
+  const usable = dropAzeriteTwins(items).filter((i) => usableBy(spec, i));
+  const byName = new Map();
+  for (const i of usable) if (!byName.has(norm(i.name))) byName.set(norm(i.name), i);
+  const others = new Map(dropAzeriteTwins(items).map((i) => [norm(i.name), i]));
+  // The name that starts earliest in the line wins (the Item column comes
+  // before Source, which can contain a boss named like an item); ties go to
+  // the longest name.
+  const find = (n, keys) => {
+    let best = null, at = Infinity;
+    for (const k of keys) {
+      const i = n.indexOf(` ${k} `);
+      if (i >= 0 && (i < at || (i === at && k.length > best.length))) { best = k; at = i; }
+    }
+    return best;
+  };
+  const entries = [], skipped = [];
+  let list = "Overall", patch = null;
+  for (const raw of text.split(/\r?\n/)) {
+    const line = raw.trim();
+    if (!line || line.startsWith("#") || /^spec\s*:/i.test(line)) continue;
+    const p = line.match(/\bpatch\s+(1\d\.\d+(?:\.\d+)?)\b/i) ?? line.match(/^(1\d\.\d+(?:\.\d+)?)$/);
+    if (p) { patch = p[1]; continue; }
+    const n = ` ${norm(line)} `;
+    const name = find(n, byName.keys());
+    const cols = line.split(/\t+|\s{2,}/).map((c) => c.trim()).filter(Boolean);
+    if (name) {
+      const it = byName.get(name);
+      const before = n.slice(0, n.indexOf(` ${name} `)).trim();
+      const slot = cols.length > 1 && !norm(cols[0]).includes(name) ? cols[0] : before ? before.replace(/\b\w/g, (c) => c.toUpperCase()) : it.slot;
+      entries.push({ id: it.id, name: it.name, slot, list });
+      continue;
+    }
+    if (/^slot\b/i.test(line) && /\bitem\b/i.test(line)) continue; // table header
+    if (!SLOT_WORDS.test(line) && LIST_HEADER.test(line) && line.length <= 60) { list = listName(line); continue; }
+    const other = find(n, others.keys());
+    if (other) { skipped.push(`${line}  (${others.get(other).name} is not usable by ${spec.spec} ${spec.class})`); continue; }
+    const slotWord = line.match(SLOT_WORDS)?.[0];
+    if (slotWord) {
+      const rest = cols.length > 1 ? cols[1] : line.slice(slotWord.length).replace(/^\s*\d\b/, "").trim();
+      entries.push({ id: null, name: rest, slot: cols.length > 1 ? cols[0] : slotWord, list });
+      continue;
+    }
+    // A title line naming the spec ("Outlaw Rogue Best in Slot") isn't worth reporting.
+    if (` ${norm(line)} `.includes(` ${norm(`${spec.spec} ${spec.class}`)} `)) continue;
+    skipped.push(line);
+  }
+  return { entries, skipped, patch };
+}
+
 async function inputs(args) {
   const files = [];
   for (const a of args.length ? args : [path.join(ROOT, "bis-pages")]) {
     const st = await stat(a).catch(() => null);
     if (!st) { console.warn(`Not found: ${a}`); continue; }
-    if (st.isDirectory()) for (const f of (await readdir(a)).sort()) { if (/\.html?$/i.test(f)) files.push(path.join(a, f)); }
+    if (st.isDirectory()) for (const f of (await readdir(a)).sort()) { if (/\.(html?|txt)$/i.test(f)) files.push(path.join(a, f)); }
     else files.push(a);
   }
   return files;
@@ -272,6 +352,28 @@ async function main() {
 
   for (const file of await inputs(argv)) {
     const name = path.relative(ROOT, file);
+    if (/\.txt$/i.test(file)) {
+      const text = await readFile(file, "utf8");
+      const spec = specOverride ? specsData.specs.find((s) => s.id === specOverride) : specFromText(text, file, specsData.specs);
+      if (!spec) { failed++; console.log(`✗ ${name}: can't tell the spec; name the file like outlaw-rogue.txt, add a "Spec: Outlaw Rogue" line, or pass --spec <id>`); continue; }
+      const { entries, skipped, patch } = parsePasted(text, spec, items);
+      const bisItems = toBisItems(entries, items);
+      const drops = bisItems.filter((b) => dropIds.has(b.id));
+      if (patch && cmpPatch(patch, cfg.minPatch) < 0 && !FORCE) { failed++; console.log(`✗ ${name}: says patch ${patch}, older than ${cfg.minPatch}`); continue; }
+      if (!drops.length && !FORCE) { failed++; console.log(`✗ ${name}: no line names a Season drop ${spec.spec} ${spec.class} can use; is this the current list?`); continue; }
+      const lists = [...new Set(bisItems.flatMap((b) => b.lists))];
+      console.log(`✓ ${name}: ${spec.spec} ${spec.class}, pasted from ${cfg.bySpec?.[spec.id] ?? cfg.defaultSource}: ` +
+        `${drops.length} Season drops, ${bisItems.length - drops.length} other, in ${lists.join(" / ")}`);
+      for (const b of bisItems.filter((x) => !dropIds.has(x.id))) console.log(`    not a drop: ${b.slot ?? "?"}: ${b.name}`);
+      for (const l of skipped) console.log(`    skipped: ${l}`);
+      const source = cfg.bySpec?.[spec.id] ?? cfg.defaultSource;
+      spec.bis = {
+        source, url: source === "Wowhead" ? `https://www.wowhead.com/guide/classes/${slug(spec.class)}/${slug(spec.spec)}/bis-gear` : null,
+        date: today, patch, via: "pasted text", items: bisItems,
+      };
+      changed++;
+      continue;
+    }
     const html = await readFile(file, "utf8");
     const url = pageUrl(html);
     const site = siteOf(url, html);
@@ -299,7 +401,7 @@ async function main() {
     changed++;
   }
 
-  if (!changed) { console.log(failed ? "Nothing imported." : "No saved pages found (put them in bis-pages/)."); process.exit(failed ? 1 : 0); }
+  if (!changed) { console.log(failed ? "Nothing imported." : "No BiS files found (put .txt or .html files in bis-pages/)."); process.exit(failed ? 1 : 0); }
   if (DRY) { console.log(`Dry run: ${changed} spec(s) would be updated.`); process.exit(failed ? 1 : 0); }
   await writeFile(specsFile, JSON.stringify(specsData, null, 2) + "\n");
   console.log(`Updated ${changed} spec(s) in data/specs.json.`);

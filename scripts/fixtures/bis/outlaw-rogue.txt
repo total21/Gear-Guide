@@ -1,0 +1,20 @@
+Spec: Outlaw Rogue
+Patch 12.1.5
+Overall BiS
+Slot	Item	Source
+Head	Gaze of the Coiled Watcher	Ula'tek (The Venomous Abyss)
+Neck	Aqirbane Reliquary	Ula'tek (The Venomous Abyss)
+Shoulders	Somber Spaulders	Taz'Rah (Voidscar Arena)
+Chest	Chosen Bloodslayer's Vest	Tier / Catalyst
+Legs	Breeches of Deft Deals	Zaen Bladesorrow (Murder Row)
+Main Hand	Bladesorrow	Zaen Bladesorrow (Murder Row)
+Off Hand	Thornblade	Lightblossom Trinity (The Blinding Vale)
+Ring 1	Band of the Amani Warlord	Zul'jan (Altar of Fangs)
+Trinket 1	Zul’jin’s Guillotine Technique	The Coiled Altar
+Trinket 2	Voracious Heart of Ula'tek	Ula'tek
+
+Mythic+ BiS
+Slot	Item	Source
+Wrist	Fury-fletched Armlets	Xathuux the Annihilator (Murder Row)
+Hands	Gauntlets of Fevered Defense	Kystia Manaheart (Murder Row)
+Feet	Sand-Shined Snakeskin Sandals	Merektha (Temple of Sethraliss)

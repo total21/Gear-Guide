@@ -143,7 +143,7 @@ function render() {
   const other = (spec.bis?.items ?? []).filter((b) => !dropIds.has(b.id));
   if (state.source === "BIS" && other.length)
     $("list").innerHTML += `<section><h2>Not from Season drops<span>${other.length} item${other.length === 1 ? "" : "s"}</span></h2><div class="none">Crafted, tier, catalyst or other sources.</div><ul>${other.map((b) =>
-      `<li><div class="name"><a href="https://www.wowhead.com/item=${b.id}" target="_blank" rel="noopener">${esc(b.name)}</a></div><div class="type">${esc(b.slot ?? "")}${b.lists?.length ? ` · ${esc(b.lists.join(" / "))}` : ""}</div></li>`).join("")}</ul></section>`;
+      `<li><div class="name"><a href="${b.id ? `https://www.wowhead.com/item=${b.id}` : `https://www.wowhead.com/search?q=${encodeURIComponent(b.name)}`}" target="_blank" rel="noopener">${esc(b.name)}</a></div><div class="type">${esc(b.slot ?? "")}${b.lists?.length ? ` · ${esc(b.lists.join(" / "))}` : ""}</div></li>`).join("")}</ul></section>`;
   $("count").textContent = `${n} item${n === 1 ? "" : "s"} shown` + (topPair ? ` · ${nTop} with the top pair` : "");
 
   const bis = spec.bis ?? {};
