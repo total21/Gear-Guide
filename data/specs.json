@@ -1,0 +1,568 @@
+{
+  "region": "us",
+  "locale": "en_US",
+  "season": "Midnight Season 2",
+  "generatedAt": "2026-10-13T19:22:49.227Z",
+  "specs": [
+    {
+      "id": 250,
+      "class": "Death Knight",
+      "spec": "Blood",
+      "role": "TANK",
+      "armorType": "Plate",
+      "primaryStat": "Strength",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 251,
+      "class": "Death Knight",
+      "spec": "Frost",
+      "role": "DAMAGE",
+      "armorType": "Plate",
+      "primaryStat": "Strength",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 252,
+      "class": "Death Knight",
+      "spec": "Unholy",
+      "role": "DAMAGE",
+      "armorType": "Plate",
+      "primaryStat": "Strength",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 1480,
+      "class": "Demon Hunter",
+      "spec": "Devourer",
+      "role": "DAMAGE",
+      "armorType": "Leather",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 577,
+      "class": "Demon Hunter",
+      "spec": "Havoc",
+      "role": "DAMAGE",
+      "armorType": "Leather",
+      "primaryStat": "Agility",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 581,
+      "class": "Demon Hunter",
+      "spec": "Vengeance",
+      "role": "TANK",
+      "armorType": "Leather",
+      "primaryStat": "Agility",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 102,
+      "class": "Druid",
+      "spec": "Balance",
+      "role": "DAMAGE",
+      "armorType": "Leather",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 103,
+      "class": "Druid",
+      "spec": "Feral",
+      "role": "DAMAGE",
+      "armorType": "Leather",
+      "primaryStat": "Agility",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 104,
+      "class": "Druid",
+      "spec": "Guardian",
+      "role": "TANK",
+      "armorType": "Leather",
+      "primaryStat": "Agility",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 105,
+      "class": "Druid",
+      "spec": "Restoration",
+      "role": "HEALER",
+      "armorType": "Leather",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 1473,
+      "class": "Evoker",
+      "spec": "Augmentation",
+      "role": "DAMAGE",
+      "armorType": "Mail",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 1467,
+      "class": "Evoker",
+      "spec": "Devastation",
+      "role": "DAMAGE",
+      "armorType": "Mail",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 1468,
+      "class": "Evoker",
+      "spec": "Preservation",
+      "role": "HEALER",
+      "armorType": "Mail",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 253,
+      "class": "Hunter",
+      "spec": "Beast Mastery",
+      "role": "DAMAGE",
+      "armorType": "Mail",
+      "primaryStat": "Agility",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 254,
+      "class": "Hunter",
+      "spec": "Marksmanship",
+      "role": "DAMAGE",
+      "armorType": "Mail",
+      "primaryStat": "Agility",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 255,
+      "class": "Hunter",
+      "spec": "Survival",
+      "role": "DAMAGE",
+      "armorType": "Mail",
+      "primaryStat": "Agility",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 62,
+      "class": "Mage",
+      "spec": "Arcane",
+      "role": "DAMAGE",
+      "armorType": "Cloth",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 63,
+      "class": "Mage",
+      "spec": "Fire",
+      "role": "DAMAGE",
+      "armorType": "Cloth",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 64,
+      "class": "Mage",
+      "spec": "Frost",
+      "role": "DAMAGE",
+      "armorType": "Cloth",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 268,
+      "class": "Monk",
+      "spec": "Brewmaster",
+      "role": "TANK",
+      "armorType": "Leather",
+      "primaryStat": "Agility",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 270,
+      "class": "Monk",
+      "spec": "Mistweaver",
+      "role": "HEALER",
+      "armorType": "Leather",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 269,
+      "class": "Monk",
+      "spec": "Windwalker",
+      "role": "DAMAGE",
+      "armorType": "Leather",
+      "primaryStat": "Agility",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 65,
+      "class": "Paladin",
+      "spec": "Holy",
+      "role": "HEALER",
+      "armorType": "Plate",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 66,
+      "class": "Paladin",
+      "spec": "Protection",
+      "role": "TANK",
+      "armorType": "Plate",
+      "primaryStat": "Strength",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 70,
+      "class": "Paladin",
+      "spec": "Retribution",
+      "role": "DAMAGE",
+      "armorType": "Plate",
+      "primaryStat": "Strength",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 256,
+      "class": "Priest",
+      "spec": "Discipline",
+      "role": "HEALER",
+      "armorType": "Cloth",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 257,
+      "class": "Priest",
+      "spec": "Holy",
+      "role": "HEALER",
+      "armorType": "Cloth",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 258,
+      "class": "Priest",
+      "spec": "Shadow",
+      "role": "DAMAGE",
+      "armorType": "Cloth",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 259,
+      "class": "Rogue",
+      "spec": "Assassination",
+      "role": "DAMAGE",
+      "armorType": "Leather",
+      "primaryStat": "Agility",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 260,
+      "class": "Rogue",
+      "spec": "Outlaw",
+      "role": "DAMAGE",
+      "armorType": "Leather",
+      "primaryStat": "Agility",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 261,
+      "class": "Rogue",
+      "spec": "Subtlety",
+      "role": "DAMAGE",
+      "armorType": "Leather",
+      "primaryStat": "Agility",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 262,
+      "class": "Shaman",
+      "spec": "Elemental",
+      "role": "DAMAGE",
+      "armorType": "Mail",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 263,
+      "class": "Shaman",
+      "spec": "Enhancement",
+      "role": "DAMAGE",
+      "armorType": "Mail",
+      "primaryStat": "Agility",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 264,
+      "class": "Shaman",
+      "spec": "Restoration",
+      "role": "HEALER",
+      "armorType": "Mail",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 265,
+      "class": "Warlock",
+      "spec": "Affliction",
+      "role": "DAMAGE",
+      "armorType": "Cloth",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 266,
+      "class": "Warlock",
+      "spec": "Demonology",
+      "role": "DAMAGE",
+      "armorType": "Cloth",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 267,
+      "class": "Warlock",
+      "spec": "Destruction",
+      "role": "DAMAGE",
+      "armorType": "Cloth",
+      "primaryStat": "Intellect",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 71,
+      "class": "Warrior",
+      "spec": "Arms",
+      "role": "DAMAGE",
+      "armorType": "Plate",
+      "primaryStat": "Strength",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 72,
+      "class": "Warrior",
+      "spec": "Fury",
+      "role": "DAMAGE",
+      "armorType": "Plate",
+      "primaryStat": "Strength",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    },
+    {
+      "id": 73,
+      "class": "Warrior",
+      "spec": "Protection",
+      "role": "TANK",
+      "armorType": "Plate",
+      "primaryStat": "Strength",
+      "statPriority": [],
+      "bis": {
+        "source": null,
+        "date": null,
+        "items": []
+      }
+    }
+  ]
+}
