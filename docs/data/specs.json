@@ -2,7 +2,7 @@
   "region": "us",
   "locale": "en_US",
   "season": "Midnight Season 2",
-  "generatedAt": "2026-10-13T19:48:47.358Z",
+  "generatedAt": "2026-10-13T20:28:12.040Z",
   "specs": [
     {
       "id": 250,
@@ -298,17 +298,20 @@
         ]
       },
       "statPriority": [
-        "Mastery"
+        "Mastery",
+        "Haste",
+        "Critical Strike",
+        "Versatility"
       ],
       "statPriorityLabel": null,
       "statVariants": [],
-      "statNotes": "Partial: the page names Mastery the best secondary for both hero trees, but the full 12.1 order could not be confirmed (the page could not be opened directly). Other stats are unranked.",
+      "statNotes": "Order supplied by the project owner on 2026-10-13; the Icy Veins 12.1 page names Mastery the best secondary for both hero trees.",
       "statSource": {
         "site": "Icy Veins",
         "url": "https://www.icy-veins.com/wow/balance-druid-pve-dps-stat-priority",
         "patch": "12.1",
         "checked": "2026-10-13",
-        "via": "web search (site not reachable from the build environment)"
+        "via": "supplied by the project owner (page not reachable from the build environment)"
       },
       "bis": {
         "source": null,

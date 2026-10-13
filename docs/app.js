@@ -11,7 +11,7 @@ try { Object.assign(state, JSON.parse(localStorage.getItem(STORE)) ?? {}); } cat
 const save = () => { try { localStorage.setItem(STORE, JSON.stringify(state)); } catch {} };
 
 const ROLE = { TANK: "Tank", HEALER: "Healer", DAMAGE: "DPS" };
-const SOURCES = [["all", "M+ and raid"], ["DUNGEON", "Mythic+"], ["RAID", "Raid"]];
+const SOURCES = [["all", "M+ and raid"], ["DUNGEON", "Mythic+"], ["RAID", "Raid"], ["BIS", "★ Best in Slot"]];
 const SORTS = [["boss", "Boss order"], ["stats", "Best stats"]];
 
 let items = [], specs = [], meta = {};
@@ -45,8 +45,8 @@ function syncHash() {
 }
 
 function chips(el, list, key) {
-  el.innerHTML = list.map(([v, label, n]) =>
-    `<button class="chip" data-v="${esc(v)}" aria-pressed="${state[key] === v}">${label}${n != null ? `<span class="n">${n}</span>` : ""}</button>`).join("");
+  el.innerHTML = list.map(([v, label, n, off]) =>
+    `<button class="chip" data-v="${esc(v)}" aria-pressed="${state[key] === v}"${off ? " disabled" : ""}>${label}${n != null ? `<span class="n">${n}</span>` : ""}</button>`).join("");
   el.querySelectorAll("button").forEach((b) => (b.onclick = () => { state[key] = b.dataset.v; save(); render(); }));
 }
 
@@ -54,17 +54,27 @@ function statChip({ stat, rank }) {
   return `<span class="stat r${rank ?? 0}" title="${esc(stat)}${rank ? ` (#${rank} for this spec)` : " (unranked)"}">${SHORT[stat]}${rank ? `<sup>#${rank}</sup>` : ""}</span>`;
 }
 
-function itemRow(it, topPair, specName) {
+// "Use: ..." -> <b>Use:</b> ...
+function effectLine(e) {
+  const m = e.text.match(/^(Use|Equip|Chance on hit):\s*/);
+  return `<li title="${esc(e.name ?? "")}">${m ? `<b>${m[1]}:</b> ${esc(e.text.slice(m[0].length))}` : esc(e.text)}</li>`;
+}
+
+function itemRow(it, topPair, spec, specName) {
   const top = topPair && it.pair === topPair;
   const notes = [];
   if (it.notes.includes("no-stats-in-api")) notes.push("No stats in the game data API yet; check the tooltip in game.");
   else if (it.notes.includes("azerite-no-secondaries-in-api")) notes.push("Secondary stats not in the game data API (legacy Azerite item).");
-  else if (!it.secondaryStats.length) notes.push(it.slot === "Trinket" ? "No secondary stats (on-use or proc effect)." : "No secondary stats.");
+  else if (!it.secondaryStats.length && !it.effects?.length) notes.push("No secondary stats.");
+  // Trinkets carry the spec's primary stat as a base stat; show it next to any secondaries.
+  const prim = it.slot === "Trinket" && it.primaryStats.includes(spec.primaryStat)
+    ? `<span class="stat prim" title="Base ${esc(spec.primaryStat)} on this trinket">+${esc(spec.primaryStat.slice(0, 3))}</span>` : "";
   const type = typeLabel(it) + (it.tag ? ` · ${it.tag}` : "");
   return `<li class="${top ? "top" : ""}${it.bis ? " bis" : ""}">
     <div class="name"><a href="https://www.wowhead.com/item=${it.id}" target="_blank" rel="noopener">${esc(it.name)}</a>${top ? `<span class="badge b-top" title="Best stat pair for ${esc(specName)}">Top pair</span>` : ""}${it.bis ? `<span class="badge b-bis">BiS</span>` : ""}</div>
-    <div class="stats">${it.stats.map(statChip).join("")}</div>
+    <div class="stats">${prim}${it.stats.map(statChip).join("")}</div>
     <div class="type">${esc(type)}</div>
+    ${it.effects?.length ? `<ul class="fx">${it.effects.map(effectLine).join("")}</ul>` : ""}
     ${notes.map((n) => `<div class="note">${esc(n)}</div>`).join("")}
   </li>`;
 }
@@ -97,10 +107,12 @@ function render() {
 
   const pairs = rankedPairs(prio);
   const topPair = prio.length >= 2 ? pairs[0].id : null;
+  const flat = (groups) => groups.flatMap((g) => g.bosses.flatMap((b) => b.items));
+  const nBis = flat(groupForSpec(items, spec, { priority: prio, source: "BIS" })).length;
+  if (state.source === "BIS" && !nBis) state.source = "all";
   const opts = { priority: prio, source: state.source, sort: state.sort };
 
   // Chip counts ignore their own filter so you can see what each choice yields.
-  const flat = (groups) => groups.flatMap((g) => g.bosses.flatMap((b) => b.items));
   const forPairs = flat(groupForSpec(items, spec, { ...opts, slot: state.slot }));
   const forSlots = flat(groupForSpec(items, spec, { ...opts, pair: state.pair }));
   const slotCount = Object.groupBy(forSlots, slotGroup);
@@ -110,7 +122,7 @@ function render() {
   chips($("pairs"), [["all", "All stats", null], ...pairs.map((p) =>
     [p.id, `${p.id === topPair ? "★ " : ""}${p.stats.map((s) => SHORT[s]).join(" / ")}`, forPairs.filter((i) => i.pair === p.id).length])], "pair");
   chips($("slots"), [["all", "All slots", null], ...avail.map(([k, l]) => [k, l, slotCount[k].length])], "slot");
-  chips($("sources"), SOURCES.map(([k, l]) => [k, l, null]), "source");
+  chips($("sources"), SOURCES.map(([k, l]) => k === "BIS" ? [k, l, nBis, !nBis] : [k, l, null]), "source");
   chips($("sorts"), SORTS.map(([k, l]) => [k, l, null]), "sort");
 
   const groups = groupForSpec(items, spec, { ...opts, pair: state.pair, slot: state.slot });
@@ -122,11 +134,13 @@ function render() {
     nTop += g.bosses.reduce((k, b) => k + b.items.filter((i) => topPair && i.pair === topPair).length, 0);
     html += `<section><h2>${esc(g.instance)}<span>${g.type === "RAID" ? "Raid · " : ""}${shown} item${shown === 1 ? "" : "s"}</span></h2>`;
     html += shown
-      ? g.bosses.filter((b) => b.items.length).map((b) => `<h3>${esc(b.boss)}</h3><ul>${b.items.map((i) => itemRow(i, topPair, label)).join("")}</ul>`).join("")
+      ? g.bosses.filter((b) => b.items.length).map((b) => `<h3>${esc(b.boss)}</h3><ul>${b.items.map((i) => itemRow(i, topPair, spec, label)).join("")}</ul>`).join("")
       : `<div class="none">Nothing here for ${esc(label)}.</div>`;
     html += `</section>`;
   }
   $("list").innerHTML = html || `<div class="none">No drops match these filters.</div>`;
+  if (state.source === "BIS" && spec.bis?.items?.some((b) => !b.id))
+    $("list").innerHTML += `<div class="none">BiS items that don't drop in Mythic+ or the raid (crafted, tier, catalyst): ${esc(spec.bis.items.filter((b) => !b.id).map((b) => `${b.name}${b.slot ? ` (${b.slot})` : ""}`).join(", "))}.</div>`;
   $("count").textContent = `${n} item${n === 1 ? "" : "s"} shown` + (topPair ? ` · ${nTop} with the top pair` : "");
 
   const bis = spec.bis ?? {};
@@ -135,6 +149,7 @@ function render() {
     `<p>${bis.items?.length
       ? `BiS markers from <a href="${esc(bis.url ?? "#")}" target="_blank" rel="noopener">${esc(bis.source)}</a>, checked ${esc(bis.date)}.`
       : `BiS markers are not filled in for ${esc(label)} yet.`}</p>` +
+    `<p>Effect numbers come from the game data API at the item's preview item level; in-season values are higher.</p>` +
     `<p>Drops from the Blizzard Game Data API (${esc(meta.generatedAt?.slice(0, 10) ?? "")}). Item names link to Wowhead. Stat values scale with item level, so only stat types are shown.</p>`;
 }
 
