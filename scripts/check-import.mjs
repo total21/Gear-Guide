@@ -76,6 +76,27 @@ eq("pasted unusable item skipped", t.skipped.length, 1);
 eq("spec from file name", specFromText("Head\tGaze of the Coiled Watcher", "bis-pages/frost-mage.txt", specs)?.id, 64);
 eq("spec from id file name", specFromText("", "260.txt", specs)?.id, 260);
 
+// A real Wowhead paste (Blood Deathbringer, 2026-10-13): doubled names,
+// a crafting reagent in the Slot column, tier pieces, a Hero line.
+{
+  const text = await readFile(path.join(ROOT, "scripts/fixtures/bis/blood-death-knight-deathbringer.txt"), "utf8");
+  const spec = specFromText(text, "x.txt", specs);
+  const r = parsePasted(text, spec, items);
+  const bis = toBisItems(r.entries, items);
+  eq("real paste spec/hero", [spec?.id, r.hero], [250, "Deathbringer"]);
+  eq("real paste drops", bis.filter((b) => b.id).map((b) => b.id),
+    [268213, 268265, 268253, 268259, 271878, 273777, 281029, 251194, 270175, 270173]);
+  eq("real paste non-drops", bis.filter((b) => !b.id).map((b) => [b.slot, b.name, b.source, b.crafting ?? null]), [
+    ["Head", "Baleful Grave-Knight's Casque", "Kith'ix", null],
+    ["Shoulders", "Baleful Grave-Knight's Gibbets", "Temple of Sethraliss", null],
+    ["Chest", "Baleful Grave-Knight's Breastplate", "The Coiled Altar", null],
+    ["Wrist", "Spellbreaker's Bracers", "Crafting", null],
+    ["Gloves", "Baleful Grave-Knight's Deathgrips", "King's Rest", null],
+    ["Ring", "Masterwork Sin'dorei Band", "Crafting", ["Prismatic Focusing Iris"]],
+  ]);
+  eq("real paste skipped", r.skipped, []);
+}
+
 // Spec slugs resolve for every spec on every site.
 for (const s of specs) {
   const c = s.class.toLowerCase().replace(/ /g, "-"), n = s.spec.toLowerCase().replace(/ /g, "-");

@@ -83,12 +83,23 @@ export function dropAzeriteTwins(items) {
   return items.filter((i) => !(i.notes.includes("azerite-no-secondaries-in-api") && withStats.has(`${i.instance}|${i.boss}|${i.name}`)));
 }
 
-// `source` is "all", "DUNGEON", "RAID", or "BIS" (only the spec's BiS items).
+// The BiS list for a hero talent: its own list if it has one, else the spec's shared list.
+export function bisFor(spec, hero) {
+  return spec.bisByHero?.[hero] ?? spec.bis ?? null;
+}
+
+// Stat priority for a hero talent: its own order if the source splits them, else the spec's.
+export function priorityForHero(spec, hero) {
+  return spec.heroStatPriority?.[hero] ?? spec.statPriority;
+}
+
+// `source` is "all", "DUNGEON", "RAID", or "BIS" (only the BiS list's items).
+// `bis` is the BiS list to use (see bisFor); defaults to the spec's shared list.
 // Group usable items as [{ instance, type, bosses: [{ boss, items }] }], keeping
 // journal order (items.json is written instance by instance, boss by boss).
-export function groupForSpec(items, spec, { priority, pair = "all", slot = "all", source = "all", sort = "boss" } = {}) {
+export function groupForSpec(items, spec, { priority, pair = "all", slot = "all", source = "all", sort = "boss", bis: bisList } = {}) {
   const prio = priority ?? spec.statPriority;
-  const bis = new Map((spec.bis?.items ?? []).map((b) => [b.id, b.lists ?? ["Overall"]]));
+  const bis = new Map(((bisList ?? spec.bis)?.items ?? []).filter((b) => b.id != null).map((b) => [b.id, b.lists ?? ["Overall"]]));
   const out = [];
   const byInstance = new Map();
   for (const item of dropAzeriteTwins(items)) {

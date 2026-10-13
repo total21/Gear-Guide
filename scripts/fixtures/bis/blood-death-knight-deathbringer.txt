@@ -1,0 +1,20 @@
+Spec: Blood Death Knight
+Hero: Deathbringer
+Overall BiS
+
+Weapon	Maze-roa, Warlord's Fury Maze-roa, Warlord's Fury	The Coiled Altar
+Head	Baleful Grave-Knight's Casque Baleful Grave-Knight's Casque 	Kith'ix
+Neck	Aqirbane Reliquary Aqirbane Reliquary	Ula'tek
+Shoulders	Baleful Grave-Knight's Gibbets Baleful Grave-Knight's Gibbets 	Temple of Sethraliss
+Cloak	Silken Voodoo Drape Silken Voodoo Drape	The Coiled Altar
+Chest	Baleful Grave-Knight's Breastplate Baleful Grave-Knight's Breastplate 	The Coiled Altar
+Wrist	Spellbreaker's Bracers Spellbreaker's Bracers	Crafting
+Gloves	Baleful Grave-Knight's Deathgrips Baleful Grave-Knight's Deathgrips 	King's Rest
+Belt	Girdle of Toxic Regret Girdle of Toxic Regret	The Coiled Altar
+Legs	Chausses of Unbound Rancor Chausses of Unbound Rancor 	Ula'tek
+Boots	Poison-Proof Stompers Poison-Proof Stompers	Altar of Fangs
+Ring (Prismatic Focusing Iris Prismatic Focusing Iris )	Masterwork Sin'dorei Band Masterwork Sin'dorei Band	Crafting
+Ring	Band of the Swarmcaller Band of the Swarmcaller	Kith'ix
+Ring	Lightwarden's Bind Lightwarden's Bind	Blinding Vale
+Trinket	Voracious Heart of Ula'tek Voracious Heart of Ula'tek	Ula'tek
+Trinket	Zul'jin's Guillotine Technique Zul'jin's Guillotine Technique	The Coiled Altar

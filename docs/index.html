@@ -73,6 +73,7 @@ li.bis.top{box-shadow:inset 3px 0 0 var(--gold)}
 .b-top{background:var(--accent);color:var(--surface)}
 .b-bis{background:var(--gold-soft);color:var(--gold);border:1px solid var(--gold)}
 .note{grid-column:1 / -1;font-size:.8rem;color:var(--muted)}
+.craft{grid-column:1 / -1;font-size:.82rem;color:var(--gold)}
 .fx{grid-column:1 / -1;margin:2px 0 0;padding:0;list-style:none;font-size:.82rem;color:var(--muted);display:grid;gap:3px}
 .fx li{display:block;padding:0;border:0}
 .fx b{color:var(--ink);font-weight:600}
@@ -93,6 +94,8 @@ footer p{margin:6px 0}
   <div class="pick">
     <label for="spec">Spec</label>
     <select id="spec" aria-describedby="prio"></select>
+    <label for="hero">Hero talent</label>
+    <select id="hero"></select>
     <label for="variant" id="variant-label" hidden>Build</label>
     <select id="variant" hidden></select>
   </div>

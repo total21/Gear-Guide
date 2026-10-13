@@ -2,7 +2,7 @@
   "region": "us",
   "locale": "en_US",
   "season": "Midnight Season 2",
-  "generatedAt": "2026-10-13T20:28:12.040Z",
+  "generatedAt": "2026-10-13T21:27:56.204Z",
   "specs": [
     {
       "id": 250,
@@ -22,24 +22,18 @@
           "Polearm"
         ]
       },
+      "heroTalents": [
+        "San'layn",
+        "Deathbringer"
+      ],
       "statPriority": [
         "Haste",
         "Critical Strike",
         "Mastery",
         "Versatility"
       ],
-      "statPriorityLabel": "San'layn",
-      "statVariants": [
-        {
-          "label": "Deathbringer",
-          "priority": [
-            "Critical Strike",
-            "Mastery",
-            "Versatility",
-            "Haste"
-          ]
-        }
-      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
       "statNotes": "San'layn wants Haste up to about 30% unbuffed; Deathbringer avoids Haste.",
       "statSource": {
         "site": "Icy Veins",
@@ -53,6 +47,168 @@
         "url": null,
         "date": null,
         "items": []
+      },
+      "heroStatPriority": {
+        "Deathbringer": [
+          "Critical Strike",
+          "Mastery",
+          "Versatility",
+          "Haste"
+        ],
+        "San'layn": [
+          "Haste",
+          "Critical Strike",
+          "Mastery",
+          "Versatility"
+        ]
+      },
+      "bisByHero": {
+        "Deathbringer": {
+          "source": "Wowhead",
+          "url": "https://www.wowhead.com/guide/classes/death-knight/blood/bis-gear",
+          "date": "2026-10-13",
+          "patch": null,
+          "via": "pasted text",
+          "items": [
+            {
+              "slot": "Weapon",
+              "name": "Maze-roa, Warlord's Fury",
+              "id": 268213,
+              "lists": [
+                "Overall"
+              ]
+            },
+            {
+              "slot": "Head",
+              "name": "Baleful Grave-Knight's Casque",
+              "id": null,
+              "lists": [
+                "Overall"
+              ],
+              "source": "Kith'ix"
+            },
+            {
+              "slot": "Neck",
+              "name": "Aqirbane Reliquary",
+              "id": 268265,
+              "lists": [
+                "Overall"
+              ]
+            },
+            {
+              "slot": "Shoulders",
+              "name": "Baleful Grave-Knight's Gibbets",
+              "id": null,
+              "lists": [
+                "Overall"
+              ],
+              "source": "Temple of Sethraliss"
+            },
+            {
+              "slot": "Cloak",
+              "name": "Silken Voodoo Drape",
+              "id": 268253,
+              "lists": [
+                "Overall"
+              ]
+            },
+            {
+              "slot": "Chest",
+              "name": "Baleful Grave-Knight's Breastplate",
+              "id": null,
+              "lists": [
+                "Overall"
+              ],
+              "source": "The Coiled Altar"
+            },
+            {
+              "slot": "Wrist",
+              "name": "Spellbreaker's Bracers",
+              "id": null,
+              "lists": [
+                "Overall"
+              ],
+              "source": "Crafting"
+            },
+            {
+              "slot": "Gloves",
+              "name": "Baleful Grave-Knight's Deathgrips",
+              "id": null,
+              "lists": [
+                "Overall"
+              ],
+              "source": "King's Rest"
+            },
+            {
+              "slot": "Belt",
+              "name": "Girdle of Toxic Regret",
+              "id": 268259,
+              "lists": [
+                "Overall"
+              ]
+            },
+            {
+              "slot": "Legs",
+              "name": "Chausses of Unbound Rancor",
+              "id": 271878,
+              "lists": [
+                "Overall"
+              ]
+            },
+            {
+              "slot": "Boots",
+              "name": "Poison-Proof Stompers",
+              "id": 273777,
+              "lists": [
+                "Overall"
+              ]
+            },
+            {
+              "slot": "Ring",
+              "name": "Masterwork Sin'dorei Band",
+              "id": null,
+              "lists": [
+                "Overall"
+              ],
+              "source": "Crafting",
+              "crafting": [
+                "Prismatic Focusing Iris"
+              ]
+            },
+            {
+              "slot": "Ring",
+              "name": "Band of the Swarmcaller",
+              "id": 281029,
+              "lists": [
+                "Overall"
+              ]
+            },
+            {
+              "slot": "Ring",
+              "name": "Lightwarden's Bind",
+              "id": 251194,
+              "lists": [
+                "Overall"
+              ]
+            },
+            {
+              "slot": "Trinket",
+              "name": "Voracious Heart of Ula'tek",
+              "id": 270175,
+              "lists": [
+                "Overall"
+              ]
+            },
+            {
+              "slot": "Trinket",
+              "name": "Zul'jin's Guillotine Technique",
+              "id": 270173,
+              "lists": [
+                "Overall"
+              ]
+            }
+          ]
+        }
       }
     },
     {
@@ -75,6 +231,10 @@
           "Polearm"
         ]
       },
+      "heroTalents": [
+        "Rider of the Apocalypse",
+        "Deathbringer"
+      ],
       "statPriority": [
         "Critical Strike",
         "Haste",
@@ -116,6 +276,10 @@
           "Polearm"
         ]
       },
+      "heroTalents": [
+        "San'layn",
+        "Rider of the Apocalypse"
+      ],
       "statPriority": [
         "Critical Strike",
         "Mastery",
@@ -158,24 +322,18 @@
           "Fist Weapon"
         ]
       },
+      "heroTalents": [
+        "Annihilator",
+        "Void-Scarred"
+      ],
       "statPriority": [
         "Haste",
         "Mastery",
         "Critical Strike",
         "Versatility"
       ],
-      "statPriorityLabel": "Annihilator",
-      "statVariants": [
-        {
-          "label": "Void-Scarred",
-          "priority": [
-            "Haste",
-            "Critical Strike",
-            "Mastery",
-            "Versatility"
-          ]
-        }
-      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
       "statNotes": "Annihilator: Mastery overtakes Haste in AoE. Void-Scarred: about 800 Haste (17-20%), then split Crit and Mastery evenly.",
       "statSource": {
         "site": "Icy Veins",
@@ -189,6 +347,20 @@
         "url": null,
         "date": null,
         "items": []
+      },
+      "heroStatPriority": {
+        "Void-Scarred": [
+          "Haste",
+          "Critical Strike",
+          "Mastery",
+          "Versatility"
+        ],
+        "Annihilator": [
+          "Haste",
+          "Mastery",
+          "Critical Strike",
+          "Versatility"
+        ]
       }
     },
     {
@@ -210,6 +382,10 @@
           "Fist Weapon"
         ]
       },
+      "heroTalents": [
+        "Aldrachi Reaver",
+        "Fel-Scarred"
+      ],
       "statPriority": [
         "Critical Strike",
         "Mastery",
@@ -252,6 +428,10 @@
           "Fist Weapon"
         ]
       },
+      "heroTalents": [
+        "Aldrachi Reaver",
+        "Annihilator"
+      ],
       "statPriority": [
         "Haste",
         "Mastery",
@@ -297,6 +477,10 @@
           "Fist Weapon"
         ]
       },
+      "heroTalents": [
+        "Keeper of the Grove",
+        "Elune's Chosen"
+      ],
       "statPriority": [
         "Mastery",
         "Haste",
@@ -337,6 +521,10 @@
           "Mace"
         ]
       },
+      "heroTalents": [
+        "Druid of the Claw",
+        "Wildstalker"
+      ],
       "statPriority": [
         "Mastery",
         "Haste",
@@ -387,6 +575,10 @@
           "Mace"
         ]
       },
+      "heroTalents": [
+        "Druid of the Claw",
+        "Elune's Chosen"
+      ],
       "statPriority": [
         "Haste",
         "Versatility",
@@ -442,6 +634,10 @@
           "Fist Weapon"
         ]
       },
+      "heroTalents": [
+        "Keeper of the Grove",
+        "Wildstalker"
+      ],
       "statPriority": [
         "Haste",
         "Mastery",
@@ -498,6 +694,10 @@
           "Staff"
         ]
       },
+      "heroTalents": [
+        "Scalecommander",
+        "Chronowarden"
+      ],
       "statPriority": [
         "Mastery",
         "Critical Strike",
@@ -544,6 +744,10 @@
           "Staff"
         ]
       },
+      "heroTalents": [
+        "Flameshaper",
+        "Scalecommander"
+      ],
       "statPriority": [
         "Critical Strike",
         "Haste",
@@ -590,6 +794,10 @@
           "Staff"
         ]
       },
+      "heroTalents": [
+        "Flameshaper",
+        "Chronowarden"
+      ],
       "statPriority": [
         "Mastery",
         "Critical Strike",
@@ -630,6 +838,10 @@
           "Crossbow"
         ]
       },
+      "heroTalents": [
+        "Dark Ranger",
+        "Pack Leader"
+      ],
       "statPriority": [
         "Mastery",
         "Haste",
@@ -680,6 +892,10 @@
           "Crossbow"
         ]
       },
+      "heroTalents": [
+        "Dark Ranger",
+        "Sentinel"
+      ],
       "statPriority": [
         "Critical Strike",
         "Mastery",
@@ -721,6 +937,10 @@
           "Sword"
         ]
       },
+      "heroTalents": [
+        "Sentinel",
+        "Pack Leader"
+      ],
       "statPriority": [
         "Mastery",
         "Critical Strike",
@@ -766,6 +986,10 @@
           "Wand"
         ]
       },
+      "heroTalents": [
+        "Spellslinger",
+        "Sunfury"
+      ],
       "statPriority": [
         "Haste",
         "Critical Strike",
@@ -811,6 +1035,10 @@
           "Wand"
         ]
       },
+      "heroTalents": [
+        "Frostfire",
+        "Sunfury"
+      ],
       "statPriority": [
         "Haste",
         "Mastery",
@@ -856,6 +1084,10 @@
           "Wand"
         ]
       },
+      "heroTalents": [
+        "Spellslinger",
+        "Frostfire"
+      ],
       "statPriority": [
         "Mastery",
         "Critical Strike",
@@ -901,6 +1133,10 @@
           "Sword"
         ]
       },
+      "heroTalents": [
+        "Master of Harmony",
+        "Shado-Pan"
+      ],
       "statPriority": [
         "Critical Strike",
         "Versatility",
@@ -957,6 +1193,10 @@
           "Sword"
         ]
       },
+      "heroTalents": [
+        "Master of Harmony",
+        "Conduit of the Celestials"
+      ],
       "statPriority": [
         "Haste",
         "Critical Strike",
@@ -1012,6 +1252,10 @@
           "Sword"
         ]
       },
+      "heroTalents": [
+        "Shado-Pan",
+        "Conduit of the Celestials"
+      ],
       "statPriority": [
         "Haste",
         "Critical Strike",
@@ -1057,24 +1301,18 @@
           "Polearm"
         ]
       },
+      "heroTalents": [
+        "Lightsmith",
+        "Herald of the Sun"
+      ],
       "statPriority": [
         "Mastery",
         "Haste",
         "Critical Strike",
         "Versatility"
       ],
-      "statPriorityLabel": "Herald of the Sun / Mythic+",
-      "statVariants": [
-        {
-          "label": "Lightsmith",
-          "priority": [
-            "Mastery",
-            "Critical Strike",
-            "Haste",
-            "Versatility"
-          ]
-        }
-      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
       "statNotes": null,
       "statSource": {
         "site": "Icy Veins",
@@ -1088,6 +1326,20 @@
         "url": null,
         "date": null,
         "items": []
+      },
+      "heroStatPriority": {
+        "Lightsmith": [
+          "Mastery",
+          "Critical Strike",
+          "Haste",
+          "Versatility"
+        ],
+        "Herald of the Sun": [
+          "Mastery",
+          "Haste",
+          "Critical Strike",
+          "Versatility"
+        ]
       }
     },
     {
@@ -1109,6 +1361,10 @@
           "Sword"
         ]
       },
+      "heroTalents": [
+        "Lightsmith",
+        "Templar"
+      ],
       "statPriority": [
         "Haste",
         "Versatility",
@@ -1160,6 +1416,10 @@
           "Polearm"
         ]
       },
+      "heroTalents": [
+        "Templar",
+        "Herald of the Sun"
+      ],
       "statPriority": [
         "Mastery",
         "Haste",
@@ -1205,6 +1465,10 @@
           "Wand"
         ]
       },
+      "heroTalents": [
+        "Voidweaver",
+        "Oracle"
+      ],
       "statPriority": [
         "Haste",
         "Mastery",
@@ -1250,6 +1514,10 @@
           "Wand"
         ]
       },
+      "heroTalents": [
+        "Archon",
+        "Oracle"
+      ],
       "statPriority": [
         "Critical Strike",
         "Mastery",
@@ -1305,24 +1573,18 @@
           "Wand"
         ]
       },
+      "heroTalents": [
+        "Archon",
+        "Voidweaver"
+      ],
       "statPriority": [
         "Mastery",
         "Haste",
         "Critical Strike",
         "Versatility"
       ],
-      "statPriorityLabel": "Single target",
-      "statVariants": [
-        {
-          "label": "Voidweaver",
-          "priority": [
-            "Haste",
-            "Mastery",
-            "Critical Strike",
-            "Versatility"
-          ]
-        }
-      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
       "statNotes": "Voidweaver generally favors Haste over Mastery; Archon keeps them close.",
       "statSource": {
         "site": "Icy Veins",
@@ -1336,6 +1598,14 @@
         "url": null,
         "date": null,
         "items": []
+      },
+      "heroStatPriority": {
+        "Voidweaver": [
+          "Haste",
+          "Mastery",
+          "Critical Strike",
+          "Versatility"
+        ]
       }
     },
     {
@@ -1358,6 +1628,10 @@
           "Sword"
         ]
       },
+      "heroTalents": [
+        "Fatebound",
+        "Deathstalker"
+      ],
       "statPriority": [
         "Critical Strike",
         "Haste",
@@ -1401,6 +1675,10 @@
           "Sword"
         ]
       },
+      "heroTalents": [
+        "Fatebound",
+        "Trickster"
+      ],
       "statPriority": [
         "Critical Strike",
         "Haste",
@@ -1444,6 +1722,10 @@
           "Sword"
         ]
       },
+      "heroTalents": [
+        "Trickster",
+        "Deathstalker"
+      ],
       "statPriority": [
         "Mastery",
         "Haste",
@@ -1490,6 +1772,10 @@
           "Fist Weapon"
         ]
       },
+      "heroTalents": [
+        "Stormbringer",
+        "Farseer"
+      ],
       "statPriority": [
         "Mastery",
         "Haste",
@@ -1532,24 +1818,18 @@
           "Dagger"
         ]
       },
+      "heroTalents": [
+        "Totemic",
+        "Stormbringer"
+      ],
       "statPriority": [
         "Mastery",
         "Critical Strike",
         "Haste",
         "Versatility"
       ],
-      "statPriorityLabel": "Stormbringer",
-      "statVariants": [
-        {
-          "label": "Totemic",
-          "priority": [
-            "Mastery",
-            "Haste",
-            "Critical Strike",
-            "Versatility"
-          ]
-        }
-      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
       "statNotes": "Stormbringer needs a floor of roughly 15-20% Haste.",
       "statSource": {
         "site": "Icy Veins",
@@ -1563,6 +1843,20 @@
         "url": null,
         "date": null,
         "items": []
+      },
+      "heroStatPriority": {
+        "Totemic": [
+          "Mastery",
+          "Haste",
+          "Critical Strike",
+          "Versatility"
+        ],
+        "Stormbringer": [
+          "Mastery",
+          "Critical Strike",
+          "Haste",
+          "Versatility"
+        ]
       }
     },
     {
@@ -1588,6 +1882,10 @@
           "Fist Weapon"
         ]
       },
+      "heroTalents": [
+        "Totemic",
+        "Farseer"
+      ],
       "statPriority": [
         "Critical Strike",
         "Versatility",
@@ -1633,6 +1931,10 @@
           "Wand"
         ]
       },
+      "heroTalents": [
+        "Hellcaller",
+        "Soul Harvester"
+      ],
       "statPriority": [
         "Haste",
         "Critical Strike",
@@ -1678,6 +1980,10 @@
           "Wand"
         ]
       },
+      "heroTalents": [
+        "Diabolist",
+        "Soul Harvester"
+      ],
       "statPriority": [
         "Haste",
         "Critical Strike",
@@ -1723,6 +2029,10 @@
           "Wand"
         ]
       },
+      "heroTalents": [
+        "Diabolist",
+        "Hellcaller"
+      ],
       "statPriority": [
         "Haste",
         "Critical Strike",
@@ -1765,6 +2075,10 @@
           "Staff"
         ]
       },
+      "heroTalents": [
+        "Colossus",
+        "Slayer"
+      ],
       "statPriority": [
         "Critical Strike",
         "Haste",
@@ -1809,6 +2123,10 @@
           "Fist Weapon"
         ]
       },
+      "heroTalents": [
+        "Mountain Thane",
+        "Slayer"
+      ],
       "statPriority": [
         "Mastery",
         "Haste",
@@ -1853,6 +2171,10 @@
           "Fist Weapon"
         ]
       },
+      "heroTalents": [
+        "Mountain Thane",
+        "Colossus"
+      ],
       "statPriority": [
         "Haste",
         "Critical Strike",

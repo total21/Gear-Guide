@@ -218,7 +218,11 @@ export function toBisItems(entries, items) {
   for (const e of entries) {
     const drop = byId.get(e.id);
     const key = e.id ?? `name:${norm(e.name ?? "")}`;
-    const m = merged.get(key) ?? { slot: e.slot ?? drop?.slot ?? null, name: drop?.name ?? e.name ?? `Item ${e.id}`, id: e.id, lists: [] };
+    const m = merged.get(key) ?? {
+      slot: e.slot ?? drop?.slot ?? null, name: drop?.name ?? e.name ?? `Item ${e.id}`, id: e.id, lists: [],
+      ...(e.source && !drop && { source: e.source }),
+      ...(e.crafting?.length && { crafting: e.crafting }),
+    };
     if (!m.lists.includes(e.list)) m.lists.push(e.list);
     merged.set(key, m);
   }
@@ -268,6 +272,19 @@ export function specFromText(text, file, specs) {
   return specs.find((s) => String(s.id) === base) ?? names.find(({ a, b }) => base === a || base === b)?.s ?? null;
 }
 
+// Wowhead's copied tables repeat each name (icon text + link text):
+// "Spellbreaker's Bracers Spellbreaker's Bracers" -> "Spellbreaker's Bracers".
+export function undouble(s) {
+  const w = s.trim().split(/\s+/);
+  const h = w.length / 2;
+  return w.length % 2 === 0 && w.slice(0, h).join(" ") === w.slice(h).join(" ") ? w.slice(0, h).join(" ") : w.join(" ");
+}
+
+// Crafted items carry their embellishment / reagent in parentheses, in the
+// Slot or Item column: "Ring (Prismatic Focusing Iris)".
+const parens = (s) => [...s.matchAll(/\(([^)]*)\)/g)].map((m) => undouble(m[1])).filter(Boolean);
+const noParens = (s) => undouble(s.replace(/\([^)]*\)/g, " "));
+
 // Parse pasted BiS table text: one item per line, "Slot  Item  Source" (tabs or
 // spaces). Each line is matched to a Season drop the spec can use by looking
 // for the item's name in it; the longest name wins. Lines naming no drop but
@@ -290,20 +307,24 @@ export function parsePasted(text, spec, items) {
     return best;
   };
   const entries = [], skipped = [];
-  let list = "Overall", patch = null;
+  let list = "Overall", patch = null, hero = null;
   for (const raw of text.split(/\r?\n/)) {
     const line = raw.trim();
     if (!line || line.startsWith("#") || /^spec\s*:/i.test(line)) continue;
     const p = line.match(/\bpatch\s+(1\d\.\d+(?:\.\d+)?)\b/i) ?? line.match(/^(1\d\.\d+(?:\.\d+)?)$/);
     if (p) { patch = p[1]; continue; }
+    const h = line.match(/^hero(?:\s+talents?)?\s*:\s*(.+)$/i);
+    if (h) { hero = h[1].trim(); continue; }
     const n = ` ${norm(line)} `;
     const name = find(n, byName.keys());
     const cols = line.split(/\t+|\s{2,}/).map((c) => c.trim()).filter(Boolean);
     if (name) {
       const it = byName.get(name);
       const before = n.slice(0, n.indexOf(` ${name} `)).trim();
-      const slot = cols.length > 1 && !norm(cols[0]).includes(name) ? cols[0] : before ? before.replace(/\b\w/g, (c) => c.toUpperCase()) : it.slot;
-      entries.push({ id: it.id, name: it.name, slot, list });
+      const slotCol = cols.length > 1 && !norm(cols[0]).includes(name) ? cols[0] : null;
+      const slot = slotCol ? noParens(slotCol) : before ? before.replace(/\b\w/g, (c) => c.toUpperCase()) : it.slot;
+      const crafting = slotCol ? parens(slotCol) : [];
+      entries.push({ id: it.id, name: it.name, slot, list, ...(crafting.length && { crafting }) });
       continue;
     }
     if (/^slot\b/i.test(line) && /\bitem\b/i.test(line)) continue; // table header
@@ -312,15 +333,22 @@ export function parsePasted(text, spec, items) {
     if (other) { skipped.push(`${line}  (${others.get(other).name} is not usable by ${spec.spec} ${spec.class})`); continue; }
     const slotWord = line.match(SLOT_WORDS)?.[0];
     if (slotWord) {
-      const rest = cols.length > 1 ? cols[1] : line.slice(slotWord.length).replace(/^\s*\d\b/, "").trim();
-      entries.push({ id: null, name: rest, slot: cols.length > 1 ? cols[0] : slotWord, list });
+      // With tabs: Slot | Item | Source. With single spaces the source stays in the name.
+      const slotCol = cols.length > 1 ? cols[0] : slotWord;
+      const itemCol = cols.length > 1 ? cols[1] : line.slice(slotWord.length).replace(/^\s*\d\b/, "").trim();
+      const crafting = [...parens(slotCol), ...parens(itemCol)];
+      entries.push({
+        id: null, name: noParens(itemCol), slot: noParens(slotCol), list,
+        ...(cols.length > 2 && { source: cols.slice(2).join(" ") }),
+        ...(crafting.length && { crafting }),
+      });
       continue;
     }
     // A title line naming the spec ("Outlaw Rogue Best in Slot") isn't worth reporting.
     if (` ${norm(line)} `.includes(` ${norm(`${spec.spec} ${spec.class}`)} `)) continue;
     skipped.push(line);
   }
-  return { entries, skipped, patch };
+  return { entries, skipped, patch, hero };
 }
 
 async function inputs(args) {
@@ -356,21 +384,26 @@ async function main() {
       const text = await readFile(file, "utf8");
       const spec = specOverride ? specsData.specs.find((s) => s.id === specOverride) : specFromText(text, file, specsData.specs);
       if (!spec) { failed++; console.log(`✗ ${name}: can't tell the spec; name the file like outlaw-rogue.txt, add a "Spec: Outlaw Rogue" line, or pass --spec <id>`); continue; }
-      const { entries, skipped, patch } = parsePasted(text, spec, items);
+      const { entries, skipped, patch, hero } = parsePasted(text, spec, items);
+      if (hero && !spec.heroTalents?.includes(hero)) { failed++; console.log(`✗ ${name}: "${hero}" isn't a ${spec.spec} ${spec.class} hero talent (${spec.heroTalents?.join(", ")})`); continue; }
       const bisItems = toBisItems(entries, items);
       const drops = bisItems.filter((b) => dropIds.has(b.id));
       if (patch && cmpPatch(patch, cfg.minPatch) < 0 && !FORCE) { failed++; console.log(`✗ ${name}: says patch ${patch}, older than ${cfg.minPatch}`); continue; }
       if (!drops.length && !FORCE) { failed++; console.log(`✗ ${name}: no line names a Season drop ${spec.spec} ${spec.class} can use; is this the current list?`); continue; }
       const lists = [...new Set(bisItems.flatMap((b) => b.lists))];
-      console.log(`✓ ${name}: ${spec.spec} ${spec.class}, pasted from ${cfg.bySpec?.[spec.id] ?? cfg.defaultSource}: ` +
+      console.log(`✓ ${name}: ${spec.spec} ${spec.class}${hero ? ` (${hero})` : ""}, pasted from ${cfg.bySpec?.[spec.id] ?? cfg.defaultSource}: ` +
         `${drops.length} Season drops, ${bisItems.length - drops.length} other, in ${lists.join(" / ")}`);
-      for (const b of bisItems.filter((x) => !dropIds.has(x.id))) console.log(`    not a drop: ${b.slot ?? "?"}: ${b.name}`);
+      for (const b of bisItems.filter((x) => !dropIds.has(x.id)))
+        console.log(`    not a drop: ${b.slot ?? "?"}: ${b.name}${b.crafting ? ` (${b.crafting.join("; ")})` : ""}${b.source ? ` [${b.source}]` : ""}`);
       for (const l of skipped) console.log(`    skipped: ${l}`);
       const source = cfg.bySpec?.[spec.id] ?? cfg.defaultSource;
-      spec.bis = {
+      const bis = {
         source, url: source === "Wowhead" ? `https://www.wowhead.com/guide/classes/${slug(spec.class)}/${slug(spec.spec)}/bis-gear` : null,
         date: today, patch, via: "pasted text", items: bisItems,
       };
+      // A list for one hero talent goes in bisByHero; otherwise it's the spec's shared list.
+      if (hero) spec.bisByHero = { ...spec.bisByHero, [hero]: bis };
+      else spec.bis = bis;
       changed++;
       continue;
     }

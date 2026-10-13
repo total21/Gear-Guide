@@ -62,7 +62,7 @@ WoW gear optimizer: a Midnight Season 2 gear farm tool (web app first, in-game a
 }
 ```
 
-- `armorType`, `primaryStat` and `weapons` are written by the fetch script. Armor type and weapons are not in the API, so they come from tables in `scripts/fetch-data.mjs` (`CLASS_ARMOR`, `SPEC_WEAPONS`). `weapons.slots` uses item inventory types: `"Off Hand"` is a shield, `"Held In Off-hand"` a caster off-hand, `"Ranged"` covers bows, guns, crossbows and wands.
+- `armorType`, `primaryStat`, `weapons` and `heroTalents` (the spec's two hero talent trees, from the API) are written by the fetch script. Armor type and weapons are not in the API, so they come from tables in `scripts/fetch-data.mjs` (`CLASS_ARMOR`, `SPEC_WEAPONS`). `weapons.slots` uses item inventory types: `"Off Hand"` is a shield, `"Held In Off-hand"` a caster off-hand, `"Ranged"` covers bows, guns, crossbows and wands.
 - Everything from `statPriority` down is hand-curated and kept across re-runs.
   - `statPriority` is the secondary stat order, best first. `statPriorityLabel` names that build when the source gives more than one; the others go in `statVariants`, and the app offers them as a "Build" choice.
   - A spec whose full order could not be confirmed has a shorter list and says "Partial" in `statNotes` (currently Balance Druid: Mastery first, the rest unranked).
@@ -73,7 +73,8 @@ WoW gear optimizer: a Midnight Season 2 gear farm tool (web app first, in-game a
            "date": "2026-10-20", "patch": "12.1.5",
            "items": [{ "slot": "Neck", "name": "Aqirbane Reliquary", "id": 268265, "lists": ["Overall", "Mythic+"] }] }
   ```
-  `id` is the item ID, or `null` for pasted items that aren't Season drops. Items that aren't in `data/items.json` (crafted, tier, catalyst) are kept and shown separately. `lists` says which of the page's lists it's on: `Overall`, `Raid`, `Mythic+`. `npm run check` fails if a listed drop's name doesn't match its ID or the spec can't use it.
+  `bisByHero` holds lists for a single hero talent, keyed by its name: `{ "Deathbringer": { ...same shape... } }`. A hero talent uses its own list if it has one, otherwise the shared `bis`. Likewise `heroStatPriority` (`{ "Deathbringer": [...] }`) overrides `statPriority` for one hero talent.
+  `id` is the item ID, or `null` for pasted items that aren't Season drops. Those also keep `source` ("Crafting", a boss for tier pieces) and `crafting` (embellishments or reagents listed in parentheses). Items that aren't in `data/items.json` (crafted, tier, catalyst) are kept and shown separately. `lists` says which of the page's lists it's on: `Overall`, `Raid`, `Mythic+`. `npm run check` fails if a listed drop's name doesn't match its ID or the spec can't use it.
 
 The journal lists each legacy BfA Azerite piece from Kings' Rest and Temple of Sethraliss twice: the old item with no secondaries in the API, and its current re-issue with real stats. The app shows only the re-issue.
 
@@ -118,7 +119,7 @@ Requirements: Node 22.21+ (no npm dependencies).
    Mythic+ BiS
    Hands	Gauntlets of Fevered Defense	Kystia Manaheart (Murder Row)
    ```
-   The `Patch` line is optional; if present it must be 12.1 or later. Headings containing "Raid" or "Mythic+" start those lists. Anything else is "Overall".
+   Start with `Spec: Blood Death Knight`, and add `Hero: Deathbringer` when the list is only for one hero talent (leave it out when both share it). The `Patch` line is optional; if present it must be 12.1 or later. Names Wowhead repeats ("Spellbreaker's Bracers Spellbreaker's Bracers") are collapsed, and parentheses in the Slot or Item column ("Ring (Prismatic Focusing Iris)") are kept as the item's crafting note. Headings containing "Raid" or "Mythic+" start those lists. Anything else is "Overall".
 
 Each line is matched by finding the name of a Season drop the spec can use inside it, so the spacing between columns doesn't matter. Lines that name no drop but start with a slot (crafted, tier, catalyst) are kept as "not from Season drops". With tabs between columns their name is exact; with single spaces the source text stays attached to it. The importer prints every non-drop and every skipped line, so check the output. A file where no line names a usable Season drop is rejected as probably stale.
 
@@ -144,7 +145,7 @@ npm run serve   # http://localhost:8000
 
 Opening `docs/index.html` straight from disk will not work: browsers block loading the JSON from `file://`.
 
-The page uses a dark theme. Pick a spec to see every Season 2 Mythic+ and raid drop it can use: its armor type, its primary stat (or no primary, e.g. jewelry), and weapons and off-hands it can equip. Each item's secondary stats are tagged #1 to #4 by the spec's priority. Items with the spec's two best stats are highlighted. Trinkets show the base primary stat they give the spec and their effect text. BiS items are badged (with "Mythic+" or "Raid" when they're only on that list). Filter by stat pair, slot, and Mythic+, raid or Best in Slot, and sort by boss order or by best stats. The last spec, build choice and filters are remembered in the browser. A link like `.../#spec=260` opens a spec directly. Spec IDs are listed in `data/specs.json`.
+The page uses a dark theme. Pick a spec and hero talent to see every Season 2 Mythic+ and raid drop it can use: its armor type, its primary stat (or no primary, e.g. jewelry), and weapons and off-hands it can equip. Each item's secondary stats are tagged #1 to #4 by the spec's priority. Items with the spec's two best stats are highlighted. Trinkets show the base primary stat they give the spec and their effect text. BiS items are badged (with "Mythic+" or "Raid" when they're only on that list). Filter by stat pair, slot, and Mythic+, raid or Best in Slot, and sort by boss order or by best stats. The last spec, build choice and filters are remembered in the browser. A link like `.../#spec=260` opens a spec directly. Spec IDs are listed in `data/specs.json`.
 
 ### Publishing with GitHub Pages
 

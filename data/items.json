@@ -2,7 +2,7 @@
   "region": "us",
   "locale": "en_US",
   "season": "Midnight Season 2",
-  "generatedAt": "2026-10-13T20:28:12.040Z",
+  "generatedAt": "2026-10-13T21:27:56.204Z",
   "items": [
     {
       "id": 273796,
@@ -7872,6 +7872,895 @@
           "text": "Equip: Your spells have a chance to drain a nearby enemy's will, reducing their cast speed by 10% and increasing your Haste by 70 for 12 sec."
         }
       ],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 281235,
+      "name": "Voidweaver's Leggings",
+      "instance": "The Unbinding of Kith'ix",
+      "instanceId": 1324,
+      "instanceType": "RAID",
+      "boss": "Kith'ix",
+      "encounterId": 2896,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [
+        {
+          "name": "Void Eruption",
+          "text": "Equip: Your attacks have a chance to erupt with void energy, dealing 1,307 Shadow damage to all nearby enemies. If you are Venomcursed, this damage is increased by 15%."
+        }
+      ],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 281236,
+      "name": "Chestwrap of Palpable Terror",
+      "instance": "The Unbinding of Kith'ix",
+      "instanceId": 1324,
+      "instanceType": "RAID",
+      "boss": "Kith'ix",
+      "encounterId": 2896,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [
+        {
+          "name": "Void Eruption",
+          "text": "Equip: Your attacks have a chance to erupt with void energy, dealing 1,307 Shadow damage to all nearby enemies. If you are Venomcursed, this damage is increased by 15%."
+        }
+      ],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 281238,
+      "name": "Aberrant Commander's Gauntlets",
+      "instance": "The Unbinding of Kith'ix",
+      "instanceId": 1324,
+      "instanceType": "RAID",
+      "boss": "Kith'ix",
+      "encounterId": 2896,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [
+        {
+          "name": "Void Eruption",
+          "text": "Equip: Your attacks have a chance to erupt with void energy, dealing 1,307 Shadow damage to all nearby enemies. If you are Venomcursed, this damage is increased by 15%."
+        }
+      ],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 281239,
+      "name": "Corroded Hulk's Skullcap",
+      "instance": "The Unbinding of Kith'ix",
+      "instanceId": 1324,
+      "instanceType": "RAID",
+      "boss": "Kith'ix",
+      "encounterId": 2896,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [
+        {
+          "name": "Void Eruption",
+          "text": "Equip: Your attacks have a chance to erupt with void energy, dealing 1,307 Shadow damage to all nearby enemies. If you are Venomcursed, this damage is increased by 15%."
+        }
+      ],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 281029,
+      "name": "Band of the Swarmcaller",
+      "instance": "The Unbinding of Kith'ix",
+      "instanceId": 1324,
+      "instanceType": "RAID",
+      "boss": "Kith'ix",
+      "encounterId": 2896,
+      "slot": "Finger",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [
+        {
+          "name": "Call the Swarm",
+          "text": "Equip: Your attacks have a chance to amplify the band's whispers, calling forth an Acidbrood Scourge. The scourge flies into your target and detonates, causing 1,743 Nature damage to all nearby enemies."
+        }
+      ],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 281056,
+      "name": "Sanctified Knight's Phoenixblade",
+      "instance": "The Unbinding of Kith'ix",
+      "instanceId": 1324,
+      "instanceType": "RAID",
+      "boss": "Kith'ix",
+      "encounterId": 2896,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Sword",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [
+        {
+          "name": "Luminescent Phoenixblade",
+          "text": "Equip: Your spells have a high chance to resonate with the blade, beseeching the Light for aid. Healing spells will smite a nearby foe for 1,568 Radiant damage, and damaging spells will heal a nearby ally for 3,294 health."
+        }
+      ],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 281215,
+      "name": "Twisted Horror's Tendril",
+      "instance": "The Unbinding of Kith'ix",
+      "instanceId": 1324,
+      "instanceType": "RAID",
+      "boss": "Kith'ix",
+      "encounterId": 2896,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [
+        {
+          "name": "Twisted Horror's Tendril",
+          "text": "Equip: Your damage has a very high chance to resonate with the tendril and grant Devastating Power, increasing your Critical Strike by 18 for 15 sec. Multiple applications may overlap. Once every 5 sec, your first strike against a new target guarantees you 3 stacks of Devastating Power."
+        }
+      ],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 280617,
+      "name": "Lightbearer's Shield Fragment",
+      "instance": "The Unbinding of Kith'ix",
+      "instanceId": 1324,
+      "instanceType": "RAID",
+      "boss": "Kith'ix",
+      "encounterId": 2896,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [
+        {
+          "name": "Lightbearer's Shield Fragment",
+          "text": "Use: Bless the ground around you for 10 sec, granting you a holy barrier which absorbs the next 484,258 damage taken as long as you remain within. Allies who stand upon the ground will also redirect 10% of their incoming damage to you until the barrier falls. Valid only for tank specializations. (3 Min Cooldown)"
+        }
+      ],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 280799,
+      "name": "Lu'selama, Light's Justice",
+      "instance": "The Unbinding of Kith'ix",
+      "instanceId": 1324,
+      "instanceType": "RAID",
+      "boss": "Kith'ix",
+      "encounterId": 2896,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Sword",
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [
+        {
+          "name": "Light's Justice",
+          "text": "Equip: Your damage has a chance to ignite Lu'selama for 10 sec, granting you 402 Haste. While ablaze, further attacks have a chance to smite your target for an additional 2,525 Radiant damage."
+        }
+      ],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 280835,
+      "name": "Sigil of the Impending Eclipse",
+      "instance": "The Unbinding of Kith'ix",
+      "instanceId": 1324,
+      "instanceType": "RAID",
+      "boss": "Kith'ix",
+      "encounterId": 2896,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [
+        {
+          "name": "Sigil of the Impending Eclipse",
+          "text": "Equip: Your healing has a chance to grant you a vision of oppressive darkness. You attempt to Forestall the End for 15 sec, granting you 144 Haste plus an additional 1 Haste for every 1% health your target is missing."
+        }
+      ],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268289,
+      "name": "Girdle of Devouring Rot",
+      "instance": "Sporefall",
+      "instanceId": 1305,
+      "instanceType": "RAID",
+      "boss": "Rotmire",
+      "encounterId": 2711,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268285,
+      "name": "Putrid Tender's Battleplate",
+      "instance": "Sporefall",
+      "instanceId": 1305,
+      "instanceType": "RAID",
+      "boss": "Rotmire",
+      "encounterId": 2711,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268288,
+      "name": "Fungarian Folly Faulds",
+      "instance": "Sporefall",
+      "instanceId": 1305,
+      "instanceType": "RAID",
+      "boss": "Rotmire",
+      "encounterId": 2711,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268287,
+      "name": "Grudgefiend Stompers",
+      "instance": "Sporefall",
+      "instanceId": 1305,
+      "instanceType": "RAID",
+      "boss": "Rotmire",
+      "encounterId": 2711,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268286,
+      "name": "Sash of the Putrid Giant",
+      "instance": "Sporefall",
+      "instanceId": 1305,
+      "instanceType": "RAID",
+      "boss": "Rotmire",
+      "encounterId": 2711,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268283,
+      "name": "Festerbloom Crown",
+      "instance": "Sporefall",
+      "instanceId": 1305,
+      "instanceType": "RAID",
+      "boss": "Rotmire",
+      "encounterId": 2711,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268282,
+      "name": "Luxurious Loamstriders",
+      "instance": "Sporefall",
+      "instanceId": 1305,
+      "instanceType": "RAID",
+      "boss": "Rotmire",
+      "encounterId": 2711,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268284,
+      "name": "Mycomancer's Rot Robes",
+      "instance": "Sporefall",
+      "instanceId": 1305,
+      "instanceType": "RAID",
+      "boss": "Rotmire",
+      "encounterId": 2711,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268292,
+      "name": "Sporelord's Mycelial Insignia",
+      "instance": "Sporefall",
+      "instanceId": 1305,
+      "instanceType": "RAID",
+      "boss": "Rotmire",
+      "encounterId": 2711,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [
+        {
+          "name": "Sporelord's Mycelium",
+          "text": "Equip: Your spells and abilities have a chance to nourish the mycelium, granting you 215 of a random secondary stat and Leech for 12 sec."
+        }
+      ],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268291,
+      "name": "Rotmire's Sporeheart",
+      "instance": "Sporefall",
+      "instanceId": 1305,
+      "instanceType": "RAID",
+      "boss": "Rotmire",
+      "encounterId": 2711,
+      "slot": "Neck",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [
+        {
+          "name": "Rotmire's Sporeheart",
+          "text": "Equip: Your healing has a chance to spawn protective toadstools absorbing 19,539 damage for up to 12 sec. If broken, the toadstools burst to deal 2,695 Nature damage to nearby enemies."
+        }
+      ],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268290,
+      "name": "Sporecaller's Blooming Loop",
+      "instance": "Sporefall",
+      "instanceId": 1305,
+      "instanceType": "RAID",
+      "boss": "Rotmire",
+      "encounterId": 2711,
+      "slot": "Finger",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [
+        {
+          "name": "Sporecaller's Blooming Loop",
+          "text": "Equip: Dealing Nature damage has a chance to inflict Rotbloom, dealing 1,718 Nature damage over 15 sec. If the enemy is already afflicted by your Rotbloom, it is consumed to deal 120% of its remaining damage."
+        }
+      ],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 270167,
+      "name": "Wavecaller's Seastone",
+      "instance": "The Tidebound Grotto",
+      "instanceId": 1317,
+      "instanceType": "RAID",
+      "boss": "Nymrissa Wavecaller",
+      "encounterId": 2849,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [
+        {
+          "name": "Wavecaller's Seastone",
+          "text": "Equip: Your spells have a high chance to call to the sea, granting Tidal Insight to increase your Intellect by 22 up to 6 times. After reaching its peak, your spells instead diminish Tidal Insight before beginning the cycle anew."
+        }
+      ],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268199,
+      "name": "Tidepiercer's Bubble Popper",
+      "instance": "The Tidebound Grotto",
+      "instanceId": 1317,
+      "instanceType": "RAID",
+      "boss": "Nymrissa Wavecaller",
+      "encounterId": 2849,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Staff",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268221,
+      "name": "Tidebound Sorcereress's Robes",
+      "instance": "The Tidebound Grotto",
+      "instanceId": 1317,
+      "instanceType": "RAID",
+      "boss": "Nymrissa Wavecaller",
+      "encounterId": 2849,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268238,
+      "name": "Grips of Swirling Fury",
+      "instance": "The Tidebound Grotto",
+      "instanceId": 1317,
+      "instanceType": "RAID",
+      "boss": "Nymrissa Wavecaller",
+      "encounterId": 2849,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268226,
+      "name": "Swelling Sea Spaulders",
+      "instance": "The Tidebound Grotto",
+      "instanceId": 1317,
+      "instanceType": "RAID",
+      "boss": "Nymrissa Wavecaller",
+      "encounterId": 2849,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268263,
+      "name": "Frostscale's Mystic Frond",
+      "instance": "The Tidebound Grotto",
+      "instanceId": 1317,
+      "instanceType": "RAID",
+      "boss": "Nymrissa Wavecaller",
+      "encounterId": 2849,
+      "slot": "Held In Off-hand",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268262,
+      "name": "Bubblefin Splash Guard",
+      "instance": "The Tidebound Grotto",
+      "instanceId": 1317,
+      "instanceType": "RAID",
+      "boss": "Nymrissa Wavecaller",
+      "encounterId": 2849,
+      "slot": "Off Hand",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268232,
+      "name": "Cincture of the Abyssal Grotto",
+      "instance": "The Tidebound Grotto",
+      "instanceId": 1317,
+      "instanceType": "RAID",
+      "boss": "Nymrissa Wavecaller",
+      "encounterId": 2849,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268247,
+      "name": "Breakwater Boots",
+      "instance": "The Tidebound Grotto",
+      "instanceId": 1317,
+      "instanceType": "RAID",
+      "boss": "Nymrissa Wavecaller",
+      "encounterId": 2849,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268217,
+      "name": "Rising Tide Wristguards",
+      "instance": "The Tidebound Grotto",
+      "instanceId": 1317,
+      "instanceType": "RAID",
+      "boss": "Nymrissa Wavecaller",
+      "encounterId": 2849,
+      "slot": "Wrist",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268244,
+      "name": "Forgotten Grotto Girdle",
+      "instance": "The Tidebound Grotto",
+      "instanceId": 1317,
+      "instanceType": "RAID",
+      "boss": "Nymrissa Wavecaller",
+      "encounterId": 2849,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
+      "previewItemLevel": 219,
+      "notes": []
+    },
+    {
+      "id": 268266,
+      "name": "Alluring Bubbleband",
+      "instance": "The Tidebound Grotto",
+      "instanceId": 1317,
+      "instanceType": "RAID",
+      "boss": "Nymrissa Wavecaller",
+      "encounterId": 2849,
+      "slot": "Finger",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "effects": [],
       "previewItemLevel": 219,
       "notes": []
     }

@@ -12,5 +12,10 @@
     "Kings' Rest",
     "Temple of Sethraliss"
   ],
-  "raids": ["The Venomous Abyss"]
+  "raids": [
+    "The Venomous Abyss",
+    "The Unbinding of Kith'ix",
+    "Sporefall",
+    "The Tidebound Grotto"
+  ]
 }

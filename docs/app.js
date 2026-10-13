@@ -1,4 +1,4 @@
-import { SHORT, SLOT_GROUPS, groupForSpec, rankedPairs, typeLabel, slotGroup } from "./gear.js";
+import { SHORT, SLOT_GROUPS, groupForSpec, rankedPairs, typeLabel, slotGroup, bisFor, priorityForHero } from "./gear.js";
 
 const $ = (id) => document.getElementById(id);
 const esc = (x) => String(x).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -6,7 +6,7 @@ const STORE = "gear-guide:v1";
 
 // Last spec, build per spec, and filters. Storage can be unavailable (private
 // mode, blocked site data), so every access is guarded and defaults still work.
-let state = { spec: null, variant: {}, pair: "all", slot: "all", source: "all", sort: "boss" };
+let state = { spec: null, hero: {}, variant: {}, pair: "all", slot: "all", source: "all", sort: "boss" };
 try { Object.assign(state, JSON.parse(localStorage.getItem(STORE)) ?? {}); } catch {}
 const save = () => { try { localStorage.setItem(STORE, JSON.stringify(state)); } catch {} };
 
@@ -26,9 +26,12 @@ async function load() {
 
 const currentSpec = () => specs.find((s) => s.id === state.spec) ?? specs[0];
 
+// Hero talent chosen for a spec (remembered per spec), defaulting to the first.
+const heroFor = (spec) => (spec.heroTalents?.includes(state.hero?.[spec.id]) ? state.hero[spec.id] : spec.heroTalents?.[0] ?? null);
+
 function priorityFor(spec) {
   const v = spec.statVariants?.find((x) => x.label === state.variant[spec.id]);
-  return v ? v.priority : spec.statPriority;
+  return v ? v.priority : priorityForHero(spec, heroFor(spec));
 }
 
 function specPicker() {
@@ -38,6 +41,7 @@ function specPicker() {
       `<option value="${s.id}">${esc(s.spec)} ${esc(cls)} (${ROLE[s.role] ?? s.role})</option>`).join("")}</optgroup>`).join("");
   $("spec").onchange = () => { state.spec = +$("spec").value; state.slot = "all"; state.pair = "all"; save(); syncHash(); render(); };
   $("variant").onchange = () => { state.variant[state.spec] = $("variant").value; save(); render(); };
+  $("hero").onchange = () => { state.hero = { ...state.hero, [state.spec]: $("hero").value }; save(); render(); };
 }
 
 function syncHash() {
@@ -88,7 +92,12 @@ function render() {
   $("title").textContent = `${label} S2 Farm List`;
   $("sub").textContent = `${meta.season} · ${spec.armorType}, ${spec.primaryStat}, every Mythic+ and raid drop this spec can use`;
 
-  // Build (hero talent / content) variants of the stat priority.
+  const hero = heroFor(spec);
+  $("hero").innerHTML = (spec.heroTalents ?? []).map((h) => `<option>${esc(h)}</option>`).join("");
+  $("hero").value = hero ?? "";
+  const bisList = bisFor(spec, hero);
+
+  // Content variants of the stat priority (raid vs Mythic+, defensive vs offensive...).
   const variants = spec.statVariants ?? [];
   $("variant").hidden = $("variant-label").hidden = !variants.length;
   if (variants.length) {
@@ -102,15 +111,16 @@ function render() {
   $("prio").innerHTML = prio.length
     ? `<span class="order"><b>Stat priority:</b> ${prio.map((s, i) => statChip({ stat: s, rank: i + 1 })).join(" › ")}</span>` +
       (src ? `<a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.site)} (${esc(src.patch)})</a>, checked ${esc(src.checked)}` : "") +
+      (spec.heroStatPriority?.[hero] ? `. Order for ${esc(hero)}` : "") +
       (spec.statNotes ? `. ${esc(spec.statNotes)}` : "")
     : "No stat priority recorded for this spec yet.";
 
   const pairs = rankedPairs(prio);
   const topPair = prio.length >= 2 ? pairs[0].id : null;
   const flat = (groups) => groups.flatMap((g) => g.bosses.flatMap((b) => b.items));
-  const nBis = flat(groupForSpec(items, spec, { priority: prio, source: "BIS" })).length;
+  const nBis = flat(groupForSpec(items, spec, { priority: prio, source: "BIS", bis: bisList })).length;
   if (state.source === "BIS" && !nBis) state.source = "all";
-  const opts = { priority: prio, source: state.source, sort: state.sort };
+  const opts = { priority: prio, source: state.source, sort: state.sort, bis: bisList };
 
   // Chip counts ignore their own filter so you can see what each choice yields.
   const forPairs = flat(groupForSpec(items, spec, { ...opts, slot: state.slot }));
@@ -140,18 +150,19 @@ function render() {
   }
   $("list").innerHTML = html || `<div class="none">No drops match these filters.</div>`;
   const dropIds = new Set(items.map((i) => i.id));
-  const other = (spec.bis?.items ?? []).filter((b) => !dropIds.has(b.id));
+  const other = (bisList?.items ?? []).filter((b) => !dropIds.has(b.id));
   if (state.source === "BIS" && other.length)
     $("list").innerHTML += `<section><h2>Not from Season drops<span>${other.length} item${other.length === 1 ? "" : "s"}</span></h2><div class="none">Crafted, tier, catalyst or other sources.</div><ul>${other.map((b) =>
-      `<li><div class="name"><a href="${b.id ? `https://www.wowhead.com/item=${b.id}` : `https://www.wowhead.com/search?q=${encodeURIComponent(b.name)}`}" target="_blank" rel="noopener">${esc(b.name)}</a></div><div class="type">${esc(b.slot ?? "")}${b.lists?.length ? ` · ${esc(b.lists.join(" / "))}` : ""}</div></li>`).join("")}</ul></section>`;
+      `<li><div class="name"><a href="${b.id ? `https://www.wowhead.com/item=${b.id}` : `https://www.wowhead.com/search?q=${encodeURIComponent(b.name)}`}" target="_blank" rel="noopener">${esc(b.name)}</a></div><div class="type">${esc(b.slot ?? "")}${b.source ? ` · ${esc(b.source)}` : ""}${b.lists?.length && b.lists.join() !== "Overall" ? ` · ${esc(b.lists.join(" / "))}` : ""}</div>${b.crafting?.length ? `<div class="craft">Crafting: ${esc(b.crafting.join("; "))}</div>` : ""}</li>`).join("")}</ul></section>`;
   $("count").textContent = `${n} item${n === 1 ? "" : "s"} shown` + (topPair ? ` · ${nTop} with the top pair` : "");
 
-  const bis = spec.bis ?? {};
+  const bis = bisList ?? {};
+  const heroBis = !!spec.bisByHero?.[hero];
   $("foot").innerHTML =
     `<p>Stat chips are ranked for this spec: <span class="stat r1">#1</span> best, then <span class="stat r2">#2</span>, <span class="stat r3">#3</span>, <span class="stat r4">#4</span>. Highlighted rows have the spec's two best stats.</p>` +
     `<p>${bis.items?.length
-      ? `BiS from <a href="${esc(bis.url ?? "#")}" target="_blank" rel="noopener">${esc(bis.source)}</a>${bis.patch ? ` (${esc(bis.patch)})` : ""}, imported ${esc(bis.date)}.`
-      : `BiS markers are not filled in for ${esc(label)} yet.`}</p>` +
+      ? `BiS ${heroBis ? `for ${esc(hero)}` : "(shared by both hero talents)"} from <a href="${esc(bis.url ?? "#")}" target="_blank" rel="noopener">${esc(bis.source)}</a>${bis.patch ? ` (${esc(bis.patch)})` : ""}, imported ${esc(bis.date)}.`
+      : `No BiS list for ${esc(label)}${hero ? ` (${esc(hero)})` : ""} yet.`}</p>` +
     `<p>Effect numbers come from the game data API at the item's preview item level; in-season values are higher.</p>` +
     `<p>Drops from the Blizzard Game Data API (${esc(meta.generatedAt?.slice(0, 10) ?? "")}). Item names link to Wowhead. Stat values scale with item level, so only stat types are shown.</p>`;
 }

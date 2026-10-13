@@ -106,7 +106,7 @@ const SPEC_WEAPONS = {
   "Warrior|Protection": weapons([ONE_H, SHIELD], ["Axe", "Mace", "Sword", "Dagger", "Fist Weapon"]),
 };
 // Hand-curated spec fields, kept across re-runs (see README for their shape).
-const CURATED = ["statPriority", "statPriorityLabel", "statVariants", "statNotes", "statSource", "bis"];
+const CURATED = ["statPriority", "statPriorityLabel", "statVariants", "heroStatPriority", "statNotes", "statSource", "bis", "bisByHero"];
 const EMPTY_BIS = { source: null, url: null, date: null, items: [] };
 
 // ---------------------------------------------------------------- HTTP
@@ -264,6 +264,9 @@ async function buildSpecs() {
         armorType: CLASS_ARMOR[s.playable_class.name] ?? null,
         primaryStat: PRIMARY[s.primary_stat_type.type] ?? s.primary_stat_type.name,
         weapons: SPEC_WEAPONS[key] ?? { slots: [], types: [] },
+        // The API also lists unused placeholder trees ("Blue [DNT]") and the same
+        // tree under several IDs (Shaman); keep each real name once.
+        heroTalents: [...new Set((s.hero_talent_trees ?? []).map((h) => h.name).filter((n) => !/\[DNT\]/i.test(n)))],
         // Curated fields: filled in by hand, kept across re-runs.
         statPriority: [],
         ...curated,
