@@ -2,7 +2,7 @@
   "region": "us",
   "locale": "en_US",
   "season": "Midnight Season 2",
-  "generatedAt": "2026-10-13T21:27:56.204Z",
+  "generatedAt": "2026-10-13T21:31:06.811Z",
   "specs": [
     {
       "id": 250,
@@ -34,20 +34,6 @@
       ],
       "statPriorityLabel": null,
       "statVariants": [],
-      "statNotes": "San'layn wants Haste up to about 30% unbuffed; Deathbringer avoids Haste.",
-      "statSource": {
-        "site": "Icy Veins",
-        "url": "https://www.icy-veins.com/wow/blood-death-knight-pve-tank-stat-priority",
-        "patch": "12.1",
-        "checked": "2026-10-13",
-        "via": "web search (site not reachable from the build environment)"
-      },
-      "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
-      },
       "heroStatPriority": {
         "Deathbringer": [
           "Critical Strike",
@@ -61,6 +47,20 @@
           "Mastery",
           "Versatility"
         ]
+      },
+      "statNotes": "San'layn wants Haste up to about 30% unbuffed; Deathbringer avoids Haste.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/blood-death-knight-pve-tank-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
+      "bis": {
+        "source": null,
+        "url": null,
+        "date": null,
+        "items": []
       },
       "bisByHero": {
         "Deathbringer": {
@@ -334,20 +334,6 @@
       ],
       "statPriorityLabel": null,
       "statVariants": [],
-      "statNotes": "Annihilator: Mastery overtakes Haste in AoE. Void-Scarred: about 800 Haste (17-20%), then split Crit and Mastery evenly.",
-      "statSource": {
-        "site": "Icy Veins",
-        "url": "https://www.icy-veins.com/wow/devourer-demon-hunter-pve-dps-stat-priority",
-        "patch": "12.1",
-        "checked": "2026-10-13",
-        "via": "web search (site not reachable from the build environment)"
-      },
-      "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
-      },
       "heroStatPriority": {
         "Void-Scarred": [
           "Haste",
@@ -361,6 +347,20 @@
           "Critical Strike",
           "Versatility"
         ]
+      },
+      "statNotes": "Annihilator: Mastery overtakes Haste in AoE. Void-Scarred: about 800 Haste (17-20%), then split Crit and Mastery evenly.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/devourer-demon-hunter-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
+      "bis": {
+        "source": null,
+        "url": null,
+        "date": null,
+        "items": []
       }
     },
     {
@@ -1313,20 +1313,6 @@
       ],
       "statPriorityLabel": null,
       "statVariants": [],
-      "statNotes": null,
-      "statSource": {
-        "site": "Icy Veins",
-        "url": "https://www.icy-veins.com/wow/holy-paladin-pve-healing-stat-priority",
-        "patch": "12.1",
-        "checked": "2026-10-13",
-        "via": "web search (site not reachable from the build environment)"
-      },
-      "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
-      },
       "heroStatPriority": {
         "Lightsmith": [
           "Mastery",
@@ -1340,6 +1326,20 @@
           "Critical Strike",
           "Versatility"
         ]
+      },
+      "statNotes": null,
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/holy-paladin-pve-healing-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
+      "bis": {
+        "source": null,
+        "url": null,
+        "date": null,
+        "items": []
       }
     },
     {
@@ -1585,6 +1585,14 @@
       ],
       "statPriorityLabel": null,
       "statVariants": [],
+      "heroStatPriority": {
+        "Voidweaver": [
+          "Haste",
+          "Mastery",
+          "Critical Strike",
+          "Versatility"
+        ]
+      },
       "statNotes": "Voidweaver generally favors Haste over Mastery; Archon keeps them close.",
       "statSource": {
         "site": "Icy Veins",
@@ -1598,14 +1606,6 @@
         "url": null,
         "date": null,
         "items": []
-      },
-      "heroStatPriority": {
-        "Voidweaver": [
-          "Haste",
-          "Mastery",
-          "Critical Strike",
-          "Versatility"
-        ]
       }
     },
     {
@@ -1830,20 +1830,6 @@
       ],
       "statPriorityLabel": null,
       "statVariants": [],
-      "statNotes": "Stormbringer needs a floor of roughly 15-20% Haste.",
-      "statSource": {
-        "site": "Icy Veins",
-        "url": "https://www.icy-veins.com/wow/enhancement-shaman-pve-dps-stat-priority",
-        "patch": "12.1",
-        "checked": "2026-10-13",
-        "via": "web search (site not reachable from the build environment)"
-      },
-      "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
-      },
       "heroStatPriority": {
         "Totemic": [
           "Mastery",
@@ -1857,6 +1843,20 @@
           "Haste",
           "Versatility"
         ]
+      },
+      "statNotes": "Stormbringer needs a floor of roughly 15-20% Haste.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/enhancement-shaman-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
+      "bis": {
+        "source": null,
+        "url": null,
+        "date": null,
+        "items": []
       }
     },
     {
