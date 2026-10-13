@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>S2 Gear Farm List</title>
+<meta name="description" content="Midnight Season 2 Mythic+ and raid drops for each spec, ranked by that spec's secondary stat priority.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Based on web/index.html: one column, sticky filter bar, one block per dungeon/raid. */
+:root{
+  --bg:#f3f4f6; --surface:#ffffff; --ink:#1c2230; --muted:#5d6577; --line:#dde1e8;
+  --accent:#6b4bb8; --accent-soft:#ece6fa; --gold:#9a6a00; --gold-soft:#fbf1d6;
+  --r1:#6b4bb8; --r2:#0f7d74; --r3:#a8641a; --r4:#8a90a0;
+  --display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12141b; --surface:#1b1e28; --ink:#e7e9f0; --muted:#9aa1b2; --line:#2c3040;
+  --accent:#a68cf0; --accent-soft:#2a2342; --gold:#e8b84a; --gold-soft:#33290f;
+  --r1:#a68cf0; --r2:#4fc7b9; --r3:#e3a35a; --r4:#7d8496; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12141b; --surface:#1b1e28; --ink:#e7e9f0; --muted:#9aa1b2; --line:#2c3040;
+  --accent:#a68cf0; --accent-soft:#2a2342; --gold:#e8b84a; --gold-soft:#33290f;
+  --r1:#a68cf0; --r2:#4fc7b9; --r3:#e3a35a; --r4:#7d8496; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.4;
+  padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding-inline:16px;padding-block:20px 40px}
+h1{font-family:var(--display);font-weight:700;font-size:1.9rem;letter-spacing:.01em;margin:0;text-wrap:balance}
+.sub{color:var(--muted);margin:4px 0 0;font-size:.92rem}
+.pick{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-top:14px}
+.pick label{font-weight:600;font-size:.9rem}
+select{font:600 1rem var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-width:0;max-width:100%}
+select:focus-visible,.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.prio{margin-top:10px;font-size:.88rem;color:var(--muted)}
+.prio b{color:var(--ink)}
+.prio .order{display:inline-flex;flex-wrap:wrap;gap:4px;align-items:center;margin-right:6px}
+.bar{position:sticky;top:0;padding-top:max(12px,env(safe-area-inset-top,0px));background:var(--bg);padding-bottom:10px;z-index:2;display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--line);margin:12px 0}
+.row{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px}
+.row::-webkit-scrollbar{display:none}
+@media (min-width:900px){.row{flex-wrap:wrap;overflow:visible}}
+.chip{flex:none;font:600 .85rem var(--body);padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.chip .n{font-weight:400;opacity:.75;margin-left:4px}
+.meta{display:flex;justify-content:space-between;align-items:center;gap:12px;overflow-x:auto;scrollbar-width:none}
+.meta::-webkit-scrollbar{display:none}
+.meta .row{overflow:visible;flex-wrap:nowrap}
+@media (max-width:600px){.chip{padding:5px 10px}.bar{gap:6px}}
+.count{font-size:.85rem;color:var(--muted)}
+.list{columns:1}
+@media (min-width:1100px){.wrap{max-width:1180px}.list{columns:2;column-gap:12px}}
+section{background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden;break-inside:avoid}
+section h2{font-family:var(--display);font-weight:600;font-size:1.25rem;letter-spacing:.03em;text-transform:uppercase;margin:0;padding:10px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+section h2 span{font-family:var(--body);font-size:.8rem;color:var(--muted);text-transform:none;letter-spacing:0;font-weight:400;white-space:nowrap}
+h3{margin:0;padding:8px 14px 4px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line)}
+section h2+h3{border-top:0}
+ul{list-style:none;margin:0;padding:0}
+li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;padding:8px 14px;align-items:start}
+li.top{background:var(--accent-soft)}
+li.bis{box-shadow:inset 3px 0 0 var(--gold)}
+.name{font-weight:600;min-width:0;overflow-wrap:anywhere}
+.name a{color:inherit;text-decoration:none}
+.name a:hover{text-decoration:underline}
+.type{grid-column:1;color:var(--muted);font-size:.85rem}
+.stats{grid-column:2;grid-row:1 / span 2;display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end;max-width:13rem}
+.stat{font:600 .72rem var(--body);letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:4px;border:1px solid currentColor;white-space:nowrap}
+.stat sup{font-size:.62rem;margin-left:2px;vertical-align:baseline;opacity:.8}
+.r1{color:var(--surface);background:var(--r1);border-color:var(--r1)}
+.r2{color:var(--r2)} .r3{color:var(--r3)} .r4,.r0{color:var(--r4);border-style:dashed}
+.badge{font:600 .68rem var(--body);letter-spacing:.05em;text-transform:uppercase;padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:1px}
+.b-top{background:var(--accent);color:var(--surface)}
+.b-bis{background:var(--gold-soft);color:var(--gold);border:1px solid var(--gold)}
+.note{grid-column:1 / -1;font-size:.8rem;color:var(--muted)}
+.none{color:var(--muted);font-size:.9rem;padding:12px 14px}
+.key{display:flex;flex-wrap:wrap;gap:6px 10px;font-size:.8rem;color:var(--muted);align-items:center}
+footer{color:var(--muted);font-size:.82rem;margin-top:16px}
+footer p{margin:6px 0}
+.err{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 id="title">S2 Gear Farm List</h1>
+  <p class="sub" id="sub">Midnight Season 2 · Mythic+ and raid drops for your spec, ranked by its stat priority</p>
+
+  <div class="pick">
+    <label for="spec">Spec</label>
+    <select id="spec" aria-describedby="prio"></select>
+    <label for="variant" id="variant-label" hidden>Build</label>
+    <select id="variant" hidden></select>
+  </div>
+  <div class="prio" id="prio"></div>
+
+  <div class="bar">
+    <div class="row" role="group" aria-label="Stat pair" id="pairs"></div>
+    <div class="row" role="group" aria-label="Slot" id="slots"></div>
+    <div class="meta">
+      <div class="row" role="group" aria-label="Content" id="sources"></div>
+      <div class="row" role="group" aria-label="Sort" id="sorts"></div>
+    </div>
+    <div class="count" id="count" aria-live="polite"></div>
+  </div>
+
+  <div class="list" id="list"></div>
+
+  <footer id="foot"></footer>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

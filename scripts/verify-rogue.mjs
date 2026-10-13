@@ -42,7 +42,8 @@ for (const e of expected) {
     issues.push(`WRONG INSTANCE: ${e.name} listed under ${e.instance}, API has ${[...new Set(hits.map((h) => h.instance))].join(", ")}`);
     continue;
   }
-  const i = inInstance[0];
+  // Prefer the current re-issue over a legacy Azerite twin with no stats.
+  const i = inInstance.find((h) => h.secondaryStats.length) ?? inInstance[0];
   const bosses = inInstance.map((h) => h.boss);
   if (!bosses.some((b) => norm(b).includes(norm(e.boss)) || norm(e.boss).includes(norm(b))))
     issues.push(`BOSS: ${e.name} listed as ${e.boss}, API has ${bosses.join(" / ")}`);
