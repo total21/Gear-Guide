@@ -2,7 +2,7 @@
   "region": "us",
   "locale": "en_US",
   "season": "Midnight Season 2",
-  "generatedAt": "2026-10-13T19:22:49.227Z",
+  "generatedAt": "2026-10-13T19:48:47.358Z",
   "specs": [
     {
       "id": 250,
@@ -11,9 +11,46 @@
       "role": "TANK",
       "armorType": "Plate",
       "primaryStat": "Strength",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand"
+        ],
+        "types": [
+          "Axe",
+          "Mace",
+          "Sword",
+          "Polearm"
+        ]
+      },
+      "statPriority": [
+        "Haste",
+        "Critical Strike",
+        "Mastery",
+        "Versatility"
+      ],
+      "statPriorityLabel": "San'layn",
+      "statVariants": [
+        {
+          "label": "Deathbringer",
+          "priority": [
+            "Critical Strike",
+            "Mastery",
+            "Versatility",
+            "Haste"
+          ]
+        }
+      ],
+      "statNotes": "San'layn wants Haste up to about 30% unbuffed; Deathbringer avoids Haste.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/blood-death-knight-pve-tank-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -25,9 +62,38 @@
       "role": "DAMAGE",
       "armorType": "Plate",
       "primaryStat": "Strength",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand"
+        ],
+        "types": [
+          "Axe",
+          "Mace",
+          "Sword",
+          "Polearm"
+        ]
+      },
+      "statPriority": [
+        "Critical Strike",
+        "Haste",
+        "Mastery",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Deathbringer values Haste slightly lower.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/frost-death-knight-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -39,9 +105,36 @@
       "role": "DAMAGE",
       "armorType": "Plate",
       "primaryStat": "Strength",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand"
+        ],
+        "types": [
+          "Axe",
+          "Mace",
+          "Sword",
+          "Polearm"
+        ]
+      },
+      "statPriority": [
+        "Critical Strike",
+        "Mastery",
+        "Haste",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Crit, Mastery and Haste are well ahead of Versatility.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/unholy-death-knight-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -53,9 +146,47 @@
       "role": "DAMAGE",
       "armorType": "Leather",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "One-Hand",
+          "Main Hand"
+        ],
+        "types": [
+          "Warglaives",
+          "Axe",
+          "Sword",
+          "Fist Weapon"
+        ]
+      },
+      "statPriority": [
+        "Haste",
+        "Mastery",
+        "Critical Strike",
+        "Versatility"
+      ],
+      "statPriorityLabel": "Annihilator",
+      "statVariants": [
+        {
+          "label": "Void-Scarred",
+          "priority": [
+            "Haste",
+            "Critical Strike",
+            "Mastery",
+            "Versatility"
+          ]
+        }
+      ],
+      "statNotes": "Annihilator: Mastery overtakes Haste in AoE. Void-Scarred: about 800 Haste (17-20%), then split Crit and Mastery evenly.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/devourer-demon-hunter-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -67,9 +198,37 @@
       "role": "DAMAGE",
       "armorType": "Leather",
       "primaryStat": "Agility",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "One-Hand",
+          "Main Hand"
+        ],
+        "types": [
+          "Warglaives",
+          "Axe",
+          "Sword",
+          "Fist Weapon"
+        ]
+      },
+      "statPriority": [
+        "Critical Strike",
+        "Mastery",
+        "Haste",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Crit and Mastery are close.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/havoc-demon-hunter-pve-dps-stat-priority",
+        "patch": "12.1.5",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -81,9 +240,37 @@
       "role": "TANK",
       "armorType": "Leather",
       "primaryStat": "Agility",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "One-Hand",
+          "Main Hand"
+        ],
+        "types": [
+          "Warglaives",
+          "Axe",
+          "Sword",
+          "Fist Weapon"
+        ]
+      },
+      "statPriority": [
+        "Haste",
+        "Mastery",
+        "Versatility",
+        "Critical Strike"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Haste on most items, then a balance of the rest.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/vengeance-demon-hunter-pve-tank-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -95,9 +282,37 @@
       "role": "DAMAGE",
       "armorType": "Leather",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Held In Off-hand"
+        ],
+        "types": [
+          "Staff",
+          "Polearm",
+          "Mace",
+          "Dagger",
+          "Fist Weapon"
+        ]
+      },
+      "statPriority": [
+        "Mastery"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Partial: the page names Mastery the best secondary for both hero trees, but the full 12.1 order could not be confirmed (the page could not be opened directly). Other stats are unranked.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/balance-druid-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -109,9 +324,45 @@
       "role": "DAMAGE",
       "armorType": "Leather",
       "primaryStat": "Agility",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand"
+        ],
+        "types": [
+          "Staff",
+          "Polearm",
+          "Mace"
+        ]
+      },
+      "statPriority": [
+        "Mastery",
+        "Haste",
+        "Critical Strike",
+        "Versatility"
+      ],
+      "statPriorityLabel": "Single target",
+      "statVariants": [
+        {
+          "label": "AoE",
+          "priority": [
+            "Mastery",
+            "Critical Strike",
+            "Haste",
+            "Versatility"
+          ]
+        }
+      ],
+      "statNotes": "Mastery, Haste and Crit are close; keep Versatility low.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/feral-druid-pve-dps-stat-priority",
+        "patch": "12.1.5",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -123,9 +374,45 @@
       "role": "TANK",
       "armorType": "Leather",
       "primaryStat": "Agility",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand"
+        ],
+        "types": [
+          "Staff",
+          "Polearm",
+          "Mace"
+        ]
+      },
+      "statPriority": [
+        "Haste",
+        "Versatility",
+        "Mastery",
+        "Critical Strike"
+      ],
+      "statPriorityLabel": "Survivability",
+      "statVariants": [
+        {
+          "label": "Damage",
+          "priority": [
+            "Haste",
+            "Versatility",
+            "Critical Strike",
+            "Mastery"
+          ]
+        }
+      ],
+      "statNotes": "All secondaries are close; item level first.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/guardian-druid-pve-tank-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -137,9 +424,50 @@
       "role": "HEALER",
       "armorType": "Leather",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Held In Off-hand"
+        ],
+        "types": [
+          "Staff",
+          "Polearm",
+          "Mace",
+          "Dagger",
+          "Fist Weapon"
+        ]
+      },
+      "statPriority": [
+        "Haste",
+        "Mastery",
+        "Versatility",
+        "Critical Strike"
+      ],
+      "statPriorityLabel": "Raid",
+      "statVariants": [
+        {
+          "label": "Mythic+",
+          "priority": [
+            "Mastery",
+            "Haste",
+            "Versatility",
+            "Critical Strike"
+          ]
+        }
+      ],
+      "statNotes": null,
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/restoration-druid-pve-healing-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -151,9 +479,41 @@
       "role": "DAMAGE",
       "armorType": "Mail",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Held In Off-hand"
+        ],
+        "types": [
+          "Axe",
+          "Mace",
+          "Sword",
+          "Dagger",
+          "Fist Weapon",
+          "Staff"
+        ]
+      },
+      "statPriority": [
+        "Mastery",
+        "Critical Strike",
+        "Haste",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Crit edges Haste for Chronowarden; roughly equal for Scalecommander.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/augmentation-evoker-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -165,9 +525,41 @@
       "role": "DAMAGE",
       "armorType": "Mail",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Held In Off-hand"
+        ],
+        "types": [
+          "Axe",
+          "Mace",
+          "Sword",
+          "Dagger",
+          "Fist Weapon",
+          "Staff"
+        ]
+      },
+      "statPriority": [
+        "Critical Strike",
+        "Haste",
+        "Mastery",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "No hard Haste breakpoints; avoid Versatility.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/devastation-evoker-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -179,9 +571,41 @@
       "role": "HEALER",
       "armorType": "Mail",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Held In Off-hand"
+        ],
+        "types": [
+          "Axe",
+          "Mace",
+          "Sword",
+          "Dagger",
+          "Fist Weapon",
+          "Staff"
+        ]
+      },
+      "statPriority": [
+        "Mastery",
+        "Critical Strike",
+        "Haste",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Same order for Chronowarden and Flameshaper.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/preservation-evoker-pve-healing-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -193,9 +617,45 @@
       "role": "DAMAGE",
       "armorType": "Mail",
       "primaryStat": "Agility",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Ranged"
+        ],
+        "types": [
+          "Bow",
+          "Gun",
+          "Crossbow"
+        ]
+      },
+      "statPriority": [
+        "Mastery",
+        "Haste",
+        "Critical Strike",
+        "Versatility"
+      ],
+      "statPriorityLabel": "Single target",
+      "statVariants": [
+        {
+          "label": "Mythic+",
+          "priority": [
+            "Mastery",
+            "Critical Strike",
+            "Versatility",
+            "Haste"
+          ]
+        }
+      ],
+      "statNotes": "Haste does nothing in AoE.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/beast-mastery-hunter-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -207,9 +667,35 @@
       "role": "DAMAGE",
       "armorType": "Mail",
       "primaryStat": "Agility",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Ranged"
+        ],
+        "types": [
+          "Bow",
+          "Gun",
+          "Crossbow"
+        ]
+      },
+      "statPriority": [
+        "Critical Strike",
+        "Mastery",
+        "Versatility",
+        "Haste"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Haste is the worst stat by some margin.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/marksmanship-hunter-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -221,9 +707,36 @@
       "role": "DAMAGE",
       "armorType": "Mail",
       "primaryStat": "Agility",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand"
+        ],
+        "types": [
+          "Polearm",
+          "Staff",
+          "Axe",
+          "Sword"
+        ]
+      },
+      "statPriority": [
+        "Mastery",
+        "Critical Strike",
+        "Haste",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Crit and Haste are interchangeable.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/survival-hunter-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -235,9 +748,40 @@
       "role": "DAMAGE",
       "armorType": "Cloth",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Held In Off-hand",
+          "Ranged"
+        ],
+        "types": [
+          "Staff",
+          "Dagger",
+          "Sword",
+          "Wand"
+        ]
+      },
+      "statPriority": [
+        "Haste",
+        "Critical Strike",
+        "Mastery",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "All secondaries are very close.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/arcane-mage-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -249,9 +793,40 @@
       "role": "DAMAGE",
       "armorType": "Cloth",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Held In Off-hand",
+          "Ranged"
+        ],
+        "types": [
+          "Staff",
+          "Dagger",
+          "Sword",
+          "Wand"
+        ]
+      },
+      "statPriority": [
+        "Haste",
+        "Mastery",
+        "Versatility",
+        "Critical Strike"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Crit is usually the worst stat.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/fire-mage-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -263,9 +838,40 @@
       "role": "DAMAGE",
       "armorType": "Cloth",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Held In Off-hand",
+          "Ranged"
+        ],
+        "types": [
+          "Staff",
+          "Dagger",
+          "Sword",
+          "Wand"
+        ]
+      },
+      "statPriority": [
+        "Mastery",
+        "Critical Strike",
+        "Haste",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Haste, Crit and Mastery even out as gear improves.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/frost-mage-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -277,9 +883,50 @@
       "role": "TANK",
       "armorType": "Leather",
       "primaryStat": "Agility",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand"
+        ],
+        "types": [
+          "Staff",
+          "Polearm",
+          "Fist Weapon",
+          "Axe",
+          "Mace",
+          "Sword"
+        ]
+      },
+      "statPriority": [
+        "Critical Strike",
+        "Versatility",
+        "Mastery",
+        "Haste"
+      ],
+      "statPriorityLabel": "Defensive",
+      "statVariants": [
+        {
+          "label": "Offensive",
+          "priority": [
+            "Critical Strike",
+            "Mastery",
+            "Versatility",
+            "Haste"
+          ]
+        }
+      ],
+      "statNotes": null,
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/brewmaster-monk-pve-tank-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -291,9 +938,51 @@
       "role": "HEALER",
       "armorType": "Leather",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Held In Off-hand"
+        ],
+        "types": [
+          "Staff",
+          "Polearm",
+          "Fist Weapon",
+          "Axe",
+          "Mace",
+          "Sword"
+        ]
+      },
+      "statPriority": [
+        "Haste",
+        "Critical Strike",
+        "Versatility",
+        "Mastery"
+      ],
+      "statPriorityLabel": "Raid",
+      "statVariants": [
+        {
+          "label": "Mythic+",
+          "priority": [
+            "Haste",
+            "Mastery",
+            "Critical Strike",
+            "Versatility"
+          ]
+        }
+      ],
+      "statNotes": null,
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/mistweaver-monk-pve-healing-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -305,9 +994,40 @@
       "role": "DAMAGE",
       "armorType": "Leather",
       "primaryStat": "Agility",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand"
+        ],
+        "types": [
+          "Staff",
+          "Polearm",
+          "Fist Weapon",
+          "Axe",
+          "Mace",
+          "Sword"
+        ]
+      },
+      "statPriority": [
+        "Haste",
+        "Critical Strike",
+        "Mastery",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Haste, Crit and Mastery are very close.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/windwalker-monk-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -319,9 +1039,50 @@
       "role": "HEALER",
       "armorType": "Plate",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Off Hand",
+          "Held In Off-hand"
+        ],
+        "types": [
+          "Axe",
+          "Mace",
+          "Sword",
+          "Polearm"
+        ]
+      },
+      "statPriority": [
+        "Mastery",
+        "Haste",
+        "Critical Strike",
+        "Versatility"
+      ],
+      "statPriorityLabel": "Herald of the Sun / Mythic+",
+      "statVariants": [
+        {
+          "label": "Lightsmith",
+          "priority": [
+            "Mastery",
+            "Critical Strike",
+            "Haste",
+            "Versatility"
+          ]
+        }
+      ],
+      "statNotes": null,
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/holy-paladin-pve-healing-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -333,9 +1094,47 @@
       "role": "TANK",
       "armorType": "Plate",
       "primaryStat": "Strength",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "One-Hand",
+          "Main Hand",
+          "Off Hand"
+        ],
+        "types": [
+          "Axe",
+          "Mace",
+          "Sword"
+        ]
+      },
+      "statPriority": [
+        "Haste",
+        "Versatility",
+        "Mastery",
+        "Critical Strike"
+      ],
+      "statPriorityLabel": "Defensive",
+      "statVariants": [
+        {
+          "label": "Offensive",
+          "priority": [
+            "Haste",
+            "Critical Strike",
+            "Versatility",
+            "Mastery"
+          ]
+        }
+      ],
+      "statNotes": "All secondaries are close; item level matters more.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/protection-paladin-pve-tank-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -347,9 +1146,36 @@
       "role": "DAMAGE",
       "armorType": "Plate",
       "primaryStat": "Strength",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand"
+        ],
+        "types": [
+          "Axe",
+          "Mace",
+          "Sword",
+          "Polearm"
+        ]
+      },
+      "statPriority": [
+        "Mastery",
+        "Haste",
+        "Critical Strike",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": null,
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/retribution-paladin-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -361,9 +1187,40 @@
       "role": "HEALER",
       "armorType": "Cloth",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Held In Off-hand",
+          "Ranged"
+        ],
+        "types": [
+          "Staff",
+          "Dagger",
+          "Mace",
+          "Wand"
+        ]
+      },
+      "statPriority": [
+        "Haste",
+        "Mastery",
+        "Critical Strike",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Voidweaver caps Haste at about 1800 rating; Oracle has no cap.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/discipline-priest-pve-healing-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -375,9 +1232,50 @@
       "role": "HEALER",
       "armorType": "Cloth",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Held In Off-hand",
+          "Ranged"
+        ],
+        "types": [
+          "Staff",
+          "Dagger",
+          "Mace",
+          "Wand"
+        ]
+      },
+      "statPriority": [
+        "Critical Strike",
+        "Mastery",
+        "Versatility",
+        "Haste"
+      ],
+      "statPriorityLabel": "Raid",
+      "statVariants": [
+        {
+          "label": "Mythic+",
+          "priority": [
+            "Critical Strike",
+            "Versatility",
+            "Haste",
+            "Mastery"
+          ]
+        }
+      ],
+      "statNotes": null,
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/holy-priest-pve-healing-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -389,9 +1287,50 @@
       "role": "DAMAGE",
       "armorType": "Cloth",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Held In Off-hand",
+          "Ranged"
+        ],
+        "types": [
+          "Staff",
+          "Dagger",
+          "Mace",
+          "Wand"
+        ]
+      },
+      "statPriority": [
+        "Mastery",
+        "Haste",
+        "Critical Strike",
+        "Versatility"
+      ],
+      "statPriorityLabel": "Single target",
+      "statVariants": [
+        {
+          "label": "Voidweaver",
+          "priority": [
+            "Haste",
+            "Mastery",
+            "Critical Strike",
+            "Versatility"
+          ]
+        }
+      ],
+      "statNotes": "Voidweaver generally favors Haste over Mastery; Archon keeps them close.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/shadow-priest-pve-dps-stat-priority",
+        "patch": "12.1.5",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -403,9 +1342,38 @@
       "role": "DAMAGE",
       "armorType": "Leather",
       "primaryStat": "Agility",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "One-Hand",
+          "Main Hand"
+        ],
+        "types": [
+          "Dagger",
+          "Fist Weapon",
+          "Axe",
+          "Mace",
+          "Sword"
+        ]
+      },
+      "statPriority": [
+        "Critical Strike",
+        "Haste",
+        "Mastery",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "All but Versatility are very close.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/assassination-rogue-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -417,9 +1385,38 @@
       "role": "DAMAGE",
       "armorType": "Leather",
       "primaryStat": "Agility",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "One-Hand",
+          "Main Hand"
+        ],
+        "types": [
+          "Dagger",
+          "Fist Weapon",
+          "Axe",
+          "Mace",
+          "Sword"
+        ]
+      },
+      "statPriority": [
+        "Critical Strike",
+        "Haste",
+        "Versatility",
+        "Mastery"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Crit to about 40%, Haste 25-30%.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/outlaw-rogue-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -431,9 +1428,38 @@
       "role": "DAMAGE",
       "armorType": "Leather",
       "primaryStat": "Agility",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "One-Hand",
+          "Main Hand"
+        ],
+        "types": [
+          "Dagger",
+          "Fist Weapon",
+          "Axe",
+          "Mace",
+          "Sword"
+        ]
+      },
+      "statPriority": [
+        "Mastery",
+        "Haste",
+        "Versatility",
+        "Critical Strike"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Haste to roughly 700-1,100 rating.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/subtlety-rogue-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -445,9 +1471,41 @@
       "role": "DAMAGE",
       "armorType": "Mail",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Off Hand",
+          "Held In Off-hand"
+        ],
+        "types": [
+          "Staff",
+          "Axe",
+          "Mace",
+          "Dagger",
+          "Fist Weapon"
+        ]
+      },
+      "statPriority": [
+        "Mastery",
+        "Haste",
+        "Critical Strike",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": null,
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/elemental-shaman-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -459,9 +1517,47 @@
       "role": "DAMAGE",
       "armorType": "Mail",
       "primaryStat": "Agility",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "One-Hand",
+          "Main Hand"
+        ],
+        "types": [
+          "Axe",
+          "Mace",
+          "Fist Weapon",
+          "Dagger"
+        ]
+      },
+      "statPriority": [
+        "Mastery",
+        "Critical Strike",
+        "Haste",
+        "Versatility"
+      ],
+      "statPriorityLabel": "Stormbringer",
+      "statVariants": [
+        {
+          "label": "Totemic",
+          "priority": [
+            "Mastery",
+            "Haste",
+            "Critical Strike",
+            "Versatility"
+          ]
+        }
+      ],
+      "statNotes": "Stormbringer needs a floor of roughly 15-20% Haste.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/enhancement-shaman-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -473,9 +1569,41 @@
       "role": "HEALER",
       "armorType": "Mail",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Off Hand",
+          "Held In Off-hand"
+        ],
+        "types": [
+          "Staff",
+          "Axe",
+          "Mace",
+          "Dagger",
+          "Fist Weapon"
+        ]
+      },
+      "statPriority": [
+        "Critical Strike",
+        "Versatility",
+        "Haste",
+        "Mastery"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Value Mastery higher for progression raiding and high Mythic+.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/restoration-shaman-pve-healing-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -487,9 +1615,40 @@
       "role": "DAMAGE",
       "armorType": "Cloth",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Held In Off-hand",
+          "Ranged"
+        ],
+        "types": [
+          "Staff",
+          "Dagger",
+          "Sword",
+          "Wand"
+        ]
+      },
+      "statPriority": [
+        "Haste",
+        "Critical Strike",
+        "Mastery",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": null,
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/affliction-warlock-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -501,9 +1660,40 @@
       "role": "DAMAGE",
       "armorType": "Cloth",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Held In Off-hand",
+          "Ranged"
+        ],
+        "types": [
+          "Staff",
+          "Dagger",
+          "Sword",
+          "Wand"
+        ]
+      },
+      "statPriority": [
+        "Haste",
+        "Critical Strike",
+        "Mastery",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Haste to 22% first, then Crit, Mastery, more Haste, Versatility.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/demonology-warlock-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -515,9 +1705,40 @@
       "role": "DAMAGE",
       "armorType": "Cloth",
       "primaryStat": "Intellect",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand",
+          "Held In Off-hand",
+          "Ranged"
+        ],
+        "types": [
+          "Staff",
+          "Dagger",
+          "Sword",
+          "Wand"
+        ]
+      },
+      "statPriority": [
+        "Haste",
+        "Critical Strike",
+        "Mastery",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Haste to 22% first, then Crit, Mastery, more Haste, Versatility.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/destruction-warlock-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -529,9 +1750,37 @@
       "role": "DAMAGE",
       "armorType": "Plate",
       "primaryStat": "Strength",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand"
+        ],
+        "types": [
+          "Axe",
+          "Mace",
+          "Sword",
+          "Polearm",
+          "Staff"
+        ]
+      },
+      "statPriority": [
+        "Critical Strike",
+        "Haste",
+        "Mastery",
+        "Versatility"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": null,
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/arms-warrior-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -543,9 +1792,39 @@
       "role": "DAMAGE",
       "armorType": "Plate",
       "primaryStat": "Strength",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand"
+        ],
+        "types": [
+          "Axe",
+          "Mace",
+          "Sword",
+          "Dagger",
+          "Fist Weapon"
+        ]
+      },
+      "statPriority": [
+        "Mastery",
+        "Haste",
+        "Versatility",
+        "Critical Strike"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": null,
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/fury-warrior-pve-dps-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }
@@ -557,9 +1836,39 @@
       "role": "TANK",
       "armorType": "Plate",
       "primaryStat": "Strength",
-      "statPriority": [],
+      "weapons": {
+        "slots": [
+          "One-Hand",
+          "Main Hand",
+          "Off Hand"
+        ],
+        "types": [
+          "Axe",
+          "Mace",
+          "Sword",
+          "Dagger",
+          "Fist Weapon"
+        ]
+      },
+      "statPriority": [
+        "Haste",
+        "Critical Strike",
+        "Versatility",
+        "Mastery"
+      ],
+      "statPriorityLabel": null,
+      "statVariants": [],
+      "statNotes": "Crit and Versatility roughly equal.",
+      "statSource": {
+        "site": "Icy Veins",
+        "url": "https://www.icy-veins.com/wow/protection-warrior-pve-tank-stat-priority",
+        "patch": "12.1",
+        "checked": "2026-10-13",
+        "via": "web search (site not reachable from the build environment)"
+      },
       "bis": {
         "source": null,
+        "url": null,
         "date": null,
         "items": []
       }

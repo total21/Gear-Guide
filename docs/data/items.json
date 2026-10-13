@@ -1,0 +1,6956 @@
+{
+  "region": "us",
+  "locale": "en_US",
+  "season": "Midnight Season 2",
+  "generatedAt": "2026-10-13T19:21:38.308Z",
+  "items": [
+    {
+      "id": 273796,
+      "name": "Vile Vial of Volatile Venom",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "Rav'i",
+      "encounterId": 2878,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273795,
+      "name": "Coiled Fangstone",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "Rav'i",
+      "encounterId": 2878,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273785,
+      "name": "Primordial Robe of Rites",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "Rav'i",
+      "encounterId": 2878,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273775,
+      "name": "Hydra Scale Wristguards",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "Rav'i",
+      "encounterId": 2878,
+      "slot": "Wrist",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273777,
+      "name": "Poison-Proof Stompers",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "Rav'i",
+      "encounterId": 2878,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273780,
+      "name": "Venom-Etched Crescent",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "Rav'i",
+      "encounterId": 2878,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Axe",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273793,
+      "name": "Hydraspine Twinblade",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "Rav'i",
+      "encounterId": 2878,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Warglaives",
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273781,
+      "name": "Strand of Warding Fangs",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "The Writhing Coil",
+      "encounterId": 2879,
+      "slot": "Neck",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273794,
+      "name": "Knot of Writhing Serpents",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "The Writhing Coil",
+      "encounterId": 2879,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273786,
+      "name": "Leggings of Entwined Serpents",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "The Writhing Coil",
+      "encounterId": 2879,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273774,
+      "name": "Snakeskin Spaulders",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "The Writhing Coil",
+      "encounterId": 2879,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273787,
+      "name": "Aged Interwoven Scaleplate",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "The Writhing Coil",
+      "encounterId": 2879,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273782,
+      "name": "Vile Writhefang Glaive",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "The Writhing Coil",
+      "encounterId": 2879,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Polearm",
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273783,
+      "name": "Toxin-Coated Warstaff",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "The Writhing Coil",
+      "encounterId": 2879,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Staff",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273779,
+      "name": "Nocuous Focal Fang",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "The Writhing Coil",
+      "encounterId": 2879,
+      "slot": "Held In Off-hand",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273792,
+      "name": "Band of the Amani Warlord",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "Zul'jan",
+      "encounterId": 2880,
+      "slot": "Finger",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273797,
+      "name": "Tattered Amani War Banner",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "Zul'jan",
+      "encounterId": 2880,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273773,
+      "name": "Handwraps of Blasphemous Rites",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "Zul'jan",
+      "encounterId": 2880,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273791,
+      "name": "Spare Speaker's Hood",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "Zul'jan",
+      "encounterId": 2880,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273789,
+      "name": "Chestguard of Corroded Scales",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "Zul'jan",
+      "encounterId": 2880,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273776,
+      "name": "Ancient General's Obsidian Pillars",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "Zul'jan",
+      "encounterId": 2880,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273778,
+      "name": "Polished Lightwood Channeler",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "Zul'jan",
+      "encounterId": 2880,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Dagger",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273784,
+      "name": "Ancestral Amani Recurve",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "Zul'jan",
+      "encounterId": 2880,
+      "slot": "Ranged",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Bow",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 275070,
+      "name": "Sharpened Lightwood Slasher",
+      "instance": "Altar of Fangs",
+      "instanceId": 1322,
+      "instanceType": "DUNGEON",
+      "boss": "Zul'jan",
+      "encounterId": 2880,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Dagger",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 250243,
+      "name": "Manaheart's Binding Flame",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Kystia Manaheart",
+      "encounterId": 2679,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251127,
+      "name": "Nibbling Armbands",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Kystia Manaheart",
+      "encounterId": 2679,
+      "slot": "Wrist",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251124,
+      "name": "Gauntlets of Fevered Defense",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Kystia Manaheart",
+      "encounterId": 2679,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251125,
+      "name": "Felsoaked Soles",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Kystia Manaheart",
+      "encounterId": 2679,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251126,
+      "name": "Greathelm of Temptation",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Kystia Manaheart",
+      "encounterId": 2679,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251123,
+      "name": "Nibbles' Training Rod",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Kystia Manaheart",
+      "encounterId": 2679,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Staff",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 271680,
+      "name": "Sinseared Repeater",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Kystia Manaheart",
+      "encounterId": 2679,
+      "slot": "Ranged",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Gun",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 250215,
+      "name": "Freightrunner's Flask",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Zaen Bladesorrow",
+      "encounterId": 2680,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251129,
+      "name": "Counterfeit Clutches",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Zaen Bladesorrow",
+      "encounterId": 2680,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251132,
+      "name": "Speakeasy Shroud",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Zaen Bladesorrow",
+      "encounterId": 2680,
+      "slot": "Back",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251130,
+      "name": "Breeches of Deft Deals",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Zaen Bladesorrow",
+      "encounterId": 2680,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251131,
+      "name": "Jangling Felpaulets",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Zaen Bladesorrow",
+      "encounterId": 2680,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251133,
+      "name": "Overseer's Vambraces",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Zaen Bladesorrow",
+      "encounterId": 2680,
+      "slot": "Wrist",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251128,
+      "name": "Bladesorrow",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Zaen Bladesorrow",
+      "encounterId": 2680,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Dagger",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 250228,
+      "name": "Resonant Bellowstone",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Xathuux the Annihilator",
+      "encounterId": 2681,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251136,
+      "name": "Signet of Snarling Servitude",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Xathuux the Annihilator",
+      "encounterId": 2681,
+      "slot": "Finger",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251137,
+      "name": "Tempestuous Sandals",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Xathuux the Annihilator",
+      "encounterId": 2681,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251135,
+      "name": "Fury-fletched Armlets",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Xathuux the Annihilator",
+      "encounterId": 2681,
+      "slot": "Wrist",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251134,
+      "name": "Xathuux's Cleave",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Xathuux the Annihilator",
+      "encounterId": 2681,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Axe",
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 250255,
+      "name": "Unstable Felheart Crystal",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Lithiel Cinderfury",
+      "encounterId": 2682,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251142,
+      "name": "Pendant of Malefic Fury",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Lithiel Cinderfury",
+      "encounterId": 2682,
+      "slot": "Neck",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251139,
+      "name": "Summoner's Searing Shirt",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Lithiel Cinderfury",
+      "encounterId": 2682,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251140,
+      "name": "Vilefiend's Guise",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Lithiel Cinderfury",
+      "encounterId": 2682,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251141,
+      "name": "Lithiel's Linked Leggings",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Lithiel Cinderfury",
+      "encounterId": 2682,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251138,
+      "name": "Cinderfury Shoulderguards",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Lithiel Cinderfury",
+      "encounterId": 2682,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 258045,
+      "name": "Dawnblade's Glaives",
+      "instance": "Murder Row",
+      "instanceId": 1304,
+      "instanceType": "DUNGEON",
+      "boss": "Lithiel Cinderfury",
+      "encounterId": 2682,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Warglaives",
+      "primaryStats": [],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "no-stats-in-api"
+      ]
+    },
+    {
+      "id": 250248,
+      "name": "Mycolic Medicine",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "The Hoardmonger",
+      "encounterId": 2776,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251148,
+      "name": "Pilfered Precious Band",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "The Hoardmonger",
+      "encounterId": 2776,
+      "slot": "Finger",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251147,
+      "name": "Hoarded Harvest Wrap",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "The Hoardmonger",
+      "encounterId": 2776,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251146,
+      "name": "Scavenger's Spaulders",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "The Hoardmonger",
+      "encounterId": 2776,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251145,
+      "name": "Forgotten Tribe Footguards",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "The Hoardmonger",
+      "encounterId": 2776,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251144,
+      "name": "Autumn's Boon Belt",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "The Hoardmonger",
+      "encounterId": 2776,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251143,
+      "name": "Grim Harvest Gloves",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "The Hoardmonger",
+      "encounterId": 2776,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Fist Weapon",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251154,
+      "name": "Winter's Embrace Bracers",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "Sentinel of Winter",
+      "encounterId": 2777,
+      "slot": "Wrist",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251153,
+      "name": "Arctic Explorer's Legwraps",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "Sentinel of Winter",
+      "encounterId": 2777,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251152,
+      "name": "Season's Turn Gauntlets",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "Sentinel of Winter",
+      "encounterId": 2777,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251155,
+      "name": "Tribal Defender's Cord",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "Sentinel of Winter",
+      "encounterId": 2777,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251151,
+      "name": "Sentinel Challenger's Prize",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "Sentinel of Winter",
+      "encounterId": 2777,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251150,
+      "name": "Tempest's Shelter",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "Sentinel of Winter",
+      "encounterId": 2777,
+      "slot": "Off Hand",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251149,
+      "name": "Victor's Flashfrozen Blade",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "Sentinel of Winter",
+      "encounterId": 2777,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Polearm",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 250244,
+      "name": "Permafrost Essence",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "Sentinel of Winter",
+      "encounterId": 2777,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "no-stats-in-api"
+      ]
+    },
+    {
+      "id": 271681,
+      "name": "Perennial Frostbound Charm",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "Sentinel of Winter",
+      "encounterId": 2777,
+      "slot": "Held In Off-hand",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251160,
+      "name": "Forest Dream Leg-guards",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "Nalorakk",
+      "encounterId": 2778,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 250229,
+      "name": "Idol of the War Loa",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "Nalorakk",
+      "encounterId": 2778,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Critical Strike"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251159,
+      "name": "War Trial Vestments",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "Nalorakk",
+      "encounterId": 2778,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251158,
+      "name": "Nalorakk's Nightmare",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "Nalorakk",
+      "encounterId": 2778,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251156,
+      "name": "Fallen Speaker's Staff",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "Nalorakk",
+      "encounterId": 2778,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Staff",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251173,
+      "name": "Yoke of the Charging Bear",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "Nalorakk",
+      "encounterId": 2778,
+      "slot": "Neck",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251214,
+      "name": "Bonds of the Hash'ura",
+      "instance": "Den of Nalorakk",
+      "instanceId": 1311,
+      "instanceType": "DUNGEON",
+      "boss": "Nalorakk",
+      "encounterId": 2778,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251185,
+      "name": "Lightblossom Cinch",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Lightblossom Trinity",
+      "encounterId": 2769,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251183,
+      "name": "Rootwarden Wraps",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Lightblossom Trinity",
+      "encounterId": 2769,
+      "slot": "Wrist",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251184,
+      "name": "Ironroot Collar",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Lightblossom Trinity",
+      "encounterId": 2769,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251182,
+      "name": "Bedrock Breeches",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Lightblossom Trinity",
+      "encounterId": 2769,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251180,
+      "name": "Thornblade",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Lightblossom Trinity",
+      "encounterId": 2769,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Dagger",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251181,
+      "name": "Pruning Lance",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Lightblossom Trinity",
+      "encounterId": 2769,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Polearm",
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 250254,
+      "name": "Seed of Radiant Hope",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Lightblossom Trinity",
+      "encounterId": 2769,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251190,
+      "name": "Bloodthorn Burnous",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Ikuzz the Light Hunter",
+      "encounterId": 2770,
+      "slot": "Back",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251189,
+      "name": "Rootwalker Harness",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Ikuzz the Light Hunter",
+      "encounterId": 2770,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251187,
+      "name": "Amirdrassil's Reach",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Ikuzz the Light Hunter",
+      "encounterId": 2770,
+      "slot": "Ranged",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Crossbow",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251186,
+      "name": "Thorntalon Edge",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Ikuzz the Light Hunter",
+      "encounterId": 2770,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Fist Weapon",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251188,
+      "name": "Doompetal",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Ikuzz the Light Hunter",
+      "encounterId": 2770,
+      "slot": "Ranged",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Wand",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 250238,
+      "name": "Seed of the Devouring Wild",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Ikuzz the Light Hunter",
+      "encounterId": 2770,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 250214,
+      "name": "Lightspire Core",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Lightwarden Ruia",
+      "encounterId": 2771,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251194,
+      "name": "Lightwarden's Bind",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Lightwarden Ruia",
+      "encounterId": 2771,
+      "slot": "Finger",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251191,
+      "name": "Luminescent Sprout",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Lightwarden Ruia",
+      "encounterId": 2771,
+      "slot": "Held In Off-hand",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251193,
+      "name": "Taproot Ribs",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Lightwarden Ruia",
+      "encounterId": 2771,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251192,
+      "name": "Branch of Pride",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Lightwarden Ruia",
+      "encounterId": 2771,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Staff",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251165,
+      "name": "Pulverizing Pads",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Lightwarden Ruia",
+      "encounterId": 2771,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251199,
+      "name": "Worldroot Canopy",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Ziekket",
+      "encounterId": 2772,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251198,
+      "name": "Lightspore Leggings",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Ziekket",
+      "encounterId": 2772,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251200,
+      "name": "Saptorbane Guards",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Ziekket",
+      "encounterId": 2772,
+      "slot": "Wrist",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251197,
+      "name": "Thornspike Gauntlets",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Ziekket",
+      "encounterId": 2772,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251196,
+      "name": "Teldrassil's Sacrifice",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Ziekket",
+      "encounterId": 2772,
+      "slot": "Off Hand",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251195,
+      "name": "Thorned Reply",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Ziekket",
+      "encounterId": 2772,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Sword",
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 250259,
+      "name": "Sapling of the Dawnroot",
+      "instance": "The Blinding Vale",
+      "instanceId": 1309,
+      "instanceType": "DUNGEON",
+      "boss": "Ziekket",
+      "encounterId": 2772,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 250225,
+      "name": "Void Execution Mandate",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Taz'Rah",
+      "encounterId": 2791,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251219,
+      "name": "Riftworn Stompers",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Taz'Rah",
+      "encounterId": 2791,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251222,
+      "name": "Ethereal Netherwrap",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Taz'Rah",
+      "encounterId": 2791,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251223,
+      "name": "Somber Spaulders",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Taz'Rah",
+      "encounterId": 2791,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251220,
+      "name": "Voidscarred Crown",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Taz'Rah",
+      "encounterId": 2791,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251221,
+      "name": "Despondent's Gauntlets",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Taz'Rah",
+      "encounterId": 2791,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251218,
+      "name": "Taz'Rah's Cosmic Edge",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Taz'Rah",
+      "encounterId": 2791,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Sword",
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 250245,
+      "name": "Tumor of the Swarm",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Atroxus",
+      "encounterId": 2792,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251227,
+      "name": "Poisoner's Pauldrons",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Atroxus",
+      "encounterId": 2792,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251226,
+      "name": "Hide of Pestilence",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Atroxus",
+      "encounterId": 2792,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251228,
+      "name": "Behemoth Waistband",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Atroxus",
+      "encounterId": 2792,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251229,
+      "name": "Visor of the Predator",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Atroxus",
+      "encounterId": 2792,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251225,
+      "name": "Fang of Contagion",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Atroxus",
+      "encounterId": 2792,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Dagger",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251224,
+      "name": "Hulking Handaxe",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Atroxus",
+      "encounterId": 2792,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Axe",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 252258,
+      "name": "Sickening Signet of Atroxus",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Atroxus",
+      "encounterId": 2792,
+      "slot": "Finger",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 250224,
+      "name": "Mindpiercer's Sigil",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Charonus",
+      "encounterId": 2793,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "no-stats-in-api"
+      ]
+    },
+    {
+      "id": 251234,
+      "name": "Graft of the Domanaar",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Charonus",
+      "encounterId": 2793,
+      "slot": "Neck",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251232,
+      "name": "Overseer's Diadem",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Charonus",
+      "encounterId": 2793,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251235,
+      "name": "Gravitic Girdle",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Charonus",
+      "encounterId": 2793,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251233,
+      "name": "Manipulator's Vest",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Charonus",
+      "encounterId": 2793,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251230,
+      "name": "Charonic Crescent",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Charonus",
+      "encounterId": 2793,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Polearm",
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 251231,
+      "name": "Singularity Slicer",
+      "instance": "Voidscar Arena",
+      "instanceId": 1313,
+      "instanceType": "DUNGEON",
+      "boss": "Charonus",
+      "encounterId": 2793,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Warglaives",
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193759,
+      "name": "Egg Tender's Leggings",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Melidrussa Chillworn",
+      "encounterId": 2488,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193758,
+      "name": "Subjugator's Chilling Grips",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Melidrussa Chillworn",
+      "encounterId": 2488,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193761,
+      "name": "Chillworn's Infusion Staff",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Melidrussa Chillworn",
+      "encounterId": 2488,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Staff",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193757,
+      "name": "Ruby Whelp Shell",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Melidrussa Chillworn",
+      "encounterId": 2488,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193728,
+      "name": "Scaleguard's Stalwart Greatboots",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Melidrussa Chillworn",
+      "encounterId": 2488,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193762,
+      "name": "Blazebinder's Hoof",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Kokia Blazehoof",
+      "encounterId": 2485,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193765,
+      "name": "Blazebound Lieutenant's Helm",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Kokia Blazehoof",
+      "encounterId": 2485,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193767,
+      "name": "Havoc Crusher",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Kokia Blazehoof",
+      "encounterId": 2485,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Mace",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193763,
+      "name": "Fireproof Drape",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Kokia Blazehoof",
+      "encounterId": 2485,
+      "slot": "Back",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193764,
+      "name": "Invader's Firestorm Chestguard",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Kokia Blazehoof",
+      "encounterId": 2485,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193766,
+      "name": "Kokia's Burnout Rod",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Kokia Blazehoof",
+      "encounterId": 2485,
+      "slot": "Held In Off-hand",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193756,
+      "name": "Skyferno Rondel",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Kyrakka and Erkhart Stormvein",
+      "encounterId": 2503,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Dagger",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193752,
+      "name": "Galerattle Gauntlets",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Kyrakka and Erkhart Stormvein",
+      "encounterId": 2503,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193691,
+      "name": "Sky Saddle Cord",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Kyrakka and Erkhart Stormvein",
+      "encounterId": 2503,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193750,
+      "name": "Wind Soarer's Breeches",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Kyrakka and Erkhart Stormvein",
+      "encounterId": 2503,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193754,
+      "name": "Drake Rider's Stecktarge",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Kyrakka and Erkhart Stormvein",
+      "encounterId": 2503,
+      "slot": "Off Hand",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193755,
+      "name": "Backdraft Cleaver",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Kyrakka and Erkhart Stormvein",
+      "encounterId": 2503,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Axe",
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193751,
+      "name": "Crown of Roaring Storms",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Kyrakka and Erkhart Stormvein",
+      "encounterId": 2503,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193748,
+      "name": "Kyrakka's Searing Embers",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Kyrakka and Erkhart Stormvein",
+      "encounterId": 2503,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Critical Strike"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 193753,
+      "name": "Breastplate of Soaring Terror",
+      "instance": "Ruby Life Pools",
+      "instanceId": 1202,
+      "instanceType": "DUNGEON",
+      "boss": "Kyrakka and Erkhart Stormvein",
+      "encounterId": 2503,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159137,
+      "name": "Gilded Serpent's Tooth",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "The Golden Serpent",
+      "encounterId": 2165,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Dagger",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159234,
+      "name": "Down-Lined Breeches",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "The Golden Serpent",
+      "encounterId": 2165,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159413,
+      "name": "Gauntlets of the Avian Sentinel",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "The Golden Serpent",
+      "encounterId": 2165,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159304,
+      "name": "Goldfeather Boots",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "The Golden Serpent",
+      "encounterId": 2165,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159617,
+      "name": "Lustrous Golden Plumage",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "The Golden Serpent",
+      "encounterId": 2165,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159369,
+      "name": "Belt of the Consecrated Tomb",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "The Golden Serpent",
+      "encounterId": 2165,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159412,
+      "name": "Auric Puddle Stompers",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "The Golden Serpent",
+      "encounterId": 2165,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159313,
+      "name": "Breeches of the Sacred Hall",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "The Golden Serpent",
+      "encounterId": 2165,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159618,
+      "name": "Mchimba's Ritual Bandages",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Mchimba the Embalmer",
+      "encounterId": 2171,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159459,
+      "name": "Ritual Binder's Ring",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Mchimba the Embalmer",
+      "encounterId": 2171,
+      "slot": "Finger",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159667,
+      "name": "Vessel of Last Rites",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Mchimba the Embalmer",
+      "encounterId": 2171,
+      "slot": "Held In Off-hand",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 160213,
+      "name": "Sepulchral Construct's Gloves",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Mchimba the Embalmer",
+      "encounterId": 2171,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159312,
+      "name": "Desiccator's Blessed Gloves",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Mchimba the Embalmer",
+      "encounterId": 2171,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159642,
+      "name": "Royal Purifier's Spade",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Mchimba the Embalmer",
+      "encounterId": 2171,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Polearm",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159409,
+      "name": "Embalmer's Steadying Bracers",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Mchimba the Embalmer",
+      "encounterId": 2171,
+      "slot": "Wrist",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 160216,
+      "name": "Crackling Jade Kilij",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "The Council of Tribes",
+      "encounterId": 2170,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Sword",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159300,
+      "name": "Kula's Butchering Wristwraps",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "The Council of Tribes",
+      "encounterId": 2170,
+      "slot": "Wrist",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159136,
+      "name": "Jeweled Dagger of Subjugation",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "The Council of Tribes",
+      "encounterId": 2170,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Dagger",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159643,
+      "name": "Crossbow of Forgotten Majesty",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "The Council of Tribes",
+      "encounterId": 2170,
+      "slot": "Ranged",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Crossbow",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159288,
+      "name": "Cloak of the Restless Tribes",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "The Council of Tribes",
+      "encounterId": 2170,
+      "slot": "Back",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159243,
+      "name": "Sandals of Wise Voodoo",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "The Council of Tribes",
+      "encounterId": 2170,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159371,
+      "name": "Boots of the Headlong Conqueror",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "The Council of Tribes",
+      "encounterId": 2170,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159418,
+      "name": "Girdle of Pestilent Purification",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "The Council of Tribes",
+      "encounterId": 2170,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 158344,
+      "name": "Mantle of Ceremonial Ascension",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "azerite-no-secondaries-in-api"
+      ]
+    },
+    {
+      "id": 159236,
+      "name": "Headdress of the First Empire",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "azerite-no-secondaries-in-api"
+      ]
+    },
+    {
+      "id": 159422,
+      "name": "Helm of the Raptor King",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "azerite-no-secondaries-in-api"
+      ]
+    },
+    {
+      "id": 159423,
+      "name": "Pauldrons of the Great Unifier",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "azerite-no-secondaries-in-api"
+      ]
+    },
+    {
+      "id": 159645,
+      "name": "Headcracker of Supplication",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Mace",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 158355,
+      "name": "Loa-Blessed Chestguard",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "azerite-no-secondaries-in-api"
+      ]
+    },
+    {
+      "id": 159303,
+      "name": "Vest of Reverent Adoration",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "azerite-no-secondaries-in-api"
+      ]
+    },
+    {
+      "id": 159368,
+      "name": "Spaulders of Prime Emperor",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "azerite-no-secondaries-in-api"
+      ]
+    },
+    {
+      "id": 159301,
+      "name": "Primal Dinomancer's Belt",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159644,
+      "name": "Geti'ikku, Cut of Death",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Sword",
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 239047,
+      "name": "Headdress of the First Empire",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 239045,
+      "name": "Mantle of Ceremonial Ascension",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 239048,
+      "name": "Vest of Reverent Adoration",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 239046,
+      "name": "Loa-Blessed Chestguard",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 239049,
+      "name": "Spaulders of Prime Emperor",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 239050,
+      "name": "Helm of the Raptor King",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 239051,
+      "name": "Pauldrons of the Great Unifier",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 273649,
+      "name": "Stormbound Emblem of Dazar",
+      "instance": "Kings' Rest",
+      "instanceId": 1041,
+      "instanceType": "DUNGEON",
+      "boss": "Dazar, The First King",
+      "encounterId": 2172,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159317,
+      "name": "Whirling Dervish Sash",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Adderis and Aspix",
+      "encounterId": 2142,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159380,
+      "name": "Arc-Glass Bindings",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Adderis and Aspix",
+      "encounterId": 2142,
+      "slot": "Wrist",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 158370,
+      "name": "Twin-Strike Polearm",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Adderis and Aspix",
+      "encounterId": 2142,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Polearm",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159259,
+      "name": "Sandswept Sandals",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Adderis and Aspix",
+      "encounterId": 2142,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159425,
+      "name": "Shard-Tipped Vambraces",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Adderis and Aspix",
+      "encounterId": 2142,
+      "slot": "Wrist",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159329,
+      "name": "Leggings of the Galeforce Viper",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Adderis and Aspix",
+      "encounterId": 2142,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159636,
+      "name": "Staff of the Lightning Serpent",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Adderis and Aspix",
+      "encounterId": 2142,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Staff",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159388,
+      "name": "Sabatons of Coruscating Energy",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Adderis and Aspix",
+      "encounterId": 2142,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159263,
+      "name": "Bindings of the Slithering Current",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Adderis and Aspix",
+      "encounterId": 2142,
+      "slot": "Wrist",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159435,
+      "name": "Legplates of Charged Duality",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Adderis and Aspix",
+      "encounterId": 2142,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159637,
+      "name": "Snakebite Recurve",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Merektha",
+      "encounterId": 2143,
+      "slot": "Ranged",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Bow",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159327,
+      "name": "Sand-Shined Snakeskin Sandals",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Merektha",
+      "encounterId": 2143,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159437,
+      "name": "Fangproof Gauntlets",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Merektha",
+      "encounterId": 2143,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159375,
+      "name": "Legguards of the Awakening Brood",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Merektha",
+      "encounterId": 2143,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 162544,
+      "name": "Jade Ophidian Band",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Merektha",
+      "encounterId": 2143,
+      "slot": "Finger",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 158367,
+      "name": "Merektha's Fang",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Merektha",
+      "encounterId": 2143,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 158714,
+      "name": "Swarm's Edge",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Merektha",
+      "encounterId": 2143,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Sword",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159255,
+      "name": "Ouroborial Sash",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Merektha",
+      "encounterId": 2143,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159247,
+      "name": "Handwraps of Oscillating Polarity",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Galvazzt",
+      "encounterId": 2144,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159442,
+      "name": "Sand-Scoured Greatbelt",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Galvazzt",
+      "encounterId": 2144,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 158374,
+      "name": "Tiny Electromental in a Jar",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Galvazzt",
+      "encounterId": 2144,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 158366,
+      "name": "Charged Sandstone Band",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Galvazzt",
+      "encounterId": 2144,
+      "slot": "Finger",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 158369,
+      "name": "Galvanized Stormcrusher",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Galvazzt",
+      "encounterId": 2144,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Mace",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159664,
+      "name": "Bulwark of Brimming Potential",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Galvazzt",
+      "encounterId": 2144,
+      "slot": "Off Hand",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159374,
+      "name": "Sethraliss' Fanged Helm",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "azerite-no-secondaries-in-api"
+      ]
+    },
+    {
+      "id": 158373,
+      "name": "Resonating Crystal Scimitar",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Sword",
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159254,
+      "name": "Brood Cleanser's Amice",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "azerite-no-secondaries-in-api"
+      ]
+    },
+    {
+      "id": 159318,
+      "name": "Hood of the Slithering Loa",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "azerite-no-secondaries-in-api"
+      ]
+    },
+    {
+      "id": 158368,
+      "name": "Sethraliss' Defiled Relic",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159370,
+      "name": "Corrupted Hexxer's Vestments",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "azerite-no-secondaries-in-api"
+      ]
+    },
+    {
+      "id": 159424,
+      "name": "Desert Guardian's Breastplate",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "azerite-no-secondaries-in-api"
+      ]
+    },
+    {
+      "id": 159337,
+      "name": "Grips of Electrified Defense",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 159257,
+      "name": "Robes of the Reborn Serpent",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "azerite-no-secondaries-in-api"
+      ]
+    },
+    {
+      "id": 159439,
+      "name": "C'thraxxi Binders Pauldrons",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "RARE",
+      "tag": null,
+      "notes": [
+        "azerite-no-secondaries-in-api"
+      ]
+    },
+    {
+      "id": 239032,
+      "name": "Robes of the Reborn Serpent",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 239031,
+      "name": "Brood Cleanser's Amice",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 239033,
+      "name": "Hood of the Slithering Loa",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 239034,
+      "name": "Corrupted Hexxer's Vestments",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 239035,
+      "name": "Sethraliss' Fanged Helm",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 239036,
+      "name": "Desert Guardian's Breastplate",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 239037,
+      "name": "C'thraxxi Binders Pauldrons",
+      "instance": "Temple of Sethraliss",
+      "instanceId": 1030,
+      "instanceType": "DUNGEON",
+      "boss": "Avatar of Sethraliss",
+      "encounterId": 2145,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "RARE",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268230,
+      "name": "Crown of the Eternal Fang",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Nek'zali the Soulcoiler",
+      "encounterId": 2888,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 270162,
+      "name": "Soulcoiler Ritual Vessel",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Nek'zali the Soulcoiler",
+      "encounterId": 2888,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268203,
+      "name": "Hexing Spiritrender",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Nek'zali the Soulcoiler",
+      "encounterId": 2888,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Dagger",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268236,
+      "name": "Initiate's Sacrificial Tights",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Nek'zali the Soulcoiler",
+      "encounterId": 2888,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268235,
+      "name": "Vestment of the Awakening",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Nek'zali the Soulcoiler",
+      "encounterId": 2888,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268229,
+      "name": "Skullguard of the Risen Sacrifice",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Nek'zali the Soulcoiler",
+      "encounterId": 2888,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268245,
+      "name": "Entombed Cultist's Sabatons",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Nek'zali the Soulcoiler",
+      "encounterId": 2888,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268208,
+      "name": "Strongblood's Ceremonial Cleaver",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Nek'zali the Soulcoiler",
+      "encounterId": 2888,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Axe",
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 270930,
+      "name": "Tomb-Creeper's Claw",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Nek'zali the Soulcoiler",
+      "encounterId": 2888,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Fist Weapon",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268248,
+      "name": "Amani Summoning Shawl",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Nek'zali the Soulcoiler",
+      "encounterId": 2888,
+      "slot": "Back",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268218,
+      "name": "Nek'zali's Spiritwalkers",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Nek'zali the Soulcoiler",
+      "encounterId": 2888,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268240,
+      "name": "Restless Spirit Shackles",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Nek'zali the Soulcoiler",
+      "encounterId": 2888,
+      "slot": "Wrist",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268216,
+      "name": "Cursed Reliquary Cincture",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Nek'zali the Soulcoiler",
+      "encounterId": 2888,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Versatility"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268250,
+      "name": "Sentinel's Vitriolic Chain",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Entombed Sentinels",
+      "encounterId": 2874,
+      "slot": "Neck",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 270165,
+      "name": "Keeper's Seething Core",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Entombed Sentinels",
+      "encounterId": 2874,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268204,
+      "name": "Ancient Construct's Venomshiv",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Entombed Sentinels",
+      "encounterId": 2874,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Dagger",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268198,
+      "name": "Caustic Keeper-Crusher",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Entombed Sentinels",
+      "encounterId": 2874,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Mace",
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268224,
+      "name": "Venom Warden's Greaves",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Entombed Sentinels",
+      "encounterId": 2874,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268228,
+      "name": "Venom-Singed Cuffs",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Entombed Sentinels",
+      "encounterId": 2874,
+      "slot": "Wrist",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268219,
+      "name": "Shadow Hunter's Warmask",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Entombed Sentinels",
+      "encounterId": 2874,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268197,
+      "name": "Spine of the Hissing Abyss",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Entombed Sentinels",
+      "encounterId": 2874,
+      "slot": "Held In Off-hand",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 270164,
+      "name": "Gebbo's Bottomless Bag",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Lost Explorers",
+      "encounterId": 2894,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 270160,
+      "name": "First Mate's Shellward",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Lost Explorers",
+      "encounterId": 2894,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268210,
+      "name": "Malevolent Spiritcudgel",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Lost Explorers",
+      "encounterId": 2894,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Mace",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268200,
+      "name": "Gebbo's Backup Blaster",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Lost Explorers",
+      "encounterId": 2894,
+      "slot": "Ranged",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Gun",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268227,
+      "name": "Unpossessed Skullsash",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Lost Explorers",
+      "encounterId": 2894,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268242,
+      "name": "Errant Scrollsage's Hood",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Lost Explorers",
+      "encounterId": 2894,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268258,
+      "name": "Boots of the Reckless Wayfarer",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Lost Explorers",
+      "encounterId": 2894,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268239,
+      "name": "Shellbound Bracers",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Lost Explorers",
+      "encounterId": 2894,
+      "slot": "Wrist",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268196,
+      "name": "Venom-Slashed Scuteward",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Lost Explorers",
+      "encounterId": 2894,
+      "slot": "Off Hand",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268249,
+      "name": "Vile Alchemist's Band",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Vashnik the Malignant",
+      "encounterId": 2882,
+      "slot": "Finger",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268246,
+      "name": "Frothing Venom Spaulders",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Vashnik the Malignant",
+      "encounterId": 2882,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268254,
+      "name": "Serpentine Mixing Belt",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Vashnik the Malignant",
+      "encounterId": 2882,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268260,
+      "name": "Scaled Fiend's Warboots",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Vashnik the Malignant",
+      "encounterId": 2882,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268214,
+      "name": "Malignant Toothed Edge",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Vashnik the Malignant",
+      "encounterId": 2882,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Sword",
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 270166,
+      "name": "Vashnik's Sanguine Rancor",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Vashnik the Malignant",
+      "encounterId": 2882,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 270161,
+      "name": "Fang of Umbral Malignance",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Vashnik the Malignant",
+      "encounterId": 2882,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268205,
+      "name": "Venomancer's Winged Channeler",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Vashnik the Malignant",
+      "encounterId": 2882,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Staff",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 270163,
+      "name": "Sszorak's Ferocity",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Sszorak",
+      "encounterId": 2871,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 270174,
+      "name": "Idol of the Howling Nexus",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Sszorak",
+      "encounterId": 2871,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268206,
+      "name": "Slithering Savage's Gavel",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Sszorak",
+      "encounterId": 2871,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Mace",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268201,
+      "name": "Venomous Boneglaive",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Sszorak",
+      "encounterId": 2871,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Warglaives",
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268257,
+      "name": "Caustic Chain-Wrapped Sash",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Sszorak",
+      "encounterId": 2871,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268234,
+      "name": "Ruthless Slaughtergrips",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Sszorak",
+      "encounterId": 2871,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268233,
+      "name": "Ferocious Scaleboots",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Sszorak",
+      "encounterId": 2871,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268252,
+      "name": "Apex Brute's Claw Ring",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Sszorak",
+      "encounterId": 2871,
+      "slot": "Finger",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 270171,
+      "name": "Preternatural Antivenom",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Twin Fangs",
+      "encounterId": 2887,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Critical Strike"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 270170,
+      "name": "Vexhul's Everflowing Gland",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Twin Fangs",
+      "encounterId": 2887,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268251,
+      "name": "Amulet of the Twin Fangs",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Twin Fangs",
+      "encounterId": 2887,
+      "slot": "Neck",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268264,
+      "name": "Ravenous Feaster's Fang",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Twin Fangs",
+      "encounterId": 2887,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Dagger",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268241,
+      "name": "Ornaments of the Eternal Coil",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Twin Fangs",
+      "encounterId": 2887,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Versatility"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268261,
+      "name": "Bespittled Slitherslippers",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Twin Fangs",
+      "encounterId": 2887,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268223,
+      "name": "Ophidian Fangmail",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Twin Fangs",
+      "encounterId": 2887,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268220,
+      "name": "Scaleplate Strangulators",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Twin Fangs",
+      "encounterId": 2887,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268225,
+      "name": "Coiled Hex Legguards",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Coiled Altar",
+      "encounterId": 2883,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268231,
+      "name": "Soulslither Spaulders",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Coiled Altar",
+      "encounterId": 2883,
+      "slot": "Shoulder",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268209,
+      "name": "Aman'muso, Warlord's Vengeance",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Coiled Altar",
+      "encounterId": 2883,
+      "slot": "Main Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Axe",
+      "primaryStats": [
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 270173,
+      "name": "Zul'jin's Guillotine Technique",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Coiled Altar",
+      "encounterId": 2883,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268243,
+      "name": "Grasps of the Eternal Shadow",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Coiled Altar",
+      "encounterId": 2883,
+      "slot": "Hands",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 270169,
+      "name": "Hex Lord's Dooming Idol",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Coiled Altar",
+      "encounterId": 2883,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268237,
+      "name": "Cuisses of the Uncoiled Union",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Coiled Altar",
+      "encounterId": 2883,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268222,
+      "name": "Reckless Spirit Breastplate",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Coiled Altar",
+      "encounterId": 2883,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268213,
+      "name": "Maze-roa, Warlord's Fury",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Coiled Altar",
+      "encounterId": 2883,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Axe",
+      "primaryStats": [
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268253,
+      "name": "Silken Voodoo Drape",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Coiled Altar",
+      "encounterId": 2883,
+      "slot": "Back",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268255,
+      "name": "Cackling Soultreads",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Coiled Altar",
+      "encounterId": 2883,
+      "slot": "Feet",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268256,
+      "name": "Sash of the Forlorn Vessel",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Coiled Altar",
+      "encounterId": 2883,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268259,
+      "name": "Girdle of Toxic Regret",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Coiled Altar",
+      "encounterId": 2883,
+      "slot": "Waist",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268211,
+      "name": "Baleful Hexblade",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "The Coiled Altar",
+      "encounterId": 2883,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Sword",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268202,
+      "name": "Jaw of the Shackled Goddess",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Ula'tek",
+      "encounterId": 2895,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Sword",
+      "primaryStats": [
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": "Venomcursed",
+      "notes": []
+    },
+    {
+      "id": 268215,
+      "name": "Abyssal Broodfiend's Bardiche",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Ula'tek",
+      "encounterId": 2895,
+      "slot": "Two-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Polearm",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": "Venomcursed",
+      "notes": []
+    },
+    {
+      "id": 270168,
+      "name": "Font of Venomous Rage",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Ula'tek",
+      "encounterId": 2895,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 270175,
+      "name": "Voracious Heart of Ula'tek",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Ula'tek",
+      "encounterId": 2895,
+      "slot": "Trinket",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Critical Strike"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 268207,
+      "name": "Caustic Repose Greatbow",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Ula'tek",
+      "encounterId": 2895,
+      "slot": "Ranged",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Bow",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike"
+      ],
+      "quality": "EPIC",
+      "tag": "Venomcursed",
+      "notes": []
+    },
+    {
+      "id": 268265,
+      "name": "Aqirbane Reliquary",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Ula'tek",
+      "encounterId": 2895,
+      "slot": "Neck",
+      "itemClass": "Armor",
+      "armorType": null,
+      "weaponType": null,
+      "primaryStats": [],
+      "secondaryStats": [
+        "Critical Strike",
+        "Haste",
+        "Versatility",
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": "Venomcursed",
+      "notes": []
+    },
+    {
+      "id": 271874,
+      "name": "Venomkeeper's Horrific Cowl",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Ula'tek",
+      "encounterId": 2895,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Cloth",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": "Venomcursed",
+      "notes": []
+    },
+    {
+      "id": 271875,
+      "name": "Gaze of the Coiled Watcher",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Ula'tek",
+      "encounterId": 2895,
+      "slot": "Head",
+      "itemClass": "Armor",
+      "armorType": "Leather",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": "Venomcursed",
+      "notes": []
+    },
+    {
+      "id": 271876,
+      "name": "Awoken Dreadfang Cuirass",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Ula'tek",
+      "encounterId": 2895,
+      "slot": "Chest",
+      "itemClass": "Armor",
+      "armorType": "Mail",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Mastery"
+      ],
+      "quality": "EPIC",
+      "tag": "Venomcursed",
+      "notes": []
+    },
+    {
+      "id": 271878,
+      "name": "Chausses of Unbound Rancor",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Ula'tek",
+      "encounterId": 2895,
+      "slot": "Legs",
+      "itemClass": "Armor",
+      "armorType": "Plate",
+      "weaponType": null,
+      "primaryStats": [
+        "Intellect",
+        "Strength"
+      ],
+      "secondaryStats": [
+        "Critical Strike"
+      ],
+      "quality": "EPIC",
+      "tag": "Venomcursed",
+      "notes": []
+    },
+    {
+      "id": 271093,
+      "name": "Zatha'tek, Breath of Corruption",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Ula'tek",
+      "encounterId": 2895,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Dagger",
+      "primaryStats": [
+        "Agility"
+      ],
+      "secondaryStats": [
+        "Critical Strike"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    },
+    {
+      "id": 271092,
+      "name": "Jan'thrazet, the Soul Fang",
+      "instance": "The Venomous Abyss",
+      "instanceId": 1320,
+      "instanceType": "RAID",
+      "boss": "Ula'tek",
+      "encounterId": 2895,
+      "slot": "One-Hand",
+      "itemClass": "Weapon",
+      "armorType": null,
+      "weaponType": "Dagger",
+      "primaryStats": [
+        "Intellect"
+      ],
+      "secondaryStats": [
+        "Haste"
+      ],
+      "quality": "EPIC",
+      "tag": null,
+      "notes": []
+    }
+  ]
+}

@@ -45,6 +45,70 @@ const CLASS_ARMOR = {
   Priest: "Cloth", Mage: "Cloth", Warlock: "Cloth",
 };
 
+// Weapons and off-hands each spec can equip and actually uses, also not in the
+// API. Slots match item inventory types: "Off Hand" is a shield, "Held In
+// Off-hand" a caster off-hand, "Ranged" covers bows, guns, crossbows and wands.
+const ONE_H = ["One-Hand", "Main Hand"];
+const TWO_H = ["Two-Hand"];
+const SHIELD = ["Off Hand"];
+const FRILL = ["Held In Off-hand"];
+const RANGED = ["Ranged"];
+const weapons = (slots, types) => ({ slots: slots.flat(), types });
+const CASTER_DRUID = weapons([TWO_H, ONE_H, FRILL], ["Staff", "Polearm", "Mace", "Dagger", "Fist Weapon"]);
+const EVOKER = weapons([TWO_H, ONE_H, FRILL], ["Axe", "Mace", "Sword", "Dagger", "Fist Weapon", "Staff"]);
+const MAGE_LOCK = weapons([TWO_H, ONE_H, FRILL, RANGED], ["Staff", "Dagger", "Sword", "Wand"]);
+const PRIEST = weapons([TWO_H, ONE_H, FRILL, RANGED], ["Staff", "Dagger", "Mace", "Wand"]);
+const MONK = ["Staff", "Polearm", "Fist Weapon", "Axe", "Mace", "Sword"];
+const ROGUE = weapons([ONE_H], ["Dagger", "Fist Weapon", "Axe", "Mace", "Sword"]);
+const DK_2H = weapons([TWO_H], ["Axe", "Mace", "Sword", "Polearm"]);
+const SHAMAN_CASTER = weapons([TWO_H, ONE_H, SHIELD, FRILL], ["Staff", "Axe", "Mace", "Dagger", "Fist Weapon"]);
+const SPEC_WEAPONS = {
+  "Death Knight|Blood": DK_2H,
+  "Death Knight|Frost": weapons([TWO_H, ONE_H], ["Axe", "Mace", "Sword", "Polearm"]),
+  "Death Knight|Unholy": DK_2H,
+  "Demon Hunter|Devourer": weapons([ONE_H], ["Warglaives", "Axe", "Sword", "Fist Weapon"]),
+  "Demon Hunter|Havoc": weapons([ONE_H], ["Warglaives", "Axe", "Sword", "Fist Weapon"]),
+  "Demon Hunter|Vengeance": weapons([ONE_H], ["Warglaives", "Axe", "Sword", "Fist Weapon"]),
+  "Druid|Balance": CASTER_DRUID,
+  "Druid|Feral": weapons([TWO_H], ["Staff", "Polearm", "Mace"]),
+  "Druid|Guardian": weapons([TWO_H], ["Staff", "Polearm", "Mace"]),
+  "Druid|Restoration": CASTER_DRUID,
+  "Evoker|Augmentation": EVOKER,
+  "Evoker|Devastation": EVOKER,
+  "Evoker|Preservation": EVOKER,
+  "Hunter|Beast Mastery": weapons([RANGED], ["Bow", "Gun", "Crossbow"]),
+  "Hunter|Marksmanship": weapons([RANGED], ["Bow", "Gun", "Crossbow"]),
+  "Hunter|Survival": weapons([TWO_H], ["Polearm", "Staff", "Axe", "Sword"]),
+  "Mage|Arcane": MAGE_LOCK,
+  "Mage|Fire": MAGE_LOCK,
+  "Mage|Frost": MAGE_LOCK,
+  "Monk|Brewmaster": weapons([TWO_H, ONE_H], MONK),
+  "Monk|Mistweaver": weapons([TWO_H, ONE_H, FRILL], MONK),
+  "Monk|Windwalker": weapons([TWO_H, ONE_H], MONK),
+  "Paladin|Holy": weapons([TWO_H, ONE_H, SHIELD, FRILL], ["Axe", "Mace", "Sword", "Polearm"]),
+  "Paladin|Protection": weapons([ONE_H, SHIELD], ["Axe", "Mace", "Sword"]),
+  "Paladin|Retribution": weapons([TWO_H], ["Axe", "Mace", "Sword", "Polearm"]),
+  "Priest|Discipline": PRIEST,
+  "Priest|Holy": PRIEST,
+  "Priest|Shadow": PRIEST,
+  "Rogue|Assassination": ROGUE,
+  "Rogue|Outlaw": ROGUE,
+  "Rogue|Subtlety": ROGUE,
+  "Shaman|Elemental": SHAMAN_CASTER,
+  "Shaman|Enhancement": weapons([ONE_H], ["Axe", "Mace", "Fist Weapon", "Dagger"]),
+  "Shaman|Restoration": SHAMAN_CASTER,
+  "Warlock|Affliction": MAGE_LOCK,
+  "Warlock|Demonology": MAGE_LOCK,
+  "Warlock|Destruction": MAGE_LOCK,
+  "Warrior|Arms": weapons([TWO_H], ["Axe", "Mace", "Sword", "Polearm", "Staff"]),
+  // Titan's Grip dual-wields two-handed axes, maces and swords, not polearms or staves.
+  "Warrior|Fury": weapons([TWO_H, ONE_H], ["Axe", "Mace", "Sword", "Dagger", "Fist Weapon"]),
+  "Warrior|Protection": weapons([ONE_H, SHIELD], ["Axe", "Mace", "Sword", "Dagger", "Fist Weapon"]),
+};
+// Hand-curated spec fields, kept across re-runs (see README for their shape).
+const CURATED = ["statPriority", "statPriorityLabel", "statVariants", "statNotes", "statSource", "bis"];
+const EMPTY_BIS = { source: null, url: null, date: null, items: [] };
+
 // ---------------------------------------------------------------- HTTP
 
 async function getToken() {
@@ -183,6 +247,9 @@ async function buildSpecs() {
     .filter((s) => s.name !== "Initial" && s.primary_stat_type)
     .map((s) => {
       const old = prev.get(s.id) ?? {};
+      const key = `${s.playable_class.name}|${s.name}`;
+      if (!SPEC_WEAPONS[key]) console.warn(`No weapon table entry for ${key}`);
+      const curated = Object.fromEntries(CURATED.filter((k) => k in old).map((k) => [k, old[k]]));
       return {
         id: s.id,
         class: s.playable_class.name,
@@ -190,9 +257,11 @@ async function buildSpecs() {
         role: s.role.type,
         armorType: CLASS_ARMOR[s.playable_class.name] ?? null,
         primaryStat: PRIMARY[s.primary_stat_type.type] ?? s.primary_stat_type.name,
+        weapons: SPEC_WEAPONS[key] ?? { slots: [], types: [] },
         // Curated fields: filled in by hand, kept across re-runs.
-        statPriority: old.statPriority ?? [],
-        bis: old.bis ?? { source: null, date: null, items: [] },
+        statPriority: [],
+        ...curated,
+        bis: curated.bis ?? EMPTY_BIS,
       };
     })
     .sort((a, b) => a.class.localeCompare(b.class) || a.spec.localeCompare(b.spec));
