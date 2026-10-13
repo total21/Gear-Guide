@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#12141b">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>S2 Gear Farm List</title>
 <meta name="description" content="Midnight Season 2 Mythic+ and raid drops for each spec, ranked by that spec's secondary stat priority.">
@@ -11,21 +13,14 @@
 <style>
 /* Based on web/index.html: one column, sticky filter bar, one block per dungeon/raid. */
 :root{
-  --bg:#f3f4f6; --surface:#ffffff; --ink:#1c2230; --muted:#5d6577; --line:#dde1e8;
-  --accent:#6b4bb8; --accent-soft:#ece6fa; --gold:#9a6a00; --gold-soft:#fbf1d6;
-  --r1:#6b4bb8; --r2:#0f7d74; --r3:#a8641a; --r4:#8a90a0;
+  /* Dark theme only for now; fonts, buttons and colors get a full pass later. */
+  --bg:#12141b; --surface:#1b1e28; --ink:#e7e9f0; --muted:#9aa1b2; --line:#2c3040;
+  --accent:#a68cf0; --accent-soft:#2a2342; --gold:#e8b84a; --gold-soft:#33290f;
+  --r1:#a68cf0; --r2:#4fc7b9; --r3:#e3a35a; --r4:#7d8496;
   --display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
   --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
-  color-scheme:light;
+  color-scheme:dark;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#12141b; --surface:#1b1e28; --ink:#e7e9f0; --muted:#9aa1b2; --line:#2c3040;
-  --accent:#a68cf0; --accent-soft:#2a2342; --gold:#e8b84a; --gold-soft:#33290f;
-  --r1:#a68cf0; --r2:#4fc7b9; --r3:#e3a35a; --r4:#7d8496; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#12141b; --surface:#1b1e28; --ink:#e7e9f0; --muted:#9aa1b2; --line:#2c3040;
-  --accent:#a68cf0; --accent-soft:#2a2342; --gold:#e8b84a; --gold-soft:#33290f;
-  --r1:#a68cf0; --r2:#4fc7b9; --r3:#e3a35a; --r4:#7d8496; color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.4;
@@ -64,6 +59,7 @@ ul{list-style:none;margin:0;padding:0}
 li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;padding:8px 14px;align-items:start}
 li.top{background:var(--accent-soft)}
 li.bis{box-shadow:inset 3px 0 0 var(--gold)}
+li.bis.top{box-shadow:inset 3px 0 0 var(--gold)}
 .name{font-weight:600;min-width:0;overflow-wrap:anywhere}
 .name a{color:inherit;text-decoration:none}
 .name a:hover{text-decoration:underline}
@@ -77,6 +73,11 @@ li.bis{box-shadow:inset 3px 0 0 var(--gold)}
 .b-top{background:var(--accent);color:var(--surface)}
 .b-bis{background:var(--gold-soft);color:var(--gold);border:1px solid var(--gold)}
 .note{grid-column:1 / -1;font-size:.8rem;color:var(--muted)}
+.fx{grid-column:1 / -1;margin:2px 0 0;padding:0;list-style:none;font-size:.82rem;color:var(--muted);display:grid;gap:3px}
+.fx li{display:block;padding:0;border:0}
+.fx b{color:var(--ink);font-weight:600}
+.prim{color:var(--ink);border-style:solid;border-color:var(--line);background:var(--bg)}
+.chip[disabled]{opacity:.45;cursor:default}
 .none{color:var(--muted);font-size:.9rem;padding:12px 14px}
 .key{display:flex;flex-wrap:wrap;gap:6px 10px;font-size:.8rem;color:var(--muted);align-items:center}
 footer{color:var(--muted);font-size:.82rem;margin-top:16px}

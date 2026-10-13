@@ -195,6 +195,12 @@ function toRecord(item, instance, encounter) {
     quality: item.quality?.type ?? null,
     // e.g. "Venomcursed": raid items with a single secondary plus a proc.
     tag: p.name_description?.display_string ?? null,
+    // On-use / proc / equip effects ("Use: ...", "Equip: ..."). Numbers in the
+    // text are for the API's preview item level, not the in-season one.
+    effects: (p.spells ?? [])
+      .map((sp) => ({ name: sp.spell?.name ?? null, text: (sp.description ?? "").replace(/\s+/g, " ").trim() }))
+      .filter((e) => e.text),
+    previewItemLevel: p.level?.value ?? null,
     notes,
   };
 }

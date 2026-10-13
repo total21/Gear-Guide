@@ -83,6 +83,7 @@ export function dropAzeriteTwins(items) {
   return items.filter((i) => !(i.notes.includes("azerite-no-secondaries-in-api") && withStats.has(`${i.instance}|${i.boss}|${i.name}`)));
 }
 
+// `source` is "all", "DUNGEON", "RAID", or "BIS" (only the spec's BiS items).
 // Group usable items as [{ instance, type, bosses: [{ boss, items }] }], keeping
 // journal order (items.json is written instance by instance, boss by boss).
 export function groupForSpec(items, spec, { priority, pair = "all", slot = "all", source = "all", sort = "boss" } = {}) {
@@ -97,7 +98,8 @@ export function groupForSpec(items, spec, { priority, pair = "all", slot = "all"
       out.push(g);
     }
     const g = byInstance.get(item.instance);
-    if (source !== "all" && item.instanceType !== source) continue;
+    if (source !== "all" && source !== "BIS" && item.instanceType !== source) continue;
+    if (source === "BIS" && !bis.has(item.id)) continue;
     if (!usableBy(spec, item)) continue;
     g.total++;
     const st = itemStats(item, prio);
@@ -108,5 +110,6 @@ export function groupForSpec(items, spec, { priority, pair = "all", slot = "all"
     b.items.push({ ...item, ...st, bis: bis.has(item.id) });
   }
   if (sort === "stats") for (const g of out) for (const b of g.bosses) b.items.sort((x, y) => y.score - x.score);
+  if (source === "BIS") return out.filter((g) => g.bosses.length);
   return out.filter((g) => source === "all" || g.type === source);
 }
