@@ -264,7 +264,7 @@ const LIST_HEADER = /\b(overall|raid|mythic|m\+|dungeons?)\b/i;
 export function specFromText(text, file, specs) {
   const names = specs.map((s) => ({ s, a: norm(`${s.spec} ${s.class}`), b: norm(`${s.class} ${s.spec}`) }));
   for (const line of text.split(/\r?\n/).slice(0, 5)) {
-    const n = ` ${norm(line.replace(/^\s*spec\s*:/i, ""))} `;
+    const n = ` ${norm(line.replace(/^\s*(?:spec|class)\s*:/i, ""))} `;
     const hit = names.filter(({ a, b }) => n.includes(` ${a} `) || n.includes(` ${b} `));
     if (hit.length === 1) return hit[0].s;
   }
@@ -310,7 +310,7 @@ export function parsePasted(text, spec, items) {
   let list = "Overall", patch = null, hero = null;
   for (const raw of text.split(/\r?\n/)) {
     const line = raw.trim();
-    if (!line || line.startsWith("#") || /^spec\s*:/i.test(line)) continue;
+    if (!line || line.startsWith("#") || /^(?:spec|class)\s*:/i.test(line)) continue;
     const p = line.match(/\bpatch\s+(1\d\.\d+(?:\.\d+)?)\b/i) ?? line.match(/^(1\d\.\d+(?:\.\d+)?)$/);
     if (p) { patch = p[1]; continue; }
     const h = line.match(/^hero(?:\s+talents?)?\s*:\s*(.+)$/i);
