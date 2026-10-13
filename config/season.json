@@ -1,0 +1,16 @@
+{
+  "name": "Midnight Season 2",
+  "region": "us",
+  "locale": "en_US",
+  "dungeons": [
+    "Altar of Fangs",
+    "Murder Row",
+    "Den of Nalorakk",
+    "The Blinding Vale",
+    "Voidscar Arena",
+    "Ruby Life Pools",
+    "Kings' Rest",
+    "Temple of Sethraliss"
+  ],
+  "raids": ["The Venomous Abyss"]
+}

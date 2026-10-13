@@ -1,0 +1,11 @@
+{
+  "name": "gear-guide",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.21" },
+  "scripts": {
+    "fetch": "node scripts/fetch-data.mjs",
+    "fetch:specs": "node scripts/fetch-data.mjs --specs-only",
+    "verify": "node scripts/verify-rogue.mjs"
+  }
+}
