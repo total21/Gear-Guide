@@ -20,7 +20,7 @@ WoW gear optimizer: a Midnight Season 2 gear farm tool (web app first, in-game a
 | `data/items.json` | One record per (item, boss) drop. Generated; do not edit by hand. |
 | `data/specs.json` | Every retail spec: class, role, armor type, primary stat, plus hand-curated stat priority and BiS. |
 | `web/index.html` | Design starting point for the web app (the rogue S2 farm list page, saved unchanged). |
-| `docs/` | The web app, published with GitHub Pages: `index.html`, `app.js` (page), `gear.js` (filtering and ranking), `data/` (copied by `npm run build`). |
+| `docs/` | The web app, published with GitHub Pages: `index.html`, `app.js` (page), `gear.js` (filtering and ranking), `character.js` (the player's gear: SimC parsing, imports, the farm plan), `data/` (copied by `npm run build`). |
 
 ## Data shape
 
@@ -180,15 +180,35 @@ The page uses a dark theme.
 
 **Filters.**
 - **Stat buttons:** All stats, then the four secondaries in the spec's priority order. Each button toggles; with two selected the list shows items with both, and a third choice replaces the oldest.
-- Then slot, and Mythic+, raid or Best in Slot.
-- Sort by boss order or by best stats.
+- Then slot. Weapons are split into One-Hand (including main-hands and wands), Two-Hand (including bows, guns and crossbows) and Off Hand (shields and held-in-off-hand items). A chip only appears when the spec has drops for it.
+- Then Mythic+, raid or Best in Slot.
 
-**Best in Slot view.** BiS items that aren't Season drops are split into three sections:
-- **Tier set:** each piece is badged Token or Catalyst, whichever the BiS list prefers. For the Catalyst it shows the drop to convert and that drop's stats. When any drop in the slot will do, it suggests the drops with the best stats. It also lists the raid token or curio as the other route.
-- **Crafted:** the item and its profession. The resolver also keeps the recipe's embellishments and reagents in `crafted` for a later gems, enchants and embellishments section.
-- **Other sources.**
+**Best in Slot view.** Picking Best in Slot clears the stat and slot filters. Choosing a stat or slot afterwards goes back to all Season drops. The view shows the list as worn, one row per slot in paper-doll order: two rings, two trinkets, and one two-hander or a main hand plus off hand. It takes the first pick per slot from Wowhead's Overall list. Later picks are Wowhead's alternates, such as situational trinkets, extra rings or a second weapon setup. They go in a **Situational BiS** section below, with Wowhead's reason (e.g. "Defense", "for M+") and a note to sim your character. In the other views they're badged "BiS · Situational".
+- **Season drops** show their stats and where they drop.
+- **Tier pieces** are badged Token or Catalyst, whichever the BiS list prefers. For the Catalyst they show the drop to convert and that drop's stats; when any drop in the slot will do, they suggest the drops with the best stats. The raid token or curio is listed as the other route.
+- **Crafted items** show their profession. The resolver also keeps the recipe's embellishments and reagents in `crafted` for a later gems, enchants and embellishments section.
+
+In the other views, BiS badges mark the worn items and the drops to catalyze into their tier pieces.
 
 **Links and memory.** The last spec, build choice and filters are remembered in the browser. A link like `.../#spec=260` opens a spec's list directly; the "Gear Guide" link goes back to the landing page. Spec IDs are listed in `data/specs.json`.
+
+### My character
+
+The **My character** tab next to the farm list tracks the gear a player already has. The site stays fully static: no server, no accounts. There are two ways to fill it in:
+- **SimulationCraft:** paste the `/simc` export from the SimulationCraft addon, the community standard. Equipped gear and gear in bags count as acquired; Great Vault choices don't.
+- **By hand:** every item in the farm list, the Best in Slot view and the character page has a **+ Have** button, which toggles to **✓ Have**.
+
+Loading a character switches the list to its spec. A later import replaces what the previous import brought in, but keeps items ticked by hand. Tabards and shirts are skipped.
+
+What it does with that gear:
+- **Farm list:** acquired items are hidden. **Hide owned** turns that off; acquired items then show dimmed.
+- **Best in Slot view:** shows "N of 16 collected".
+- **Character page:** three sections:
+  - **Best in Slot checklist:** for the selected spec and hero talent, with your item level for each piece you have.
+  - **Where to farm:** the missing BiS items grouped by dungeon, raid, Crafting or Catalyst, with the most items first.
+  - **Acquired:** everything acquired, with the item level and where it came from.
+
+The character is saved in the browser only (`localStorage`, key `gear-guide:character:v1`).
 
 ### Publishing with GitHub Pages
 

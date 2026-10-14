@@ -1,0 +1,38 @@
+# Mourn - Blood - 2026-10-14 18:02 - US/Kil'rogg
+# SimC Addon 12.1.5-01
+# WoW 12.1.5.70077, TOC 120105
+# Requires SimulationCraft 1210-01 or newer
+
+deathknight="Mourn"
+level=90
+race=human
+region=us
+server=kilrogg
+role=tank
+professions=blacksmithing=100/mining=100
+spec=blood
+
+talents=CoPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+# Baleful Grave-Knight's Casque (321)
+head=,id=271474,bonus_id=6652/13440/13695/13692/13698/12846
+# Aqirbane Reliquary (334)
+neck=,id=268265,gem_id=213743,bonus_id=6652/13668/13334/13987/12854
+# Masterwork Sin'dorei Band (330)
+finger1=,id=240949,enchant_id=7334,bonus_id=12040/12043,crafted_stats=32/36
+
+### Gear from Bags
+#
+# Silken Voodoo Drape (316)
+# back=,id=268253,bonus_id=6652/13440
+#
+# Some Old Gloves (210)
+# hands=,id=999999
+
+### Weekly Reward Choices
+#
+# Voracious Heart of Ula'tek (337)
+# trinket1=,id=270175,bonus_id=6652
+
+### Additional Character Info
+# upgrade_currencies=c:3008:1250

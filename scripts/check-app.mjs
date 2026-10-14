@@ -6,7 +6,8 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { STATS, SLOT_GROUPS, groupForSpec, usableBy, rankedPairs, dropAzeriteTwins, bisSlotGroup, statOrder, toggleStat, effectTags } from "../docs/gear.js";
+import { parseSimc, specOf, withImport, farmPlan, ownKey } from "../docs/character.js";
+import { STATS, SLOT_GROUPS, slotGroup, groupForSpec, usableBy, rankedPairs, dropAzeriteTwins, bisSlotGroup, statOrder, toggleStat, effectTags, trueBis, situationalBis } from "../docs/gear.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = async (f) => JSON.parse(await readFile(path.join(ROOT, f), "utf8"));
@@ -16,7 +17,8 @@ const problems = [];
 const tierIds = new Set((await read("data/tier.json")).sets.flatMap((x) => x.items.map((i) => i.id)));
 const crafting = await read("data/crafting.json");
 const embellishments = new Set(crafting.embellishments);
-const slotKeys = new Set(SLOT_GROUPS.map(([k]) => k));
+// BiS text slots group weapons as "weapon" (one- or two-hand isn't in the text).
+const slotKeys = new Set([...SLOT_GROUPS.map(([k]) => k), "weapon"]);
 const fail = (msg) => problems.push(msg);
 const flat = (groups) => groups.flatMap((g) => g.bosses.flatMap((b) => b.items));
 const name = (s) => `${s.spec} ${s.class}`;
@@ -109,6 +111,54 @@ for (const s of specs) {
   const want = s.statPriority.slice(0, 2);
   for (const i of flat(groupForSpec(items, s, { stats: want })))
     if (!want.every((x) => i.secondaryStats.includes(x))) fail(`${name(s)}: stat filter kept ${i.name}`);
+}
+
+// Best in Slot as worn: one pick per slot, two rings and trinkets, one or two weapons.
+for (const s of specs)
+  for (const [h, list] of [["shared", s.bis], ...Object.entries(s.bisByHero ?? {})]) {
+    if (!list?.items?.length) continue;
+    const worn = trueBis(list.items, items);
+    const by = Object.groupBy(worn, (b) => bisSlotGroup(b.slot));
+    const hands = (by.weapon?.length ?? 0) + (by.offhand?.length ?? 0);
+    if (worn.some((b) => b.addedBy)) fail(`${name(s)} (${h}): worn BiS includes a catalyst source`);
+    if (hands < 1 || hands > 2) fail(`${name(s)} (${h}): worn BiS has ${hands} weapons`);
+    for (const [k, v] of Object.entries(by)) if (v.length > (["ring", "trinket"].includes(k) ? 2 : k === "weapon" ? 2 : 1)) fail(`${name(s)} (${h}): ${v.length} ${k} picks`);
+    if (worn.length < 15) fail(`${name(s)} (${h}): worn BiS has only ${worn.length} items`);
+    // Worn plus situational is exactly the Overall list, without catalyst sources.
+    const overall = list.items.filter((b) => !b.addedBy && (b.lists ?? ["Overall"]).includes("Overall"));
+    if (worn.length + situationalBis(list.items, items).length !== overall.length) fail(`${name(s)} (${h}): worn + situational != Overall list`);
+  }
+
+// Weapon slot filters: each weapon and off-hand lands in exactly one of them.
+for (const i of items.filter((i) => i.itemClass === "Weapon" || /Off/.test(i.slot))) {
+  const k = slotGroup(i);
+  const want = i.slot === "Two-Hand" || ["Bow", "Gun", "Crossbow"].includes(i.weaponType) ? "twohand"
+    : i.itemClass === "Weapon" ? "onehand" : "offhand";
+  if (k !== want) fail(`${i.name} (${i.slot} ${i.weaponType ?? ""}) filed under ${k}, want ${want}`);
+}
+
+// Character: SimC import (equipped and bag gear, not the Great Vault),
+// re-imports keeping hand-ticked items, and the farm plan.
+{
+  const simc = parseSimc(await readFile(path.join(ROOT, "scripts/fixtures/simc/blood-dk.simc"), "utf8"));
+  const got = simc?.items.map((i) => [i.id, i.slot, i.ilvl, i.how]);
+  if (!same([simc?.name, simc?.className, simc?.specName, simc?.realm, simc?.region], ["Mourn", "deathknight", "blood", "Kil'rogg", "us"])) fail(`parseSimc header: ${JSON.stringify(simc)}`);
+  if (!same(got, [[271474, "Head", 321, "equipped"], [268265, "Neck", 334, "equipped"], [240949, "Finger", 330, "equipped"], [268253, "Back", 316, "bags"], [999999, "Hands", 210, "bags"]])) fail(`parseSimc items: ${JSON.stringify(got)}`);
+  if (specOf(specs, simc.className, simc.specName)?.id !== 250) fail("specOf(deathknight, blood)");
+  if (specOf(specs, "Demon Hunter", "Devourer")?.id !== 1480 || specOf(specs, "hunter", "beast_mastery")?.id !== 253) fail("specOf names");
+  if (parseSimc("hello") !== null) fail("parseSimc accepts junk");
+  let c = withImport(null, simc, "simc");
+  c.items["268253"].how = "manual"; // pretend this one was ticked by hand
+  c = withImport(c, { ...simc, items: simc.items.slice(0, 1) }, "simc");
+  if (!same(Object.keys(c.items).sort(), ["268253", "271474"])) fail(`withImport keeps manual items: ${Object.keys(c.items)}`);
+  const t = withImport(null, { name: "X", items: [{ id: 1, slot: "Tabard" }, { id: 2, slot: "Shirt" }, { id: 3, slot: "Head" }] }, "simc");
+  if (!same(Object.keys(t.items), ["3"])) fail("withImport keeps tabards or shirts");
+  const blood = specs.find((s) => s.id === 250);
+  const worn = trueBis(blood.bisByHero.Deathbringer.items, items);
+  const plan = farmPlan(worn, { [ownKey(worn[1])]: {} }, items);
+  const left = plan.reduce((n, g) => n + g.items.length, 0);
+  if (left !== worn.length - 1) fail(`farmPlan leaves ${left} of ${worn.length}`);
+  if (plan.some((g, i) => i && g.items.length > plan[i - 1].items.length)) fail("farmPlan not sorted by count");
 }
 
 // Every effect is labeled On use or Proc, except the raid's Deadly Venom reduction.
