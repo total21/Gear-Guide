@@ -6689,10 +6689,147 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/warlock/affliction/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Weapon",
+            "name": "Jan'thrazet, the Soul Fang",
+            "id": 271092,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Offhand",
+            "name": "Nocuous Focal Fang",
+            "id": 273779,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Head",
+            "name": "Venomkeeper's Horrific Cowl",
+            "id": 271874,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Spires of the Damned Necrolyte",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "The Lost Explorers"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Damned Necrolyte's Rattling Robes",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Vashnik the Malignant"
+          },
+          {
+            "slot": "Wrist",
+            "name": "Martyr's Bindings",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Damned Necrolyte's Charred Grasps",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Entombed Sentinels"
+          },
+          {
+            "slot": "Belt",
+            "name": "Martyr's Waistwrap",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting"
+          },
+          {
+            "slot": "Legs",
+            "name": "Damned Necrolyte's Leg Bindings",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Sszorak"
+          },
+          {
+            "slot": "Boots",
+            "name": "Cackling Soultreads",
+            "id": 268255,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Apex Brute's Claw Ring",
+            "id": 268252,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Band of the Swarmcaller",
+            "id": 281029,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Gebbo's Bottomless Bag",
+            "id": 270164,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Stormbound Emblem of Dazar",
+            "id": 273649,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {
