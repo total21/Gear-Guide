@@ -4238,10 +4238,136 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/monk/windwalker/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "2H Weapon",
+            "name": "Abyssal Broodfiend's Bardiche",
+            "id": 268215,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Head",
+            "name": "Gaze of the Coiled Watcher",
+            "id": 271875,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Tassels of the Monkey King",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "The Lost Explorers"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Chestwrap of Palpable Terror",
+            "id": 281236,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Wrist",
+            "name": "Silvermoon Agent's Deflectors",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting"
+          },
+          {
+            "slot": "Hands",
+            "name": "Gauntlets of Fevered Defense",
+            "id": 251124,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Belt",
+            "name": "Sash of the Forlorn Vessel",
+            "id": 268256,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Legs",
+            "name": "Coiled Hex Legguards",
+            "id": 268225,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Feet",
+            "name": "Silvermoon Agent's Sneakers",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting"
+          },
+          {
+            "slot": "Ring",
+            "name": "Charged Sandstone Band",
+            "id": 158366,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Band of the Swarmcaller",
+            "id": 281029,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket 1",
+            "name": "Voracious Heart of Ula'tek",
+            "id": 270175,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket 2",
+            "name": "Zul'jin's Guillotine Technique",
+            "id": 270173,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {
