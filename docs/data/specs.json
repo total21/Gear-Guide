@@ -4989,10 +4989,147 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/priest/discipline/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Weapon",
+            "name": "Jan'thrazet, the Soul Fang",
+            "id": 271092,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Offhand",
+            "name": "Vessel of Last Rites",
+            "id": 159667,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Head",
+            "name": "Venomkeeper's Horrific Cowl",
+            "id": 271874,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Cosmic Penitent's Echoing Screams",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Vexhul"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Cosmic Penitent's Eclipsing Robes",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Murder Row"
+          },
+          {
+            "slot": "Wrist",
+            "name": "Martyr's Bindings",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Cosmic Penitent's Celestial Grips",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "The Coiled Altar"
+          },
+          {
+            "slot": "Belt",
+            "name": "Martyr's Waistwrap",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting"
+          },
+          {
+            "slot": "Legs",
+            "name": "Enveloping Legwraps of the Cosmic Penitent",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Sszorak"
+          },
+          {
+            "slot": "Boots",
+            "name": "Cackling Soultreads",
+            "id": 268255,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Alluring Bubbleband",
+            "id": 268266,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Sickening Signet of Atroxus",
+            "id": 252258,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Wavecaller's Seastone",
+            "id": 270167,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Soulcoiler Ritual Vessel",
+            "id": 270162,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {
