@@ -6,7 +6,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { STATS, SLOT_GROUPS, groupForSpec, usableBy, rankedPairs, dropAzeriteTwins, bisSlotGroup, statOrder, toggleStat, effectTags, trueBis, situationalBis } from "../docs/gear.js";
+import { STATS, SLOT_GROUPS, slotGroup, groupForSpec, usableBy, rankedPairs, dropAzeriteTwins, bisSlotGroup, statOrder, toggleStat, effectTags, trueBis, situationalBis } from "../docs/gear.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = async (f) => JSON.parse(await readFile(path.join(ROOT, f), "utf8"));
@@ -16,7 +16,8 @@ const problems = [];
 const tierIds = new Set((await read("data/tier.json")).sets.flatMap((x) => x.items.map((i) => i.id)));
 const crafting = await read("data/crafting.json");
 const embellishments = new Set(crafting.embellishments);
-const slotKeys = new Set(SLOT_GROUPS.map(([k]) => k));
+// BiS text slots group weapons as "weapon" (one- or two-hand isn't in the text).
+const slotKeys = new Set([...SLOT_GROUPS.map(([k]) => k), "weapon"]);
 const fail = (msg) => problems.push(msg);
 const flat = (groups) => groups.flatMap((g) => g.bosses.flatMap((b) => b.items));
 const name = (s) => `${s.spec} ${s.class}`;
@@ -126,6 +127,14 @@ for (const s of specs)
     const overall = list.items.filter((b) => !b.addedBy && (b.lists ?? ["Overall"]).includes("Overall"));
     if (worn.length + situationalBis(list.items, items).length !== overall.length) fail(`${name(s)} (${h}): worn + situational != Overall list`);
   }
+
+// Weapon slot filters: each weapon and off-hand lands in exactly one of them.
+for (const i of items.filter((i) => i.itemClass === "Weapon" || /Off/.test(i.slot))) {
+  const k = slotGroup(i);
+  const want = i.slot === "Two-Hand" || ["Bow", "Gun", "Crossbow"].includes(i.weaponType) ? "twohand"
+    : i.itemClass === "Weapon" ? "onehand" : "offhand";
+  if (k !== want) fail(`${i.name} (${i.slot} ${i.weaponType ?? ""}) filed under ${k}, want ${want}`);
+}
 
 // Every effect is labeled On use or Proc, except the raid's Deadly Venom reduction.
 for (const i of items)

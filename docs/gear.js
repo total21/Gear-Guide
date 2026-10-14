@@ -10,11 +10,13 @@ export const SLOT_GROUPS = [
   ["head", "Head"], ["neck", "Neck"], ["shoulder", "Shoulder"], ["back", "Back"],
   ["chest", "Chest"], ["wrist", "Wrist"], ["hands", "Hands"], ["waist", "Waist"],
   ["legs", "Legs"], ["feet", "Feet"], ["ring", "Ring"], ["trinket", "Trinket"],
-  ["weapon", "Weapon"], ["offhand", "Off-hand"],
+  ["onehand", "One-Hand"], ["twohand", "Two-Hand"], ["offhand", "Off Hand"],
 ];
 
 export function slotGroup(item) {
-  if (item.itemClass === "Weapon") return "weapon";
+  // Bows, guns and crossbows are two-handed; a wand is held like a one-hander.
+  if (item.itemClass === "Weapon")
+    return item.slot === "Two-Hand" || (item.slot === "Ranged" && item.weaponType !== "Wand") ? "twohand" : "onehand";
   if (item.slot === "Off Hand" || item.slot === "Held In Off-hand") return "offhand";
   if (item.slot === "Finger") return "ring";
   return item.slot.toLowerCase();
@@ -196,8 +198,9 @@ export function trueBis(bisItems, items) {
   const offLabel = (b) => /off.?hand|shield/i.test(b.slot ?? "");
   const out = [];
   for (const [key] of SLOT_GROUPS) {
-    if (key === "offhand") continue;
-    if (key === "weapon") {
+    if (key === "twohand" || key === "offhand") continue;
+    // Weapons and off-hands are picked together, at the first hand slot.
+    if (key === "onehand") {
       const hands = picks.filter((b) => ["weapon", "offhand"].includes(bisSlotGroup(b.slot)));
       const [first, ...rest] = hands;
       if (!first) continue;

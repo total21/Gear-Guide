@@ -180,7 +180,8 @@ The page uses a dark theme.
 
 **Filters.**
 - **Stat buttons:** All stats, then the four secondaries in the spec's priority order. Each button toggles; with two selected the list shows items with both, and a third choice replaces the oldest.
-- Then slot, and Mythic+, raid or Best in Slot.
+- Then slot. Weapons are split into One-Hand (including main-hands and wands), Two-Hand (including bows, guns and crossbows) and Off Hand (shields and held-in-off-hand items). A chip only appears when the spec has drops for it.
+- Then Mythic+, raid or Best in Slot.
 
 **Best in Slot view.** Picking Best in Slot clears the stat and slot filters. Choosing a stat or slot afterwards goes back to all Season drops. The view shows the list as worn, one row per slot in paper-doll order: two rings, two trinkets, and one two-hander or a main hand plus off hand. It takes the first pick per slot from Wowhead's Overall list. Later picks are Wowhead's alternates, such as situational trinkets, extra rings or a second weapon setup. They go in a **Situational BiS** section below, with Wowhead's reason (e.g. "Defense", "for M+") and a note to sim your character. In the other views they're badged "BiS · Situational".
 - **Season drops** show their stats and where they drop.
