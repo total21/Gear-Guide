@@ -13,6 +13,7 @@ const read = async (f) => JSON.parse(await readFile(path.join(ROOT, f), "utf8"))
 const { items } = await read("data/items.json");
 const { specs } = await read("data/specs.json");
 const problems = [];
+const tierIds = new Set((await read("data/tier.json")).sets.flatMap((x) => x.items.map((i) => i.id)));
 const fail = (msg) => problems.push(msg);
 const flat = (groups) => groups.flatMap((g) => g.bosses.flatMap((b) => b.items));
 const name = (s) => `${s.spec} ${s.class}`;
@@ -38,7 +39,13 @@ for (const s of specs) {
       // id is null for pasted non-drop items (crafted, tier), which have no ID in the text.
       if (!(Number.isInteger(b.id) || b.id === null) || !b.name || !b.lists?.length) fail(`${name(s)}: BiS entry needs id, name and lists: ${JSON.stringify(b)}`);
       const hit = items.find((i) => i.id === b.id);
-      if (!hit) continue; // crafted, tier, catalyst: not a Season drop
+      if (b.tier && !tierIds.has(b.id)) fail(`${name(s)}: tier piece ${b.name} (${b.id}) not in data/tier.json`);
+    for (const f of b.catalyst?.from ?? []) {
+      const src = items.find((i) => i.id === f.id);
+      if (!src || !usableBy(s, src)) fail(`${name(s)}: catalyst source ${f.name} for ${b.name} is not a usable Season drop`);
+      else if (src.slot !== b.slot) fail(`${name(s)}: catalyst source ${f.name} is ${src.slot}, ${b.name} is ${b.slot}`);
+    }
+    if (!hit) continue; // crafted, tier, catalyst: not a Season drop
       if (hit.name !== b.name) fail(`${name(s)}: BiS item ${b.id} is ${hit.name}, not ${b.name}`);
       if (!usableBy(s, hit)) fail(`${name(s)}: BiS item ${b.name} is not usable by this spec`);
     }

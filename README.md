@@ -6,11 +6,13 @@ WoW gear optimizer: a Midnight Season 2 gear farm tool (web app first, in-game a
 
 | Path | What it is |
 | --- | --- |
-| `config/season.json` | The season definition: region, locale, M+ dungeon names and raid names. |
+| `config/season.json` | The season definition: region, locale, M+ dungeon and raid names, class tier set IDs (`tierSets`), and nicknames for bosses used in pasted BiS sources (`bossAliases`). |
 | `scripts/fetch-data.mjs` | Pulls every boss drop from the Blizzard Game Data API and writes `data/`. |
 | `scripts/verify-rogue.mjs` | Cross-checks `data/items.json` against the rogue farm list in `web/index.html`. |
 | `scripts/build-docs.mjs` | Copies `data/*.json` into `docs/data/` for the website. |
 | `scripts/import-bis.mjs` | Imports BiS lists from pasted Wowhead table text or saved pages (see "Best in slot lists"). |
+| `scripts/resolve-bis.mjs` | Links BiS tier pieces to their set, raid token and catalyst source drop (runs after every import and fetch). |
+| `data/tier.json` | Season class tier sets (pieces and slots) and raid tier tokens, from the API. Generated. |
 | `scripts/check-import.mjs` | Tests for the importer, against hand-written samples in `scripts/fixtures/bis/`. |
 | `config/bis.json` | Which site each spec takes its BiS list from, and the minimum patch accepted. |
 | `scripts/check-app.mjs` | Sanity checks: curated stat data is complete and cited, equip rules hold, the rogue list is reproduced. |
@@ -133,6 +135,15 @@ Pages saved with Ctrl+S / Cmd+S → "Webpage, HTML only" also work, from Wowhead
 - looks up missing item names in the Blizzard API.
 
 The saved-page parser was written without access to the real pages and is tested only against hand-made samples in `scripts/fixtures/bis/`. If a real page imports badly, add it as a fixture and adjust `scripts/import-bis.mjs`.
+
+### Tier pieces and the catalyst
+
+`npm run resolve-bis` (also run by `import-bis` and `fetch`) looks up every BiS item that belongs to the class's tier set in `data/tier.json` and adds:
+- `id`, `slot` (the API's slot, whatever the paste said) and `tier` (the set name);
+- `token` / `curio`: the raid token for that slot and class (e.g. Venomcast Effigy from The Twin Fangs for mail heads) and the any-slot Slumbering Coil Curio from Ula'tek;
+- `catalyst`: which Season drop(s) to convert, when Wowhead's Source names a dungeon or boss other than the token's boss, or says "Catalyst" ("Catalyst the Kith'ix Gloves" → Aberrant Commander's Gauntlets from Kith'ix). With "Catalyst" but no place it's `{ any: "Mail Head" }`. Those source drops are added to the BiS list with the note "Catalyze into <tier piece>", so they get the BiS badge.
+
+Boss names in pasted sources are matched loosely (one typo per word), and nicknames go in `bossAliases` in `config/season.json`. New season: update `tierSets` with the new set IDs (`/data/wow/item-set/index`, the highest IDs) and run `npm run fetch`.
 
 ## Web app
 

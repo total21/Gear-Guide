@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Copies data/items.json and data/specs.json into docs/data/ so the GitHub
+// Copies data/items.json, specs.json and tier.json into docs/data/ so the GitHub
 // Pages site (served from /docs) can load them. Run after every data change;
 // `npm run fetch` does this for you.
 //
@@ -13,7 +13,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CHECK = process.argv.includes("--check");
-const FILES = ["items.json", "specs.json"];
+const FILES = ["items.json", "specs.json", "tier.json"];
 
 await mkdir(path.join(ROOT, "docs/data"), { recursive: true });
 let stale = 0;

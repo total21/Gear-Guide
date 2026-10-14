@@ -1,0 +1,770 @@
+{
+  "region": "us",
+  "locale": "en_US",
+  "season": "Midnight Season 2",
+  "generatedAt": "2026-10-14T04:07:27.980Z",
+  "sets": [
+    {
+      "id": 2055,
+      "name": "Baleful Grave-Knight's Crucible",
+      "classes": [
+        "Death Knight"
+      ],
+      "items": [
+        {
+          "id": 271477,
+          "name": "Baleful Grave-Knight's Breastplate",
+          "slot": "Chest",
+          "armorType": "Plate"
+        },
+        {
+          "id": 271475,
+          "name": "Baleful Grave-Knight's Deathgrips",
+          "slot": "Hands",
+          "armorType": "Plate"
+        },
+        {
+          "id": 271474,
+          "name": "Baleful Grave-Knight's Casque",
+          "slot": "Head",
+          "armorType": "Plate"
+        },
+        {
+          "id": 271473,
+          "name": "Baleful Grave-Knight's Greaves",
+          "slot": "Legs",
+          "armorType": "Plate"
+        },
+        {
+          "id": 271472,
+          "name": "Baleful Grave-Knight's Gibbets",
+          "slot": "Shoulder",
+          "armorType": "Plate"
+        }
+      ]
+    },
+    {
+      "id": 2056,
+      "name": "Abyssal Doomhound's Pursuit",
+      "classes": [
+        "Demon Hunter"
+      ],
+      "items": [
+        {
+          "id": 271540,
+          "name": "Abyssal Doomhound's Coreguard",
+          "slot": "Chest",
+          "armorType": "Leather"
+        },
+        {
+          "id": 271538,
+          "name": "Abyssal Doomhound's Studded Gauntlets",
+          "slot": "Hands",
+          "armorType": "Leather"
+        },
+        {
+          "id": 271537,
+          "name": "Abyssal Doomhound's Relentless Stare",
+          "slot": "Head",
+          "armorType": "Leather"
+        },
+        {
+          "id": 271536,
+          "name": "Abyssal Doomhound's Legwraps",
+          "slot": "Legs",
+          "armorType": "Leather"
+        },
+        {
+          "id": 271535,
+          "name": "Abyssal Doomhound's Jaws",
+          "slot": "Shoulder",
+          "armorType": "Leather"
+        }
+      ]
+    },
+    {
+      "id": 2057,
+      "name": "Bark of the Enigmatic Dreamwatcher",
+      "classes": [
+        "Druid"
+      ],
+      "items": [
+        {
+          "id": 271531,
+          "name": "Enigmatic Dreamwatcher's Lunar Raiment",
+          "slot": "Chest",
+          "armorType": "Leather"
+        },
+        {
+          "id": 271529,
+          "name": "Enigmatic Dreamwatcher's Gauntlets",
+          "slot": "Hands",
+          "armorType": "Leather"
+        },
+        {
+          "id": 271528,
+          "name": "Enigmatic Dreamwatcher's Somnolent Stare",
+          "slot": "Head",
+          "armorType": "Leather"
+        },
+        {
+          "id": 271527,
+          "name": "Enigmatic Dreamwatcher's Leggings",
+          "slot": "Legs",
+          "armorType": "Leather"
+        },
+        {
+          "id": 271526,
+          "name": "Enigmatic Dreamwatcher's Plumage",
+          "slot": "Shoulder",
+          "armorType": "Leather"
+        }
+      ]
+    },
+    {
+      "id": 2058,
+      "name": "Echo of Calamity",
+      "classes": [
+        "Evoker"
+      ],
+      "items": [
+        {
+          "id": 271504,
+          "name": "Searing Caldera of Calamity",
+          "slot": "Chest",
+          "armorType": "Mail"
+        },
+        {
+          "id": 271502,
+          "name": "Calamitous Echo's Ebon Greathorns",
+          "slot": "Hands",
+          "armorType": "Mail"
+        },
+        {
+          "id": 271501,
+          "name": "Calamitous Echo's Magmashapers",
+          "slot": "Head",
+          "armorType": "Mail"
+        },
+        {
+          "id": 271500,
+          "name": "Earthen Pillars of Calamity",
+          "slot": "Legs",
+          "armorType": "Mail"
+        },
+        {
+          "id": 271499,
+          "name": "Calamitous Echo's Sundered Peaks",
+          "slot": "Shoulder",
+          "armorType": "Mail"
+        }
+      ]
+    },
+    {
+      "id": 2059,
+      "name": "Skulking Viper's Ambush",
+      "classes": [
+        "Hunter"
+      ],
+      "items": [
+        {
+          "id": 271495,
+          "name": "Skulking Viper's Scuteplate",
+          "slot": "Chest",
+          "armorType": "Mail"
+        },
+        {
+          "id": 271493,
+          "name": "Skulking Viper's Hidepiercers",
+          "slot": "Hands",
+          "armorType": "Mail"
+        },
+        {
+          "id": 271492,
+          "name": "Skulking Viper's Weeping Fangs",
+          "slot": "Head",
+          "armorType": "Mail"
+        },
+        {
+          "id": 271491,
+          "name": "Skulking Viper's Coiled Legwraps",
+          "slot": "Legs",
+          "armorType": "Mail"
+        },
+        {
+          "id": 271490,
+          "name": "Jaws of the Skulking Viper",
+          "slot": "Shoulder",
+          "armorType": "Mail"
+        }
+      ]
+    },
+    {
+      "id": 2060,
+      "name": "Primal Leywarden's Attire",
+      "classes": [
+        "Mage"
+      ],
+      "items": [
+        {
+          "id": 271567,
+          "name": "Crest of the Primal Leywarden",
+          "slot": "Chest",
+          "armorType": "Cloth"
+        },
+        {
+          "id": 271565,
+          "name": "Primal Leywarden's Manashapers",
+          "slot": "Hands",
+          "armorType": "Cloth"
+        },
+        {
+          "id": 271564,
+          "name": "Crown of the Primal Leywarden",
+          "slot": "Head",
+          "armorType": "Cloth"
+        },
+        {
+          "id": 271563,
+          "name": "Primal Leywarden's Tailored Legwraps",
+          "slot": "Legs",
+          "armorType": "Cloth"
+        },
+        {
+          "id": 271562,
+          "name": "Primal Leywarden's Manaflux",
+          "slot": "Shoulder",
+          "armorType": "Cloth"
+        }
+      ]
+    },
+    {
+      "id": 2061,
+      "name": "Guile of the Monkey King",
+      "classes": [
+        "Monk"
+      ],
+      "items": [
+        {
+          "id": 271522,
+          "name": "Battle Gi of the Monkey King",
+          "slot": "Chest",
+          "armorType": "Leather"
+        },
+        {
+          "id": 271520,
+          "name": "Monkey King's Fighting Fists",
+          "slot": "Hands",
+          "armorType": "Leather"
+        },
+        {
+          "id": 271519,
+          "name": "Monkey King's Unyielding Visage",
+          "slot": "Head",
+          "armorType": "Leather"
+        },
+        {
+          "id": 271518,
+          "name": "Pantaloons of the Monkey King",
+          "slot": "Legs",
+          "armorType": "Leather"
+        },
+        {
+          "id": 271517,
+          "name": "Tassels of the Monkey King",
+          "slot": "Shoulder",
+          "armorType": "Leather"
+        }
+      ]
+    },
+    {
+      "id": 2062,
+      "name": "Radiance of the Consecrated Flame",
+      "classes": [
+        "Paladin"
+      ],
+      "items": [
+        {
+          "id": 271468,
+          "name": "Bulwark of the Consecrated Flame",
+          "slot": "Chest",
+          "armorType": "Plate"
+        },
+        {
+          "id": 271466,
+          "name": "Gauntlets of the Consecrated Flame",
+          "slot": "Hands",
+          "armorType": "Plate"
+        },
+        {
+          "id": 271465,
+          "name": "Warhelm of the Consecrated Flame",
+          "slot": "Head",
+          "armorType": "Plate"
+        },
+        {
+          "id": 271464,
+          "name": "Greaves of the Consecrated Flame",
+          "slot": "Legs",
+          "armorType": "Plate"
+        },
+        {
+          "id": 271463,
+          "name": "Pauldrons of the Consecrated Flame",
+          "slot": "Shoulder",
+          "armorType": "Plate"
+        }
+      ]
+    },
+    {
+      "id": 2063,
+      "name": "Cosmic Penitent's Raiment",
+      "classes": [
+        "Priest"
+      ],
+      "items": [
+        {
+          "id": 271556,
+          "name": "Cosmic Penitent's Celestial Grips",
+          "slot": "Hands",
+          "armorType": "Cloth"
+        },
+        {
+          "id": 271555,
+          "name": "Cosmic Penitent's Truesight",
+          "slot": "Head",
+          "armorType": "Cloth"
+        },
+        {
+          "id": 271554,
+          "name": "Enveloping Legwraps of the Cosmic Penitent",
+          "slot": "Legs",
+          "armorType": "Cloth"
+        },
+        {
+          "id": 271558,
+          "name": "Cosmic Penitent's Eclipsing Robes",
+          "slot": "Chest",
+          "armorType": "Cloth"
+        },
+        {
+          "id": 271553,
+          "name": "Cosmic Penitent's Echoing Screams",
+          "slot": "Shoulder",
+          "armorType": "Cloth"
+        }
+      ]
+    },
+    {
+      "id": 2064,
+      "name": "Chosen Bloodslayer's Hexweave",
+      "classes": [
+        "Rogue"
+      ],
+      "items": [
+        {
+          "id": 271513,
+          "name": "Chosen Bloodslayer's Banded Poncho",
+          "slot": "Chest",
+          "armorType": "Leather"
+        },
+        {
+          "id": 271511,
+          "name": "Chosen Bloodslayer's Fanged Grips",
+          "slot": "Hands",
+          "armorType": "Leather"
+        },
+        {
+          "id": 271510,
+          "name": "Chosen Bloodslayer's Spirit Shroud",
+          "slot": "Head",
+          "armorType": "Leather"
+        },
+        {
+          "id": 271509,
+          "name": "Chosen Bloodslayer's Reinforced Pants",
+          "slot": "Legs",
+          "armorType": "Leather"
+        },
+        {
+          "id": 271508,
+          "name": "Chosen Bloodslayer's Voodoo Guards",
+          "slot": "Shoulder",
+          "armorType": "Leather"
+        }
+      ]
+    },
+    {
+      "id": 2065,
+      "name": "Ophidian Oracle's Prophecy",
+      "classes": [
+        "Shaman"
+      ],
+      "items": [
+        {
+          "id": 271486,
+          "name": "Fanged Raiment of the Ophidian Oracle",
+          "slot": "Chest",
+          "armorType": "Mail"
+        },
+        {
+          "id": 271484,
+          "name": "Hexing Grips of the Ophidian Oracle",
+          "slot": "Hands",
+          "armorType": "Mail"
+        },
+        {
+          "id": 271483,
+          "name": "Serpent Crown of the Ophidian Oracle",
+          "slot": "Head",
+          "armorType": "Mail"
+        },
+        {
+          "id": 271482,
+          "name": "Leggings of the Ophidian Oracle",
+          "slot": "Legs",
+          "armorType": "Mail"
+        },
+        {
+          "id": 271481,
+          "name": "Hissing Mantle of the Ophidian Oracle",
+          "slot": "Shoulder",
+          "armorType": "Mail"
+        }
+      ]
+    },
+    {
+      "id": 2066,
+      "name": "Damned Necrolyte's Shattered Restraints",
+      "classes": [
+        "Warlock"
+      ],
+      "items": [
+        {
+          "id": 271547,
+          "name": "Damned Necrolyte's Charred Grasps",
+          "slot": "Hands",
+          "armorType": "Cloth"
+        },
+        {
+          "id": 271546,
+          "name": "Skull of the Damned Necrolyte",
+          "slot": "Head",
+          "armorType": "Cloth"
+        },
+        {
+          "id": 271545,
+          "name": "Damned Necrolyte's Leg Bindings",
+          "slot": "Legs",
+          "armorType": "Cloth"
+        },
+        {
+          "id": 271549,
+          "name": "Damned Necrolyte's Rattling Robes",
+          "slot": "Chest",
+          "armorType": "Cloth"
+        },
+        {
+          "id": 271544,
+          "name": "Spires of the Damned Necrolyte",
+          "slot": "Shoulder",
+          "armorType": "Cloth"
+        }
+      ]
+    },
+    {
+      "id": 2067,
+      "name": "Jade Warlord's Dominion",
+      "classes": [
+        "Warrior"
+      ],
+      "items": [
+        {
+          "id": 271459,
+          "name": "Cuirass of the Jade Warlord",
+          "slot": "Chest",
+          "armorType": "Plate"
+        },
+        {
+          "id": 271457,
+          "name": "Jeweled Gauntlets of the Jade Warlord",
+          "slot": "Hands",
+          "armorType": "Plate"
+        },
+        {
+          "id": 271456,
+          "name": "Tempered Horns of the Jade Warlord",
+          "slot": "Head",
+          "armorType": "Plate"
+        },
+        {
+          "id": 271455,
+          "name": "Greaves of the Jade Warlord",
+          "slot": "Legs",
+          "armorType": "Plate"
+        },
+        {
+          "id": 271454,
+          "name": "Raging Pauldrons of the Jade Warlord",
+          "slot": "Shoulder",
+          "armorType": "Plate"
+        }
+      ]
+    }
+  ],
+  "tokens": [
+    {
+      "id": 270913,
+      "name": "Venomforged Idol",
+      "instance": "The Venomous Abyss",
+      "boss": "Entombed Sentinels",
+      "slot": "Hands",
+      "classes": [
+        "Death Knight",
+        "Paladin",
+        "Warrior"
+      ]
+    },
+    {
+      "id": 270912,
+      "name": "Venomcast Idol",
+      "instance": "The Venomous Abyss",
+      "boss": "Entombed Sentinels",
+      "slot": "Hands",
+      "classes": [
+        "Hunter",
+        "Shaman",
+        "Evoker"
+      ]
+    },
+    {
+      "id": 270911,
+      "name": "Venomcured Idol",
+      "instance": "The Venomous Abyss",
+      "boss": "Entombed Sentinels",
+      "slot": "Hands",
+      "classes": [
+        "Druid",
+        "Demon Hunter",
+        "Monk",
+        "Rogue"
+      ]
+    },
+    {
+      "id": 270910,
+      "name": "Venomwoven Idol",
+      "instance": "The Venomous Abyss",
+      "boss": "Entombed Sentinels",
+      "slot": "Hands",
+      "classes": [
+        "Warlock",
+        "Mage",
+        "Priest"
+      ]
+    },
+    {
+      "id": 270925,
+      "name": "Venomforged Remnant",
+      "instance": "The Venomous Abyss",
+      "boss": "The Lost Explorers",
+      "slot": "Shoulder",
+      "classes": [
+        "Death Knight",
+        "Paladin",
+        "Warrior"
+      ]
+    },
+    {
+      "id": 270924,
+      "name": "Venomcast Remnant",
+      "instance": "The Venomous Abyss",
+      "boss": "The Lost Explorers",
+      "slot": "Shoulder",
+      "classes": [
+        "Hunter",
+        "Shaman",
+        "Evoker"
+      ]
+    },
+    {
+      "id": 270923,
+      "name": "Venomcured Remnant",
+      "instance": "The Venomous Abyss",
+      "boss": "The Lost Explorers",
+      "slot": "Shoulder",
+      "classes": [
+        "Druid",
+        "Demon Hunter",
+        "Monk",
+        "Rogue"
+      ]
+    },
+    {
+      "id": 270922,
+      "name": "Venomwoven Remnant",
+      "instance": "The Venomous Abyss",
+      "boss": "The Lost Explorers",
+      "slot": "Shoulder",
+      "classes": [
+        "Warlock",
+        "Mage",
+        "Priest"
+      ]
+    },
+    {
+      "id": 270929,
+      "name": "Venomforged Icon",
+      "instance": "The Venomous Abyss",
+      "boss": "Vashnik the Malignant",
+      "slot": "Chest",
+      "classes": [
+        "Death Knight",
+        "Paladin",
+        "Warrior"
+      ]
+    },
+    {
+      "id": 270928,
+      "name": "Venomcast Icon",
+      "instance": "The Venomous Abyss",
+      "boss": "Vashnik the Malignant",
+      "slot": "Chest",
+      "classes": [
+        "Hunter",
+        "Shaman",
+        "Evoker"
+      ]
+    },
+    {
+      "id": 270927,
+      "name": "Venomcured Icon",
+      "instance": "The Venomous Abyss",
+      "boss": "Vashnik the Malignant",
+      "slot": "Chest",
+      "classes": [
+        "Druid",
+        "Demon Hunter",
+        "Monk",
+        "Rogue"
+      ]
+    },
+    {
+      "id": 270926,
+      "name": "Venomwoven Icon",
+      "instance": "The Venomous Abyss",
+      "boss": "Vashnik the Malignant",
+      "slot": "Chest",
+      "classes": [
+        "Warlock",
+        "Mage",
+        "Priest"
+      ]
+    },
+    {
+      "id": 270921,
+      "name": "Venomforged Relic",
+      "instance": "The Venomous Abyss",
+      "boss": "Sszorak",
+      "slot": "Legs",
+      "classes": [
+        "Death Knight",
+        "Paladin",
+        "Warrior"
+      ]
+    },
+    {
+      "id": 270920,
+      "name": "Venomcast Relic",
+      "instance": "The Venomous Abyss",
+      "boss": "Sszorak",
+      "slot": "Legs",
+      "classes": [
+        "Hunter",
+        "Shaman",
+        "Evoker"
+      ]
+    },
+    {
+      "id": 270919,
+      "name": "Venomcured Relic",
+      "instance": "The Venomous Abyss",
+      "boss": "Sszorak",
+      "slot": "Legs",
+      "classes": [
+        "Druid",
+        "Demon Hunter",
+        "Monk",
+        "Rogue"
+      ]
+    },
+    {
+      "id": 270918,
+      "name": "Venomwoven Relic",
+      "instance": "The Venomous Abyss",
+      "boss": "Sszorak",
+      "slot": "Legs",
+      "classes": [
+        "Warlock",
+        "Mage",
+        "Priest"
+      ]
+    },
+    {
+      "id": 270917,
+      "name": "Venomforged Effigy",
+      "instance": "The Venomous Abyss",
+      "boss": "The Twin Fangs",
+      "slot": "Head",
+      "classes": [
+        "Death Knight",
+        "Paladin",
+        "Warrior"
+      ]
+    },
+    {
+      "id": 270916,
+      "name": "Venomcast Effigy",
+      "instance": "The Venomous Abyss",
+      "boss": "The Twin Fangs",
+      "slot": "Head",
+      "classes": [
+        "Hunter",
+        "Shaman",
+        "Evoker"
+      ]
+    },
+    {
+      "id": 270915,
+      "name": "Venomcured Effigy",
+      "instance": "The Venomous Abyss",
+      "boss": "The Twin Fangs",
+      "slot": "Head",
+      "classes": [
+        "Druid",
+        "Demon Hunter",
+        "Monk",
+        "Rogue"
+      ]
+    },
+    {
+      "id": 270914,
+      "name": "Venomwoven Effigy",
+      "instance": "The Venomous Abyss",
+      "boss": "The Twin Fangs",
+      "slot": "Head",
+      "classes": [
+        "Warlock",
+        "Mage",
+        "Priest"
+      ]
+    },
+    {
+      "id": 270909,
+      "name": "Slumbering Coil Curio",
+      "instance": "The Venomous Abyss",
+      "boss": "Ula'tek",
+      "slot": null,
+      "classes": null
+    }
+  ]
+}

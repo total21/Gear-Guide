@@ -8,10 +8,13 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { pageUrl, siteOf, specFromUrl, walk, wowheadMarkupToHtml, extractBis, toBisItems, versionOf, versionOk, specFromText, parsePasted } from "./import-bis.mjs";
+import { resolveSpec } from "./resolve-bis.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const { items } = JSON.parse(await readFile(path.join(ROOT, "data/items.json"), "utf8"));
 const { specs } = JSON.parse(await readFile(path.join(ROOT, "data/specs.json"), "utf8"));
+const tier = JSON.parse(await readFile(path.join(ROOT, "data/tier.json"), "utf8"));
+const { bossAliases } = JSON.parse(await readFile(path.join(ROOT, "config/season.json"), "utf8"));
 const problems = [];
 const eq = (label, got, want) => {
   if (JSON.stringify(got) !== JSON.stringify(want)) problems.push(`${label}: got ${JSON.stringify(got)}, want ${JSON.stringify(want)}`);
@@ -111,14 +114,40 @@ eq("spec from id file name", specFromText("", "260.txt", specs)?.id, 260);
   eq("crafted with", r.entries.map((e) => [e.name, e.crafting, e.source]), [["Silvermoon Agent's Deflectors", ["Arcanoweave Lining"], "Crafting/Misc"]]);
 }
 
-// "<tier> (Catalyzed from <drop>)": tier piece kept as non-drop, source drop badged.
+// "<tier> (Catalyzed from <drop>)": the parser keeps the tier piece and its
+// named source; resolve-bis.mjs then links and badges the source drop.
 {
-  const spec = specs.find((x) => x.id === 255);
+  const spec = structuredClone(specs.find((x) => x.id === 255));
   const r = parsePasted("Head\tSkulking Viper's Weeping Fangs Skulking Viper's Weeping Fangs (Catalyzed from Sethraliss' Fanged Helm Sethraliss' Fanged Helm)\tTier Set|Temple of Sethraliss", spec, items);
-  eq("catalyst", r.entries.map((e) => [e.id, e.name, e.note ?? null, e.catalyzedFrom ?? null, e.source ?? null]), [
-    [239035, "Sethraliss' Fanged Helm", "Catalyze into Skulking Viper's Weeping Fangs", null, null],
-    [null, "Skulking Viper's Weeping Fangs", null, "Sethraliss' Fanged Helm", "Tier Set · Temple of Sethraliss"],
+  eq("catalyst parse", r.entries.map((e) => [e.id, e.name, e.catalyzedFrom ?? null, e.source ?? null]), [
+    [null, "Skulking Viper's Weeping Fangs", "Sethraliss' Fanged Helm", "Tier Set · Temple of Sethraliss"],
   ]);
+  spec.bis = { items: toBisItems(r.entries, items) };
+  resolveSpec(spec, items, tier, bossAliases);
+  const [t, d] = spec.bis.items;
+  eq("catalyst tier", [t.id, t.slot, t.tier, t.catalyst.from.map((f) => f.id), t.token?.name], [271492, "Head", "Skulking Viper's Ambush", [239035], "Venomcast Effigy"]);
+  eq("catalyst badge", [d?.id, d?.note, d?.addedBy], [239035, "Catalyze into Skulking Viper's Weeping Fangs", "catalyst"]);
+}
+
+// Tier sources from Wowhead's Source column: "Catalyst the <boss> <slot>" names
+// the drop to convert; the token boss alone means the raid token; "Catalyst"
+// with no place means any drop in that slot.
+{
+  const run = (specId, line) => {
+    const spec = structuredClone(specs.find((x) => x.id === specId));
+    spec.bis = { items: toBisItems(parsePasted(line, spec, items).entries, items) };
+    resolveSpec(spec, items, tier, bossAliases);
+    const b = spec.bis.items[0];
+    return [b.slot, b.catalyst?.from?.map((f) => f.name) ?? null, b.catalyst?.any ?? null, b.token?.boss ?? null];
+  };
+  eq("catalyst from boss", run(254, "Head\tSkulking Viper's Weeping Fangs Skulking Viper's Weeping Fangs \tCatalyst the Nek'zali the Soulcoiler Head"),
+    ["Head", ["Crown of the Eternal Fang"], null, "The Twin Fangs"]);
+  eq("token boss only", run(65, "Gloves\tGauntlets of the Consecrated Flame Gauntlets of the Consecrated Flame \tEntombed Sentinels"),
+    ["Hands", null, null, "Entombed Sentinels"]);
+  eq("catalyst any", run(268, "Head\tMonkey King's Unyielding Visage Monkey King's Unyielding Visage \tCatalyst|Mythic+|Vault"),
+    ["Head", [], "Leather Head", "The Twin Fangs"]);
+  eq("catalyst from dungeon", run(65, "Shoulders\tPauldrons of the Consecrated Flame Pauldrons of the Consecrated Flame \tMurder Row"),
+    ["Shoulder", ["Cinderfury Shoulderguards"], null, "The Lost Explorers"]);
 }
 
 // Spec slugs resolve for every spec on every site.

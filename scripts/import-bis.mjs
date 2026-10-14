@@ -22,6 +22,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { usableBy, dropAzeriteTwins } from "../docs/gear.js";
+import { resolveSpec } from "./resolve-bis.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -333,8 +334,8 @@ export function parsePasted(text, spec, items) {
       const from = byName.get(find(` ${norm(fromName)} `, byName.keys()));
       const slot = noParens(cols[0]);
       const source = cols.length > 2 ? undouble(cols.slice(2).join(" ")).replace(/\s*\|\s*/g, " · ") : null;
-      if (from) entries.push({ id: from.id, name: from.name, slot, list, note: `Catalyze into ${tier}` });
-      else skipped.push(`${line}  (catalyst source "${fromName}" is not a Season drop ${spec.spec} ${spec.class} can use)`);
+      // resolve-bis.mjs badges the source drop; here just check it exists.
+      if (!from) skipped.push(`${line}  (catalyst source "${fromName}" is not a Season drop ${spec.spec} ${spec.class} can use)`);
       entries.push({ id: null, name: tier, slot, list, ...(source && { source }), catalyzedFrom: from?.name ?? fromName });
       continue;
     }
@@ -463,6 +464,10 @@ async function main() {
 
   if (!changed) { console.log(failed ? "Nothing imported." : "No BiS files found (put .txt or .html files in bis-pages/)."); process.exit(failed ? 1 : 0); }
   if (DRY) { console.log(`Dry run: ${changed} spec(s) would be updated.`); process.exit(failed ? 1 : 0); }
+  // Tier pieces: real slot, raid token, catalyst source drops (see resolve-bis.mjs).
+  const tier = JSON.parse(await readFile(path.join(ROOT, "data/tier.json"), "utf8"));
+  const { bossAliases } = JSON.parse(await readFile(path.join(ROOT, "config/season.json"), "utf8"));
+  for (const s of specsData.specs) for (const r of resolveSpec(s, items, tier, bossAliases)) console.log("  slot: " + r);
   await writeFile(specsFile, JSON.stringify(specsData, null, 2) + "\n");
   console.log(`Updated ${changed} spec(s) in data/specs.json.`);
   execFileSync(process.execPath, [path.join(ROOT, "scripts/build-docs.mjs")], { stdio: "inherit" });

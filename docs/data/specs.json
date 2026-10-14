@@ -2,7 +2,7 @@
   "region": "us",
   "locale": "en_US",
   "season": "Midnight Season 2",
-  "generatedAt": "2026-10-14T01:56:55.676Z",
+  "generatedAt": "2026-10-14T04:07:27.980Z",
   "specs": [
     {
       "id": 250,
@@ -81,11 +81,32 @@
             {
               "slot": "Head",
               "name": "Baleful Grave-Knight's Casque",
-              "id": null,
+              "id": 271474,
               "lists": [
                 "Overall"
               ],
-              "source": "Kith'ix"
+              "source": "Kith'ix",
+              "tier": "Baleful Grave-Knight's Crucible",
+              "token": {
+                "name": "Venomforged Effigy",
+                "id": 270917,
+                "boss": "The Twin Fangs"
+              },
+              "curio": {
+                "name": "Slumbering Coil Curio",
+                "id": 270909,
+                "boss": "Ula'tek"
+              },
+              "catalyst": {
+                "from": [
+                  {
+                    "id": 281239,
+                    "name": "Corroded Hulk's Skullcap",
+                    "boss": "Kith'ix",
+                    "instance": "The Unbinding of Kith'ix"
+                  }
+                ]
+              }
             },
             {
               "slot": "Neck",
@@ -96,13 +117,34 @@
               ]
             },
             {
-              "slot": "Shoulders",
+              "slot": "Shoulder",
               "name": "Baleful Grave-Knight's Gibbets",
-              "id": null,
+              "id": 271472,
               "lists": [
                 "Overall"
               ],
-              "source": "Temple of Sethraliss"
+              "source": "Temple of Sethraliss",
+              "tier": "Baleful Grave-Knight's Crucible",
+              "token": {
+                "name": "Venomforged Remnant",
+                "id": 270925,
+                "boss": "The Lost Explorers"
+              },
+              "curio": {
+                "name": "Slumbering Coil Curio",
+                "id": 270909,
+                "boss": "Ula'tek"
+              },
+              "catalyst": {
+                "from": [
+                  {
+                    "id": 239037,
+                    "name": "C'thraxxi Binders Pauldrons",
+                    "boss": "Avatar of Sethraliss",
+                    "instance": "Temple of Sethraliss"
+                  }
+                ]
+              }
             },
             {
               "slot": "Cloak",
@@ -115,11 +157,32 @@
             {
               "slot": "Chest",
               "name": "Baleful Grave-Knight's Breastplate",
-              "id": null,
+              "id": 271477,
               "lists": [
                 "Overall"
               ],
-              "source": "The Coiled Altar"
+              "source": "The Coiled Altar",
+              "tier": "Baleful Grave-Knight's Crucible",
+              "token": {
+                "name": "Venomforged Icon",
+                "id": 270929,
+                "boss": "Vashnik the Malignant"
+              },
+              "curio": {
+                "name": "Slumbering Coil Curio",
+                "id": 270909,
+                "boss": "Ula'tek"
+              },
+              "catalyst": {
+                "from": [
+                  {
+                    "id": 268222,
+                    "name": "Reckless Spirit Breastplate",
+                    "boss": "The Coiled Altar",
+                    "instance": "The Venomous Abyss"
+                  }
+                ]
+              }
             },
             {
               "slot": "Wrist",
@@ -131,13 +194,34 @@
               "source": "Crafting"
             },
             {
-              "slot": "Gloves",
+              "slot": "Hands",
               "name": "Baleful Grave-Knight's Deathgrips",
-              "id": null,
+              "id": 271475,
               "lists": [
                 "Overall"
               ],
-              "source": "King's Rest"
+              "source": "King's Rest",
+              "tier": "Baleful Grave-Knight's Crucible",
+              "token": {
+                "name": "Venomforged Idol",
+                "id": 270913,
+                "boss": "Entombed Sentinels"
+              },
+              "curio": {
+                "name": "Slumbering Coil Curio",
+                "id": 270909,
+                "boss": "Ula'tek"
+              },
+              "catalyst": {
+                "from": [
+                  {
+                    "id": 159413,
+                    "name": "Gauntlets of the Avian Sentinel",
+                    "boss": "The Golden Serpent",
+                    "instance": "Kings' Rest"
+                  }
+                ]
+              }
             },
             {
               "slot": "Belt",
@@ -206,6 +290,46 @@
               "lists": [
                 "Overall"
               ]
+            },
+            {
+              "slot": "Head",
+              "name": "Corroded Hulk's Skullcap",
+              "id": 281239,
+              "lists": [
+                "Overall"
+              ],
+              "note": "Catalyze into Baleful Grave-Knight's Casque",
+              "addedBy": "catalyst"
+            },
+            {
+              "slot": "Shoulder",
+              "name": "C'thraxxi Binders Pauldrons",
+              "id": 239037,
+              "lists": [
+                "Overall"
+              ],
+              "note": "Catalyze into Baleful Grave-Knight's Gibbets",
+              "addedBy": "catalyst"
+            },
+            {
+              "slot": "Chest",
+              "name": "Reckless Spirit Breastplate",
+              "id": 268222,
+              "lists": [
+                "Overall"
+              ],
+              "note": "Catalyze into Baleful Grave-Knight's Breastplate",
+              "addedBy": "catalyst"
+            },
+            {
+              "slot": "Hands",
+              "name": "Gauntlets of the Avian Sentinel",
+              "id": 159413,
+              "lists": [
+                "Overall"
+              ],
+              "note": "Catalyze into Baleful Grave-Knight's Deathgrips",
+              "addedBy": "catalyst"
             }
           ]
         },
@@ -227,11 +351,32 @@
             {
               "slot": "Head",
               "name": "Baleful Grave-Knight's Casque",
-              "id": null,
+              "id": 271474,
               "lists": [
                 "Overall"
               ],
-              "source": "Kith'ix"
+              "source": "Kith'ix",
+              "tier": "Baleful Grave-Knight's Crucible",
+              "token": {
+                "name": "Venomforged Effigy",
+                "id": 270917,
+                "boss": "The Twin Fangs"
+              },
+              "curio": {
+                "name": "Slumbering Coil Curio",
+                "id": 270909,
+                "boss": "Ula'tek"
+              },
+              "catalyst": {
+                "from": [
+                  {
+                    "id": 281239,
+                    "name": "Corroded Hulk's Skullcap",
+                    "boss": "Kith'ix",
+                    "instance": "The Unbinding of Kith'ix"
+                  }
+                ]
+              }
             },
             {
               "slot": "Neck",
@@ -242,13 +387,34 @@
               ]
             },
             {
-              "slot": "Shoulders",
+              "slot": "Shoulder",
               "name": "Baleful Grave-Knight's Gibbets",
-              "id": null,
+              "id": 271472,
               "lists": [
                 "Overall"
               ],
-              "source": "Temple of Sethraliss"
+              "source": "Temple of Sethraliss",
+              "tier": "Baleful Grave-Knight's Crucible",
+              "token": {
+                "name": "Venomforged Remnant",
+                "id": 270925,
+                "boss": "The Lost Explorers"
+              },
+              "curio": {
+                "name": "Slumbering Coil Curio",
+                "id": 270909,
+                "boss": "Ula'tek"
+              },
+              "catalyst": {
+                "from": [
+                  {
+                    "id": 239037,
+                    "name": "C'thraxxi Binders Pauldrons",
+                    "boss": "Avatar of Sethraliss",
+                    "instance": "Temple of Sethraliss"
+                  }
+                ]
+              }
             },
             {
               "slot": "Cloak",
@@ -261,11 +427,32 @@
             {
               "slot": "Chest",
               "name": "Baleful Grave-Knight's Breastplate",
-              "id": null,
+              "id": 271477,
               "lists": [
                 "Overall"
               ],
-              "source": "The Coiled Altar"
+              "source": "The Coiled Altar",
+              "tier": "Baleful Grave-Knight's Crucible",
+              "token": {
+                "name": "Venomforged Icon",
+                "id": 270929,
+                "boss": "Vashnik the Malignant"
+              },
+              "curio": {
+                "name": "Slumbering Coil Curio",
+                "id": 270909,
+                "boss": "Ula'tek"
+              },
+              "catalyst": {
+                "from": [
+                  {
+                    "id": 268222,
+                    "name": "Reckless Spirit Breastplate",
+                    "boss": "The Coiled Altar",
+                    "instance": "The Venomous Abyss"
+                  }
+                ]
+              }
             },
             {
               "slot": "Wrist",
@@ -277,13 +464,34 @@
               "source": "Crafting"
             },
             {
-              "slot": "Gloves",
+              "slot": "Hands",
               "name": "Baleful Grave-Knight's Deathgrips",
-              "id": null,
+              "id": 271475,
               "lists": [
                 "Overall"
               ],
-              "source": "King's Rest"
+              "source": "King's Rest",
+              "tier": "Baleful Grave-Knight's Crucible",
+              "token": {
+                "name": "Venomforged Idol",
+                "id": 270913,
+                "boss": "Entombed Sentinels"
+              },
+              "curio": {
+                "name": "Slumbering Coil Curio",
+                "id": 270909,
+                "boss": "Ula'tek"
+              },
+              "catalyst": {
+                "from": [
+                  {
+                    "id": 159413,
+                    "name": "Gauntlets of the Avian Sentinel",
+                    "boss": "The Golden Serpent",
+                    "instance": "Kings' Rest"
+                  }
+                ]
+              }
             },
             {
               "slot": "Belt",
@@ -360,6 +568,46 @@
               "lists": [
                 "Overall"
               ]
+            },
+            {
+              "slot": "Head",
+              "name": "Corroded Hulk's Skullcap",
+              "id": 281239,
+              "lists": [
+                "Overall"
+              ],
+              "note": "Catalyze into Baleful Grave-Knight's Casque",
+              "addedBy": "catalyst"
+            },
+            {
+              "slot": "Shoulder",
+              "name": "C'thraxxi Binders Pauldrons",
+              "id": 239037,
+              "lists": [
+                "Overall"
+              ],
+              "note": "Catalyze into Baleful Grave-Knight's Gibbets",
+              "addedBy": "catalyst"
+            },
+            {
+              "slot": "Chest",
+              "name": "Reckless Spirit Breastplate",
+              "id": 268222,
+              "lists": [
+                "Overall"
+              ],
+              "note": "Catalyze into Baleful Grave-Knight's Breastplate",
+              "addedBy": "catalyst"
+            },
+            {
+              "slot": "Hands",
+              "name": "Gauntlets of the Avian Sentinel",
+              "id": 159413,
+              "lists": [
+                "Overall"
+              ],
+              "note": "Catalyze into Baleful Grave-Knight's Deathgrips",
+              "addedBy": "catalyst"
             }
           ]
         }
@@ -431,11 +679,22 @@
           {
             "slot": "Head",
             "name": "Baleful Grave-Knight's Casque",
-            "id": null,
+            "id": 271474,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Baleful Grave-Knight's Crucible",
+            "token": {
+              "name": "Venomforged Effigy",
+              "id": 270917,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Neck",
@@ -446,13 +705,24 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Baleful Grave-Knight's Gibbets",
-            "id": null,
+            "id": 271472,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Baleful Grave-Knight's Crucible",
+            "token": {
+              "name": "Venomforged Remnant",
+              "id": 270925,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Cloak",
@@ -465,11 +735,32 @@
           {
             "slot": "Chest",
             "name": "Baleful Grave-Knight's Breastplate",
-            "id": null,
+            "id": 271477,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar"
+            "source": "The Coiled Altar",
+            "tier": "Baleful Grave-Knight's Crucible",
+            "token": {
+              "name": "Venomforged Icon",
+              "id": 270929,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268222,
+                  "name": "Reckless Spirit Breastplate",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Wrist",
@@ -481,13 +772,24 @@
             "source": "Crafting/Misc"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Baleful Grave-Knight's Deathgrips",
-            "id": null,
+            "id": 271475,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Baleful Grave-Knight's Crucible",
+            "token": {
+              "name": "Venomforged Idol",
+              "id": 270913,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -545,6 +847,16 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Reckless Spirit Breastplate",
+            "id": 268222,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Baleful Grave-Knight's Breastplate",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -605,11 +917,22 @@
           {
             "slot": "Head",
             "name": "Baleful Grave-Knight's Casque",
-            "id": null,
+            "id": 271474,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Baleful Grave-Knight's Crucible",
+            "token": {
+              "name": "Venomforged Effigy",
+              "id": 270917,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Neck",
@@ -620,13 +943,24 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Baleful Grave-Knight's Gibbets",
-            "id": null,
+            "id": 271472,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Baleful Grave-Knight's Crucible",
+            "token": {
+              "name": "Venomforged Remnant",
+              "id": 270925,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Cloak",
@@ -639,11 +973,22 @@
           {
             "slot": "Chest",
             "name": "Baleful Grave-Knight's Breastplate",
-            "id": null,
+            "id": 271477,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Baleful Grave-Knight's Crucible",
+            "token": {
+              "name": "Venomforged Icon",
+              "id": 270929,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Wrist",
@@ -655,13 +1000,24 @@
             "source": "Crafting"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Baleful Grave-Knight's Deathgrips",
-            "id": null,
+            "id": 271475,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Baleful Grave-Knight's Crucible",
+            "token": {
+              "name": "Venomforged Idol",
+              "id": 270913,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -803,11 +1159,32 @@
           {
             "slot": "Head",
             "name": "Abyssal Doomhound's Relentless Stare",
-            "id": null,
+            "id": 271537,
             "lists": [
               "Overall"
             ],
-            "source": "Ula'tek"
+            "source": "Ula'tek",
+            "tier": "Abyssal Doomhound's Pursuit",
+            "token": {
+              "name": "Venomcured Effigy",
+              "id": 270915,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 271875,
+                  "name": "Gaze of the Coiled Watcher",
+                  "boss": "Ula'tek",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Neck",
@@ -818,13 +1195,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Abyssal Doomhound's Jaws",
-            "id": null,
+            "id": 271535,
             "lists": [
               "Overall"
             ],
-            "source": "Vashnik the Malignant"
+            "source": "Vashnik the Malignant",
+            "tier": "Abyssal Doomhound's Pursuit",
+            "token": {
+              "name": "Venomcured Remnant",
+              "id": 270923,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268246,
+                  "name": "Frothing Venom Spaulders",
+                  "boss": "Vashnik the Malignant",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Cloak",
@@ -837,11 +1235,32 @@
           {
             "slot": "Chest",
             "name": "Abyssal Doomhound's Coreguard",
-            "id": null,
+            "id": 271540,
             "lists": [
               "Overall"
             ],
-            "source": "General Kith'ix"
+            "source": "General Kith'ix",
+            "tier": "Abyssal Doomhound's Pursuit",
+            "token": {
+              "name": "Venomcured Icon",
+              "id": 270927,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 281236,
+                  "name": "Chestwrap of Palpable Terror",
+                  "boss": "Kith'ix",
+                  "instance": "The Unbinding of Kith'ix"
+                }
+              ]
+            }
           },
           {
             "slot": "Wrist",
@@ -856,13 +1275,24 @@
             ]
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Abyssal Doomhound's Studded Gauntlets",
-            "id": null,
+            "id": 271538,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Abyssal Doomhound's Pursuit",
+            "token": {
+              "name": "Venomcured Idol",
+              "id": 270911,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -875,11 +1305,32 @@
           {
             "slot": "Legs",
             "name": "Abyssal Doomhound's Legwraps",
-            "id": null,
+            "id": 271536,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar"
+            "source": "The Coiled Altar",
+            "tier": "Abyssal Doomhound's Pursuit",
+            "token": {
+              "name": "Venomcured Relic",
+              "id": 270919,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268225,
+                  "name": "Coiled Hex Legguards",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -924,6 +1375,46 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Head",
+            "name": "Gaze of the Coiled Watcher",
+            "id": 271875,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Abyssal Doomhound's Relentless Stare",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Frothing Venom Spaulders",
+            "id": 268246,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Abyssal Doomhound's Jaws",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Chest",
+            "name": "Chestwrap of Palpable Terror",
+            "id": 281236,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Abyssal Doomhound's Coreguard",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Coiled Hex Legguards",
+            "id": 268225,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Abyssal Doomhound's Legwraps",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -994,11 +1485,32 @@
           {
             "slot": "Head",
             "name": "Abyssal Doomhound's Relentless Stare",
-            "id": null,
+            "id": 271537,
             "lists": [
               "Overall"
             ],
-            "source": "Ula'tek"
+            "source": "Ula'tek",
+            "tier": "Abyssal Doomhound's Pursuit",
+            "token": {
+              "name": "Venomcured Effigy",
+              "id": 270915,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 271875,
+                  "name": "Gaze of the Coiled Watcher",
+                  "boss": "Ula'tek",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Neck",
@@ -1009,13 +1521,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Abyssal Doomhound's Jaws",
-            "id": null,
+            "id": 271535,
             "lists": [
               "Overall"
             ],
-            "source": "Vashnik the Malignant"
+            "source": "Vashnik the Malignant",
+            "tier": "Abyssal Doomhound's Pursuit",
+            "token": {
+              "name": "Venomcured Remnant",
+              "id": 270923,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268246,
+                  "name": "Frothing Venom Spaulders",
+                  "boss": "Vashnik the Malignant",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Cloak",
@@ -1043,13 +1576,24 @@
             "source": "Crafting/Misc"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Abyssal Doomhound's Studded Gauntlets",
-            "id": null,
+            "id": 271538,
             "lists": [
               "Overall"
             ],
-            "source": "Entombed Sentinels"
+            "source": "Entombed Sentinels",
+            "tier": "Abyssal Doomhound's Pursuit",
+            "token": {
+              "name": "Venomcured Idol",
+              "id": 270911,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -1062,11 +1606,32 @@
           {
             "slot": "Legs",
             "name": "Abyssal Doomhound's Legwraps",
-            "id": null,
+            "id": 271536,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar"
+            "source": "The Coiled Altar",
+            "tier": "Abyssal Doomhound's Pursuit",
+            "token": {
+              "name": "Venomcured Relic",
+              "id": 270919,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268225,
+                  "name": "Coiled Hex Legguards",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -1107,6 +1672,36 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Head",
+            "name": "Gaze of the Coiled Watcher",
+            "id": 271875,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Abyssal Doomhound's Relentless Stare",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Frothing Venom Spaulders",
+            "id": 268246,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Abyssal Doomhound's Jaws",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Coiled Hex Legguards",
+            "id": 268225,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Abyssal Doomhound's Legwraps",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -1177,11 +1772,32 @@
           {
             "slot": "Head",
             "name": "Abyssal Doomhound's Relentless Stare",
-            "id": null,
+            "id": 271537,
             "lists": [
               "Overall"
             ],
-            "source": "Ula'tek"
+            "source": "Ula'tek",
+            "tier": "Abyssal Doomhound's Pursuit",
+            "token": {
+              "name": "Venomcured Effigy",
+              "id": 270915,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 271875,
+                  "name": "Gaze of the Coiled Watcher",
+                  "boss": "Ula'tek",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Neck",
@@ -1192,13 +1808,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Abyssal Doomhound's Jaws",
-            "id": null,
+            "id": 271535,
             "lists": [
               "Overall"
             ],
-            "source": "Voidscar Arena"
+            "source": "Voidscar Arena",
+            "tier": "Abyssal Doomhound's Pursuit",
+            "token": {
+              "name": "Venomcured Remnant",
+              "id": 270923,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 251223,
+                  "name": "Somber Spaulders",
+                  "boss": "Taz'Rah",
+                  "instance": "Voidscar Arena"
+                }
+              ]
+            }
           },
           {
             "slot": "Cloak",
@@ -1211,11 +1848,32 @@
           {
             "slot": "Chest",
             "name": "Abyssal Doomhound's Coreguard",
-            "id": null,
+            "id": 271540,
             "lists": [
               "Overall"
             ],
-            "source": "The Unbinding of Kith'ix"
+            "source": "The Unbinding of Kith'ix",
+            "tier": "Abyssal Doomhound's Pursuit",
+            "token": {
+              "name": "Venomcured Icon",
+              "id": 270927,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 281236,
+                  "name": "Chestwrap of Palpable Terror",
+                  "boss": "Kith'ix",
+                  "instance": "The Unbinding of Kith'ix"
+                }
+              ]
+            }
           },
           {
             "slot": "Wrist",
@@ -1227,13 +1885,34 @@
             "source": "Crafted"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Abyssal Doomhound's Studded Gauntlets",
-            "id": null,
+            "id": 271538,
             "lists": [
               "Overall"
             ],
-            "source": "Murder Row"
+            "source": "Murder Row",
+            "tier": "Abyssal Doomhound's Pursuit",
+            "token": {
+              "name": "Venomcured Idol",
+              "id": 270911,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 251124,
+                  "name": "Gauntlets of Fevered Defense",
+                  "boss": "Kystia Manaheart",
+                  "instance": "Murder Row"
+                }
+              ]
+            }
           },
           {
             "slot": "Belt",
@@ -1246,11 +1925,32 @@
           {
             "slot": "Legs",
             "name": "Abyssal Doomhound's Legwraps",
-            "id": null,
+            "id": 271536,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar"
+            "source": "The Coiled Altar",
+            "tier": "Abyssal Doomhound's Pursuit",
+            "token": {
+              "name": "Venomcured Relic",
+              "id": 270919,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268225,
+                  "name": "Coiled Hex Legguards",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -1309,6 +2009,56 @@
               "Overall"
             ],
             "note": "Group Defensive"
+          },
+          {
+            "slot": "Head",
+            "name": "Gaze of the Coiled Watcher",
+            "id": 271875,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Abyssal Doomhound's Relentless Stare",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Somber Spaulders",
+            "id": 251223,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Abyssal Doomhound's Jaws",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Chest",
+            "name": "Chestwrap of Palpable Terror",
+            "id": 281236,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Abyssal Doomhound's Coreguard",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Hands",
+            "name": "Gauntlets of Fevered Defense",
+            "id": 251124,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Abyssal Doomhound's Studded Gauntlets",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Coiled Hex Legguards",
+            "id": 268225,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Abyssal Doomhound's Legwraps",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -1560,11 +2310,26 @@
           {
             "slot": "Head",
             "name": "Enigmatic Dreamwatcher's Somnolent Stare",
-            "id": null,
+            "id": 271528,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst"
+            "source": "Catalyst",
+            "tier": "Bark of the Enigmatic Dreamwatcher",
+            "token": {
+              "name": "Venomcured Effigy",
+              "id": 270915,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [],
+              "any": "Leather Head"
+            }
           },
           {
             "slot": "Neck",
@@ -1575,13 +2340,28 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Enigmatic Dreamwatcher's Plumage",
-            "id": null,
+            "id": 271526,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst"
+            "source": "Catalyst",
+            "tier": "Bark of the Enigmatic Dreamwatcher",
+            "token": {
+              "name": "Venomcured Remnant",
+              "id": 270923,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [],
+              "any": "Leather Shoulder"
+            }
           },
           {
             "slot": "Cloak",
@@ -1594,11 +2374,32 @@
           {
             "slot": "Chest",
             "name": "Enigmatic Dreamwatcher's Lunar Raiment",
-            "id": null,
+            "id": 271531,
             "lists": [
               "Overall"
             ],
-            "source": "Kith'ix"
+            "source": "Kith'ix",
+            "tier": "Bark of the Enigmatic Dreamwatcher",
+            "token": {
+              "name": "Venomcured Icon",
+              "id": 270927,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 281236,
+                  "name": "Chestwrap of Palpable Terror",
+                  "boss": "Kith'ix",
+                  "instance": "The Unbinding of Kith'ix"
+                }
+              ]
+            }
           },
           {
             "slot": "Wrist",
@@ -1629,11 +2430,26 @@
           {
             "slot": "Legs",
             "name": "Enigmatic Dreamwatcher's Leggings",
-            "id": null,
+            "id": 271527,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst"
+            "source": "Catalyst",
+            "tier": "Bark of the Enigmatic Dreamwatcher",
+            "token": {
+              "name": "Venomcured Relic",
+              "id": 270919,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [],
+              "any": "Leather Legs"
+            }
           },
           {
             "slot": "Boots",
@@ -1674,6 +2490,16 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Chestwrap of Palpable Terror",
+            "id": 281236,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Enigmatic Dreamwatcher's Lunar Raiment",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -1757,13 +2583,24 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Enigmatic Dreamwatcher's Plumage",
-            "id": null,
+            "id": 271526,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Bark of the Enigmatic Dreamwatcher",
+            "token": {
+              "name": "Venomcured Remnant",
+              "id": 270923,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Cloak",
@@ -1790,13 +2627,24 @@
             ]
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Enigmatic Dreamwatcher's Gauntlets",
-            "id": null,
+            "id": 271529,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Bark of the Enigmatic Dreamwatcher",
+            "token": {
+              "name": "Venomcured Idol",
+              "id": 270911,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -1809,11 +2657,22 @@
           {
             "slot": "Legs",
             "name": "Enigmatic Dreamwatcher's Leggings",
-            "id": null,
+            "id": 271527,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Bark of the Enigmatic Dreamwatcher",
+            "token": {
+              "name": "Venomcured Relic",
+              "id": 270919,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Boots",
@@ -1918,13 +2777,34 @@
         "via": "pasted text",
         "items": [
           {
-            "slot": "Helm",
+            "slot": "Head",
             "name": "Enigmatic Dreamwatcher's Somnolent Stare",
-            "id": null,
+            "id": 271528,
             "lists": [
               "Overall"
             ],
-            "source": "Ula'tek (Raid) & Catalyst"
+            "source": "Ula'tek (Raid) & Catalyst",
+            "tier": "Bark of the Enigmatic Dreamwatcher",
+            "token": {
+              "name": "Venomcured Effigy",
+              "id": 270915,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 271875,
+                  "name": "Gaze of the Coiled Watcher",
+                  "boss": "Ula'tek",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Neck",
@@ -1954,11 +2834,32 @@
           {
             "slot": "Chest",
             "name": "Enigmatic Dreamwatcher's Lunar Raiment",
-            "id": null,
+            "id": 271531,
             "lists": [
               "Overall"
             ],
-            "source": "Nek'zali the Soulcoiler (Raid) & Catalyst"
+            "source": "Nek'zali the Soulcoiler (Raid) & Catalyst",
+            "tier": "Bark of the Enigmatic Dreamwatcher",
+            "token": {
+              "name": "Venomcured Icon",
+              "id": 270927,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268235,
+                  "name": "Vestment of the Awakening",
+                  "boss": "Nek'zali the Soulcoiler",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Bracers",
@@ -1970,13 +2871,24 @@
             "source": "Leatherworking"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Enigmatic Dreamwatcher's Gauntlets",
-            "id": null,
+            "id": 271529,
             "lists": [
               "Overall"
             ],
-            "source": "Entomed Sentinels (Raid)"
+            "source": "Entomed Sentinels (Raid)",
+            "tier": "Bark of the Enigmatic Dreamwatcher",
+            "token": {
+              "name": "Venomcured Idol",
+              "id": 270911,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -1989,11 +2901,32 @@
           {
             "slot": "Legs",
             "name": "Enigmatic Dreamwatcher's Leggings",
-            "id": null,
+            "id": 271527,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Alter (Raid) & Catalyst"
+            "source": "The Coiled Alter (Raid) & Catalyst",
+            "tier": "Bark of the Enigmatic Dreamwatcher",
+            "token": {
+              "name": "Venomcured Relic",
+              "id": 270919,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268225,
+                  "name": "Coiled Hex Legguards",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -2051,6 +2984,36 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Head",
+            "name": "Gaze of the Coiled Watcher",
+            "id": 271875,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Enigmatic Dreamwatcher's Somnolent Stare",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Chest",
+            "name": "Vestment of the Awakening",
+            "id": 268235,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Enigmatic Dreamwatcher's Lunar Raiment",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Coiled Hex Legguards",
+            "id": 268225,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Enigmatic Dreamwatcher's Leggings",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -2124,11 +3087,22 @@
           {
             "slot": "Head",
             "name": "Calamitous Echo's Magmashapers",
-            "id": null,
+            "id": 271501,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Echo of Calamity",
+            "token": {
+              "name": "Venomcast Effigy",
+              "id": 270916,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Neck",
@@ -2139,13 +3113,24 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Calamitous Echo's Sundered Peaks",
-            "id": null,
+            "id": 271499,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Echo of Calamity",
+            "token": {
+              "name": "Venomcast Remnant",
+              "id": 270924,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Cloak",
@@ -2158,11 +3143,22 @@
           {
             "slot": "Chest",
             "name": "Searing Caldera of Calamity",
-            "id": null,
+            "id": 271504,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Echo of Calamity",
+            "token": {
+              "name": "Venomcast Icon",
+              "id": 270928,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Wrist",
@@ -2174,13 +3170,24 @@
             "source": "Crafting"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Calamitous Echo's Ebon Greathorns",
-            "id": null,
+            "id": 271502,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Echo of Calamity",
+            "token": {
+              "name": "Venomcast Idol",
+              "id": 270912,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -2194,11 +3201,22 @@
           {
             "slot": "Legs",
             "name": "Earthen Pillars of Calamity",
-            "id": null,
+            "id": 271500,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Echo of Calamity",
+            "token": {
+              "name": "Venomcast Relic",
+              "id": 270920,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Boots",
@@ -2313,11 +3331,22 @@
           {
             "slot": "Head",
             "name": "Calamitous Echo's Magmashapers",
-            "id": null,
+            "id": 271501,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Echo of Calamity",
+            "token": {
+              "name": "Venomcast Effigy",
+              "id": 270916,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Neck",
@@ -2328,13 +3357,24 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Calamitous Echo's Sundered Peaks",
-            "id": null,
+            "id": 271499,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Echo of Calamity",
+            "token": {
+              "name": "Venomcast Remnant",
+              "id": 270924,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Cloak",
@@ -2347,11 +3387,22 @@
           {
             "slot": "Chest",
             "name": "Searing Caldera of Calamity",
-            "id": null,
+            "id": 271504,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Echo of Calamity",
+            "token": {
+              "name": "Venomcast Icon",
+              "id": 270928,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Wrist",
@@ -2363,13 +3414,24 @@
             "source": "Crafting"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Calamitous Echo's Ebon Greathorns",
-            "id": null,
+            "id": 271502,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Echo of Calamity",
+            "token": {
+              "name": "Venomcast Idol",
+              "id": 270912,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -2382,11 +3444,22 @@
           {
             "slot": "Legs",
             "name": "Earthen Pillars of Calamity",
-            "id": null,
+            "id": 271500,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Echo of Calamity",
+            "token": {
+              "name": "Venomcast Relic",
+              "id": 270920,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Boots",
@@ -2482,13 +3555,34 @@
         "via": "pasted text",
         "items": [
           {
-            "slot": "Helm",
+            "slot": "Head",
             "name": "Calamitous Echo's Magmashapers",
-            "id": null,
+            "id": 271501,
             "lists": [
               "Overall"
             ],
-            "source": "Temple of Sethraliss & Catalyst"
+            "source": "Temple of Sethraliss & Catalyst",
+            "tier": "Echo of Calamity",
+            "token": {
+              "name": "Venomcast Effigy",
+              "id": 270916,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 239035,
+                  "name": "Sethraliss' Fanged Helm",
+                  "boss": "Avatar of Sethraliss",
+                  "instance": "Temple of Sethraliss"
+                }
+              ]
+            }
           },
           {
             "slot": "Neck",
@@ -2499,13 +3593,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Calamitous Echo's Sundered Peaks",
-            "id": null,
+            "id": 271499,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar (Raid) & Catalyst"
+            "source": "The Coiled Altar (Raid) & Catalyst",
+            "tier": "Echo of Calamity",
+            "token": {
+              "name": "Venomcast Remnant",
+              "id": 270924,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268231,
+                  "name": "Soulslither Spaulders",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Cape",
@@ -2518,11 +3633,32 @@
           {
             "slot": "Chest",
             "name": "Searing Caldera of Calamity",
-            "id": null,
+            "id": 271504,
             "lists": [
               "Overall"
             ],
-            "source": "Ula'tek (Raid) & Catalyst"
+            "source": "Ula'tek (Raid) & Catalyst",
+            "tier": "Echo of Calamity",
+            "token": {
+              "name": "Venomcast Icon",
+              "id": 270928,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 271876,
+                  "name": "Awoken Dreadfang Cuirass",
+                  "boss": "Ula'tek",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Bracers",
@@ -2533,13 +3669,34 @@
             ]
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Calamitous Echo's Ebon Greathorns",
-            "id": null,
+            "id": 271502,
             "lists": [
               "Overall"
             ],
-            "source": "Kithix (Raid)"
+            "source": "Kithix (Raid)",
+            "tier": "Echo of Calamity",
+            "token": {
+              "name": "Venomcast Idol",
+              "id": 270912,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 281238,
+                  "name": "Aberrant Commander's Gauntlets",
+                  "boss": "Kith'ix",
+                  "instance": "The Unbinding of Kith'ix"
+                }
+              ]
+            }
           },
           {
             "slot": "Belt",
@@ -2552,11 +3709,32 @@
           {
             "slot": "Legs",
             "name": "Earthen Pillars of Calamity",
-            "id": null,
+            "id": 271500,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar (Raid) & Catalyst"
+            "source": "The Coiled Altar (Raid) & Catalyst",
+            "tier": "Echo of Calamity",
+            "token": {
+              "name": "Venomcast Relic",
+              "id": 270920,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268237,
+                  "name": "Cuisses of the Uncoiled Union",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -2613,6 +3791,56 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Head",
+            "name": "Sethraliss' Fanged Helm",
+            "id": 239035,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Calamitous Echo's Magmashapers",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Soulslither Spaulders",
+            "id": 268231,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Calamitous Echo's Sundered Peaks",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Chest",
+            "name": "Awoken Dreadfang Cuirass",
+            "id": 271876,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Searing Caldera of Calamity",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Hands",
+            "name": "Aberrant Commander's Gauntlets",
+            "id": 281238,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Calamitous Echo's Ebon Greathorns",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Cuisses of the Uncoiled Union",
+            "id": 268237,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Earthen Pillars of Calamity",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -2682,11 +3910,22 @@
           {
             "slot": "Head",
             "name": "Skulking Viper's Weeping Fangs",
-            "id": null,
+            "id": 271492,
             "lists": [
               "Overall"
             ],
-            "source": "The Twin Fangs"
+            "source": "The Twin Fangs",
+            "tier": "Skulking Viper's Ambush",
+            "token": {
+              "name": "Venomcast Effigy",
+              "id": 270916,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Neck",
@@ -2697,13 +3936,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Jaws of the Skulking Viper",
-            "id": null,
+            "id": 271490,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar"
+            "source": "The Coiled Altar",
+            "tier": "Skulking Viper's Ambush",
+            "token": {
+              "name": "Venomcast Remnant",
+              "id": 270924,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268231,
+                  "name": "Soulslither Spaulders",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Cloak",
@@ -2716,11 +3976,32 @@
           {
             "slot": "Chest",
             "name": "Skulking Viper's Scuteplate",
-            "id": null,
+            "id": 271495,
             "lists": [
               "Overall"
             ],
-            "source": "Ula'tek"
+            "source": "Ula'tek",
+            "tier": "Skulking Viper's Ambush",
+            "token": {
+              "name": "Venomcast Icon",
+              "id": 270928,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 271876,
+                  "name": "Awoken Dreadfang Cuirass",
+                  "boss": "Ula'tek",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Wrist",
@@ -2732,13 +4013,34 @@
             "source": "Leatherworking"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Skulking Viper's Hidepiercers",
-            "id": null,
+            "id": 271493,
             "lists": [
               "Overall"
             ],
-            "source": "Kith'ix"
+            "source": "Kith'ix",
+            "tier": "Skulking Viper's Ambush",
+            "token": {
+              "name": "Venomcast Idol",
+              "id": 270912,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 281238,
+                  "name": "Aberrant Commander's Gauntlets",
+                  "boss": "Kith'ix",
+                  "instance": "The Unbinding of Kith'ix"
+                }
+              ]
+            }
           },
           {
             "slot": "Belt",
@@ -2752,11 +4054,32 @@
           {
             "slot": "Legs",
             "name": "Skulking Viper's Coiled Legwraps",
-            "id": null,
+            "id": 271491,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar"
+            "source": "The Coiled Altar",
+            "tier": "Skulking Viper's Ambush",
+            "token": {
+              "name": "Venomcast Relic",
+              "id": 270920,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268237,
+                  "name": "Cuisses of the Uncoiled Union",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -2806,6 +4129,46 @@
               "Overall"
             ],
             "note": "Situationally"
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Soulslither Spaulders",
+            "id": 268231,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Jaws of the Skulking Viper",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Chest",
+            "name": "Awoken Dreadfang Cuirass",
+            "id": 271876,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Skulking Viper's Scuteplate",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Hands",
+            "name": "Aberrant Commander's Gauntlets",
+            "id": 281238,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Skulking Viper's Hidepiercers",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Cuisses of the Uncoiled Union",
+            "id": 268237,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Skulking Viper's Coiled Legwraps",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -2865,11 +4228,32 @@
           {
             "slot": "Head",
             "name": "Skulking Viper's Weeping Fangs",
-            "id": null,
+            "id": 271492,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst the Nek'zali the Soulcoiler Head"
+            "source": "Catalyst the Nek'zali the Soulcoiler Head",
+            "tier": "Skulking Viper's Ambush",
+            "token": {
+              "name": "Venomcast Effigy",
+              "id": 270916,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268230,
+                  "name": "Crown of the Eternal Fang",
+                  "boss": "Nek'zali the Soulcoiler",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Neck",
@@ -2880,13 +4264,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Jaws of the Skulking Viper",
-            "id": null,
+            "id": 271490,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst the The Coiled Altar Shoulders"
+            "source": "Catalyst the The Coiled Altar Shoulders",
+            "tier": "Skulking Viper's Ambush",
+            "token": {
+              "name": "Venomcast Remnant",
+              "id": 270924,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268231,
+                  "name": "Soulslither Spaulders",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Cloak",
@@ -2899,11 +4304,32 @@
           {
             "slot": "Chest",
             "name": "Skulking Viper's Scuteplate",
-            "id": null,
+            "id": 271495,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst the Ula'tek Chest"
+            "source": "Catalyst the Ula'tek Chest",
+            "tier": "Skulking Viper's Ambush",
+            "token": {
+              "name": "Venomcast Icon",
+              "id": 270928,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 271876,
+                  "name": "Awoken Dreadfang Cuirass",
+                  "boss": "Ula'tek",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Wrist",
@@ -2915,13 +4341,34 @@
             "source": "Crafting/Misc"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Skulking Viper's Hidepiercers",
-            "id": null,
+            "id": 271493,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst the Kith'ix Gloves"
+            "source": "Catalyst the Kith'ix Gloves",
+            "tier": "Skulking Viper's Ambush",
+            "token": {
+              "name": "Venomcast Idol",
+              "id": 270912,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 281238,
+                  "name": "Aberrant Commander's Gauntlets",
+                  "boss": "Kith'ix",
+                  "instance": "The Unbinding of Kith'ix"
+                }
+              ]
+            }
           },
           {
             "slot": "Belt",
@@ -2935,11 +4382,32 @@
           {
             "slot": "Legs",
             "name": "Skulking Viper's Coiled Legwraps",
-            "id": null,
+            "id": 271491,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst the The Coiled Altar Legs"
+            "source": "Catalyst the The Coiled Altar Legs",
+            "tier": "Skulking Viper's Ambush",
+            "token": {
+              "name": "Venomcast Relic",
+              "id": 270920,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268237,
+                  "name": "Cuisses of the Uncoiled Union",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -2980,6 +4448,56 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Head",
+            "name": "Crown of the Eternal Fang",
+            "id": 268230,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Skulking Viper's Weeping Fangs",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Soulslither Spaulders",
+            "id": 268231,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Jaws of the Skulking Viper",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Chest",
+            "name": "Awoken Dreadfang Cuirass",
+            "id": 271876,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Skulking Viper's Scuteplate",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Hands",
+            "name": "Aberrant Commander's Gauntlets",
+            "id": 281238,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Skulking Viper's Hidepiercers",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Cuisses of the Uncoiled Union",
+            "id": 268237,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Skulking Viper's Coiled Legwraps",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -3069,12 +4587,33 @@
           {
             "slot": "Head",
             "name": "Skulking Viper's Weeping Fangs",
-            "id": null,
+            "id": 271492,
             "lists": [
               "Overall"
             ],
             "source": "Tier Set · Temple of Sethraliss",
-            "catalyzedFrom": "Sethraliss' Fanged Helm"
+            "tier": "Skulking Viper's Ambush",
+            "token": {
+              "name": "Venomcast Effigy",
+              "id": 270916,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "named": "Sethraliss' Fanged Helm",
+              "from": [
+                {
+                  "id": 239035,
+                  "name": "Sethraliss' Fanged Helm",
+                  "boss": "Avatar of Sethraliss",
+                  "instance": "Temple of Sethraliss"
+                }
+              ]
+            }
           },
           {
             "slot": "Neck",
@@ -3094,14 +4633,35 @@
             "note": "Catalyze into Jaws of the Skulking Viper"
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Jaws of the Skulking Viper",
-            "id": null,
+            "id": 271490,
             "lists": [
               "Overall"
             ],
             "source": "Tier Set · The Coiled Altar",
-            "catalyzedFrom": "Soulslither Spaulders"
+            "tier": "Skulking Viper's Ambush",
+            "token": {
+              "name": "Venomcast Remnant",
+              "id": 270924,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "named": "Soulslither Spaulders",
+              "from": [
+                {
+                  "id": 268231,
+                  "name": "Soulslither Spaulders",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Cloak",
@@ -3138,14 +4698,35 @@
             "note": "Catalyze into Skulking Viper's Hidepiercers"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Skulking Viper's Hidepiercers",
-            "id": null,
+            "id": 271493,
             "lists": [
               "Overall"
             ],
             "source": "Tier Set · Kith'ix",
-            "catalyzedFrom": "Aberrant Commander's Gauntlets"
+            "tier": "Skulking Viper's Ambush",
+            "token": {
+              "name": "Venomcast Idol",
+              "id": 270912,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "named": "Aberrant Commander's Gauntlets",
+              "from": [
+                {
+                  "id": 281238,
+                  "name": "Aberrant Commander's Gauntlets",
+                  "boss": "Kith'ix",
+                  "instance": "The Unbinding of Kith'ix"
+                }
+              ]
+            }
           },
           {
             "slot": "Belt",
@@ -3168,12 +4749,33 @@
           {
             "slot": "Legs",
             "name": "Skulking Viper's Coiled Legwraps",
-            "id": null,
+            "id": 271491,
             "lists": [
               "Overall"
             ],
             "source": "Tier Set · The Coiled Altar",
-            "catalyzedFrom": "Cuisses of the Uncoiled Union"
+            "tier": "Skulking Viper's Ambush",
+            "token": {
+              "name": "Venomcast Relic",
+              "id": 270920,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "named": "Cuisses of the Uncoiled Union",
+              "from": [
+                {
+                  "id": 268237,
+                  "name": "Cuisses of the Uncoiled Union",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -3287,11 +4889,32 @@
           {
             "slot": "Head",
             "name": "Crown of the Primal Leywarden",
-            "id": null,
+            "id": 271564,
             "lists": [
               "Overall"
             ],
-            "source": "Ula'tek"
+            "source": "Ula'tek",
+            "tier": "Primal Leywarden's Attire",
+            "token": {
+              "name": "Venomwoven Effigy",
+              "id": 270914,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 271874,
+                  "name": "Venomkeeper's Horrific Cowl",
+                  "boss": "Ula'tek",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Neck",
@@ -3302,13 +4925,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Primal Leywarden's Manaflux",
-            "id": null,
+            "id": 271562,
             "lists": [
               "Overall"
             ],
-            "source": "The Twin Fangs"
+            "source": "The Twin Fangs",
+            "tier": "Primal Leywarden's Attire",
+            "token": {
+              "name": "Venomwoven Remnant",
+              "id": 270922,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268241,
+                  "name": "Ornaments of the Eternal Coil",
+                  "boss": "The Twin Fangs",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Cloak",
@@ -3321,11 +4965,32 @@
           {
             "slot": "Chest",
             "name": "Crest of the Primal Leywarden",
-            "id": null,
+            "id": 271567,
             "lists": [
               "Overall"
             ],
-            "source": "Altar of Fangs"
+            "source": "Altar of Fangs",
+            "tier": "Primal Leywarden's Attire",
+            "token": {
+              "name": "Venomwoven Icon",
+              "id": 270926,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 273785,
+                  "name": "Primordial Robe of Rites",
+                  "boss": "Rav'i",
+                  "instance": "Altar of Fangs"
+                }
+              ]
+            }
           },
           {
             "slot": "Wrist",
@@ -3337,13 +5002,34 @@
             "source": "Crafting"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Primal Leywarden's Manashapers",
-            "id": null,
+            "id": 271565,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar"
+            "source": "The Coiled Altar",
+            "tier": "Primal Leywarden's Attire",
+            "token": {
+              "name": "Venomwoven Idol",
+              "id": 270910,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268243,
+                  "name": "Grasps of the Eternal Shadow",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Belt",
@@ -3356,11 +5042,32 @@
           {
             "slot": "Legs",
             "name": "Primal Leywarden's Tailored Legwraps",
-            "id": null,
+            "id": 271563,
             "lists": [
               "Overall"
             ],
-            "source": "Nek'zali the Soulcoiler"
+            "source": "Nek'zali the Soulcoiler",
+            "tier": "Primal Leywarden's Attire",
+            "token": {
+              "name": "Venomwoven Relic",
+              "id": 270918,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268236,
+                  "name": "Initiate's Sacrificial Tights",
+                  "boss": "Nek'zali the Soulcoiler",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -3401,6 +5108,56 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Head",
+            "name": "Venomkeeper's Horrific Cowl",
+            "id": 271874,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Crown of the Primal Leywarden",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Ornaments of the Eternal Coil",
+            "id": 268241,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Primal Leywarden's Manaflux",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Chest",
+            "name": "Primordial Robe of Rites",
+            "id": 273785,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Crest of the Primal Leywarden",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Hands",
+            "name": "Grasps of the Eternal Shadow",
+            "id": 268243,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Primal Leywarden's Manashapers",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Initiate's Sacrificial Tights",
+            "id": 268236,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Primal Leywarden's Tailored Legwraps",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -3474,11 +5231,22 @@
           {
             "slot": "Head",
             "name": "Crown of the Primal Leywarden",
-            "id": null,
+            "id": 271564,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Primal Leywarden's Attire",
+            "token": {
+              "name": "Venomwoven Effigy",
+              "id": 270914,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Neck",
@@ -3489,13 +5257,24 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Primal Leywarden's Manaflux",
-            "id": null,
+            "id": 271562,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Primal Leywarden's Attire",
+            "token": {
+              "name": "Venomwoven Remnant",
+              "id": 270922,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Cloak",
@@ -3508,11 +5287,22 @@
           {
             "slot": "Chest",
             "name": "Crest of the Primal Leywarden",
-            "id": null,
+            "id": 271567,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Primal Leywarden's Attire",
+            "token": {
+              "name": "Venomwoven Icon",
+              "id": 270926,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Wrist",
@@ -3524,13 +5314,24 @@
             "source": "Crafting/Misc"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Primal Leywarden's Manashapers",
-            "id": null,
+            "id": 271565,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Primal Leywarden's Attire",
+            "token": {
+              "name": "Venomwoven Idol",
+              "id": 270910,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -3543,11 +5344,22 @@
           {
             "slot": "Legs",
             "name": "Primal Leywarden's Tailored Legwraps",
-            "id": null,
+            "id": 271563,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Primal Leywarden's Attire",
+            "token": {
+              "name": "Venomwoven Relic",
+              "id": 270918,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Boots",
@@ -3660,11 +5472,22 @@
           {
             "slot": "Head",
             "name": "Crown of the Primal Leywarden",
-            "id": null,
+            "id": 271564,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Primal Leywarden's Attire",
+            "token": {
+              "name": "Venomwoven Effigy",
+              "id": 270914,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Neck",
@@ -3675,13 +5498,24 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Primal Leywarden's Manaflux",
-            "id": null,
+            "id": 271562,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Primal Leywarden's Attire",
+            "token": {
+              "name": "Venomwoven Remnant",
+              "id": 270922,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Cloak",
@@ -3694,11 +5528,22 @@
           {
             "slot": "Chest",
             "name": "Crest of the Primal Leywarden",
-            "id": null,
+            "id": 271567,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Primal Leywarden's Attire",
+            "token": {
+              "name": "Venomwoven Icon",
+              "id": 270926,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Wrist",
@@ -3710,13 +5555,24 @@
             "source": "Crafting/Misc"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Primal Leywarden's Manashapers",
-            "id": null,
+            "id": 271565,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Primal Leywarden's Attire",
+            "token": {
+              "name": "Venomwoven Idol",
+              "id": 270910,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -3730,11 +5586,22 @@
           {
             "slot": "Legs",
             "name": "Primal Leywarden's Tailored Legwraps",
-            "id": null,
+            "id": 271563,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Primal Leywarden's Attire",
+            "token": {
+              "name": "Venomwoven Relic",
+              "id": 270918,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Boots",
@@ -3867,11 +5734,26 @@
           {
             "slot": "Head",
             "name": "Monkey King's Unyielding Visage",
-            "id": null,
+            "id": 271519,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst · Mythic+ · Vault"
+            "source": "Catalyst · Mythic+ · Vault",
+            "tier": "Guile of the Monkey King",
+            "token": {
+              "name": "Venomcured Effigy",
+              "id": 270915,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [],
+              "any": "Leather Head"
+            }
           },
           {
             "slot": "Neck",
@@ -3882,13 +5764,28 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Tassels of the Monkey King",
-            "id": null,
+            "id": 271517,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst · Mythic+ · Vault"
+            "source": "Catalyst · Mythic+ · Vault",
+            "tier": "Guile of the Monkey King",
+            "token": {
+              "name": "Venomcured Remnant",
+              "id": 270923,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [],
+              "any": "Leather Shoulder"
+            }
           },
           {
             "slot": "Cloak",
@@ -3901,11 +5798,26 @@
           {
             "slot": "Chest",
             "name": "Battle Gi of the Monkey King",
-            "id": null,
+            "id": 271522,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst · Mythic+ · Vault"
+            "source": "Catalyst · Mythic+ · Vault",
+            "tier": "Guile of the Monkey King",
+            "token": {
+              "name": "Venomcured Icon",
+              "id": 270927,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [],
+              "any": "Leather Chest"
+            }
           },
           {
             "slot": "Wrist",
@@ -3917,13 +5829,28 @@
             "source": "Leatherworking"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Monkey King's Fighting Fists",
-            "id": null,
+            "id": 271520,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst · Mythic+ · Vault"
+            "source": "Catalyst · Mythic+ · Vault",
+            "tier": "Guile of the Monkey King",
+            "token": {
+              "name": "Venomcured Idol",
+              "id": 270911,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [],
+              "any": "Leather Hands"
+            }
           },
           {
             "slot": "Belt",
@@ -3936,11 +5863,26 @@
           {
             "slot": "Legs",
             "name": "Pantaloons of the Monkey King",
-            "id": null,
+            "id": 271518,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst · Raid · Vault"
+            "source": "Catalyst · Raid · Vault",
+            "tier": "Guile of the Monkey King",
+            "token": {
+              "name": "Venomcured Relic",
+              "id": 270919,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [],
+              "any": "Leather Legs"
+            }
           },
           {
             "slot": "Boots",
@@ -4068,13 +6010,34 @@
         "via": "pasted text",
         "items": [
           {
-            "slot": "Helm",
+            "slot": "Head",
             "name": "Monkey King's Unyielding Visage",
-            "id": null,
+            "id": 271519,
             "lists": [
               "Overall"
             ],
-            "source": "Ula'tek & Catalyst"
+            "source": "Ula'tek & Catalyst",
+            "tier": "Guile of the Monkey King",
+            "token": {
+              "name": "Venomcured Effigy",
+              "id": 270915,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 271875,
+                  "name": "Gaze of the Coiled Watcher",
+                  "boss": "Ula'tek",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Neck",
@@ -4085,13 +6048,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Tassels of the Monkey King",
-            "id": null,
+            "id": 271517,
             "lists": [
               "Overall"
             ],
-            "source": "Den of Nalorakk & Catalyst"
+            "source": "Den of Nalorakk & Catalyst",
+            "tier": "Guile of the Monkey King",
+            "token": {
+              "name": "Venomcured Remnant",
+              "id": 270923,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 251146,
+                  "name": "Scavenger's Spaulders",
+                  "boss": "The Hoardmonger",
+                  "instance": "Den of Nalorakk"
+                }
+              ]
+            }
           },
           {
             "slot": "Cape",
@@ -4104,11 +6088,32 @@
           {
             "slot": "Chest",
             "name": "Battle Gi of the Monkey King",
-            "id": null,
+            "id": 271522,
             "lists": [
               "Overall"
             ],
-            "source": "Kith'ix & Catalyst"
+            "source": "Kith'ix & Catalyst",
+            "tier": "Guile of the Monkey King",
+            "token": {
+              "name": "Venomcured Icon",
+              "id": 270927,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 281236,
+                  "name": "Chestwrap of Palpable Terror",
+                  "boss": "Kith'ix",
+                  "instance": "The Unbinding of Kith'ix"
+                }
+              ]
+            }
           },
           {
             "slot": "Bracers",
@@ -4119,13 +6124,34 @@
             ]
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Monkey King's Fighting Fists",
-            "id": null,
+            "id": 271520,
             "lists": [
               "Overall"
             ],
-            "source": "Murder Row & Catalyst"
+            "source": "Murder Row & Catalyst",
+            "tier": "Guile of the Monkey King",
+            "token": {
+              "name": "Venomcured Idol",
+              "id": 270911,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 251124,
+                  "name": "Gauntlets of Fevered Defense",
+                  "boss": "Kystia Manaheart",
+                  "instance": "Murder Row"
+                }
+              ]
+            }
           },
           {
             "slot": "Belt",
@@ -4138,11 +6164,32 @@
           {
             "slot": "Legs",
             "name": "Pantaloons of the Monkey King",
-            "id": null,
+            "id": 271518,
             "lists": [
               "Overall"
             ],
-            "source": "Kings' Rest & Catalyst"
+            "source": "Kings' Rest & Catalyst",
+            "tier": "Guile of the Monkey King",
+            "token": {
+              "name": "Venomcured Relic",
+              "id": 270919,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 159313,
+                  "name": "Breeches of the Sacred Hall",
+                  "boss": "The Golden Serpent",
+                  "instance": "Kings' Rest"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -4191,6 +6238,56 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Head",
+            "name": "Gaze of the Coiled Watcher",
+            "id": 271875,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Monkey King's Unyielding Visage",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Scavenger's Spaulders",
+            "id": 251146,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Tassels of the Monkey King",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Chest",
+            "name": "Chestwrap of Palpable Terror",
+            "id": 281236,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Battle Gi of the Monkey King",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Hands",
+            "name": "Gauntlets of Fevered Defense",
+            "id": 251124,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Monkey King's Fighting Fists",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Breeches of the Sacred Hall",
+            "id": 159313,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Pantaloons of the Monkey King",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -4269,13 +6366,24 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Tassels of the Monkey King",
-            "id": null,
+            "id": 271517,
             "lists": [
               "Overall"
             ],
-            "source": "The Lost Explorers"
+            "source": "The Lost Explorers",
+            "tier": "Guile of the Monkey King",
+            "token": {
+              "name": "Venomcured Remnant",
+              "id": 270923,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Cloak",
@@ -4452,11 +6560,32 @@
           {
             "slot": "Head",
             "name": "Warhelm of the Consecrated Flame",
-            "id": null,
+            "id": 271465,
             "lists": [
               "Overall"
             ],
-            "source": "Kith'ix"
+            "source": "Kith'ix",
+            "tier": "Radiance of the Consecrated Flame",
+            "token": {
+              "name": "Venomforged Effigy",
+              "id": 270917,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 281239,
+                  "name": "Corroded Hulk's Skullcap",
+                  "boss": "Kith'ix",
+                  "instance": "The Unbinding of Kith'ix"
+                }
+              ]
+            }
           },
           {
             "slot": "Neck",
@@ -4467,13 +6596,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Pauldrons of the Consecrated Flame",
-            "id": null,
+            "id": 271463,
             "lists": [
               "Overall"
             ],
-            "source": "Murder Row"
+            "source": "Murder Row",
+            "tier": "Radiance of the Consecrated Flame",
+            "token": {
+              "name": "Venomforged Remnant",
+              "id": 270925,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 251138,
+                  "name": "Cinderfury Shoulderguards",
+                  "boss": "Lithiel Cinderfury",
+                  "instance": "Murder Row"
+                }
+              ]
+            }
           },
           {
             "slot": "Cloak",
@@ -4486,11 +6636,32 @@
           {
             "slot": "Chest",
             "name": "Bulwark of the Consecrated Flame",
-            "id": null,
+            "id": 271468,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar"
+            "source": "The Coiled Altar",
+            "tier": "Radiance of the Consecrated Flame",
+            "token": {
+              "name": "Venomforged Icon",
+              "id": 270929,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268222,
+                  "name": "Reckless Spirit Breastplate",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Wrist",
@@ -4501,13 +6672,24 @@
             ]
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Gauntlets of the Consecrated Flame",
-            "id": null,
+            "id": 271466,
             "lists": [
               "Overall"
             ],
-            "source": "Entombed Sentinels"
+            "source": "Entombed Sentinels",
+            "tier": "Radiance of the Consecrated Flame",
+            "token": {
+              "name": "Venomforged Idol",
+              "id": 270913,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -4520,11 +6702,32 @@
           {
             "slot": "Legs",
             "name": "Greaves of the Consecrated Flame",
-            "id": null,
+            "id": 271464,
             "lists": [
               "Overall"
             ],
-            "source": "Ula'tek"
+            "source": "Ula'tek",
+            "tier": "Radiance of the Consecrated Flame",
+            "token": {
+              "name": "Venomforged Relic",
+              "id": 270921,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 271878,
+                  "name": "Chausses of Unbound Rancor",
+                  "boss": "Ula'tek",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -4575,6 +6778,46 @@
               "Overall"
             ],
             "note": "for M+"
+          },
+          {
+            "slot": "Head",
+            "name": "Corroded Hulk's Skullcap",
+            "id": 281239,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Warhelm of the Consecrated Flame",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Cinderfury Shoulderguards",
+            "id": 251138,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Pauldrons of the Consecrated Flame",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Chest",
+            "name": "Reckless Spirit Breastplate",
+            "id": 268222,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Bulwark of the Consecrated Flame",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Chausses of Unbound Rancor",
+            "id": 271878,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Greaves of the Consecrated Flame",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -4668,13 +6911,24 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Pauldrons of the Consecrated Flame",
-            "id": null,
+            "id": 271463,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Radiance of the Consecrated Flame",
+            "token": {
+              "name": "Venomforged Remnant",
+              "id": 270925,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Cloak",
@@ -4687,11 +6941,22 @@
           {
             "slot": "Chest",
             "name": "Bulwark of the Consecrated Flame",
-            "id": null,
+            "id": 271468,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Radiance of the Consecrated Flame",
+            "token": {
+              "name": "Venomforged Icon",
+              "id": 270929,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Wrist",
@@ -4703,13 +6968,24 @@
             "source": "Crafting Blacksmithing"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Gauntlets of the Consecrated Flame",
-            "id": null,
+            "id": 271466,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Radiance of the Consecrated Flame",
+            "token": {
+              "name": "Venomforged Idol",
+              "id": 270913,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -4827,11 +7103,22 @@
           {
             "slot": "Head",
             "name": "Warhelm of the Consecrated Flame",
-            "id": null,
+            "id": 271465,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Radiance of the Consecrated Flame",
+            "token": {
+              "name": "Venomforged Effigy",
+              "id": 270917,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Neck",
@@ -4842,13 +7129,24 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Pauldrons of the Consecrated Flame",
-            "id": null,
+            "id": 271463,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Radiance of the Consecrated Flame",
+            "token": {
+              "name": "Venomforged Remnant",
+              "id": 270925,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Cloak",
@@ -4861,11 +7159,22 @@
           {
             "slot": "Chest",
             "name": "Bulwark of the Consecrated Flame",
-            "id": null,
+            "id": 271468,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Radiance of the Consecrated Flame",
+            "token": {
+              "name": "Venomforged Icon",
+              "id": 270929,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Wrist",
@@ -4877,13 +7186,24 @@
             "source": "Blacksmithing"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Gauntlets of the Consecrated Flame",
-            "id": null,
+            "id": 271466,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Radiance of the Consecrated Flame",
+            "token": {
+              "name": "Venomforged Idol",
+              "id": 270913,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -4896,11 +7216,32 @@
           {
             "slot": "Legs",
             "name": "Greaves of the Consecrated Flame",
-            "id": null,
+            "id": 271464,
             "lists": [
               "Overall"
             ],
-            "source": "Ula'tek"
+            "source": "Ula'tek",
+            "tier": "Radiance of the Consecrated Flame",
+            "token": {
+              "name": "Venomforged Relic",
+              "id": 270921,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 271878,
+                  "name": "Chausses of Unbound Rancor",
+                  "boss": "Ula'tek",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -4942,6 +7283,16 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Legs",
+            "name": "Chausses of Unbound Rancor",
+            "id": 271878,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Greaves of the Consecrated Flame",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -5028,13 +7379,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Cosmic Penitent's Echoing Screams",
-            "id": null,
+            "id": 271553,
             "lists": [
               "Overall"
             ],
-            "source": "Vexhul"
+            "source": "Vexhul",
+            "tier": "Cosmic Penitent's Raiment",
+            "token": {
+              "name": "Venomwoven Remnant",
+              "id": 270922,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268241,
+                  "name": "Ornaments of the Eternal Coil",
+                  "boss": "The Twin Fangs",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Cloak",
@@ -5047,11 +7419,32 @@
           {
             "slot": "Chest",
             "name": "Cosmic Penitent's Eclipsing Robes",
-            "id": null,
+            "id": 271558,
             "lists": [
               "Overall"
             ],
-            "source": "Murder Row"
+            "source": "Murder Row",
+            "tier": "Cosmic Penitent's Raiment",
+            "token": {
+              "name": "Venomwoven Icon",
+              "id": 270926,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 251139,
+                  "name": "Summoner's Searing Shirt",
+                  "boss": "Lithiel Cinderfury",
+                  "instance": "Murder Row"
+                }
+              ]
+            }
           },
           {
             "slot": "Wrist",
@@ -5063,13 +7456,34 @@
             "source": "Crafting"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Cosmic Penitent's Celestial Grips",
-            "id": null,
+            "id": 271556,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar"
+            "source": "The Coiled Altar",
+            "tier": "Cosmic Penitent's Raiment",
+            "token": {
+              "name": "Venomwoven Idol",
+              "id": 270910,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268243,
+                  "name": "Grasps of the Eternal Shadow",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Belt",
@@ -5083,11 +7497,22 @@
           {
             "slot": "Legs",
             "name": "Enveloping Legwraps of the Cosmic Penitent",
-            "id": null,
+            "id": 271554,
             "lists": [
               "Overall"
             ],
-            "source": "Sszorak"
+            "source": "Sszorak",
+            "tier": "Cosmic Penitent's Raiment",
+            "token": {
+              "name": "Venomwoven Relic",
+              "id": 270918,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Boots",
@@ -5128,6 +7553,36 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Ornaments of the Eternal Coil",
+            "id": 268241,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Cosmic Penitent's Echoing Screams",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Chest",
+            "name": "Summoner's Searing Shirt",
+            "id": 251139,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Cosmic Penitent's Eclipsing Robes",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Hands",
+            "name": "Grasps of the Eternal Shadow",
+            "id": 268243,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Cosmic Penitent's Celestial Grips",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -5224,13 +7679,24 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Cosmic Penitent's Echoing Screams",
-            "id": null,
+            "id": 271553,
             "lists": [
               "Overall"
             ],
-            "source": "Mor'zahi"
+            "source": "Mor'zahi",
+            "tier": "Cosmic Penitent's Raiment",
+            "token": {
+              "name": "Venomwoven Remnant",
+              "id": 270922,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Cloak",
@@ -5243,11 +7709,32 @@
           {
             "slot": "Chest",
             "name": "Cosmic Penitent's Eclipsing Robes",
-            "id": null,
+            "id": 271558,
             "lists": [
               "Overall"
             ],
-            "source": "Nymrissa Wavecaller"
+            "source": "Nymrissa Wavecaller",
+            "tier": "Cosmic Penitent's Raiment",
+            "token": {
+              "name": "Venomwoven Icon",
+              "id": 270926,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268221,
+                  "name": "Tidebound Sorcereress's Robes",
+                  "boss": "Nymrissa Wavecaller",
+                  "instance": "The Tidebound Grotto"
+                }
+              ]
+            }
           },
           {
             "slot": "Wrist",
@@ -5259,13 +7746,24 @@
             "source": "Crafting"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Cosmic Penitent's Celestial Grips",
-            "id": null,
+            "id": 271556,
             "lists": [
               "Overall"
             ],
-            "source": "Breath of Ula'tek"
+            "source": "Breath of Ula'tek",
+            "tier": "Cosmic Penitent's Raiment",
+            "token": {
+              "name": "Venomwoven Idol",
+              "id": 270910,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -5279,11 +7777,32 @@
           {
             "slot": "Legs",
             "name": "Enveloping Legwraps of the Cosmic Penitent",
-            "id": null,
+            "id": 271554,
             "lists": [
               "Overall"
             ],
-            "source": "Kings' Rest"
+            "source": "Kings' Rest",
+            "tier": "Cosmic Penitent's Raiment",
+            "token": {
+              "name": "Venomwoven Relic",
+              "id": 270918,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 159234,
+                  "name": "Down-Lined Breeches",
+                  "boss": "The Golden Serpent",
+                  "instance": "Kings' Rest"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -5324,6 +7843,26 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Tidebound Sorcereress's Robes",
+            "id": 268221,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Cosmic Penitent's Eclipsing Robes",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Down-Lined Breeches",
+            "id": 159234,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Enveloping Legwraps of the Cosmic Penitent",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -5404,11 +7943,32 @@
           {
             "slot": "Head",
             "name": "Cosmic Penitent's Truesight",
-            "id": null,
+            "id": 271555,
             "lists": [
               "Overall"
             ],
-            "source": "Ula'tek"
+            "source": "Ula'tek",
+            "tier": "Cosmic Penitent's Raiment",
+            "token": {
+              "name": "Venomwoven Effigy",
+              "id": 270914,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 271874,
+                  "name": "Venomkeeper's Horrific Cowl",
+                  "boss": "Ula'tek",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Neck",
@@ -5437,11 +7997,22 @@
           {
             "slot": "Chest",
             "name": "Cosmic Penitent's Eclipsing Robes",
-            "id": null,
+            "id": 271558,
             "lists": [
               "Overall"
             ],
-            "source": "Vashnik the Malignant"
+            "source": "Vashnik the Malignant",
+            "tier": "Cosmic Penitent's Raiment",
+            "token": {
+              "name": "Venomwoven Icon",
+              "id": 270926,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Wrist",
@@ -5453,13 +8024,34 @@
             "source": "Crafting/Misc"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Cosmic Penitent's Celestial Grips",
-            "id": null,
+            "id": 271556,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar"
+            "source": "The Coiled Altar",
+            "tier": "Cosmic Penitent's Raiment",
+            "token": {
+              "name": "Venomwoven Idol",
+              "id": 270910,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268243,
+                  "name": "Grasps of the Eternal Shadow",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Belt",
@@ -5517,6 +8109,26 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Head",
+            "name": "Venomkeeper's Horrific Cowl",
+            "id": 271874,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Cosmic Penitent's Truesight",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Hands",
+            "name": "Grasps of the Eternal Shadow",
+            "id": 268243,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Cosmic Penitent's Celestial Grips",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -5587,11 +8199,32 @@
           {
             "slot": "Head",
             "name": "Chosen Bloodslayer's Spirit Shroud",
-            "id": null,
+            "id": 271510,
             "lists": [
               "Overall"
             ],
-            "source": "Ula'tek"
+            "source": "Ula'tek",
+            "tier": "Chosen Bloodslayer's Hexweave",
+            "token": {
+              "name": "Venomcured Effigy",
+              "id": 270915,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 271875,
+                  "name": "Gaze of the Coiled Watcher",
+                  "boss": "Ula'tek",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Neck",
@@ -5602,13 +8235,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Chosen Bloodslayer's Voodoo Guards",
-            "id": null,
+            "id": 271508,
             "lists": [
               "Overall"
             ],
-            "source": "Voidscar Arena"
+            "source": "Voidscar Arena",
+            "tier": "Chosen Bloodslayer's Hexweave",
+            "token": {
+              "name": "Venomcured Remnant",
+              "id": 270923,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 251223,
+                  "name": "Somber Spaulders",
+                  "boss": "Taz'Rah",
+                  "instance": "Voidscar Arena"
+                }
+              ]
+            }
           },
           {
             "slot": "Cloak",
@@ -5636,13 +8290,24 @@
             "source": "Crafting/Misc"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Chosen Bloodslayer's Fanged Grips",
-            "id": null,
+            "id": 271511,
             "lists": [
               "Overall"
             ],
-            "source": "Entombed Sentinels"
+            "source": "Entombed Sentinels",
+            "tier": "Chosen Bloodslayer's Hexweave",
+            "token": {
+              "name": "Venomcured Idol",
+              "id": 270911,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -5655,11 +8320,32 @@
           {
             "slot": "Legs",
             "name": "Chosen Bloodslayer's Reinforced Pants",
-            "id": null,
+            "id": 271509,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar"
+            "source": "The Coiled Altar",
+            "tier": "Chosen Bloodslayer's Hexweave",
+            "token": {
+              "name": "Venomcured Relic",
+              "id": 270919,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268225,
+                  "name": "Coiled Hex Legguards",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -5701,6 +8387,36 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Head",
+            "name": "Gaze of the Coiled Watcher",
+            "id": 271875,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Chosen Bloodslayer's Spirit Shroud",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Somber Spaulders",
+            "id": 251223,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Chosen Bloodslayer's Voodoo Guards",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Coiled Hex Legguards",
+            "id": 268225,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Chosen Bloodslayer's Reinforced Pants",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -5785,13 +8501,24 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Chosen Bloodslayer's Voodoo Guards",
-            "id": null,
+            "id": 271508,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Chosen Bloodslayer's Hexweave",
+            "token": {
+              "name": "Venomcured Remnant",
+              "id": 270923,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Cloak",
@@ -5804,11 +8531,22 @@
           {
             "slot": "Chest",
             "name": "Chosen Bloodslayer's Banded Poncho",
-            "id": null,
+            "id": 271513,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Chosen Bloodslayer's Hexweave",
+            "token": {
+              "name": "Venomcured Icon",
+              "id": 270927,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Wrist",
@@ -5819,13 +8557,24 @@
             ]
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Chosen Bloodslayer's Fanged Grips",
-            "id": null,
+            "id": 271511,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Chosen Bloodslayer's Hexweave",
+            "token": {
+              "name": "Venomcured Idol",
+              "id": 270911,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -5839,11 +8588,22 @@
           {
             "slot": "Legs",
             "name": "Chosen Bloodslayer's Reinforced Pants",
-            "id": null,
+            "id": 271509,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Chosen Bloodslayer's Hexweave",
+            "token": {
+              "name": "Venomcured Relic",
+              "id": 270919,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Boots",
@@ -5956,11 +8716,32 @@
           {
             "slot": "Head",
             "name": "Chosen Bloodslayer's Spirit Shroud",
-            "id": null,
+            "id": 271510,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set - Ula'tek"
+            "source": "Tier Set - Ula'tek",
+            "tier": "Chosen Bloodslayer's Hexweave",
+            "token": {
+              "name": "Venomcured Effigy",
+              "id": 270915,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 271875,
+                  "name": "Gaze of the Coiled Watcher",
+                  "boss": "Ula'tek",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Neck",
@@ -5971,13 +8752,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Chosen Bloodslayer's Voodoo Guards",
-            "id": null,
+            "id": 271508,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set - Vashnik the Malignant"
+            "source": "Tier Set - Vashnik the Malignant",
+            "tier": "Chosen Bloodslayer's Hexweave",
+            "token": {
+              "name": "Venomcured Remnant",
+              "id": 270923,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268246,
+                  "name": "Frothing Venom Spaulders",
+                  "boss": "Vashnik the Malignant",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Cloak",
@@ -5990,11 +8792,32 @@
           {
             "slot": "Chest",
             "name": "Chosen Bloodslayer's Banded Poncho",
-            "id": null,
+            "id": 271513,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set - Kith'ix"
+            "source": "Tier Set - Kith'ix",
+            "tier": "Chosen Bloodslayer's Hexweave",
+            "token": {
+              "name": "Venomcured Icon",
+              "id": 270927,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 281236,
+                  "name": "Chestwrap of Palpable Terror",
+                  "boss": "Kith'ix",
+                  "instance": "The Unbinding of Kith'ix"
+                }
+              ]
+            }
           },
           {
             "slot": "Wrist",
@@ -6006,13 +8829,34 @@
             "source": "Crafting/Misc"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Chosen Bloodslayer's Fanged Grips",
-            "id": null,
+            "id": 271511,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set - Temple of Sethraliss"
+            "source": "Tier Set - Temple of Sethraliss",
+            "tier": "Chosen Bloodslayer's Hexweave",
+            "token": {
+              "name": "Venomcured Idol",
+              "id": 270911,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 159337,
+                  "name": "Grips of Electrified Defense",
+                  "boss": "Avatar of Sethraliss",
+                  "instance": "Temple of Sethraliss"
+                }
+              ]
+            }
           },
           {
             "slot": "Belt",
@@ -6025,11 +8869,32 @@
           {
             "slot": "Legs",
             "name": "Chosen Bloodslayer's Reinforced Pants",
-            "id": null,
+            "id": 271509,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar"
+            "source": "The Coiled Altar",
+            "tier": "Chosen Bloodslayer's Hexweave",
+            "token": {
+              "name": "Venomcured Relic",
+              "id": 270919,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268225,
+                  "name": "Coiled Hex Legguards",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -6070,6 +8935,56 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Head",
+            "name": "Gaze of the Coiled Watcher",
+            "id": 271875,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Chosen Bloodslayer's Spirit Shroud",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Frothing Venom Spaulders",
+            "id": 268246,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Chosen Bloodslayer's Voodoo Guards",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Chest",
+            "name": "Chestwrap of Palpable Terror",
+            "id": 281236,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Chosen Bloodslayer's Banded Poncho",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Hands",
+            "name": "Grips of Electrified Defense",
+            "id": 159337,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Chosen Bloodslayer's Fanged Grips",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Coiled Hex Legguards",
+            "id": 268225,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Chosen Bloodslayer's Reinforced Pants",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -6143,11 +9058,22 @@
           {
             "slot": "Head",
             "name": "Serpent Crown of the Ophidian Oracle",
-            "id": null,
+            "id": 271483,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Ophidian Oracle's Prophecy",
+            "token": {
+              "name": "Venomcast Effigy",
+              "id": 270916,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Neck",
@@ -6158,13 +9084,24 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Hissing Mantle of the Ophidian Oracle",
-            "id": null,
+            "id": 271481,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Ophidian Oracle's Prophecy",
+            "token": {
+              "name": "Venomcast Remnant",
+              "id": 270924,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Cloak",
@@ -6177,11 +9114,22 @@
           {
             "slot": "Chest",
             "name": "Fanged Raiment of the Ophidian Oracle",
-            "id": null,
+            "id": 271486,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Ophidian Oracle's Prophecy",
+            "token": {
+              "name": "Venomcast Icon",
+              "id": 270928,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Wrist",
@@ -6193,13 +9141,34 @@
             "source": "Crafting"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Hexing Grips of the Ophidian Oracle",
-            "id": null,
+            "id": 271484,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set/The Unbinding of Kith'ix"
+            "source": "Tier Set/The Unbinding of Kith'ix",
+            "tier": "Ophidian Oracle's Prophecy",
+            "token": {
+              "name": "Venomcast Idol",
+              "id": 270912,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 281238,
+                  "name": "Aberrant Commander's Gauntlets",
+                  "boss": "Kith'ix",
+                  "instance": "The Unbinding of Kith'ix"
+                }
+              ]
+            }
           },
           {
             "slot": "Belt",
@@ -6212,11 +9181,22 @@
           {
             "slot": "Legs",
             "name": "Leggings of the Ophidian Oracle",
-            "id": null,
+            "id": 271482,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Ophidian Oracle's Prophecy",
+            "token": {
+              "name": "Venomcast Relic",
+              "id": 270920,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Boots",
@@ -6258,6 +9238,16 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Hands",
+            "name": "Aberrant Commander's Gauntlets",
+            "id": 281238,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Hexing Grips of the Ophidian Oracle",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -6342,11 +9332,22 @@
           {
             "slot": "Head",
             "name": "Serpent Crown of the Ophidian Oracle",
-            "id": null,
+            "id": 271483,
             "lists": [
               "Overall"
             ],
-            "source": "Twin Fangs"
+            "source": "Twin Fangs",
+            "tier": "Ophidian Oracle's Prophecy",
+            "token": {
+              "name": "Venomcast Effigy",
+              "id": 270916,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Neck",
@@ -6357,13 +9358,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Hissing Mantle of the Ophidian Oracle",
-            "id": null,
+            "id": 271481,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst – The Coiled Altar"
+            "source": "Catalyst – The Coiled Altar",
+            "tier": "Ophidian Oracle's Prophecy",
+            "token": {
+              "name": "Venomcast Remnant",
+              "id": 270924,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268231,
+                  "name": "Soulslither Spaulders",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Cloak",
@@ -6376,11 +9398,32 @@
           {
             "slot": "Chest",
             "name": "Fanged Raiment of the Ophidian Oracle",
-            "id": null,
+            "id": 271486,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst – Ula'tek"
+            "source": "Catalyst – Ula'tek",
+            "tier": "Ophidian Oracle's Prophecy",
+            "token": {
+              "name": "Venomcast Icon",
+              "id": 270928,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 271876,
+                  "name": "Awoken Dreadfang Cuirass",
+                  "boss": "Ula'tek",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Wrist",
@@ -6392,13 +9435,34 @@
             "source": "Leatherworking"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Hexing Grips of the Ophidian Oracle",
-            "id": null,
+            "id": 271484,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst – Kith'ix"
+            "source": "Catalyst – Kith'ix",
+            "tier": "Ophidian Oracle's Prophecy",
+            "token": {
+              "name": "Venomcast Idol",
+              "id": 270912,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 281238,
+                  "name": "Aberrant Commander's Gauntlets",
+                  "boss": "Kith'ix",
+                  "instance": "The Unbinding of Kith'ix"
+                }
+              ]
+            }
           },
           {
             "slot": "Belt",
@@ -6411,11 +9475,32 @@
           {
             "slot": "Legs",
             "name": "Leggings of the Ophidian Oracle",
-            "id": null,
+            "id": 271482,
             "lists": [
               "Overall"
             ],
-            "source": "Catalyst – The Coiled Altar"
+            "source": "Catalyst – The Coiled Altar",
+            "tier": "Ophidian Oracle's Prophecy",
+            "token": {
+              "name": "Venomcast Relic",
+              "id": 270920,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268237,
+                  "name": "Cuisses of the Uncoiled Union",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -6456,6 +9541,46 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Soulslither Spaulders",
+            "id": 268231,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Hissing Mantle of the Ophidian Oracle",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Chest",
+            "name": "Awoken Dreadfang Cuirass",
+            "id": 271876,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Fanged Raiment of the Ophidian Oracle",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Hands",
+            "name": "Aberrant Commander's Gauntlets",
+            "id": 281238,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Hexing Grips of the Ophidian Oracle",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Cuisses of the Uncoiled Union",
+            "id": 268237,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Leggings of the Ophidian Oracle",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -6511,13 +9636,24 @@
         "via": "pasted text",
         "items": [
           {
-            "slot": "Helm",
+            "slot": "Head",
             "name": "Serpent Crown of the Ophidian Oracle",
-            "id": null,
+            "id": 271483,
             "lists": [
               "Overall"
             ],
-            "source": "Raid · Vault"
+            "source": "Raid · Vault",
+            "tier": "Ophidian Oracle's Prophecy",
+            "token": {
+              "name": "Venomcast Effigy",
+              "id": 270916,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Neck",
@@ -6528,13 +9664,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Hissing Mantle of the Ophidian Oracle",
-            "id": null,
+            "id": 271481,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar (Raid) & Catalyst"
+            "source": "The Coiled Altar (Raid) & Catalyst",
+            "tier": "Ophidian Oracle's Prophecy",
+            "token": {
+              "name": "Venomcast Remnant",
+              "id": 270924,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268231,
+                  "name": "Soulslither Spaulders",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Cape",
@@ -6547,11 +9704,32 @@
           {
             "slot": "Chest",
             "name": "Fanged Raiment of the Ophidian Oracle",
-            "id": null,
+            "id": 271486,
             "lists": [
               "Overall"
             ],
-            "source": "Kings Rest & Catalyst"
+            "source": "Kings Rest & Catalyst",
+            "tier": "Ophidian Oracle's Prophecy",
+            "token": {
+              "name": "Venomcast Icon",
+              "id": 270928,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 239046,
+                  "name": "Loa-Blessed Chestguard",
+                  "boss": "Dazar, The First King",
+                  "instance": "Kings' Rest"
+                }
+              ]
+            }
           },
           {
             "slot": "Bracers",
@@ -6562,13 +9740,34 @@
             ]
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Hexing Grips of the Ophidian Oracle",
-            "id": null,
+            "id": 271484,
             "lists": [
               "Overall"
             ],
-            "source": "The Blinding Vale & Catalyst"
+            "source": "The Blinding Vale & Catalyst",
+            "tier": "Ophidian Oracle's Prophecy",
+            "token": {
+              "name": "Venomcast Idol",
+              "id": 270912,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 251165,
+                  "name": "Pulverizing Pads",
+                  "boss": "Lightwarden Ruia",
+                  "instance": "The Blinding Vale"
+                }
+              ]
+            }
           },
           {
             "slot": "Belt",
@@ -6581,11 +9780,32 @@
           {
             "slot": "Legs",
             "name": "Leggings of the Ophidian Oracle",
-            "id": null,
+            "id": 271482,
             "lists": [
               "Overall"
             ],
-            "source": "Temple of Sethraliss & Catalyst"
+            "source": "Temple of Sethraliss & Catalyst",
+            "tier": "Ophidian Oracle's Prophecy",
+            "token": {
+              "name": "Venomcast Relic",
+              "id": 270920,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 159375,
+                  "name": "Legguards of the Awakening Brood",
+                  "boss": "Merektha",
+                  "instance": "Temple of Sethraliss"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -6642,6 +9862,46 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Soulslither Spaulders",
+            "id": 268231,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Hissing Mantle of the Ophidian Oracle",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Chest",
+            "name": "Loa-Blessed Chestguard",
+            "id": 239046,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Fanged Raiment of the Ophidian Oracle",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Hands",
+            "name": "Pulverizing Pads",
+            "id": 251165,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Hexing Grips of the Ophidian Oracle",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Legguards of the Awakening Brood",
+            "id": 159375,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Leggings of the Ophidian Oracle",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -6728,13 +9988,24 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Spires of the Damned Necrolyte",
-            "id": null,
+            "id": 271544,
             "lists": [
               "Overall"
             ],
-            "source": "The Lost Explorers"
+            "source": "The Lost Explorers",
+            "tier": "Damned Necrolyte's Shattered Restraints",
+            "token": {
+              "name": "Venomwoven Remnant",
+              "id": 270922,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Cloak",
@@ -6747,11 +10018,22 @@
           {
             "slot": "Chest",
             "name": "Damned Necrolyte's Rattling Robes",
-            "id": null,
+            "id": 271549,
             "lists": [
               "Overall"
             ],
-            "source": "Vashnik the Malignant"
+            "source": "Vashnik the Malignant",
+            "tier": "Damned Necrolyte's Shattered Restraints",
+            "token": {
+              "name": "Venomwoven Icon",
+              "id": 270926,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Wrist",
@@ -6763,13 +10045,24 @@
             "source": "Crafting"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Damned Necrolyte's Charred Grasps",
-            "id": null,
+            "id": 271547,
             "lists": [
               "Overall"
             ],
-            "source": "Entombed Sentinels"
+            "source": "Entombed Sentinels",
+            "tier": "Damned Necrolyte's Shattered Restraints",
+            "token": {
+              "name": "Venomwoven Idol",
+              "id": 270910,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -6783,11 +10076,22 @@
           {
             "slot": "Legs",
             "name": "Damned Necrolyte's Leg Bindings",
-            "id": null,
+            "id": 271545,
             "lists": [
               "Overall"
             ],
-            "source": "Sszorak"
+            "source": "Sszorak",
+            "tier": "Damned Necrolyte's Shattered Restraints",
+            "token": {
+              "name": "Venomwoven Relic",
+              "id": 270918,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Boots",
@@ -6915,13 +10219,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Spires of the Damned Necrolyte",
-            "id": null,
+            "id": 271544,
             "lists": [
               "Overall"
             ],
-            "source": "Venomous Abyss Trash Drop"
+            "source": "Venomous Abyss Trash Drop",
+            "tier": "Damned Necrolyte's Shattered Restraints",
+            "token": {
+              "name": "Venomwoven Remnant",
+              "id": 270922,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268241,
+                  "name": "Ornaments of the Eternal Coil",
+                  "boss": "The Twin Fangs",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Cloak",
@@ -6934,11 +10259,22 @@
           {
             "slot": "Chest",
             "name": "Damned Necrolyte's Rattling Robes",
-            "id": null,
+            "id": 271549,
             "lists": [
               "Overall"
             ],
-            "source": "Vashnik the Malignant"
+            "source": "Vashnik the Malignant",
+            "tier": "Damned Necrolyte's Shattered Restraints",
+            "token": {
+              "name": "Venomwoven Icon",
+              "id": 270926,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Wrist",
@@ -6950,13 +10286,24 @@
             "source": "Entombed Sentinels"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Damned Necrolyte's Charred Grasps",
-            "id": null,
+            "id": 271547,
             "lists": [
               "Overall"
             ],
-            "source": "Entombed Sentinels"
+            "source": "Entombed Sentinels",
+            "tier": "Damned Necrolyte's Shattered Restraints",
+            "token": {
+              "name": "Venomwoven Idol",
+              "id": 270910,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -6970,11 +10317,32 @@
           {
             "slot": "Legs",
             "name": "Damned Necrolyte's Leg Bindings",
-            "id": null,
+            "id": 271545,
             "lists": [
               "Overall"
             ],
-            "source": "Kith'ix"
+            "source": "Kith'ix",
+            "tier": "Damned Necrolyte's Shattered Restraints",
+            "token": {
+              "name": "Venomwoven Relic",
+              "id": 270918,
+              "boss": "Sszorak"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 281235,
+                  "name": "Voidweaver's Leggings",
+                  "boss": "Kith'ix",
+                  "instance": "The Unbinding of Kith'ix"
+                }
+              ]
+            }
           },
           {
             "slot": "Boots",
@@ -7015,6 +10383,26 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Ornaments of the Eternal Coil",
+            "id": 268241,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Spires of the Damned Necrolyte",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Voidweaver's Leggings",
+            "id": 281235,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Damned Necrolyte's Leg Bindings",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -7101,13 +10489,24 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Spires of the Damned Necrolyte",
-            "id": null,
+            "id": 271544,
             "lists": [
               "Overall"
             ],
-            "source": "The Lost Explorers"
+            "source": "The Lost Explorers",
+            "tier": "Damned Necrolyte's Shattered Restraints",
+            "token": {
+              "name": "Venomwoven Remnant",
+              "id": 270922,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Cloak",
@@ -7120,11 +10519,22 @@
           {
             "slot": "Chest",
             "name": "Damned Necrolyte's Rattling Robes",
-            "id": null,
+            "id": 271549,
             "lists": [
               "Overall"
             ],
-            "source": "Vashnik the Malignant"
+            "source": "Vashnik the Malignant",
+            "tier": "Damned Necrolyte's Shattered Restraints",
+            "token": {
+              "name": "Venomwoven Icon",
+              "id": 270926,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Wrist",
@@ -7136,13 +10546,34 @@
             "source": "Crafting"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Damned Necrolyte's Charred Grasps",
-            "id": null,
+            "id": 271547,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar + Catalyst"
+            "source": "The Coiled Altar + Catalyst",
+            "tier": "Damned Necrolyte's Shattered Restraints",
+            "token": {
+              "name": "Venomwoven Idol",
+              "id": 270910,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268243,
+                  "name": "Grasps of the Eternal Shadow",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Belt",
@@ -7200,6 +10631,16 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Hands",
+            "name": "Grasps of the Eternal Shadow",
+            "id": 268243,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Damned Necrolyte's Charred Grasps",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -7251,13 +10692,34 @@
         "via": "pasted text",
         "items": [
           {
-            "slot": "Helm",
+            "slot": "Head",
             "name": "Tempered Horns of the Jade Warlord",
-            "id": null,
+            "id": 271456,
             "lists": [
               "Overall"
             ],
-            "source": "Kithix"
+            "source": "Kithix",
+            "tier": "Jade Warlord's Dominion",
+            "token": {
+              "name": "Venomforged Effigy",
+              "id": 270917,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 281239,
+                  "name": "Corroded Hulk's Skullcap",
+                  "boss": "Kith'ix",
+                  "instance": "The Unbinding of Kith'ix"
+                }
+              ]
+            }
           },
           {
             "slot": "Neck",
@@ -7268,13 +10730,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Raging Pauldrons of the Jade Warlord",
-            "id": null,
+            "id": 271454,
             "lists": [
               "Overall"
             ],
-            "source": "Temple of Sethraliss"
+            "source": "Temple of Sethraliss",
+            "tier": "Jade Warlord's Dominion",
+            "token": {
+              "name": "Venomforged Remnant",
+              "id": 270925,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 239037,
+                  "name": "C'thraxxi Binders Pauldrons",
+                  "boss": "Avatar of Sethraliss",
+                  "instance": "Temple of Sethraliss"
+                }
+              ]
+            }
           },
           {
             "slot": "Cloak",
@@ -7287,11 +10770,32 @@
           {
             "slot": "Chest",
             "name": "Cuirass of the Jade Warlord",
-            "id": null,
+            "id": 271459,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar"
+            "source": "The Coiled Altar",
+            "tier": "Jade Warlord's Dominion",
+            "token": {
+              "name": "Venomforged Icon",
+              "id": 270929,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268222,
+                  "name": "Reckless Spirit Breastplate",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Bracers",
@@ -7303,13 +10807,24 @@
             "source": "Crafted"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Jeweled Gauntlets of the Jade Warlord",
-            "id": null,
+            "id": 271457,
             "lists": [
               "Overall"
             ],
-            "source": "Entombed Sentinels"
+            "source": "Entombed Sentinels",
+            "tier": "Jade Warlord's Dominion",
+            "token": {
+              "name": "Venomforged Idol",
+              "id": 270913,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -7375,6 +10890,36 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Head",
+            "name": "Corroded Hulk's Skullcap",
+            "id": 281239,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Tempered Horns of the Jade Warlord",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Shoulder",
+            "name": "C'thraxxi Binders Pauldrons",
+            "id": 239037,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Raging Pauldrons of the Jade Warlord",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Chest",
+            "name": "Reckless Spirit Breastplate",
+            "id": 268222,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Cuirass of the Jade Warlord",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -7428,13 +10973,34 @@
         "via": "pasted text",
         "items": [
           {
-            "slot": "Helm",
+            "slot": "Head",
             "name": "Tempered Horns of the Jade Warlord",
-            "id": null,
+            "id": 271456,
             "lists": [
               "Overall"
             ],
-            "source": "Kithix"
+            "source": "Kithix",
+            "tier": "Jade Warlord's Dominion",
+            "token": {
+              "name": "Venomforged Effigy",
+              "id": 270917,
+              "boss": "The Twin Fangs"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 281239,
+                  "name": "Corroded Hulk's Skullcap",
+                  "boss": "Kith'ix",
+                  "instance": "The Unbinding of Kith'ix"
+                }
+              ]
+            }
           },
           {
             "slot": "Neck",
@@ -7445,13 +11011,34 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Raging Pauldrons of the Jade Warlord",
-            "id": null,
+            "id": 271454,
             "lists": [
               "Overall"
             ],
-            "source": "Murder Row"
+            "source": "Murder Row",
+            "tier": "Jade Warlord's Dominion",
+            "token": {
+              "name": "Venomforged Remnant",
+              "id": 270925,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 251138,
+                  "name": "Cinderfury Shoulderguards",
+                  "boss": "Lithiel Cinderfury",
+                  "instance": "Murder Row"
+                }
+              ]
+            }
           },
           {
             "slot": "Cloak",
@@ -7464,11 +11051,32 @@
           {
             "slot": "Chest",
             "name": "Cuirass of the Jade Warlord",
-            "id": null,
+            "id": 271459,
             "lists": [
               "Overall"
             ],
-            "source": "The Coiled Altar"
+            "source": "The Coiled Altar",
+            "tier": "Jade Warlord's Dominion",
+            "token": {
+              "name": "Venomforged Icon",
+              "id": 270929,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            },
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268222,
+                  "name": "Reckless Spirit Breastplate",
+                  "boss": "The Coiled Altar",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Bracers",
@@ -7480,13 +11088,24 @@
             "source": "Crafted"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Jeweled Gauntlets of the Jade Warlord",
-            "id": null,
+            "id": 271457,
             "lists": [
               "Overall"
             ],
-            "source": "Entombed Sentinels"
+            "source": "Entombed Sentinels",
+            "tier": "Jade Warlord's Dominion",
+            "token": {
+              "name": "Venomforged Idol",
+              "id": 270913,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",
@@ -7560,6 +11179,36 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Head",
+            "name": "Corroded Hulk's Skullcap",
+            "id": 281239,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Tempered Horns of the Jade Warlord",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Cinderfury Shoulderguards",
+            "id": 251138,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Raging Pauldrons of the Jade Warlord",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Chest",
+            "name": "Reckless Spirit Breastplate",
+            "id": 268222,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Cuirass of the Jade Warlord",
+            "addedBy": "catalyst"
           }
         ]
       }
@@ -7645,13 +11294,24 @@
             ]
           },
           {
-            "slot": "Shoulders",
+            "slot": "Shoulder",
             "name": "Raging Pauldrons of the Jade Warlord",
-            "id": null,
+            "id": 271454,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Jade Warlord's Dominion",
+            "token": {
+              "name": "Venomforged Remnant",
+              "id": 270925,
+              "boss": "The Lost Explorers"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Cloak",
@@ -7664,11 +11324,22 @@
           {
             "slot": "Chest",
             "name": "Cuirass of the Jade Warlord",
-            "id": null,
+            "id": 271459,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Jade Warlord's Dominion",
+            "token": {
+              "name": "Venomforged Icon",
+              "id": 270929,
+              "boss": "Vashnik the Malignant"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Wrist",
@@ -7680,13 +11351,24 @@
             "source": "Crafting Blacksmithing"
           },
           {
-            "slot": "Gloves",
+            "slot": "Hands",
             "name": "Jeweled Gauntlets of the Jade Warlord",
-            "id": null,
+            "id": 271457,
             "lists": [
               "Overall"
             ],
-            "source": "Tier Set"
+            "source": "Tier Set",
+            "tier": "Jade Warlord's Dominion",
+            "token": {
+              "name": "Venomforged Idol",
+              "id": 270913,
+              "boss": "Entombed Sentinels"
+            },
+            "curio": {
+              "name": "Slumbering Coil Curio",
+              "id": 270909,
+              "boss": "Ula'tek"
+            }
           },
           {
             "slot": "Belt",

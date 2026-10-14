@@ -36,6 +36,8 @@ const SECONDARY = {
   MASTERY_RATING: "Mastery",
   VERSATILITY: "Versatility",
 };
+// Token use text "set hand item" -> item slot names used in items.json.
+const TOKEN_SLOT = { head: "Head", shoulder: "Shoulder", chest: "Chest", hand: "Hands", leg: "Legs" };
 const ARMOR_TYPES = new Set(["Cloth", "Leather", "Mail", "Plate"]);
 // Armor type is a class property; the API does not expose it on the spec.
 const CLASS_ARMOR = {
@@ -217,7 +219,7 @@ async function fetchItems() {
   const missing = wanted.filter((w) => !byName.has(w.name.toLowerCase()));
   if (missing.length) throw new Error(`Journal instances not found: ${missing.map((m) => m.name).join(", ")}`);
 
-  const records = [];
+  const records = [], tokens = [];
   const itemCache = new Map();
   for (const w of wanted) {
     const instance = await api(`/data/wow/journal-instance/${byName.get(w.name.toLowerCase())}`);
@@ -230,6 +232,18 @@ async function fetchItems() {
       });
       const seen = new Set();
       for (const item of items) {
+        // Tier tokens: "Create a soulbound set hand item appropriate for your class",
+        // or a curio traded for any class set piece.
+        const use = (item.preview_item?.spells ?? []).map((sp) => sp.description ?? "").join(" ");
+        const tokenSlot = use.match(/Create a soulbound set (\w+) item/i)?.[1];
+        const curio = /class set armor/i.test(item.description ?? item.preview_item?.description ?? "");
+        if ((tokenSlot || curio) && !tokens.some((t) => t.id === item.id)) {
+          tokens.push({
+            id: item.id, name: item.name, instance: instance.name, boss: enc.name,
+            slot: tokenSlot ? TOKEN_SLOT[tokenSlot.toLowerCase()] ?? tokenSlot : null,
+            classes: item.preview_item?.requirements?.playable_classes?.links?.map((c) => c.name) ?? null,
+          });
+        }
         // The journal lists some items twice per boss; skip non-gear loot.
         if (seen.has(item.id) || !isGear(item)) continue;
         seen.add(item.id);
@@ -238,7 +252,22 @@ async function fetchItems() {
     }
     console.log(`${instance.name}: ${encounters.length} bosses, ${records.filter((r) => r.instanceId === instance.id).length} drops`);
   }
-  return records;
+  return { records, tokens };
+}
+
+// Class tier sets (config "tierSets") with each piece's slot and class.
+async function fetchTierSets() {
+  const sets = [];
+  for (const id of season.tierSets ?? []) {
+    const set = await api(`/data/wow/item-set/${id}`);
+    const pieces = await mapLimit(set.items ?? [], 5, (i) => api(`/data/wow/item/${i.id}`));
+    sets.push({
+      id, name: set.name,
+      classes: pieces[0]?.preview_item?.requirements?.playable_classes?.links?.map((c) => c.name) ?? [],
+      items: pieces.map((it) => ({ id: it.id, name: it.name, slot: it.inventory_type?.name ?? null, armorType: it.item_subclass?.name ?? null })),
+    });
+  }
+  return sets;
 }
 
 // ---------------------------------------------------------------- specs
@@ -284,11 +313,14 @@ await mkdir(path.join(ROOT, "data"), { recursive: true });
 const meta = { region: REGION, locale: LOCALE, season: season.name, generatedAt: new Date().toISOString() };
 
 if (!SPECS_ONLY) {
-  const items = await fetchItems();
+  const { records: items, tokens } = await fetchItems();
   const odd = items.filter((i) => i.secondaryStats.length !== 2 && !["Trinket", "Neck"].includes(i.slot) && !i.tag);
   if (odd.length) console.warn(`Note: ${odd.length} drops lack 2 secondaries in the API (see "notes"):\n  ` + odd.map((i) => `${i.name} (${i.instance})`).join("\n  "));
   await writeFile(path.join(ROOT, "data/items.json"), JSON.stringify({ ...meta, items }, null, 2) + "\n");
   console.log(`Wrote data/items.json (${items.length} drops)`);
+  const sets = await fetchTierSets();
+  await writeFile(path.join(ROOT, "data/tier.json"), JSON.stringify({ ...meta, sets, tokens }, null, 2) + "\n");
+  console.log(`Wrote data/tier.json (${sets.length} tier sets, ${tokens.length} tokens)`);
 }
 
 const specs = await buildSpecs();

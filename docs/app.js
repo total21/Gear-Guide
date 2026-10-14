@@ -58,6 +58,25 @@ function statChip({ stat, rank }) {
   return `<span class="stat r${rank ?? 0}" title="${esc(stat)}${rank ? ` (#${rank} for this spec)` : " (unranked)"}">${SHORT[stat]}${rank ? `<sup>#${rank}</sup>` : ""}</span>`;
 }
 
+const itemLink = (id, name) => `<a href="https://www.wowhead.com/item=${id}" target="_blank" rel="noopener">${esc(name)}</a>`;
+
+// A BiS item that isn't a Season drop: tier piece (with its catalyst source
+// drop and raid token), crafted item, or other.
+function otherRow(b) {
+  const link = b.id ? itemLink(b.id, b.name)
+    : `<a href="https://www.wowhead.com/search?q=${encodeURIComponent(b.name)}" target="_blank" rel="noopener">${esc(b.name)}</a>`;
+  const lists = b.lists?.length && b.lists.join() !== "Overall" ? ` · ${esc(b.lists.join(" / "))}` : "";
+  const lines = [];
+  if (b.catalyst?.from?.length)
+    lines.push(`<b>Catalyst:</b> convert ${b.catalyst.from.map((f) => `${itemLink(f.id, f.name)} (${esc(f.boss)} · ${esc(f.instance)})`).join(" or ")}`);
+  else if (b.catalyst?.any) lines.push(`<b>Catalyst:</b> convert any ${esc(b.catalyst.any)} Season drop`);
+  if (b.token) lines.push(`<b>Raid token:</b> ${itemLink(b.token.id, b.token.name)} (${esc(b.token.boss)})${b.curio ? ` or ${itemLink(b.curio.id, b.curio.name)} (${esc(b.curio.boss)})` : ""}`);
+  if (b.crafting?.length) lines.push(`<b>Crafting:</b> ${esc(b.crafting.join("; "))}`);
+  return `<li><div class="name">${link}${b.tier ? `<span class="badge b-tier" title="${esc(b.tier)}">Tier</span>` : ""}</div>
+    <div class="type">${esc(b.slot ?? "")}${b.tier ? ` · ${esc(b.tier)}` : ""}${lists}${b.source ? ` · Wowhead: ${esc(b.source)}` : ""}</div>
+    ${lines.length ? `<ul class="fx">${lines.map((l) => `<li>${l}</li>`).join("")}</ul>` : ""}</li>`;
+}
+
 // "Use: ..." -> <b>Use:</b> ...
 function effectLine(e) {
   const m = e.text.match(/^(Use|Equip|Chance on hit):\s*/);
@@ -153,8 +172,7 @@ function render() {
   const dropIds = new Set(items.map((i) => i.id));
   const other = (bisList?.items ?? []).filter((b) => !dropIds.has(b.id));
   if (state.source === "BIS" && other.length)
-    $("list").innerHTML += `<section><h2>Not from Season drops<span>${other.length} item${other.length === 1 ? "" : "s"}</span></h2><div class="none">Crafted, tier, catalyst or other sources.</div><ul>${other.map((b) =>
-      `<li><div class="name"><a href="${b.id ? `https://www.wowhead.com/item=${b.id}` : `https://www.wowhead.com/search?q=${encodeURIComponent(b.name)}`}" target="_blank" rel="noopener">${esc(b.name)}</a></div><div class="type">${esc(b.slot ?? "")}${b.source ? ` · ${esc(b.source)}` : ""}${b.lists?.length && b.lists.join() !== "Overall" ? ` · ${esc(b.lists.join(" / "))}` : ""}</div>${b.crafting?.length ? `<div class="craft">Crafting: ${esc(b.crafting.join("; "))}</div>` : ""}${b.catalyzedFrom ? `<div class="craft">Catalyzed from ${esc(b.catalyzedFrom)}</div>` : ""}</li>`).join("")}</ul></section>`;
+    $("list").innerHTML += `<section><h2>Not from Season drops<span>${other.length} item${other.length === 1 ? "" : "s"}</span></h2><div class="none">Tier, crafted and other sources.</div><ul>${other.map(otherRow).join("")}</ul></section>`;
   $("count").textContent = `${n} item${n === 1 ? "" : "s"} shown` + (topPair ? ` · ${nTop} with the top pair` : "");
 
   const bis = bisList ?? {};
