@@ -1,4 +1,4 @@
-import { SHORT, SLOT_GROUPS, groupForSpec, rankedPairs, typeLabel, slotGroup, bisFor, priorityForHero, itemStats, catalystOptions, splitOffDrops, bisSlotGroup, statOrder, toggleStat, effectTags } from "./gear.js";
+import { SHORT, SLOT_GROUPS, groupForSpec, rankedPairs, typeLabel, slotGroup, bisFor, priorityForHero, itemStats, catalystOptions, splitOffDrops, bisSlotGroup, statOrder, toggleStat, effectTags } from "./gear.js?v=9";
 
 const $ = (id) => document.getElementById(id);
 const esc = (x) => String(x).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -20,7 +20,7 @@ let items = [], specs = [], meta = {};
 
 async function load() {
   const [i, s] = await Promise.all(["data/items.json", "data/specs.json"].map((u) =>
-    fetch(u).then((r) => { if (!r.ok) throw new Error(`${u}: HTTP ${r.status}`); return r.json(); })));
+    fetch(u, { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(`${u}: HTTP ${r.status}`); return r.json(); })));
   items = i.items;
   specs = s.specs;
   meta = { season: i.season, generatedAt: i.generatedAt };
