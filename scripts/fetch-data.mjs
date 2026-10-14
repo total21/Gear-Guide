@@ -66,7 +66,8 @@ const SPEC_WEAPONS = {
   "Death Knight|Blood": DK_2H,
   "Death Knight|Frost": weapons([TWO_H, ONE_H], ["Axe", "Mace", "Sword", "Polearm"]),
   "Death Knight|Unholy": DK_2H,
-  "Demon Hunter|Devourer": weapons([ONE_H], ["Warglaives", "Axe", "Sword", "Fist Weapon"]),
+  // Wowhead's Devourer BiS (2026-10-14) uses an Intellect dagger, Jan'thrazet.
+  "Demon Hunter|Devourer": weapons([ONE_H], ["Warglaives", "Axe", "Sword", "Fist Weapon", "Dagger"]),
   "Demon Hunter|Havoc": weapons([ONE_H], ["Warglaives", "Axe", "Sword", "Fist Weapon"]),
   "Demon Hunter|Vengeance": weapons([ONE_H], ["Warglaives", "Axe", "Sword", "Fist Weapon"]),
   "Druid|Balance": CASTER_DRUID,

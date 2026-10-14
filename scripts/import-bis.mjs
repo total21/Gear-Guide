@@ -338,9 +338,11 @@ export function parsePasted(text, spec, items) {
       // With tabs: Slot | Item | Source. With single spaces the source stays in the name.
       const slotCol = cols.length > 1 ? cols[0] : slotWord;
       const itemCol = cols.length > 1 ? cols[1] : line.slice(slotWord.length).replace(/^\s*\d\b/, "").trim();
-      const crafting = [...parens(slotCol), ...parens(itemCol)];
+      // Reagents also come as "<item> <item> crafted with <reagent> <reagent>".
+      const [itemPart, ...withParts] = itemCol.split(/\s+crafted with\s+/i);
+      const crafting = [...parens(slotCol), ...parens(itemPart), ...withParts.map(noParens).filter(Boolean)];
       entries.push({
-        id: null, name: noParens(itemCol), slot: noParens(slotCol), list,
+        id: null, name: noParens(itemPart), slot: noParens(slotCol), list,
         ...(cols.length > 2 && { source: cols.slice(2).join(" ") }),
         ...(crafting.length && { crafting }),
       });

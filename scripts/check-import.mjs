@@ -104,6 +104,13 @@ eq("spec from id file name", specFromText("", "260.txt", specs)?.id, 260);
   eq("drop slot note", r.entries.map((e) => [e.id, e.slot, e.note ?? null, e.crafting ?? null]), [[270173, "Trinket", "Raw Damage", null]]);
 }
 
+// Reagents written as "<item> <item> crafted with <reagent> <reagent>".
+{
+  const spec = specs.find((x) => x.id === 1480);
+  const r = parsePasted("Wrist\tSilvermoon Agent's Deflectors Silvermoon Agent's Deflectors crafted with Arcanoweave Lining Arcanoweave Lining \tCrafting/Misc", spec, items);
+  eq("crafted with", r.entries.map((e) => [e.name, e.crafting, e.source]), [["Silvermoon Agent's Deflectors", ["Arcanoweave Lining"], "Crafting/Misc"]]);
+}
+
 // Spec slugs resolve for every spec on every site.
 for (const s of specs) {
   const c = s.class.toLowerCase().replace(/ /g, "-"), n = s.spec.toLowerCase().replace(/ /g, "-");
