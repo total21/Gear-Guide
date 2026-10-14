@@ -5,11 +5,14 @@
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#12141b">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>S2 Gear Farm List</title>
+<title>Gear Guide</title>
 <meta name="description" content="Midnight Season 2 Mythic+ and raid drops for each spec, ranked by that spec's secondary stat priority.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<!-- Wowhead item tooltips on hover, with item icons, for every wowhead.com/item= link. -->
+<script>const whTooltips = { colorLinks: false, iconizeLinks: true, renameLinks: false };</script>
+<script src="https://wow.zamimg.com/js/tooltips.js" async></script>
 <style>
 /* Based on web/index.html: one column, sticky filter bar, one block per dungeon/raid. */
 :root{
@@ -89,12 +92,27 @@ li.bis.top{box-shadow:inset 3px 0 0 var(--gold)}
 footer{color:var(--muted);font-size:.82rem;margin-top:16px}
 footer p{margin:6px 0}
 .err{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px}
+.tag{color:var(--gold);border-color:var(--gold)}
+.brand{font:700 .95rem var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);text-decoration:none}
+.go{display:none;font:700 1.05rem var(--display);letter-spacing:.06em;text-transform:uppercase;padding:10px 28px;border-radius:999px;border:0;background:var(--accent);color:var(--surface);cursor:pointer;margin-top:22px}
+.go:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+/* Landing page: the name, the spec picker and the stat buttons, nothing else. */
+body.home .wrap{min-height:100svh;display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:22svh}
+body.home .brand,body.home .only-list,body.home #list,body.home #foot,body.home #count{display:none}
+body.home h1{font-size:clamp(2.8rem,9vw,4.5rem);letter-spacing:.02em}
+body.home .sub{font-size:1rem;margin-top:8px}
+body.home .pick{justify-content:center;margin-top:28px}
+body.home .prio{margin-top:14px}
+body.home .bar{position:static;border:0;background:none;margin:18px 0 0;padding:0;align-items:center}
+body.home #stats{flex-wrap:wrap;justify-content:center;overflow:visible}
+body.home .go{display:inline-block}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1 id="title">S2 Gear Farm List</h1>
-  <p class="sub" id="sub">Midnight Season 2 · Mythic+ and raid drops for your spec, ranked by its stat priority</p>
+  <a class="brand" id="home" href="#">Gear Guide</a>
+  <h1 id="title">Gear Guide</h1>
+  <p class="sub" id="sub">Midnight Season 2 · Mythic+ and raid gear for your spec, ranked by its stat priority</p>
 
   <div class="pick">
     <label for="spec">Spec</label>
@@ -107,14 +125,15 @@ footer p{margin:6px 0}
   <div class="prio" id="prio"></div>
 
   <div class="bar">
-    <div class="row" role="group" aria-label="Stat pair" id="pairs"></div>
-    <div class="row" role="group" aria-label="Slot" id="slots"></div>
-    <div class="meta">
+    <div class="row" role="group" aria-label="Secondary stats" id="stats"></div>
+    <div class="row only-list" role="group" aria-label="Slot" id="slots"></div>
+    <div class="meta only-list">
       <div class="row" role="group" aria-label="Content" id="sources"></div>
       <div class="row" role="group" aria-label="Sort" id="sorts"></div>
     </div>
     <div class="count" id="count" aria-live="polite"></div>
   </div>
+  <button class="go" id="go" type="button">Show gear</button>
 
   <div class="list" id="list"></div>
 

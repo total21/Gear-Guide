@@ -6,7 +6,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { STATS, SLOT_GROUPS, groupForSpec, usableBy, rankedPairs, dropAzeriteTwins, bisSlotGroup } from "../docs/gear.js";
+import { STATS, SLOT_GROUPS, groupForSpec, usableBy, rankedPairs, dropAzeriteTwins, bisSlotGroup, statOrder, toggleStat, effectTags } from "../docs/gear.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = async (f) => JSON.parse(await readFile(path.join(ROOT, f), "utf8"));
@@ -99,6 +99,22 @@ for (const s of specs.filter((s) => s.statPriority.length === 4)) {
   const top = rankedPairs(s.statPriority)[0].stats;
   if (top[0] !== s.statPriority[0] || top[1] !== s.statPriority[1]) fail(`${name(s)}: top pair ${top} != priority`);
 }
+
+// Stat buttons follow the priority; the stat filter keeps items with every chosen stat.
+const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+if (!same(statOrder(["Haste", "Mastery", "Critical Strike", "Versatility"]), ["Haste", "Mastery", "Critical Strike", "Versatility"])) fail("statOrder ignores the priority");
+if (!same(statOrder(["Mastery"]), ["Mastery", "Critical Strike", "Haste", "Versatility"])) fail("statOrder drops unranked stats");
+if (!same(toggleStat(["Haste", "Mastery"], "Versatility"), ["Mastery", "Versatility"]) || !same(toggleStat(["Haste"], "Haste"), [])) fail("toggleStat");
+for (const s of specs) {
+  const want = s.statPriority.slice(0, 2);
+  for (const i of flat(groupForSpec(items, s, { stats: want })))
+    if (!want.every((x) => i.secondaryStats.includes(x))) fail(`${name(s)}: stat filter kept ${i.name}`);
+}
+
+// Every effect is labeled On use or Proc, except the raid's Deadly Venom reduction.
+for (const i of items)
+  for (const e of i.effects ?? [])
+    if (!/Deadly Venom/.test(e.text) && !effectTags({ effects: [e] }).length) fail(`${i.name}: unlabeled effect ${e.text}`);
 
 console.log(`${specs.length} specs, ${items.length} drops checked, ${problems.length} problem(s)`);
 for (const p of problems) console.log("- " + p);
