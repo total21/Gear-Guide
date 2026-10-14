@@ -3448,10 +3448,148 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/mage/fire/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Weapon",
+            "name": "Jan'thrazet, the Soul Fang",
+            "id": 271092,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Offhand",
+            "name": "Aln'hara Lantern",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting"
+          },
+          {
+            "slot": "Head",
+            "name": "Crown of the Primal Leywarden",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Primal Leywarden's Manaflux",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Crest of the Primal Leywarden",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Wrist",
+            "name": "Martyr's Bindings",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting/Misc"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Primal Leywarden's Manashapers",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Belt",
+            "name": "Caustic Chain-Wrapped Sash",
+            "id": 268257,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Legs",
+            "name": "Primal Leywarden's Tailored Legwraps",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Boots",
+            "name": "Cackling Soultreads",
+            "id": 268255,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Alluring Bubbleband",
+            "id": 268266,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Ritual Binder's Ring",
+            "id": 159459,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Vile Vial of Volatile Venom",
+            "id": 273796,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Gebbo's Bottomless Bag",
+            "id": 270164,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {
