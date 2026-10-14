@@ -1726,10 +1726,136 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/druid/guardian/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Weapon",
+            "name": "Abyssal Broodfiend's Bardiche",
+            "id": 268215,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Head",
+            "name": "Gaze of the Coiled Watcher",
+            "id": 271875,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Enigmatic Dreamwatcher's Plumage",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Chestwrap of Palpable Terror",
+            "id": 281236,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Wrist",
+            "name": "Restless Spirit Shackles",
+            "id": 268240,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Gloves",
+            "name": "Enigmatic Dreamwatcher's Gauntlets",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Belt",
+            "name": "Sash of the Forlorn Vessel",
+            "id": 268256,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Legs",
+            "name": "Enigmatic Dreamwatcher's Leggings",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Boots",
+            "name": "Bespittled Slitherslippers",
+            "id": 268261,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Apex Brute's Claw Ring",
+            "id": 268252,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring 2",
+            "name": "Band of the Swarmcaller",
+            "id": 281029,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Gebbo's Bottomless Bag",
+            "id": 270164,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket 2",
+            "name": "Zul'jin's Guillotine Technique",
+            "id": 270173,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {
