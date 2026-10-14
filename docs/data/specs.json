@@ -6504,10 +6504,146 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/shaman/restoration/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Helm",
+            "name": "Serpent Crown of the Ophidian Oracle",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Raid · Vault"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Hissing Mantle of the Ophidian Oracle",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "The Coiled Altar (Raid) & Catalyst"
+          },
+          {
+            "slot": "Cape",
+            "name": "Amani Summoning Shawl",
+            "id": 268248,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Fanged Raiment of the Ophidian Oracle",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Kings Rest & Catalyst"
+          },
+          {
+            "slot": "Bracers",
+            "name": "Arc-Glass Bindings",
+            "id": 159380,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Gloves",
+            "name": "Hexing Grips of the Ophidian Oracle",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "The Blinding Vale & Catalyst"
+          },
+          {
+            "slot": "Belt",
+            "name": "Cursed Reliquary Cincture",
+            "id": 268216,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Legs",
+            "name": "Leggings of the Ophidian Oracle",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Temple of Sethraliss & Catalyst"
+          },
+          {
+            "slot": "Boots",
+            "name": "Felsoaked Soles",
+            "id": 251125,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Apex Brute's Claw Ring",
+            "id": 268252,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Pilfered Precious Band",
+            "id": 251148,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Soulcoiler Ritual Vessel",
+            "id": 270162,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Twisted Horror's Tendril",
+            "id": 281215,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "1h Weapon",
+            "name": "Jan'thrazet, the Soul Fang",
+            "id": 271092,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shield",
+            "name": "Venom-Slashed Scuteward",
+            "id": 268196,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {
