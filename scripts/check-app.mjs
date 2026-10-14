@@ -6,7 +6,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { STATS, groupForSpec, usableBy, rankedPairs, dropAzeriteTwins } from "../docs/gear.js";
+import { STATS, SLOT_GROUPS, groupForSpec, usableBy, rankedPairs, dropAzeriteTwins, bisSlotGroup } from "../docs/gear.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = async (f) => JSON.parse(await readFile(path.join(ROOT, f), "utf8"));
@@ -14,6 +14,9 @@ const { items } = await read("data/items.json");
 const { specs } = await read("data/specs.json");
 const problems = [];
 const tierIds = new Set((await read("data/tier.json")).sets.flatMap((x) => x.items.map((i) => i.id)));
+const crafting = await read("data/crafting.json");
+const embellishments = new Set(crafting.embellishments);
+const slotKeys = new Set(SLOT_GROUPS.map(([k]) => k));
 const fail = (msg) => problems.push(msg);
 const flat = (groups) => groups.flatMap((g) => g.bosses.flatMap((b) => b.items));
 const name = (s) => `${s.spec} ${s.class}`;
@@ -36,16 +39,24 @@ for (const s of specs) {
   for (const list of [s.bis, ...Object.values(s.bisByHero ?? {})]) {
     if (list?.items?.length && !(list.source && list.url && list.date)) fail(`${name(s)}: BiS items without source/url/date`);
     for (const b of list?.items ?? []) {
-      // id is null for pasted non-drop items (crafted, tier), which have no ID in the text.
+      // id is null for pasted non-drop items the API data doesn't name (off-set
+      // pieces, vendor or currency items).
       if (!(Number.isInteger(b.id) || b.id === null) || !b.name || !b.lists?.length) fail(`${name(s)}: BiS entry needs id, name and lists: ${JSON.stringify(b)}`);
       const hit = items.find((i) => i.id === b.id);
-      if (b.tier && !tierIds.has(b.id)) fail(`${name(s)}: tier piece ${b.name} (${b.id}) not in data/tier.json`);
-    for (const f of b.catalyst?.from ?? []) {
-      const src = items.find((i) => i.id === f.id);
-      if (!src || !usableBy(s, src)) fail(`${name(s)}: catalyst source ${f.name} for ${b.name} is not a usable Season drop`);
-      else if (src.slot !== b.slot) fail(`${name(s)}: catalyst source ${f.name} is ${src.slot}, ${b.name} is ${b.slot}`);
-    }
-    if (!hit) continue; // crafted, tier, catalyst: not a Season drop
+      if (b.tier && !b.offSet && !tierIds.has(b.id)) fail(`${name(s)}: tier piece ${b.name} (${b.id}) not in data/tier.json`);
+      if (b.offSet && !b.catalyst) fail(`${name(s)}: off-set piece ${b.name} has no catalyst route`);
+      for (const f of b.catalyst?.from ?? []) {
+        const src = items.find((i) => i.id === f.id);
+        if (!src || !usableBy(s, src)) fail(`${name(s)}: catalyst source ${f.name} for ${b.name} is not a usable Season drop`);
+        else if (src.slot !== b.slot) fail(`${name(s)}: catalyst source ${f.name} is ${src.slot}, ${b.name} is ${b.slot}`);
+      }
+      if (b.crafted) {
+        const r = crafting.recipes.find((x) => x.item?.id === b.id);
+        if (!r || r.name !== b.name) fail(`${name(s)}: crafted ${b.name} (${b.id}) has no matching recipe`);
+        for (const e of b.crafted.embellishments) if (!embellishments.has(e.name)) fail(`${name(s)}: ${e.name} on ${b.name} is not an embellishment`);
+      }
+      if (!hit && !slotKeys.has(bisSlotGroup(b.slot))) fail(`${name(s)}: BiS slot "${b.slot}" of ${b.name} maps to no slot filter`);
+      if (!hit) continue; // crafted, tier, catalyst: not a Season drop
       if (hit.name !== b.name) fail(`${name(s)}: BiS item ${b.id} is ${hit.name}, not ${b.name}`);
       if (!usableBy(s, hit)) fail(`${name(s)}: BiS item ${b.name} is not usable by this spec`);
     }

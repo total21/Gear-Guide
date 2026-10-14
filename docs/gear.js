@@ -125,3 +125,34 @@ export function groupForSpec(items, spec, { priority, pair = "all", slot = "all"
   if (source === "BIS") return out.filter((g) => g.bosses.length);
   return out.filter((g) => source === "all" || g.type === source);
 }
+
+// Season drops this spec could put in the Catalyst for a set piece in `slot`,
+// best stats first. The Catalyst keeps the drop's secondary stats.
+export function catalystOptions(items, spec, slot, priority) {
+  return dropAzeriteTwins(items)
+    .filter((i) => i.slot === slot && usableBy(spec, i) && i.secondaryStats.length)
+    .map((i) => ({ ...i, ...itemStats(i, priority) }))
+    .sort((a, b) => b.score - a.score);
+}
+
+// BiS items that aren't Season drops, split into tier (set pieces and
+// off-set pieces), crafted, and anything else.
+export function splitOffDrops(bisItems, dropIds) {
+  const out = { tier: [], crafted: [], other: [] };
+  for (const b of bisItems ?? []) {
+    if (b.id != null && dropIds.has(b.id)) continue;
+    (b.tier ? out.tier : b.crafted ? out.crafted : out.other).push(b);
+  }
+  return out;
+}
+
+// Slot filter group for a BiS list's free-text slot ("Boots", "Ring 2",
+// "Main-Hand", "Cape"...), for items that aren't Season drops.
+export function bisSlotGroup(text) {
+  const t = String(text ?? "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  if (/^(off ?hand|shield|held in off hand)/.test(t)) return "offhand";
+  if (/weapon|^(main|one|two|2) ?hand|^1h|^2h/.test(t)) return "weapon";
+  const words = { helm: "head", shoulders: "shoulder", cloak: "back", cape: "back", bracers: "wrist", gloves: "hands", belt: "waist", boots: "feet", finger: "ring", trinkets: "trinket" };
+  const w = t.split(" ")[0];
+  return words[w] ?? w;
+}
