@@ -1543,10 +1543,139 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/druid/feral/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Weapon",
+            "name": "Abyssal Broodfiend's Bardiche",
+            "id": 268215,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Head",
+            "name": "Enigmatic Dreamwatcher's Somnolent Stare",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Catalyst"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Enigmatic Dreamwatcher's Plumage",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Catalyst"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Enigmatic Dreamwatcher's Lunar Raiment",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Kith'ix"
+          },
+          {
+            "slot": "Wrist",
+            "name": "Silvermoon Agent's Deflectors",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting/Misc"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Silvermoon Agent's Handwraps",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting/Misc"
+          },
+          {
+            "slot": "Belt",
+            "name": "Sash of the Forlorn Vessel",
+            "id": 268256,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Legs",
+            "name": "Enigmatic Dreamwatcher's Leggings",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Catalyst"
+          },
+          {
+            "slot": "Boots",
+            "name": "Bespittled Slitherslippers",
+            "id": 268261,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Vile Alchemist's Band",
+            "id": 268249,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Band of the Swarmcaller",
+            "id": 281029,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Zul'jin's Guillotine Technique",
+            "id": 270173,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Voracious Heart of Ula'tek",
+            "id": 270175,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {
