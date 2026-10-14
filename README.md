@@ -169,7 +169,7 @@ Opening `docs/index.html` straight from disk will not work: browsers block loadi
 
 The page uses a dark theme.
 
-**Landing page.** It opens on a landing page with the name, the spec, hero talent and build pickers, the spec's stat priority, and the stat buttons. The stat buttons start on the spec's two best stats. **Show gear** opens the list.
+**Landing page.** It opens on a landing page with the name, the spec, hero talent and build pickers, the spec's stat priority, and the stat buttons. The stat buttons start on the spec's two best stats. **Show gear** opens the list on M+ and raid drops with the chosen stats, whatever view was open last.
 
 **The list.** It shows every Season 2 Mythic+ and raid drop the spec can use: its armor type, its primary stat (or no primary, e.g. jewelry), and the weapons and off-hands it can equip.
 - **Stats:** each item's secondary stats are tagged #1 to #4 by the spec's priority. Items with the two best stats are highlighted and badged "Best stats".
@@ -196,7 +196,7 @@ In the other views, BiS badges mark the worn items and the drops to catalyze int
 
 The **My character** tab next to the farm list tracks the gear a player already has. The site stays fully static: no server, no accounts. There are two ways to fill it in:
 - **SimulationCraft:** paste the `/simc` export from the SimulationCraft addon, the community standard. Equipped gear and gear in bags count as acquired; Great Vault choices don't.
-- **By hand:** every item in the farm list, the Best in Slot view and the character page has a **+ Have** button, which toggles to **✓ Have**.
+- **By hand:** every item in the farm list, the Best in Slot view and the character page has a **+ Owned** button, which toggles to **✓ Owned**. Gear the SimC import shows the character wearing also gets an **Equipped** badge.
 
 Loading a character switches the list to its spec. A later import replaces what the previous import brought in, but keeps items ticked by hand. Tabards and shirts are skipped.
 

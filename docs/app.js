@@ -1,5 +1,5 @@
-import { trueBis, situationalBis, SHORT, SLOT_GROUPS, groupForSpec, rankedPairs, typeLabel, slotGroup, bisFor, priorityForHero, itemStats, catalystOptions, statOrder, toggleStat, effectTags } from "./gear.js?v=14";
-import { parseSimc, specOf, withImport, farmPlan, ownKey } from "./character.js?v=14";
+import { trueBis, situationalBis, SHORT, SLOT_GROUPS, groupForSpec, rankedPairs, typeLabel, slotGroup, bisFor, priorityForHero, itemStats, catalystOptions, statOrder, toggleStat, effectTags } from "./gear.js?v=15";
+import { parseSimc, specOf, withImport, farmPlan, ownKey } from "./character.js?v=15";
 
 const $ = (id) => document.getElementById(id);
 const esc = (x) => String(x).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -22,10 +22,12 @@ try { char = JSON.parse(localStorage.getItem(CHAR_STORE)); } catch {}
 const saveChar = () => { try { localStorage.setItem(CHAR_STORE, JSON.stringify(char)); } catch {} };
 const owned = () => char?.items ?? {};
 const has = (b) => !!owned()[ownKey(b)];
-// Toggle button marking an item as acquired (or not).
+// Toggle button marking an item as owned (or not), plus an Equipped badge
+// for gear the SimC import shows the character wearing.
 const ownButton = (b) => {
-  const have = has(b);
-  return `<button class="own${have ? " have" : ""}" type="button" data-own="${esc(ownKey(b))}" data-name="${esc(b.name)}" data-slot="${esc(b.slot ?? "")}" aria-pressed="${have}" title="${have ? "You have this. Click to unmark." : "Mark as acquired"}">${have ? "✓ Have" : "+ Have"}</button>`;
+  const mine = owned()[ownKey(b)];
+  return `<button class="own${mine ? " have" : ""}" type="button" data-own="${esc(ownKey(b))}" data-name="${esc(b.name)}" data-slot="${esc(b.slot ?? "")}" aria-pressed="${!!mine}" title="${mine ? "You own this. Click to unmark." : "Mark as owned"}">${mine ? "✓ Owned" : "+ Owned"}</button>` +
+    (mine?.how === "equipped" ? `<span class="badge b-eq" title="Equipped in your SimC import">Equipped</span>` : "");
 };
 
 const ROLE = { TANK: "Tank", HEALER: "Healer", DAMAGE: "DPS" };
@@ -66,7 +68,8 @@ function specPicker() {
   $("spec").onchange = () => { state.spec = +$("spec").value; state.slot = "all"; changed(); };
   $("variant").onchange = () => { state.variant[state.spec] = $("variant").value; changed(); };
   $("hero").onchange = () => { state.hero = { ...state.hero, [state.spec]: $("hero").value }; changed(); };
-  $("go").onclick = () => { state.slot = "all"; save(); location.hash = `spec=${state.spec}`; };
+  // Leaving the landing page opens M+ and raid drops with the chosen stats.
+  $("go").onclick = () => { state.slot = "all"; state.source = "all"; state.tab = "list"; save(); location.hash = `spec=${state.spec}`; };
 }
 
 function syncHash() {
@@ -347,7 +350,7 @@ function renderChar(spec, hero, worn, label) {
       const drop = byId.get(+k);
       return `<li class="got"><div class="name">${/^\d+$/.test(k) ? itemLink(+k, v.name ?? drop?.name ?? `Item ${k}`) : esc(v.name)}${ownButton({ id: /^\d+$/.test(k) ? +k : null, name: v.name, slot: v.slot })}</div>` +
         `<div class="type">${esc(v.slot ?? drop?.slot ?? "")}${v.ilvl ? ` · item level ${v.ilvl}` : ""} · ${HOW[v.how] ?? ""}${drop ? ` · ${esc(drop.instance)}` : ""}</div></li>`;
-    }).join("")}</ul>` : `<div class="none">Nothing yet. Load your character above, or tick items with + Have in the farm list.</div>`) + `</section>`;
+    }).join("")}</ul>` : `<div class="none">Nothing yet. Load your character above, or tick items with + Owned in the farm list.</div>`) + `</section>`;
 
   $("list").innerHTML = html;
   $("count").textContent = "";
@@ -372,7 +375,7 @@ function renderChar(spec, hero, worn, label) {
   refreshTooltips();
 }
 
-// "+ Have" buttons anywhere in the list mark an item acquired, or unmark it.
+// "+ Owned" buttons anywhere in the list mark an item acquired, or unmark it.
 document.addEventListener("click", (e) => {
   const b = e.target.closest("[data-own]");
   if (!b) return;
@@ -395,10 +398,13 @@ try {
   await load();
   specPicker();
   if (inList()) state.spec = hashSpec();
+  // The landing page always starts on the spec's two best stats.
+  else state.stats = bestStats();
   render();
   save();
   addEventListener("hashchange", () => {
     if (inList() && hashSpec() !== state.spec) { state.spec = hashSpec(); state.stats = bestStats(); }
+    if (!inList()) state.stats = bestStats();
     save();
     render();
     scrollTo(0, 0);
