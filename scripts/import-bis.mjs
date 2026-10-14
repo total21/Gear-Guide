@@ -464,10 +464,12 @@ async function main() {
 
   if (!changed) { console.log(failed ? "Nothing imported." : "No BiS files found (put .txt or .html files in bis-pages/)."); process.exit(failed ? 1 : 0); }
   if (DRY) { console.log(`Dry run: ${changed} spec(s) would be updated.`); process.exit(failed ? 1 : 0); }
-  // Tier pieces: real slot, raid token, catalyst source drops (see resolve-bis.mjs).
+  // Tier pieces (real slot, raid token, catalyst source drops) and crafted
+  // items (recipe, reagents, embellishments); see resolve-bis.mjs.
   const tier = JSON.parse(await readFile(path.join(ROOT, "data/tier.json"), "utf8"));
+  const crafting = JSON.parse(await readFile(path.join(ROOT, "data/crafting.json"), "utf8"));
   const { bossAliases } = JSON.parse(await readFile(path.join(ROOT, "config/season.json"), "utf8"));
-  for (const s of specsData.specs) for (const r of resolveSpec(s, items, tier, bossAliases)) console.log("  slot: " + r);
+  for (const s of specsData.specs) for (const r of resolveSpec(s, items, tier, bossAliases, crafting)) console.log("  slot: " + r);
   await writeFile(specsFile, JSON.stringify(specsData, null, 2) + "\n");
   console.log(`Updated ${changed} spec(s) in data/specs.json.`);
   execFileSync(process.execPath, [path.join(ROOT, "scripts/build-docs.mjs")], { stdio: "inherit" });

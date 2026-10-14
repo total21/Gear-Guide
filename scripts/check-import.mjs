@@ -14,6 +14,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const { items } = JSON.parse(await readFile(path.join(ROOT, "data/items.json"), "utf8"));
 const { specs } = JSON.parse(await readFile(path.join(ROOT, "data/specs.json"), "utf8"));
 const tier = JSON.parse(await readFile(path.join(ROOT, "data/tier.json"), "utf8"));
+const crafting = JSON.parse(await readFile(path.join(ROOT, "data/crafting.json"), "utf8"));
 const { bossAliases } = JSON.parse(await readFile(path.join(ROOT, "config/season.json"), "utf8"));
 const problems = [];
 const eq = (label, got, want) => {
@@ -152,6 +153,24 @@ eq("spec from id file name", specFromText("", "260.txt", specs)?.id, 260);
     ["Hands", null, null, "Entombed Sentinels"]);
   eq("catalyst from dungeon", run(65, "Shoulders\tPauldrons of the Consecrated Flame Pauldrons of the Consecrated Flame \tMurder Row"),
     ["Shoulder", ["Cinderfury Shoulderguards"], null, "The Lost Explorers"]);
+}
+
+// Crafted items get their recipe; pasted reagents split into embellishments
+// and the rest. Off-set pieces named like the tier set go to the Catalyst.
+{
+  const resolve = (specId, line) => {
+    const spec = structuredClone(specs.find((x) => x.id === specId));
+    spec.bis = { items: toBisItems(parsePasted(line, spec, items).entries, items) };
+    resolveSpec(spec, items, tier, bossAliases, crafting);
+    return spec.bis.items;
+  };
+  const [c] = resolve(1480, "Wrist\tSilvermoon Agent's Deflectors Silvermoon Agent's Deflectors (crafted with Arcanoweave Lining)\tCrafting/Misc");
+  eq("crafted recipe", [c.id, c.crafted?.profession, c.crafted?.embellishable, c.crafted?.customStats, c.crafted?.embellishments, c.crafted?.otherReagents],
+    [244576, "Leatherworking", true, true, [{ name: "Arcanoweave Lining", profession: "Tailoring" }], []]);
+  const [o, d] = resolve(266, "Wrist\tDamned Necrolyte's Shackles Damned Necrolyte's Shackles\tEntombed Sentinels");
+  eq("off-set piece", [o.slot, o.offSet, o.tier, o.token ?? null, o.catalyst?.from?.map((f) => f.name)],
+    ["Wrist", true, "Damned Necrolyte's Shattered Restraints", null, ["Venom-Singed Cuffs"]]);
+  eq("off-set badge", [d?.name, d?.note], ["Venom-Singed Cuffs", "Catalyze into Damned Necrolyte's Shackles"]);
 }
 
 // Spec slugs resolve for every spec on every site.

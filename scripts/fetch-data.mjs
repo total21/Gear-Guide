@@ -3,7 +3,10 @@
 // writes data/items.json. Also (re)builds data/specs.json, preserving any
 // stat priority / BiS data already filled in.
 //
-// Usage: node scripts/fetch-data.mjs [--season config/season.json] [--specs-only]
+// Also writes data/tier.json (class sets, raid tokens) and data/crafting.json
+// (the expansion's crafting recipes and which reagents are embellishments).
+//
+// Usage: node scripts/fetch-data.mjs [--season config/season.json] [--specs-only | --crafting-only]
 //
 // Auth: if BLIZZARD_CLIENT_ID and BLIZZARD_CLIENT_SECRET are set they are sent
 // as Basic auth to the token endpoint. Otherwise the request is sent without
@@ -22,6 +25,7 @@ const argVal = (name, def) => {
 };
 const SEASON_FILE = path.resolve(ROOT, argVal("--season", "config/season.json"));
 const SPECS_ONLY = args.includes("--specs-only");
+const CRAFTING_ONLY = args.includes("--crafting-only");
 
 const season = JSON.parse(await readFile(SEASON_FILE, "utf8"));
 const REGION = season.region ?? "us";
@@ -270,6 +274,62 @@ async function fetchTierSets() {
   return sets;
 }
 
+// ---------------------------------------------------------------- crafting
+
+// Professions that make gear or gear reagents.
+const CRAFT_PROFESSIONS = [164, 165, 197, 202, 755, 773, 171];
+// Recipe categories with nothing worn or put into gear.
+const SKIP_CATEGORY = /House Decor|Appendix|Competitor|PvP|Recraft/i;
+
+// Every recipe in the expansion's skill tier ("Midnight Blacksmithing"...):
+// base reagents, optional crafting slots, and for gear the crafted item (the
+// recipe doesn't link it, so it is found by name). Embellishments are the
+// reagents the "Add Embellishment" slot accepts.
+async function fetchCrafting() {
+  const recipes = [], slotTypes = new Map();
+  for (const pid of CRAFT_PROFESSIONS) {
+    const prof = await api(`/data/wow/profession/${pid}`);
+    const tierRef = prof.skill_tiers?.find((t) => t.name.includes(season.expansion ?? "Midnight"));
+    if (!tierRef) { console.warn(`${prof.name}: no ${season.expansion ?? "Midnight"} skill tier`); continue; }
+    const tier = await api(`/data/wow/profession/${pid}/skill-tier/${tierRef.id}`);
+    const refs = (tier.categories ?? []).filter((c) => !SKIP_CATEGORY.test(c.name))
+      .flatMap((c) => c.recipes.map((r) => ({ id: r.id, category: c.name })));
+    const full = await mapLimit(refs, 10, (r) => api(`/data/wow/recipe/${r.id}`));
+    full.forEach((r, i) => {
+      const slots = (r.modified_crafting_slots ?? []).map((m) => m.slot_type);
+      for (const t of slots) slotTypes.set(t.id, t.name);
+      recipes.push({
+        id: r.id, name: r.name, profession: prof.name, category: refs[i].category,
+        reagents: (r.reagents ?? []).map((x) => ({ name: x.reagent.name, quantity: x.quantity })),
+        slots: [...new Set(slots.map((t) => t.name))],
+      });
+    });
+    console.log(`${prof.name}: ${refs.length} recipes`);
+  }
+  // Reagent categories each "Add Embellishment" slot accepts.
+  const embellishments = new Set();
+  for (const [id, name] of slotTypes)
+    if (name === "Add Embellishment")
+      for (const c of (await api(`/data/wow/modified-crafting/reagent-slot-type/${id}`)).compatible_categories ?? []) embellishments.add(c.name);
+  // Crafted gear (recipes with a Spark slot): the newest item with exactly the
+  // recipe's name. Name search is fuzzy, so ask for a full page, newest first.
+  await mapLimit(recipes.filter((r) => r.slots.includes("Spark")), 6, async (r) => {
+    const found = await api(`/data/wow/search/item?name.${LOCALE}=${encodeURIComponent(r.name)}&orderby=id:desc&_pageSize=1000`).catch(() => null);
+    const hit = found?.results?.find((x) => x.data.name?.[LOCALE] === r.name);
+    if (!hit) return;
+    const item = await api(`/data/wow/item/${hit.data.id}`);
+    if (!["Armor", "Weapon"].includes(item.item_class?.name) || !isGear(item)) return;
+    const p = item.preview_item ?? {};
+    r.item = {
+      id: item.id, slot: item.inventory_type?.name ?? null,
+      type: item.item_subclass?.name ?? null,
+      // Some crafted gear comes embellished, with its own Equip/Use effect.
+      effects: (p.spells ?? []).map((sp) => (sp.description ?? "").replace(/\s+/g, " ").trim()).filter(Boolean),
+    };
+  });
+  return { recipes, embellishments: [...embellishments].sort() };
+}
+
 // ---------------------------------------------------------------- specs
 
 async function buildSpecs() {
@@ -312,7 +372,7 @@ async function buildSpecs() {
 await mkdir(path.join(ROOT, "data"), { recursive: true });
 const meta = { region: REGION, locale: LOCALE, season: season.name, generatedAt: new Date().toISOString() };
 
-if (!SPECS_ONLY) {
+if (!SPECS_ONLY && !CRAFTING_ONLY) {
   const { records: items, tokens } = await fetchItems();
   const odd = items.filter((i) => i.secondaryStats.length !== 2 && !["Trinket", "Neck"].includes(i.slot) && !i.tag);
   if (odd.length) console.warn(`Note: ${odd.length} drops lack 2 secondaries in the API (see "notes"):\n  ` + odd.map((i) => `${i.name} (${i.instance})`).join("\n  "));
@@ -322,6 +382,13 @@ if (!SPECS_ONLY) {
   await writeFile(path.join(ROOT, "data/tier.json"), JSON.stringify({ ...meta, sets, tokens }, null, 2) + "\n");
   console.log(`Wrote data/tier.json (${sets.length} tier sets, ${tokens.length} tokens)`);
 }
+
+if (!SPECS_ONLY) {
+  const crafting = await fetchCrafting();
+  await writeFile(path.join(ROOT, "data/crafting.json"), JSON.stringify({ ...meta, ...crafting }, null, 2) + "\n");
+  console.log(`Wrote data/crafting.json (${crafting.recipes.length} recipes, ${crafting.recipes.filter((r) => r.item).length} gear, ${crafting.embellishments.length} embellishments)`);
+}
+if (CRAFTING_ONLY) process.exit(0);
 
 const specs = await buildSpecs();
 await writeFile(path.join(ROOT, "data/specs.json"), JSON.stringify({ ...meta, specs }, null, 2) + "\n");

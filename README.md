@@ -13,6 +13,7 @@ WoW gear optimizer: a Midnight Season 2 gear farm tool (web app first, in-game a
 | `scripts/import-bis.mjs` | Imports BiS lists from pasted Wowhead table text or saved pages (see "Best in slot lists"). |
 | `scripts/resolve-bis.mjs` | Links BiS tier pieces to their set, raid token and catalyst source drop (runs after every import and fetch). |
 | `data/tier.json` | Season class tier sets (pieces and slots) and raid tier tokens, from the API. Generated. |
+| `data/crafting.json` | The expansion's crafting recipes (profession, category, base reagents, optional reagent slots, crafted item and its built-in effects) and the reagents that count as embellishments, from the API's profession and recipe endpoints. Generated; refresh alone with `node scripts/fetch-data.mjs --crafting-only`. Not copied to `docs/`: the resolver copies what the app needs into `specs.json`. |
 | `scripts/check-import.mjs` | Tests for the importer, against hand-written samples in `scripts/fixtures/bis/`. |
 | `config/bis.json` | Which site each spec takes its BiS list from, and the minimum patch accepted. |
 | `scripts/check-app.mjs` | Sanity checks: curated stat data is complete and cited, equip rules hold, the rogue list is reproduced. |
@@ -76,7 +77,7 @@ WoW gear optimizer: a Midnight Season 2 gear farm tool (web app first, in-game a
            "items": [{ "slot": "Neck", "name": "Aqirbane Reliquary", "id": 268265, "lists": ["Overall", "Mythic+"] }] }
   ```
   `bisByHero` holds lists for a single hero talent, keyed by its name: `{ "Deathbringer": { ...same shape... } }`. A hero talent uses its own list if it has one, otherwise the shared `bis`. Likewise `heroStatPriority` (`{ "Deathbringer": [...] }`) overrides `statPriority` for one hero talent.
-  `id` is the item ID, or `null` for pasted items that aren't Season drops. Those also keep `source` ("Crafting", a boss for tier pieces) and `crafting` (embellishments or reagents listed in parentheses). Items that aren't in `data/items.json` (crafted, tier, catalyst) are kept and shown separately. `lists` says which of the page's lists it's on: `Overall`, `Raid`, `Mythic+`. `npm run check` fails if a listed drop's name doesn't match its ID or the spec can't use it.
+  `id` is the item ID, or `null` for pasted items that aren't Season drops. Those also keep `source` ("Crafting", a boss for tier pieces) and `crafting` (embellishments or reagents listed in parentheses). Items that aren't in `data/items.json` are kept and shown in their own sections: tier, crafted, and other. `lists` says which of the page's lists it's on: `Overall`, `Raid`, `Mythic+`. `npm run check` fails if a listed drop's name doesn't match its ID or the spec can't use it.
 
 The journal lists each legacy BfA Azerite piece from Kings' Rest and Temple of Sethraliss twice: the old item with no secondaries in the API, and its current re-issue with real stats. The app shows only the re-issue.
 
@@ -143,6 +144,16 @@ The saved-page parser was written without access to the real pages and is tested
 - `token` / `curio`: the raid token for that slot and class (e.g. Venomcast Effigy from The Twin Fangs for mail heads) and the any-slot Slumbering Coil Curio from Ula'tek;
 - `catalyst`: which Season drop(s) to convert, when Wowhead's Source names a dungeon or boss other than the token's boss, or says "Catalyst" ("Catalyst the Kith'ix Gloves" → Aberrant Commander's Gauntlets from Kith'ix). With "Catalyst" or "Tier Set" but no place it's `{ any: "Mail Head" }` (convert any Season drop in that slot). Those source drops are added to the BiS list with the note "Catalyze into <tier piece>", so they get the BiS badge.
 
+Off-set pieces, which share the set's name but sit outside the five token slots (e.g. Damned Necrolyte's Shackles, a wrist), get `tier`, `offSet: true` and a `catalyst` route only. They come from the Catalyst, not a token.
+
+Crafted items, matched by name to a recipe in `data/crafting.json`, get their `id` and a `crafted` object with these fields:
+- `profession`, `category`;
+- `reagents`: the base reagents and quantities;
+- `optional`: the optional reagent slots;
+- `embellishable`, `customStats`: whether the recipe has an "Add Embellishment" or "Customize Secondary Stats" slot;
+- `builtIn`: the effects of items that come embellished;
+- `embellishments` and `otherReagents`: the reagents Wowhead names in parentheses, split by whether the "Add Embellishment" slot accepts them, each with the profession that makes it.
+
 Boss names in pasted sources are matched loosely (one typo per word), and nicknames go in `bossAliases` in `config/season.json`. New season: update `tierSets` with the new set IDs (`/data/wow/item-set/index`, the highest IDs) and run `npm run fetch`.
 
 ## Web app
@@ -156,7 +167,12 @@ npm run serve   # http://localhost:8000
 
 Opening `docs/index.html` straight from disk will not work: browsers block loading the JSON from `file://`.
 
-The page uses a dark theme. Pick a spec and hero talent to see every Season 2 Mythic+ and raid drop it can use: its armor type, its primary stat (or no primary, e.g. jewelry), and weapons and off-hands it can equip. Each item's secondary stats are tagged #1 to #4 by the spec's priority. Items with the spec's two best stats are highlighted. Trinkets show the base primary stat they give the spec and their effect text. BiS items are badged (with "Mythic+" or "Raid" when they're only on that list). Filter by stat pair, slot, and Mythic+, raid or Best in Slot, and sort by boss order or by best stats. The last spec, build choice and filters are remembered in the browser. A link like `.../#spec=260` opens a spec directly. Spec IDs are listed in `data/specs.json`.
+The page uses a dark theme. Pick a spec and hero talent to see every Season 2 Mythic+ and raid drop it can use: its armor type, its primary stat (or no primary, e.g. jewelry), and weapons and off-hands it can equip. Each item's secondary stats are tagged #1 to #4 by the spec's priority. Items with the spec's two best stats are highlighted and badged "Best stats". Trinkets show the base primary stat they give the spec and their effect text. BiS items are badged (with "Mythic+" or "Raid" when they're only on that list). Filter by stat pair, slot, and Mythic+, raid or Best in Slot, and sort by boss order or by best stats. In the Best in Slot view, BiS items that aren't Season drops are split into three sections:
+- **Tier set:** each piece is badged Token or Catalyst, whichever the BiS list prefers. For the Catalyst it shows the drop to convert and that drop's stats. When any drop in the slot will do, it suggests the drops with the best stats. It also lists the raid token or curio as the other route.
+- **Crafted:** each item shows its profession, embellishment (named, built in, or an open slot), the secondary stats to pick when crafting, base reagents and optional slots.
+- **Other sources.**
+
+The last spec, build choice and filters are remembered in the browser. A link like `.../#spec=260` opens a spec directly. Spec IDs are listed in `data/specs.json`.
 
 ### Publishing with GitHub Pages
 

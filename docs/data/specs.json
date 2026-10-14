@@ -187,11 +187,38 @@
             {
               "slot": "Wrist",
               "name": "Spellbreaker's Bracers",
-              "id": null,
+              "id": 237834,
               "lists": [
                 "Overall"
               ],
-              "source": "Crafting"
+              "source": "Crafting",
+              "crafted": {
+                "profession": "Blacksmithing",
+                "category": "Armor",
+                "reagents": [
+                  {
+                    "name": "Dazzling Thorium",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "Tormented Tantalum",
+                    "quantity": 1
+                  }
+                ],
+                "optional": [
+                  "Sterling Alloy",
+                  "Gloaming Alloy",
+                  "Sin'dorei Armor Banding",
+                  "Spark",
+                  "Infuse with Power",
+                  "Socket"
+                ],
+                "embellishable": true,
+                "customStats": true,
+                "builtIn": [],
+                "embellishments": [],
+                "otherReagents": []
+              }
             },
             {
               "slot": "Hands",
@@ -250,14 +277,41 @@
             {
               "slot": "Ring",
               "name": "Masterwork Sin'dorei Band",
-              "id": null,
+              "id": 240949,
               "lists": [
                 "Overall"
               ],
               "source": "Crafting",
               "crafting": [
                 "Prismatic Focusing Iris"
-              ]
+              ],
+              "crafted": {
+                "profession": "Jewelcrafting",
+                "category": "Regal Rings",
+                "reagents": [
+                  {
+                    "name": "Tormented Tantalum",
+                    "quantity": 1
+                  }
+                ],
+                "optional": [
+                  "Kaleidoscopic Prism",
+                  "Duskshrouded Stone",
+                  "Glimmering Gemdust",
+                  "Spark",
+                  "Infuse with Power"
+                ],
+                "embellishable": true,
+                "customStats": true,
+                "builtIn": [],
+                "embellishments": [
+                  {
+                    "name": "Prismatic Focusing Iris",
+                    "profession": "Jewelcrafting"
+                  }
+                ],
+                "otherReagents": []
+              }
             },
             {
               "slot": "Ring",
@@ -457,11 +511,38 @@
             {
               "slot": "Wrist",
               "name": "Spellbreaker's Bracers",
-              "id": null,
+              "id": 237834,
               "lists": [
                 "Overall"
               ],
-              "source": "Crafting"
+              "source": "Crafting",
+              "crafted": {
+                "profession": "Blacksmithing",
+                "category": "Armor",
+                "reagents": [
+                  {
+                    "name": "Dazzling Thorium",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "Tormented Tantalum",
+                    "quantity": 1
+                  }
+                ],
+                "optional": [
+                  "Sterling Alloy",
+                  "Gloaming Alloy",
+                  "Sin'dorei Armor Banding",
+                  "Spark",
+                  "Infuse with Power",
+                  "Socket"
+                ],
+                "embellishable": true,
+                "customStats": true,
+                "builtIn": [],
+                "embellishments": [],
+                "otherReagents": []
+              }
             },
             {
               "slot": "Hands",
@@ -520,14 +601,41 @@
             {
               "slot": "Ring",
               "name": "Masterwork Sin'dorei Band",
-              "id": null,
+              "id": 240949,
               "lists": [
                 "Overall"
               ],
               "source": "Crafting",
               "crafting": [
                 "Prismatic Focusing Iris"
-              ]
+              ],
+              "crafted": {
+                "profession": "Jewelcrafting",
+                "category": "Regal Rings",
+                "reagents": [
+                  {
+                    "name": "Tormented Tantalum",
+                    "quantity": 1
+                  }
+                ],
+                "optional": [
+                  "Kaleidoscopic Prism",
+                  "Duskshrouded Stone",
+                  "Glimmering Gemdust",
+                  "Spark",
+                  "Infuse with Power"
+                ],
+                "embellishable": true,
+                "customStats": true,
+                "builtIn": [],
+                "embellishments": [
+                  {
+                    "name": "Prismatic Focusing Iris",
+                    "profession": "Jewelcrafting"
+                  }
+                ],
+                "otherReagents": []
+              }
             },
             {
               "slot": "Ring",
@@ -773,11 +881,38 @@
           {
             "slot": "Wrist",
             "name": "Spellbreaker's Bracers",
-            "id": null,
+            "id": 237834,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Blacksmithing",
+              "category": "Armor",
+              "reagents": [
+                {
+                  "name": "Dazzling Thorium",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sterling Alloy",
+                "Gloaming Alloy",
+                "Sin'dorei Armor Banding",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -838,11 +973,39 @@
           {
             "slot": "Ring",
             "name": "Loa Worshiper's Band",
-            "id": null,
+            "id": 251513,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Jewelcrafting",
+              "category": "Regal Rings",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Mote of Wild Magic",
+                  "quantity": 20
+                }
+              ],
+              "optional": [
+                "Kaleidoscopic Prism",
+                "Duskshrouded Stone",
+                "Flawless Amani Lapis",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": false,
+              "customStats": false,
+              "builtIn": [
+                "Equip: Your damaging spells and abilities have a chance to charge the band, calling forth the avatar of a Loa to assist you in combat. Each unique socketed gem color in your gear allows for different Loa to be summoned. These effects range from dealing damage to your foes or granting you temporary power."
+              ],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Trinket",
@@ -1017,11 +1180,38 @@
           {
             "slot": "Wrist",
             "name": "Spellbreaker's Bracers",
-            "id": null,
+            "id": 237834,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Blacksmithing",
+              "category": "Armor",
+              "reagents": [
+                {
+                  "name": "Dazzling Thorium",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sterling Alloy",
+                "Gloaming Alloy",
+                "Sin'dorei Armor Banding",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -1066,11 +1256,37 @@
           {
             "slot": "Boots",
             "name": "Spellbreaker's March",
-            "id": null,
+            "id": 237828,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Blacksmithing",
+              "category": "Armor",
+              "reagents": [
+                {
+                  "name": "Dazzling Thorium",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sterling Alloy",
+                "Gloaming Alloy",
+                "Sin'dorei Armor Banding",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Ring",
@@ -1293,14 +1509,43 @@
           {
             "slot": "Wrist",
             "name": "Silvermoon Agent's Deflectors",
-            "id": null,
+            "id": 244576,
             "lists": [
               "Overall"
             ],
             "source": "Crafting/Misc",
             "crafting": [
               "Arcanoweave Lining"
-            ]
+            ],
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [
+                {
+                  "name": "Arcanoweave Lining",
+                  "profession": "Tailoring"
+                }
+              ],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -1367,14 +1612,42 @@
           {
             "slot": "Boots",
             "name": "Silvermoon Agent's Sneakers",
-            "id": null,
+            "id": 244569,
             "lists": [
               "Overall"
             ],
             "source": "Crafting/Misc",
             "crafting": [
               "Arcanoweave Lining"
-            ]
+            ],
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [
+                {
+                  "name": "Arcanoweave Lining",
+                  "profession": "Tailoring"
+                }
+              ],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Ring",
@@ -1508,11 +1781,37 @@
           {
             "slot": "Offhand",
             "name": "Spellbreaker's Warglaive",
-            "id": null,
+            "id": 237840,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Blacksmithing",
+              "category": "Weapons",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Dazzling Thorium",
+                  "quantity": 2
+                }
+              ],
+              "optional": [
+                "Gloaming Alloy",
+                "Sterling Alloy",
+                "Silvermoon Weapon Wrap",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Head",
@@ -1601,11 +1900,35 @@
           {
             "slot": "Wrist",
             "name": "Silvermoon Agent's Deflectors",
-            "id": null,
+            "id": 244576,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -1795,11 +2118,37 @@
           {
             "slot": "Offhand",
             "name": "Spellbreaker's Warglaive",
-            "id": null,
+            "id": 237840,
             "lists": [
               "Overall"
             ],
-            "source": "Crafted"
+            "source": "Crafted",
+            "crafted": {
+              "profession": "Blacksmithing",
+              "category": "Weapons",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Dazzling Thorium",
+                  "quantity": 2
+                }
+              ],
+              "optional": [
+                "Gloaming Alloy",
+                "Sterling Alloy",
+                "Silvermoon Weapon Wrap",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Head",
@@ -1910,11 +2259,35 @@
           {
             "slot": "Wrist",
             "name": "Silvermoon Agent's Deflectors",
-            "id": null,
+            "id": 244576,
             "lists": [
               "Overall"
             ],
-            "source": "Crafted"
+            "source": "Crafted",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -2155,11 +2528,36 @@
           {
             "slot": "Offhand",
             "name": "Aln'hara Lantern",
-            "id": null,
+            "id": 245769,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Inscription",
+              "category": "Weapons",
+              "reagents": [
+                {
+                  "name": "Majestic Claw",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Codified Azeroot",
+                "Soul Cipher",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Head",
@@ -2204,11 +2602,35 @@
           {
             "slot": "Wrist",
             "name": "Silvermoon Agent's Deflectors",
-            "id": null,
+            "id": 244576,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Gloves",
@@ -2436,20 +2858,67 @@
           {
             "slot": "Wrist",
             "name": "Silvermoon Agent's Deflectors",
-            "id": null,
+            "id": 244576,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Gloves",
             "name": "Silvermoon Agent's Handwraps",
-            "id": null,
+            "id": 244575,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Belt",
@@ -2861,11 +3330,34 @@
           {
             "slot": "Shoulders",
             "name": "Silvermoon Agent's Mantle",
-            "id": null,
+            "id": 244572,
             "lists": [
               "Overall"
             ],
-            "source": "Leatherworking"
+            "source": "Leatherworking",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Cape",
@@ -2908,11 +3400,35 @@
           {
             "slot": "Bracers",
             "name": "Silvermoon Agent's Deflectors",
-            "id": null,
+            "id": 244576,
             "lists": [
               "Overall"
             ],
-            "source": "Leatherworking"
+            "source": "Leatherworking",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -2975,11 +3491,34 @@
           {
             "slot": "Boots",
             "name": "Silvermoon Agent's Sneakers",
-            "id": null,
+            "id": 244569,
             "lists": [
               "Overall"
             ],
-            "source": "Leatherworking"
+            "source": "Leatherworking",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Ring",
@@ -3219,11 +3758,35 @@
           {
             "slot": "Wrist",
             "name": "Farstrider's Plated Bracers",
-            "id": null,
+            "id": 244584,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Mail Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Scales",
+                "Void-Tempered Leather",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -3252,11 +3815,35 @@
           {
             "slot": "Belt",
             "name": "Farstrider's Trophy Belt",
-            "id": null,
+            "id": 244581,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Mail Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Scales",
+                "Void-Tempered Leather",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Legs",
@@ -3386,11 +3973,36 @@
           {
             "slot": "Offhand",
             "name": "Aln'hara Lantern",
-            "id": null,
+            "id": 245769,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Inscription",
+              "category": "Weapons",
+              "reagents": [
+                {
+                  "name": "Majestic Claw",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Codified Azeroot",
+                "Soul Cipher",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Head",
@@ -3483,11 +4095,35 @@
           {
             "slot": "Wrist",
             "name": "Farstrider's Plated Bracers",
-            "id": null,
+            "id": 244584,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Mail Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Scales",
+                "Void-Tempered Leather",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -4090,11 +4726,35 @@
           {
             "slot": "Wrist",
             "name": "Farstrider's Plated Bracers",
-            "id": null,
+            "id": 244584,
             "lists": [
               "Overall"
             ],
-            "source": "Leatherworking"
+            "source": "Leatherworking",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Mail Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Scales",
+                "Void-Tempered Leather",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -4129,11 +4789,35 @@
           {
             "slot": "Belt",
             "name": "Farstrider's Trophy Belt",
-            "id": null,
+            "id": 244581,
             "lists": [
               "Overall"
             ],
-            "source": "Leatherworking"
+            "source": "Leatherworking",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Mail Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Scales",
+                "Void-Tempered Leather",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Legs",
@@ -4418,11 +5102,35 @@
           {
             "slot": "Wrist",
             "name": "Farstrider's Plated Bracers",
-            "id": null,
+            "id": 244584,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Mail Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Scales",
+                "Void-Tempered Leather",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -4457,11 +5165,35 @@
           {
             "slot": "Belt",
             "name": "Farstrider's Trophy Belt",
-            "id": null,
+            "id": 244581,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Mail Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Scales",
+                "Void-Tempered Leather",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Legs",
@@ -4748,11 +5480,35 @@
           {
             "slot": "Wrist",
             "name": "Farstrider's Plated Bracers",
-            "id": null,
+            "id": 244584,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Mail Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Scales",
+                "Void-Tempered Leather",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -4788,11 +5544,35 @@
           {
             "slot": "Belt",
             "name": "Farstrider's Trophy Belt",
-            "id": null,
+            "id": 244581,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Mail Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Scales",
+                "Void-Tempered Leather",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Legs",
@@ -4968,11 +5748,36 @@
           {
             "slot": "Offhand",
             "name": "Aln'hara Lantern",
-            "id": null,
+            "id": 245769,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Inscription",
+              "category": "Weapons",
+              "reagents": [
+                {
+                  "name": "Majestic Claw",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Codified Azeroot",
+                "Soul Cipher",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Head",
@@ -5083,11 +5888,45 @@
           {
             "slot": "Wrist",
             "name": "Martyr's Bindings",
-            "id": null,
+            "id": 239648,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Tailoring",
+              "category": "Garments",
+              "reagents": [
+                {
+                  "name": "Embroidery Floss",
+                  "quantity": 5
+                },
+                {
+                  "name": "Mote of Primal Energy",
+                  "quantity": 8
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Peerless Plumage",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Arcanoweave Bolt",
+                "Radiant Shard",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -5310,11 +6149,36 @@
           {
             "slot": "Offhand",
             "name": "Aln'hara Lantern",
-            "id": null,
+            "id": 245769,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Inscription",
+              "category": "Weapons",
+              "reagents": [
+                {
+                  "name": "Majestic Claw",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Codified Azeroot",
+                "Soul Cipher",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Head",
@@ -5407,11 +6271,45 @@
           {
             "slot": "Wrist",
             "name": "Martyr's Bindings",
-            "id": null,
+            "id": 239648,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Tailoring",
+              "category": "Garments",
+              "reagents": [
+                {
+                  "name": "Embroidery Floss",
+                  "quantity": 5
+                },
+                {
+                  "name": "Mote of Primal Energy",
+                  "quantity": 8
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Peerless Plumage",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Arcanoweave Bolt",
+                "Radiant Shard",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -5668,11 +6566,45 @@
           {
             "slot": "Wrist",
             "name": "Martyr's Bindings",
-            "id": null,
+            "id": 239648,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Tailoring",
+              "category": "Garments",
+              "reagents": [
+                {
+                  "name": "Embroidery Floss",
+                  "quantity": 5
+                },
+                {
+                  "name": "Mote of Primal Energy",
+                  "quantity": 8
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Peerless Plumage",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Arcanoweave Bolt",
+                "Radiant Shard",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -5701,11 +6633,45 @@
           {
             "slot": "Belt",
             "name": "Martyr's Waistwrap",
-            "id": null,
+            "id": 239649,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Tailoring",
+              "category": "Garments",
+              "reagents": [
+                {
+                  "name": "Embroidery Floss",
+                  "quantity": 5
+                },
+                {
+                  "name": "Mote of Primal Energy",
+                  "quantity": 8
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Peerless Plumage",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sunfire Silk Bolt",
+                "Radiant Shard",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Legs",
@@ -5950,11 +6916,35 @@
           {
             "slot": "Wrist",
             "name": "Silvermoon Agent's Deflectors",
-            "id": null,
+            "id": 244576,
             "lists": [
               "Overall"
             ],
-            "source": "Leatherworking"
+            "source": "Leatherworking",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -6032,11 +7022,39 @@
           {
             "slot": "Ring",
             "name": "Loa Worshiper's Band",
-            "id": null,
+            "id": 251513,
             "lists": [
               "Overall"
             ],
-            "source": "Jewelcrafting"
+            "source": "Jewelcrafting",
+            "crafted": {
+              "profession": "Jewelcrafting",
+              "category": "Regal Rings",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Mote of Wild Magic",
+                  "quantity": 20
+                }
+              ],
+              "optional": [
+                "Kaleidoscopic Prism",
+                "Duskshrouded Stone",
+                "Flawless Amani Lapis",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": false,
+              "customStats": false,
+              "builtIn": [
+                "Equip: Your damaging spells and abilities have a chance to charge the band, calling forth the avatar of a Loa to assist you in combat. Each unique socketed gem color in your gear allows for different Loa to be summoned. These effects range from dealing damage to your foes or granting you temporary power."
+              ],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Trinket",
@@ -6532,11 +7550,35 @@
           {
             "slot": "Wrist",
             "name": "Silvermoon Agent's Deflectors",
-            "id": null,
+            "id": 244576,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -6565,11 +7607,34 @@
           {
             "slot": "Feet",
             "name": "Silvermoon Agent's Sneakers",
-            "id": null,
+            "id": 244569,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Ring",
@@ -7097,11 +8162,38 @@
           {
             "slot": "Wrist",
             "name": "Spellbreaker's Bracers",
-            "id": null,
+            "id": 237834,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting Blacksmithing"
+            "source": "Crafting Blacksmithing",
+            "crafted": {
+              "profession": "Blacksmithing",
+              "category": "Armor",
+              "reagents": [
+                {
+                  "name": "Dazzling Thorium",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sterling Alloy",
+                "Gloaming Alloy",
+                "Sin'dorei Armor Banding",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -7146,11 +8238,37 @@
           {
             "slot": "Boots",
             "name": "Spellbreaker's March",
-            "id": null,
+            "id": 237828,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting Blacksmithing"
+            "source": "Crafting Blacksmithing",
+            "crafted": {
+              "profession": "Blacksmithing",
+              "category": "Armor",
+              "reagents": [
+                {
+                  "name": "Dazzling Thorium",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sterling Alloy",
+                "Gloaming Alloy",
+                "Sin'dorei Armor Banding",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Ring",
@@ -7331,11 +8449,38 @@
           {
             "slot": "Wrist",
             "name": "Spellbreaker's Bracers",
-            "id": null,
+            "id": 237834,
             "lists": [
               "Overall"
             ],
-            "source": "Blacksmithing"
+            "source": "Blacksmithing",
+            "crafted": {
+              "profession": "Blacksmithing",
+              "category": "Armor",
+              "reagents": [
+                {
+                  "name": "Dazzling Thorium",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sterling Alloy",
+                "Gloaming Alloy",
+                "Sin'dorei Armor Banding",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -7418,11 +8563,39 @@
           {
             "slot": "Ring",
             "name": "Loa Worshiper's Band",
-            "id": null,
+            "id": 251513,
             "lists": [
               "Overall"
             ],
-            "source": "Jewelcrafting"
+            "source": "Jewelcrafting",
+            "crafted": {
+              "profession": "Jewelcrafting",
+              "category": "Regal Rings",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Mote of Wild Magic",
+                  "quantity": 20
+                }
+              ],
+              "optional": [
+                "Kaleidoscopic Prism",
+                "Duskshrouded Stone",
+                "Flawless Amani Lapis",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": false,
+              "customStats": false,
+              "builtIn": [
+                "Equip: Your damaging spells and abilities have a chance to charge the band, calling forth the avatar of a Loa to assist you in combat. Each unique socketed gem color in your gear allows for different Loa to be summoned. These effects range from dealing damage to your foes or granting you temporary power."
+              ],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Trinket",
@@ -7605,11 +8778,45 @@
           {
             "slot": "Wrist",
             "name": "Martyr's Bindings",
-            "id": null,
+            "id": 239648,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Tailoring",
+              "category": "Garments",
+              "reagents": [
+                {
+                  "name": "Embroidery Floss",
+                  "quantity": 5
+                },
+                {
+                  "name": "Mote of Primal Energy",
+                  "quantity": 8
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Peerless Plumage",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Arcanoweave Bolt",
+                "Radiant Shard",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -7644,11 +8851,45 @@
           {
             "slot": "Belt",
             "name": "Martyr's Waistwrap",
-            "id": null,
+            "id": 239649,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Tailoring",
+              "category": "Garments",
+              "reagents": [
+                {
+                  "name": "Embroidery Floss",
+                  "quantity": 5
+                },
+                {
+                  "name": "Mote of Primal Energy",
+                  "quantity": 8
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Peerless Plumage",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sunfire Silk Bolt",
+                "Radiant Shard",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Legs",
@@ -7895,11 +9136,45 @@
           {
             "slot": "Wrist",
             "name": "Martyr's Bindings",
-            "id": null,
+            "id": 239648,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Tailoring",
+              "category": "Garments",
+              "reagents": [
+                {
+                  "name": "Embroidery Floss",
+                  "quantity": 5
+                },
+                {
+                  "name": "Mote of Primal Energy",
+                  "quantity": 8
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Peerless Plumage",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Arcanoweave Bolt",
+                "Radiant Shard",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -7924,11 +9199,45 @@
           {
             "slot": "Belt",
             "name": "Martyr's Waistwrap",
-            "id": null,
+            "id": 239649,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Tailoring",
+              "category": "Garments",
+              "reagents": [
+                {
+                  "name": "Embroidery Floss",
+                  "quantity": 5
+                },
+                {
+                  "name": "Mote of Primal Energy",
+                  "quantity": 8
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Peerless Plumage",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sunfire Silk Bolt",
+                "Radiant Shard",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Legs",
@@ -8173,11 +9482,45 @@
           {
             "slot": "Wrist",
             "name": "Martyr's Bindings",
-            "id": null,
+            "id": 239648,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Tailoring",
+              "category": "Garments",
+              "reagents": [
+                {
+                  "name": "Embroidery Floss",
+                  "quantity": 5
+                },
+                {
+                  "name": "Mote of Primal Energy",
+                  "quantity": 8
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Peerless Plumage",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Arcanoweave Bolt",
+                "Radiant Shard",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -8212,11 +9555,45 @@
           {
             "slot": "Belt",
             "name": "Martyr's Waistwrap",
-            "id": null,
+            "id": 239649,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Tailoring",
+              "category": "Garments",
+              "reagents": [
+                {
+                  "name": "Embroidery Floss",
+                  "quantity": 5
+                },
+                {
+                  "name": "Mote of Primal Energy",
+                  "quantity": 8
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Peerless Plumage",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sunfire Silk Bolt",
+                "Radiant Shard",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Legs",
@@ -8439,11 +9816,35 @@
           {
             "slot": "Wrist",
             "name": "Silvermoon Agent's Deflectors",
-            "id": null,
+            "id": 244576,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -8506,11 +9907,34 @@
           {
             "slot": "Boots",
             "name": "Silvermoon Agent's Sneakers",
-            "id": null,
+            "id": 244569,
             "lists": [
               "Overall"
             ],
-            "source": "Crafted"
+            "source": "Crafted",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Ring",
@@ -8747,11 +10171,35 @@
           {
             "slot": "Belt",
             "name": "Silvermoon Agent's Utility Belt",
-            "id": null,
+            "id": 244573,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Legs",
@@ -8780,11 +10228,34 @@
           {
             "slot": "Boots",
             "name": "Silvermoon Agent's Sneakers",
-            "id": null,
+            "id": 244569,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Ring",
@@ -8879,11 +10350,37 @@
           {
             "slot": "Off-Hand",
             "name": "Farstrider's Mercy",
-            "id": null,
+            "id": 237837,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Blacksmithing",
+              "category": "Weapons",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Dazzling Thorium",
+                  "quantity": 2
+                }
+              ],
+              "optional": [
+                "Gloaming Alloy",
+                "Sterling Alloy",
+                "Silvermoon Weapon Wrap",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Head",
@@ -8994,11 +10491,35 @@
           {
             "slot": "Wrist",
             "name": "Silvermoon Agent's Deflectors",
-            "id": null,
+            "id": 244576,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting/Misc"
+            "source": "Crafting/Misc",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Leather Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Leather",
+                "Void-Tempered Scales",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -9318,11 +10839,35 @@
           {
             "slot": "Wrist",
             "name": "Farstrider's Plated Bracers",
-            "id": null,
+            "id": 244584,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Mail Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Scales",
+                "Void-Tempered Leather",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -9389,11 +10934,34 @@
           {
             "slot": "Boots",
             "name": "Farstrider's Razor Talons",
-            "id": null,
+            "id": 244577,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Mail Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Scales",
+                "Void-Tempered Leather",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Ring",
@@ -9511,11 +11079,37 @@
           {
             "slot": "Off Hand",
             "name": "Farstrider's Chopper",
-            "id": null,
+            "id": 237850,
             "lists": [
               "Overall"
             ],
-            "source": "Blacksmithing"
+            "source": "Blacksmithing",
+            "crafted": {
+              "profession": "Blacksmithing",
+              "category": "Weapons",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Dazzling Thorium",
+                  "quantity": 2
+                }
+              ],
+              "optional": [
+                "Gloaming Alloy",
+                "Sterling Alloy",
+                "Silvermoon Weapon Wrap",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Head",
@@ -9616,11 +11210,35 @@
           {
             "slot": "Wrist",
             "name": "Farstrider's Plated Bracers",
-            "id": null,
+            "id": 244584,
             "lists": [
               "Overall"
             ],
-            "source": "Leatherworking"
+            "source": "Leatherworking",
+            "crafted": {
+              "profession": "Leatherworking",
+              "category": "Mail Armor",
+              "reagents": [
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Void-Tempered Scales",
+                "Void-Tempered Leather",
+                "Sin'dorei Armor Banding",
+                "Infused Scalewoven Hide",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -10226,11 +11844,45 @@
           {
             "slot": "Wrist",
             "name": "Martyr's Bindings",
-            "id": null,
+            "id": 239648,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Tailoring",
+              "category": "Garments",
+              "reagents": [
+                {
+                  "name": "Embroidery Floss",
+                  "quantity": 5
+                },
+                {
+                  "name": "Mote of Primal Energy",
+                  "quantity": 8
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Peerless Plumage",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Arcanoweave Bolt",
+                "Radiant Shard",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -10255,11 +11907,45 @@
           {
             "slot": "Belt",
             "name": "Martyr's Waistwrap",
-            "id": null,
+            "id": 239649,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Tailoring",
+              "category": "Garments",
+              "reagents": [
+                {
+                  "name": "Embroidery Floss",
+                  "quantity": 5
+                },
+                {
+                  "name": "Mote of Primal Energy",
+                  "quantity": 8
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Peerless Plumage",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sunfire Silk Bolt",
+                "Radiant Shard",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Legs",
@@ -10384,11 +12070,36 @@
           {
             "slot": "Offhand",
             "name": "Aln'hara Lantern",
-            "id": null,
+            "id": 245769,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Inscription",
+              "category": "Weapons",
+              "reagents": [
+                {
+                  "name": "Majestic Claw",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Codified Azeroot",
+                "Soul Cipher",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Head",
@@ -10471,7 +12182,19 @@
             "lists": [
               "Overall"
             ],
-            "source": "Entombed Sentinels"
+            "source": "Entombed Sentinels",
+            "tier": "Damned Necrolyte's Shattered Restraints",
+            "offSet": true,
+            "catalyst": {
+              "from": [
+                {
+                  "id": 268228,
+                  "name": "Venom-Singed Cuffs",
+                  "boss": "Entombed Sentinels",
+                  "instance": "The Venomous Abyss"
+                }
+              ]
+            }
           },
           {
             "slot": "Hands",
@@ -10496,11 +12219,45 @@
           {
             "slot": "Belt",
             "name": "Martyr's Waistwrap",
-            "id": null,
+            "id": 239649,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Tailoring",
+              "category": "Garments",
+              "reagents": [
+                {
+                  "name": "Embroidery Floss",
+                  "quantity": 5
+                },
+                {
+                  "name": "Mote of Primal Energy",
+                  "quantity": 8
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Peerless Plumage",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sunfire Silk Bolt",
+                "Radiant Shard",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Legs",
@@ -10580,6 +12337,16 @@
               "Overall"
             ],
             "note": "Catalyze into Spires of the Damned Necrolyte",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Wrist",
+            "name": "Venom-Singed Cuffs",
+            "id": 268228,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Damned Necrolyte's Shackles",
             "addedBy": "catalyst"
           },
           {
@@ -10727,11 +12494,45 @@
           {
             "slot": "Wrist",
             "name": "Martyr's Bindings",
-            "id": null,
+            "id": 239648,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Tailoring",
+              "category": "Garments",
+              "reagents": [
+                {
+                  "name": "Embroidery Floss",
+                  "quantity": 5
+                },
+                {
+                  "name": "Mote of Primal Energy",
+                  "quantity": 8
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Peerless Plumage",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Arcanoweave Bolt",
+                "Radiant Shard",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -10766,11 +12567,45 @@
           {
             "slot": "Belt",
             "name": "Martyr's Waistwrap",
-            "id": null,
+            "id": 239649,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting"
+            "source": "Crafting",
+            "crafted": {
+              "profession": "Tailoring",
+              "category": "Garments",
+              "reagents": [
+                {
+                  "name": "Embroidery Floss",
+                  "quantity": 5
+                },
+                {
+                  "name": "Mote of Primal Energy",
+                  "quantity": 8
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                },
+                {
+                  "name": "Peerless Plumage",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sunfire Silk Bolt",
+                "Radiant Shard",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Legs",
@@ -10988,11 +12823,38 @@
           {
             "slot": "Bracers",
             "name": "Spellbreaker's Bracers",
-            "id": null,
+            "id": 237834,
             "lists": [
               "Overall"
             ],
-            "source": "Crafted"
+            "source": "Crafted",
+            "crafted": {
+              "profession": "Blacksmithing",
+              "category": "Armor",
+              "reagents": [
+                {
+                  "name": "Dazzling Thorium",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sterling Alloy",
+                "Gloaming Alloy",
+                "Sin'dorei Armor Banding",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -11033,11 +12895,37 @@
           {
             "slot": "Boots",
             "name": "Spellbreaker's March",
-            "id": null,
+            "id": 237828,
             "lists": [
               "Overall"
             ],
-            "source": "Crafted"
+            "source": "Crafted",
+            "crafted": {
+              "profession": "Blacksmithing",
+              "category": "Armor",
+              "reagents": [
+                {
+                  "name": "Dazzling Thorium",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sterling Alloy",
+                "Gloaming Alloy",
+                "Sin'dorei Armor Banding",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Ring",
@@ -11269,11 +13157,38 @@
           {
             "slot": "Bracers",
             "name": "Spellbreaker's Bracers",
-            "id": null,
+            "id": 237834,
             "lists": [
               "Overall"
             ],
-            "source": "Crafted"
+            "source": "Crafted",
+            "crafted": {
+              "profession": "Blacksmithing",
+              "category": "Armor",
+              "reagents": [
+                {
+                  "name": "Dazzling Thorium",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sterling Alloy",
+                "Gloaming Alloy",
+                "Sin'dorei Armor Banding",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -11314,11 +13229,37 @@
           {
             "slot": "Boots",
             "name": "Spellbreaker's March",
-            "id": null,
+            "id": 237828,
             "lists": [
               "Overall"
             ],
-            "source": "Crafted"
+            "source": "Crafted",
+            "crafted": {
+              "profession": "Blacksmithing",
+              "category": "Armor",
+              "reagents": [
+                {
+                  "name": "Dazzling Thorium",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sterling Alloy",
+                "Gloaming Alloy",
+                "Sin'dorei Armor Banding",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Ring",
@@ -11540,11 +13481,38 @@
           {
             "slot": "Wrist",
             "name": "Spellbreaker's Bracers",
-            "id": null,
+            "id": 237834,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting Blacksmithing"
+            "source": "Crafting Blacksmithing",
+            "crafted": {
+              "profession": "Blacksmithing",
+              "category": "Armor",
+              "reagents": [
+                {
+                  "name": "Dazzling Thorium",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sterling Alloy",
+                "Gloaming Alloy",
+                "Sin'dorei Armor Banding",
+                "Spark",
+                "Infuse with Power",
+                "Socket"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Hands",
@@ -11589,11 +13557,37 @@
           {
             "slot": "Boots",
             "name": "Spellbreaker's March",
-            "id": null,
+            "id": 237828,
             "lists": [
               "Overall"
             ],
-            "source": "Crafting Blacksmithing"
+            "source": "Crafting Blacksmithing",
+            "crafted": {
+              "profession": "Blacksmithing",
+              "category": "Armor",
+              "reagents": [
+                {
+                  "name": "Dazzling Thorium",
+                  "quantity": 1
+                },
+                {
+                  "name": "Tormented Tantalum",
+                  "quantity": 1
+                }
+              ],
+              "optional": [
+                "Sterling Alloy",
+                "Gloaming Alloy",
+                "Sin'dorei Armor Banding",
+                "Spark",
+                "Infuse with Power"
+              ],
+              "embellishable": true,
+              "customStats": true,
+              "builtIn": [],
+              "embellishments": [],
+              "otherReagents": []
+            }
           },
           {
             "slot": "Ring",
