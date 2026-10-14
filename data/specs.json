@@ -3635,10 +3635,148 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/mage/frost/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Weapon",
+            "name": "Jan'thrazet, the Soul Fang",
+            "id": 271092,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Offhand",
+            "name": "Frostscale's Mystic Frond",
+            "id": 268263,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Head",
+            "name": "Crown of the Primal Leywarden",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Primal Leywarden's Manaflux",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Crest of the Primal Leywarden",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Wrist",
+            "name": "Martyr's Bindings",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting/Misc"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Primal Leywarden's Manashapers",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Belt",
+            "name": "Martyr's Waistwrap",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting/Misc"
+          },
+          {
+            "slot": "Legs",
+            "name": "Primal Leywarden's Tailored Legwraps",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Boots",
+            "name": "Cackling Soultreads",
+            "id": 268255,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Band of the Swarmcaller",
+            "id": 281029,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Apex Brute's Claw Ring",
+            "id": 268252,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Gebbo's Bottomless Bag",
+            "id": 270164,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Twisted Horror's Tendril",
+            "id": 281215,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {
