@@ -5379,10 +5379,146 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/priest/shadow/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Weapon",
+            "name": "Jan'thrazet, the Soul Fang",
+            "id": 271092,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Offhand",
+            "name": "Spine of the Hissing Abyss",
+            "id": 268197,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Head",
+            "name": "Cosmic Penitent's Truesight",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Ula'tek"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Mantle of Ceremonial Ascension",
+            "id": 239045,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Cosmic Penitent's Eclipsing Robes",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Vashnik the Malignant"
+          },
+          {
+            "slot": "Wrist",
+            "name": "Martyr's Bindings",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting/Misc"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Cosmic Penitent's Celestial Grips",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "The Coiled Altar"
+          },
+          {
+            "slot": "Belt",
+            "name": "Martyr's Waistwrap",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting/Misc"
+          },
+          {
+            "slot": "Legs",
+            "name": "Voidweaver's Leggings",
+            "id": 281235,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Boots",
+            "name": "Cackling Soultreads",
+            "id": 268255,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Band of the Swarmcaller",
+            "id": 281029,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Vile Alchemist's Band",
+            "id": 268249,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Twisted Horror's Tendril",
+            "id": 281215,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Freightrunner's Flask",
+            "id": 250215,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {
