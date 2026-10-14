@@ -1911,10 +1911,148 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/druid/restoration/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Helm",
+            "name": "Enigmatic Dreamwatcher's Somnolent Stare",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Ula'tek (Raid) & Catalyst"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Silvermoon Agent's Mantle",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Leatherworking"
+          },
+          {
+            "slot": "Cape",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Enigmatic Dreamwatcher's Lunar Raiment",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Nek'zali the Soulcoiler (Raid) & Catalyst"
+          },
+          {
+            "slot": "Bracers",
+            "name": "Silvermoon Agent's Deflectors",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Leatherworking"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Enigmatic Dreamwatcher's Gauntlets",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Entomed Sentinels (Raid)"
+          },
+          {
+            "slot": "Belt",
+            "name": "Sash of the Forlorn Vessel",
+            "id": 268256,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Legs",
+            "name": "Enigmatic Dreamwatcher's Leggings",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "The Coiled Alter (Raid) & Catalyst"
+          },
+          {
+            "slot": "Boots",
+            "name": "Silvermoon Agent's Sneakers",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Leatherworking"
+          },
+          {
+            "slot": "Ring",
+            "name": "Band of the Swarmcaller",
+            "id": 281029,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Sickening Signet of Atroxus",
+            "id": 252258,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinkets",
+            "name": "Wavecaller's Seastone",
+            "id": 270167,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinkets",
+            "name": "Soulcoiler Ritual Vessel",
+            "id": 270162,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "1h Weapon",
+            "name": "Jan'thrazet, the Soul Fang",
+            "id": 271092,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Offhand",
+            "name": "Spine of the Hissing Abyss",
+            "id": 268197,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {

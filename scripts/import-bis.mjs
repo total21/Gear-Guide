@@ -257,7 +257,7 @@ async function lookUpNames(bisItems, region = "us", locale = "en_US") {
 // "Gaze of the Coiled Watcher" and "gaze of the coiled watcher’s" both -> "gaze of the coiled watcher"
 export const norm = (s) => s.toLowerCase().replace(/[\u2018\u2019'`]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
 
-const SLOT_WORDS = /^(head|helm|neck|shoulders?|back|cloak|chest|wrists?|bracers|hands|gloves|waist|belt|legs|feet|boots|rings?|finger|trinkets?|main[ -]?hand|off[ -]?hand|weapons?|two[ -]?hand(?:ed)?|one[ -]?hand(?:ed)?|ranged|dagger|staff)\b/i;
+const SLOT_WORDS = /^(head|helm|neck|shoulders?|back|cloak|cape|chest|wrists?|bracers|hands|gloves|waist|belt|legs|feet|boots|rings?|finger|trinkets?|main[ -]?hand|off[ -]?hand|weapons?|two[ -]?hand(?:ed)?|one[ -]?hand(?:ed)?|ranged|dagger|staff)\b/i;
 const LIST_HEADER = /\b(overall|raid|mythic|m\+|dungeons?)\b/i;
 
 // Spec named in the text ("Spec: Outlaw Rogue", or a line like "Outlaw Rogue BiS")
@@ -343,7 +343,7 @@ export function parsePasted(text, spec, items) {
       const crafting = [...parens(slotCol), ...parens(itemPart), ...withParts.map(noParens).filter(Boolean)];
       entries.push({
         id: null, name: noParens(itemPart), slot: noParens(slotCol), list,
-        ...(cols.length > 2 && { source: cols.slice(2).join(" ") }),
+        ...(cols.length > 2 && { source: undouble(cols.slice(2).join(" ")) }),
         ...(crafting.length && { crafting }),
       });
       continue;
