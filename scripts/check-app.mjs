@@ -13,6 +13,7 @@ const read = async (f) => JSON.parse(await readFile(path.join(ROOT, f), "utf8"))
 const { items } = await read("data/items.json");
 const { specs } = await read("data/specs.json");
 const problems = [];
+const tierIds = new Set((await read("data/tier.json")).sets.flatMap((x) => x.items.map((i) => i.id)));
 const fail = (msg) => problems.push(msg);
 const flat = (groups) => groups.flatMap((g) => g.bosses.flatMap((b) => b.items));
 const name = (s) => `${s.spec} ${s.class}`;
@@ -26,14 +27,28 @@ for (const s of specs) {
   }
   if (!s.statSource?.url || !/^\d{4}-\d{2}-\d{2}$/.test(s.statSource?.checked ?? "")) fail(`${name(s)}: stat priority not cited/dated`);
   if (!s.weapons?.slots?.length) fail(`${name(s)}: no weapon slots`);
-  if (s.bis?.items?.length && !(s.bis.source && s.bis.url && s.bis.date)) fail(`${name(s)}: BiS items without source/url/date`);
-  for (const b of s.bis?.items ?? []) {
-    // id is null for pasted non-drop items (crafted, tier), which have no ID in the text.
-    if (!(Number.isInteger(b.id) || b.id === null) || !b.name || !b.lists?.length) fail(`${name(s)}: BiS entry needs id, name and lists: ${JSON.stringify(b)}`);
-    const hit = items.find((i) => i.id === b.id);
+  if (s.heroTalents?.length !== 2) fail(`${name(s)}: expected 2 hero talents, got ${s.heroTalents}`);
+  for (const [h, p] of Object.entries(s.heroStatPriority ?? {})) {
+    if (!s.heroTalents?.includes(h)) fail(`${name(s)}: heroStatPriority for unknown hero talent ${h}`);
+    if (p.length !== 4 || p.some((x) => !STATS.includes(x)) || new Set(p).size !== 4) fail(`${name(s)}: bad ${h} priority ${p}`);
+  }
+  for (const h of Object.keys(s.bisByHero ?? {})) if (!s.heroTalents?.includes(h)) fail(`${name(s)}: bisByHero for unknown hero talent ${h}`);
+  for (const list of [s.bis, ...Object.values(s.bisByHero ?? {})]) {
+    if (list?.items?.length && !(list.source && list.url && list.date)) fail(`${name(s)}: BiS items without source/url/date`);
+    for (const b of list?.items ?? []) {
+      // id is null for pasted non-drop items (crafted, tier), which have no ID in the text.
+      if (!(Number.isInteger(b.id) || b.id === null) || !b.name || !b.lists?.length) fail(`${name(s)}: BiS entry needs id, name and lists: ${JSON.stringify(b)}`);
+      const hit = items.find((i) => i.id === b.id);
+      if (b.tier && !tierIds.has(b.id)) fail(`${name(s)}: tier piece ${b.name} (${b.id}) not in data/tier.json`);
+    for (const f of b.catalyst?.from ?? []) {
+      const src = items.find((i) => i.id === f.id);
+      if (!src || !usableBy(s, src)) fail(`${name(s)}: catalyst source ${f.name} for ${b.name} is not a usable Season drop`);
+      else if (src.slot !== b.slot) fail(`${name(s)}: catalyst source ${f.name} is ${src.slot}, ${b.name} is ${b.slot}`);
+    }
     if (!hit) continue; // crafted, tier, catalyst: not a Season drop
-    if (hit.name !== b.name) fail(`${name(s)}: BiS item ${b.id} is ${hit.name}, not ${b.name}`);
-    if (!usableBy(s, hit)) fail(`${name(s)}: BiS item ${b.name} is not usable by this spec`);
+      if (hit.name !== b.name) fail(`${name(s)}: BiS item ${b.id} is ${hit.name}, not ${b.name}`);
+      if (!usableBy(s, hit)) fail(`${name(s)}: BiS item ${b.name} is not usable by this spec`);
+    }
   }
 }
 

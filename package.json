@@ -6,12 +6,13 @@
     "node": ">=22.21"
   },
   "scripts": {
-    "fetch": "node scripts/fetch-data.mjs && node scripts/build-docs.mjs",
-    "fetch:specs": "node scripts/fetch-data.mjs --specs-only && node scripts/build-docs.mjs",
+    "fetch": "node scripts/fetch-data.mjs && node scripts/resolve-bis.mjs",
+    "fetch:specs": "node scripts/fetch-data.mjs --specs-only && node scripts/resolve-bis.mjs",
     "build": "node scripts/build-docs.mjs",
     "verify": "node scripts/verify-rogue.mjs",
     "check": "node scripts/build-docs.mjs --check && node scripts/check-app.mjs && node scripts/check-import.mjs",
     "serve": "python3 -m http.server 8000 --directory docs",
-    "import-bis": "node scripts/import-bis.mjs"
+    "import-bis": "node scripts/import-bis.mjs",
+    "resolve-bis": "node scripts/resolve-bis.mjs"
   }
 }
