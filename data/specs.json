@@ -4061,10 +4061,138 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/monk/mistweaver/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Helm",
+            "name": "Monkey King's Unyielding Visage",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Ula'tek & Catalyst"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Tassels of the Monkey King",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Den of Nalorakk & Catalyst"
+          },
+          {
+            "slot": "Cape",
+            "name": "Fireproof Drape",
+            "id": 193763,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Battle Gi of the Monkey King",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Kith'ix & Catalyst"
+          },
+          {
+            "slot": "Bracers",
+            "name": "Fury-fletched Armlets",
+            "id": 251135,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Gloves",
+            "name": "Monkey King's Fighting Fists",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Murder Row & Catalyst"
+          },
+          {
+            "slot": "Belt",
+            "name": "Rootwalker Harness",
+            "id": 251189,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Legs",
+            "name": "Pantaloons of the Monkey King",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Kings' Rest & Catalyst"
+          },
+          {
+            "slot": "Boots",
+            "name": "Breakwater Boots",
+            "id": 268247,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Alluring Bubbleband",
+            "id": 268266,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Ritual Binder's Ring",
+            "id": 159459,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinkets",
+            "name": "Wavecaller's Seastone",
+            "id": 270167,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinkets",
+            "name": "Soulcoiler Ritual Vessel",
+            "id": 270162,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Weapon",
+            "name": "Nibbles' Training Rod",
+            "id": 251123,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {
