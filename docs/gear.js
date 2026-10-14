@@ -210,3 +210,10 @@ export function trueBis(bisItems, items) {
   }
   return out;
 }
+
+// Wowhead's alternates: the Overall picks trueBis leaves out (situational
+// trinkets, a second weapon setup, extra rings), in list order.
+export function situationalBis(bisItems, items) {
+  const worn = new Set(trueBis(bisItems, items));
+  return (bisItems ?? []).filter((b) => !b.addedBy && (b.lists ?? ["Overall"]).includes("Overall") && !worn.has(b));
+}

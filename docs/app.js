@@ -1,4 +1,4 @@
-import { trueBis, SHORT, SLOT_GROUPS, groupForSpec, rankedPairs, typeLabel, slotGroup, bisFor, priorityForHero, itemStats, catalystOptions, statOrder, toggleStat, effectTags } from "./gear.js?v=10";
+import { trueBis, situationalBis, SHORT, SLOT_GROUPS, groupForSpec, rankedPairs, typeLabel, slotGroup, bisFor, priorityForHero, itemStats, catalystOptions, statOrder, toggleStat, effectTags } from "./gear.js?v=11";
 
 const $ = (id) => document.getElementById(id);
 const esc = (x) => String(x).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -151,7 +151,7 @@ function itemRow(it, topPair, spec, bestTitle, where = "") {
     <div class="name">${itemLink(it.id, it.name)}${top ? `<span class="badge b-top" title="${esc(bestTitle)}">Best stats</span>` : ""}${it.bis ? `<span class="badge b-bis" title="Best in slot (${esc(it.bis.join(", "))})">${it.bis.includes("Overall") ? "BiS" : `BiS · ${esc(it.bis.join(" / "))}`}</span>` : ""}</div>
     <div class="stats">${prim}${it.stats.map(statChip).join("")}${tags}${missing}</div>
     <div class="type">${esc(type)}${where ? ` · ${esc(where)}` : ""}</div>
-    ${it.bisNote ? `<div class="craft">BiS: ${esc(it.bisNote)}</div>` : ""}
+    ${it.bisNote ? `<div class="craft">${esc(it.noteLabel ?? "BiS")}: ${esc(it.bisNote)}</div>` : ""}
   </li>`;
 }
 
@@ -193,7 +193,12 @@ function render() {
   // The BiS list as worn (one pick per slot), plus the drops to catalyze into its tier pieces.
   const worn = trueBis(bisList?.items, items);
   const wornNames = new Set(worn.map((b) => b.name));
-  const bisBadges = { items: [...worn, ...(bisList?.items ?? []).filter((b) => b.addedBy && wornNames.has(b.note?.replace(/^Catalyze into /, "")))] };
+  const alternates = situationalBis(bisList?.items, items);
+  const bisBadges = { items: [
+    ...worn,
+    ...(bisList?.items ?? []).filter((b) => b.addedBy && wornNames.has(b.note?.replace(/^Catalyze into /, ""))),
+    ...alternates.map((b) => ({ ...b, lists: ["Situational"], note: b.note ? `Situational (${b.note})` : "Situational" })),
+  ] };
   const isBis = state.source === "BIS" && !home && worn.length;
   if (state.source === "BIS" && !worn.length) state.source = "all";
   // The landing page counts every drop; the list counts within its filters.
@@ -231,13 +236,18 @@ function render() {
     // One row per slot in paper-doll order, wherever the item comes from.
     const ctx = { items, spec, prio, pairs, topPair, bestTitle };
     const byId = new Map(items.map((i) => [i.id, i]));
-    const rows = worn.map((b) => {
+    const row = (b, why) => {
       const drop = b.id != null && byId.get(b.id);
-      if (drop) return itemRow({ ...drop, ...itemStats(drop, prio), bis: null, bisNote: null }, topPair, spec, bestTitle, `${drop.instance} · ${drop.boss}`);
+      if (drop) return itemRow({ ...drop, ...itemStats(drop, prio), bis: null, bisNote: why ? b.note : null, noteLabel: "Wowhead" }, topPair, spec, bestTitle, `${drop.instance} · ${drop.boss}`);
       return b.tier ? tierRow(b, ctx) : b.crafted ? craftedRow(b) : otherRow(b);
-    });
-    n = rows.length;
-    html = `<section><h2>Best in Slot<span>${n} items</span></h2><ul>${rows.join("")}</ul></section>`;
+    };
+    n = worn.length + alternates.length;
+    html = `<section><h2>Best in Slot<span>${worn.length} items</span></h2><ul>${worn.map((b) => row(b)).join("")}</ul></section>`;
+    // Wowhead's alternates for a slot, e.g. defensive trinkets or a second weapon setup.
+    if (alternates.length)
+      html += `<section><h2>Situational BiS<span>${alternates.length} item${alternates.length === 1 ? "" : "s"}</span></h2>` +
+        `<div class="none">Wowhead lists these as alternatives for a slot. Sim your character (e.g. on Raidbots) to find which combination is best for you.</div>` +
+        `<ul>${alternates.map((b) => row(b, true)).join("")}</ul></section>`;
   } else {
     const groups = groupForSpec(items, spec, { ...opts, stats, slot: state.slot });
     for (const g of groups) {

@@ -6,7 +6,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { STATS, SLOT_GROUPS, groupForSpec, usableBy, rankedPairs, dropAzeriteTwins, bisSlotGroup, statOrder, toggleStat, effectTags, trueBis } from "../docs/gear.js";
+import { STATS, SLOT_GROUPS, groupForSpec, usableBy, rankedPairs, dropAzeriteTwins, bisSlotGroup, statOrder, toggleStat, effectTags, trueBis, situationalBis } from "../docs/gear.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = async (f) => JSON.parse(await readFile(path.join(ROOT, f), "utf8"));
@@ -122,6 +122,9 @@ for (const s of specs)
     if (hands < 1 || hands > 2) fail(`${name(s)} (${h}): worn BiS has ${hands} weapons`);
     for (const [k, v] of Object.entries(by)) if (v.length > (["ring", "trinket"].includes(k) ? 2 : k === "weapon" ? 2 : 1)) fail(`${name(s)} (${h}): ${v.length} ${k} picks`);
     if (worn.length < 15) fail(`${name(s)} (${h}): worn BiS has only ${worn.length} items`);
+    // Worn plus situational is exactly the Overall list, without catalyst sources.
+    const overall = list.items.filter((b) => !b.addedBy && (b.lists ?? ["Overall"]).includes("Overall"));
+    if (worn.length + situationalBis(list.items, items).length !== overall.length) fail(`${name(s)} (${h}): worn + situational != Overall list`);
   }
 
 // Every effect is labeled On use or Proc, except the raid's Deadly Venom reduction.
