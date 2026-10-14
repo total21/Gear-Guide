@@ -4577,15 +4577,6 @@
           },
           {
             "slot": "Head",
-            "name": "Sethraliss' Fanged Helm",
-            "id": 239035,
-            "lists": [
-              "Overall"
-            ],
-            "note": "Catalyze into Skulking Viper's Weeping Fangs"
-          },
-          {
-            "slot": "Head",
             "name": "Skulking Viper's Weeping Fangs",
             "id": 271492,
             "lists": [
@@ -4622,15 +4613,6 @@
             "lists": [
               "Overall"
             ]
-          },
-          {
-            "slot": "Shoulders",
-            "name": "Soulslither Spaulders",
-            "id": 268231,
-            "lists": [
-              "Overall"
-            ],
-            "note": "Catalyze into Jaws of the Skulking Viper"
           },
           {
             "slot": "Shoulder",
@@ -4689,15 +4671,6 @@
             "source": "Crafting"
           },
           {
-            "slot": "Gloves",
-            "name": "Aberrant Commander's Gauntlets",
-            "id": 281238,
-            "lists": [
-              "Overall"
-            ],
-            "note": "Catalyze into Skulking Viper's Hidepiercers"
-          },
-          {
             "slot": "Hands",
             "name": "Skulking Viper's Hidepiercers",
             "id": 271493,
@@ -4736,15 +4709,6 @@
               "Overall"
             ],
             "source": "Crafting"
-          },
-          {
-            "slot": "Legs",
-            "name": "Cuisses of the Uncoiled Union",
-            "id": 268237,
-            "lists": [
-              "Overall"
-            ],
-            "note": "Catalyze into Skulking Viper's Coiled Legwraps"
           },
           {
             "slot": "Legs",
@@ -4816,6 +4780,46 @@
             "lists": [
               "Overall"
             ]
+          },
+          {
+            "slot": "Head",
+            "name": "Sethraliss' Fanged Helm",
+            "id": 239035,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Skulking Viper's Weeping Fangs",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Shoulder",
+            "name": "Soulslither Spaulders",
+            "id": 268231,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Jaws of the Skulking Viper",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Hands",
+            "name": "Aberrant Commander's Gauntlets",
+            "id": 281238,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Skulking Viper's Hidepiercers",
+            "addedBy": "catalyst"
+          },
+          {
+            "slot": "Legs",
+            "name": "Cuisses of the Uncoiled Union",
+            "id": 268237,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Skulking Viper's Coiled Legwraps",
+            "addedBy": "catalyst"
           }
         ]
       }
