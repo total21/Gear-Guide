@@ -5930,10 +5930,148 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/rogue/subtlety/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Main-Hand",
+            "name": "Zatha'tek, Breath of Corruption",
+            "id": 271093,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Off-Hand",
+            "name": "Farstrider's Mercy",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting/Misc"
+          },
+          {
+            "slot": "Head",
+            "name": "Chosen Bloodslayer's Spirit Shroud",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set - Ula'tek"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Chosen Bloodslayer's Voodoo Guards",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set - Vashnik the Malignant"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Chosen Bloodslayer's Banded Poncho",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set - Kith'ix"
+          },
+          {
+            "slot": "Wrist",
+            "name": "Silvermoon Agent's Deflectors",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting/Misc"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Chosen Bloodslayer's Fanged Grips",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set - Temple of Sethraliss"
+          },
+          {
+            "slot": "Belt",
+            "name": "Sash of the Forlorn Vessel",
+            "id": 268256,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Legs",
+            "name": "Chosen Bloodslayer's Reinforced Pants",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "The Coiled Altar"
+          },
+          {
+            "slot": "Boots",
+            "name": "Goldfeather Boots",
+            "id": 159304,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Band of the Swarmcaller",
+            "id": 281029,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Jade Ophidian Band",
+            "id": 162544,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Zul'jin's Guillotine Technique",
+            "id": 270173,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Voracious Heart of Ula'tek",
+            "id": 270175,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {
