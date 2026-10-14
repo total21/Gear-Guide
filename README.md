@@ -20,8 +20,7 @@ WoW gear optimizer: a Midnight Season 2 gear farm tool (web app first, in-game a
 | `data/items.json` | One record per (item, boss) drop. Generated; do not edit by hand. |
 | `data/specs.json` | Every retail spec: class, role, armor type, primary stat, plus hand-curated stat priority and BiS. |
 | `web/index.html` | Design starting point for the web app (the rogue S2 farm list page, saved unchanged). |
-| `docs/` | The web app, published with GitHub Pages: `index.html`, `app.js` (page), `gear.js` (filtering and ranking), `character.js` (the player's gear: SimC parsing, imports, the farm plan), `config.json` (the Armory lookup's address), `data/` (copied by `npm run build`). |
-| `worker/` | The Armory lookup: a Cloudflare Worker (`armory.js`, `wrangler.toml`) that holds the Blizzard API credentials for the site. See "Armory lookup". |
+| `docs/` | The web app, published with GitHub Pages: `index.html`, `app.js` (page), `gear.js` (filtering and ranking), `character.js` (the player's gear: SimC parsing, imports, the farm plan), `data/` (copied by `npm run build`). |
 
 ## Data shape
 
@@ -195,9 +194,8 @@ In the other views, BiS badges mark the worn items and the drops to catalyze int
 
 ### My character
 
-The **My character** tab next to the farm list tracks the gear a player already has. There are three ways to fill it in:
-- **Armory:** region, realm and character name, through the Armory lookup below. It loads the equipped gear.
-- **SimulationCraft:** paste the `/simc` export from the SimulationCraft addon. Equipped gear and gear in bags count as acquired; Great Vault choices don't. It needs no server, so it works even without the Armory lookup.
+The **My character** tab next to the farm list tracks the gear a player already has. The site stays fully static: no server, no accounts. There are two ways to fill it in:
+- **SimulationCraft:** paste the `/simc` export from the SimulationCraft addon, the community standard. Equipped gear and gear in bags count as acquired; Great Vault choices don't.
 - **By hand:** every item in the farm list, the Best in Slot view and the character page has a **+ Have** button, which toggles to **✓ Have**.
 
 Loading a character switches the list to its spec. A later import replaces what the previous import brought in, but keeps items ticked by hand. Tabards and shirts are skipped.
@@ -211,23 +209,6 @@ What it does with that gear:
   - **Acquired:** everything acquired, with the item level and where it came from.
 
 The character is saved in the browser only (`localStorage`, key `gear-guide:character:v1`).
-
-### Armory lookup
-
-The Blizzard API needs an access token, and getting one needs a client secret, which a public static site can't keep. `worker/armory.js` is a small Cloudflare Worker that holds the secret and serves `GET /character/{region}/{realm}/{name}`, returning the character's name, class, spec, item level and equipped items. The API allows browser requests from any site, so the Worker only adds the token. Until `docs/config.json` names a Worker, the Load from Armory button is disabled and the page points to the SimC import.
-
-To switch it on:
-1. **Create a Blizzard API client** at https://develop.battle.net/access/clients. Any name; no redirect URL needed. Note the client ID and secret.
-2. **Deploy the Worker** with a free Cloudflare account and Wrangler (`npm install -g wrangler`, then `wrangler login`). From `worker/`, run:
-   ```
-   wrangler secret put BLIZZARD_CLIENT_ID
-   wrangler secret put BLIZZARD_CLIENT_SECRET
-   wrangler deploy
-   ```
-   Wrangler prints the Worker's address, e.g. `https://gear-guide-armory.<you>.workers.dev`.
-3. **Point the site at it:** put that address in `docs/config.json` as `"armoryProxy"` and commit.
-
-`ALLOW_ORIGIN` in `wrangler.toml` limits browser calls to the site's address. Change it if the site moves. The free Workers plan allows 100,000 requests a day.
 
 ### Publishing with GitHub Pages
 

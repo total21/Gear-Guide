@@ -1,6 +1,5 @@
-// The player's character: gear they already have, from the Armory (through
-// the token broker in worker/), a SimulationCraft addon export, or ticked by
-// hand. Pure functions, no DOM, so scripts/check-app.mjs can test them.
+// The player's character: gear they already have, from a SimulationCraft
+// addon export or ticked by hand. Pure functions, no DOM, so scripts/check-app.mjs can test them.
 
 // SimC gear lines: "head=,id=271474,bonus_id=..." (equipped) and, under
 // "### Gear from Bags", the same line commented out ("# head=,id=...").
@@ -45,14 +44,9 @@ export function parseSimc(text) {
   return out.className && out.items.length ? out : null;
 }
 
-// The spec a SimC export or Armory profile names, if we have it.
+// The spec a SimC export names, if we have it.
 export function specOf(specs, className, specName) {
   return specs.find((s) => key(s.class) === key(className) && key(s.spec) === key(specName)) ?? null;
-}
-
-// "Kil'rogg" / "Area 52" -> "kilrogg" / "area-52", as the Armory API wants.
-export function realmSlug(realm) {
-  return String(realm ?? "").trim().toLowerCase().replace(/['’]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
 // Merges imported gear into a character, replacing what the last import

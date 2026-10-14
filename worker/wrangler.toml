@@ -1,8 +1,0 @@
-# Cloudflare Worker for the Armory lookup (see README.md, "Armory lookup").
-name = "gear-guide-armory"
-main = "armory.js"
-compatibility_date = "2026-01-01"
-
-[vars]
-# Only the site may call the Worker from a browser.
-ALLOW_ORIGIN = "https://total21.github.io"

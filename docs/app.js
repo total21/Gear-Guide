@@ -1,5 +1,5 @@
-import { trueBis, situationalBis, SHORT, SLOT_GROUPS, groupForSpec, rankedPairs, typeLabel, slotGroup, bisFor, priorityForHero, itemStats, catalystOptions, statOrder, toggleStat, effectTags } from "./gear.js?v=13";
-import { parseSimc, specOf, realmSlug, withImport, farmPlan, ownKey } from "./character.js?v=13";
+import { trueBis, situationalBis, SHORT, SLOT_GROUPS, groupForSpec, rankedPairs, typeLabel, slotGroup, bisFor, priorityForHero, itemStats, catalystOptions, statOrder, toggleStat, effectTags } from "./gear.js?v=14";
+import { parseSimc, specOf, withImport, farmPlan, ownKey } from "./character.js?v=14";
 
 const $ = (id) => document.getElementById(id);
 const esc = (x) => String(x).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -31,7 +31,7 @@ const ownButton = (b) => {
 const ROLE = { TANK: "Tank", HEALER: "Healer", DAMAGE: "DPS" };
 const SOURCES = [["all", "M+ and raid"], ["DUNGEON", "Mythic+"], ["RAID", "Raid"], ["BIS", "★ Best in Slot"]];
 
-let items = [], specs = [], meta = {}, config = {};
+let items = [], specs = [], meta = {};
 
 async function load() {
   const [i, s] = await Promise.all(["data/items.json", "data/specs.json"].map((u) =>
@@ -39,8 +39,6 @@ async function load() {
   items = i.items;
   specs = s.specs;
   meta = { season: i.season, generatedAt: i.generatedAt };
-  // Optional: the Armory lookup's address (worker/armory.js).
-  config = await fetch("config.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
 }
 
 const currentSpec = () => specs.find((s) => s.id === state.spec) ?? specs[0];
@@ -304,27 +302,21 @@ function render() {
   refreshTooltips();
 }
 
-// The character page: load gear from the Armory or a SimC export, then the
+// The character page: load gear from a SimulationCraft export, then the
 // BiS checklist, where to farm what's missing, and everything acquired.
 function renderChar(spec, hero, worn, label) {
   const byId = new Map(items.map((i) => [i.id, i]));
   const own = owned();
   const theirSpec = char?.className ? specOf(specs, char.className, char.specName) : null;
-  const armory = !!config.armoryProxy;
-  let html = `<section><h2>Your character${char?.name ? `<span>${esc(char.source === "armory" ? "Armory" : char.source === "simc" ? "SimC import" : "Ticked by hand")}${char.updated ? `, ${esc(char.updated)}` : ""}</span>` : ""}</h2><div class="pad">`;
+  let html = `<section><h2>Your character${char?.name ? `<span>${esc(char.source === "simc" ? "SimC import" : "Ticked by hand")}${char.updated ? `, ${esc(char.updated)}` : ""}</span>` : ""}</h2><div class="pad">`;
   if (char?.name) {
     html += `<p class="who"><b>${esc(char.name)}</b>${char.realm ? ` · ${esc(char.realm)}` : ""}${char.region ? ` (${esc(char.region.toUpperCase())})` : ""}${theirSpec ? ` · ${esc(theirSpec.spec)} ${esc(theirSpec.class)}` : char.className ? ` · ${esc(char.className)}` : ""}</p>`;
     if (theirSpec && theirSpec.id !== spec.id)
       html += `<p class="warn">The list is showing ${esc(label)}. <button class="btn" type="button" id="usespec">Show ${esc(theirSpec.spec)} ${esc(theirSpec.class)}</button></p>`;
   }
-  html += `<form id="armory" class="form"><label>Region <select id="a-region">${["us", "eu", "kr", "tw"].map((r) => `<option value="${r}"${(char?.region ?? "us") === r ? " selected" : ""}>${r.toUpperCase()}</option>`).join("")}</select></label>` +
-    `<label>Realm <input id="a-realm" autocomplete="off" placeholder="e.g. Kil'rogg" value="${esc(char?.realm ?? "")}"></label>` +
-    `<label>Character <input id="a-name" autocomplete="off" placeholder="Name" value="${esc(char?.name ?? "")}"></label>` +
-    `<button class="btn" type="submit"${armory ? "" : " disabled"}>Load from Armory</button></form>` +
-    (armory ? "" : `<p class="help">Armory lookup isn't switched on for this site yet. Use a SimC import below, or tick items with + Have.</p>`) +
-    `<details class="simc"${armory ? "" : " open"}><summary>Import from the SimulationCraft addon</summary>` +
-    `<p class="help">In game, type <code>/simc</code>, copy the text, and paste it here. Equipped gear and gear in your bags count as acquired.</p>` +
-    `<textarea id="simc" rows="5" placeholder="Paste the /simc text here"></textarea><button class="btn" type="button" id="simcgo">Import</button></details>` +
+  html += `<label class="simc" for="simc">Import from the SimulationCraft addon</label>` +
+    `<p class="help">In game, type <code>/simc</code>, copy all of the text, and paste it here. Equipped gear and gear in your bags count as acquired.</p>` +
+    `<textarea id="simc" rows="5" placeholder="Paste the /simc text here"></textarea><button class="btn" type="button" id="simcgo">Import</button>` +
     `<p class="msg" id="charmsg" role="status"></p>` +
     (char ? `<p class="help"><button class="btn quiet" type="button" id="charclear">Clear character</button> Forgets the character and every item marked as acquired.</p>` : "") +
     `</div></section>`;
@@ -369,18 +361,6 @@ function renderChar(spec, hero, worn, label) {
     save();
     render();
     $("charmsg").textContent = `Loaded ${data.items.length} items for ${data.name}.`;
-  };
-  $("armory").onsubmit = async (e) => {
-    e.preventDefault();
-    const name = $("a-name").value.trim(), realm = realmSlug($("a-realm").value), region = $("a-region").value;
-    if (!name || !realm) return msg("Enter a realm and character name.");
-    msg("Loading from the Armory…");
-    try {
-      const r = await fetch(`${config.armoryProxy.replace(/\/$/, "")}/character/${region}/${realm}/${encodeURIComponent(name)}`);
-      const data = await r.json();
-      if (!r.ok) return msg(data.error ?? `Armory lookup failed (HTTP ${r.status}).`);
-      imported({ ...data, items: data.items.map((i) => ({ ...i, how: "equipped" })) }, "armory");
-    } catch (err) { msg(`Armory lookup failed (${err.message}).`); }
   };
   $("simcgo").onclick = () => {
     const data = parseSimc($("simc").value);
