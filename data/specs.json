@@ -2337,10 +2337,146 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/evoker/preservation/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Helm",
+            "name": "Calamitous Echo's Magmashapers",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Temple of Sethraliss & Catalyst"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Calamitous Echo's Sundered Peaks",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "The Coiled Altar (Raid) & Catalyst"
+          },
+          {
+            "slot": "Cape",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Searing Caldera of Calamity",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Ula'tek (Raid) & Catalyst"
+          },
+          {
+            "slot": "Bracers",
+            "name": "Rising Tide Wristguards",
+            "id": 268217,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Gloves",
+            "name": "Calamitous Echo's Ebon Greathorns",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Kithix (Raid)"
+          },
+          {
+            "slot": "Belt",
+            "name": "Serpentine Mixing Belt",
+            "id": 268254,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Legs",
+            "name": "Earthen Pillars of Calamity",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "The Coiled Altar (Raid) & Catalyst"
+          },
+          {
+            "slot": "Boots",
+            "name": "Sabatons of Coruscating Energy",
+            "id": 159388,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Vile Alchemist's Band",
+            "id": 268249,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Charged Sandstone Band",
+            "id": 158366,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinkets",
+            "name": "Gebbo's Bottomless Bag",
+            "id": 270164,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinkets",
+            "name": "Soulcoiler Ritual Vessel",
+            "id": 270162,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "1h Weapon",
+            "name": "Jan'thrazet, the Soul Fang",
+            "id": 271092,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Offhand",
+            "name": "Spine of the Hissing Abyss",
+            "id": 268197,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {
