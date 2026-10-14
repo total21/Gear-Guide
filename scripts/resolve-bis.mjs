@@ -87,7 +87,8 @@ export function resolveSpec(spec, items, tier, aliases = {}) {
       // that isn't just the token's boss, or the word "Catalyst".
       const from = b.catalyzedFrom ?? b.catalyst?.named ?? null;
       const loc = locationsIn(b.source, items, aliases);
-      const says = /catal/i.test(b.source ?? "");
+      // "Tier Set" with no place means the catalyst too (any drop in that slot).
+      const says = /catal/i.test(b.source ?? "") || /^\s*tier set\s*$/i.test(b.source ?? "");
       const onlyTokenBoss = !says && !loc.instances.length && loc.bosses.length && loc.bosses.every((x) => x === token?.boss);
       let cands = [];
       if (from) cands = [byName.get(norm(from))].filter(Boolean);

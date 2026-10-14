@@ -146,6 +146,10 @@ eq("spec from id file name", specFromText("", "260.txt", specs)?.id, 260);
     ["Hands", null, null, "Entombed Sentinels"]);
   eq("catalyst any", run(268, "Head\tMonkey King's Unyielding Visage Monkey King's Unyielding Visage \tCatalyst|Mythic+|Vault"),
     ["Head", [], "Leather Head", "The Twin Fangs"]);
+  eq("tier set means catalyst", run(1467, "Head\tCalamitous Echo's Magmashapers Calamitous Echo's Magmashapers \tTier Set"),
+    ["Head", [], "Mail Head", "The Twin Fangs"]);
+  eq("boss nickname", run(257, "Gloves\tCosmic Penitent's Celestial Grips Cosmic Penitent's Celestial Grips\tBreath of Ula'tek"),
+    ["Hands", null, null, "Entombed Sentinels"]);
   eq("catalyst from dungeon", run(65, "Shoulders\tPauldrons of the Consecrated Flame Pauldrons of the Consecrated Flame \tMurder Row"),
     ["Shoulder", ["Cinderfury Shoulderguards"], null, "The Lost Explorers"]);
 }

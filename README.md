@@ -141,7 +141,7 @@ The saved-page parser was written without access to the real pages and is tested
 `npm run resolve-bis` (also run by `import-bis` and `fetch`) looks up every BiS item that belongs to the class's tier set in `data/tier.json` and adds:
 - `id`, `slot` (the API's slot, whatever the paste said) and `tier` (the set name);
 - `token` / `curio`: the raid token for that slot and class (e.g. Venomcast Effigy from The Twin Fangs for mail heads) and the any-slot Slumbering Coil Curio from Ula'tek;
-- `catalyst`: which Season drop(s) to convert, when Wowhead's Source names a dungeon or boss other than the token's boss, or says "Catalyst" ("Catalyst the Kith'ix Gloves" → Aberrant Commander's Gauntlets from Kith'ix). With "Catalyst" but no place it's `{ any: "Mail Head" }`. Those source drops are added to the BiS list with the note "Catalyze into <tier piece>", so they get the BiS badge.
+- `catalyst`: which Season drop(s) to convert, when Wowhead's Source names a dungeon or boss other than the token's boss, or says "Catalyst" ("Catalyst the Kith'ix Gloves" → Aberrant Commander's Gauntlets from Kith'ix). With "Catalyst" or "Tier Set" but no place it's `{ any: "Mail Head" }` (convert any Season drop in that slot). Those source drops are added to the BiS list with the note "Catalyze into <tier piece>", so they get the BiS badge.
 
 Boss names in pasted sources are matched loosely (one typo per word), and nicknames go in `bossAliases` in `config/season.json`. New season: update `tierSets` with the new set IDs (`/data/wow/item-set/index`, the highest IDs) and run `npm run fetch`.
 
