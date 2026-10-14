@@ -317,6 +317,11 @@ export function parsePasted(text, spec, items) {
     if (p) { patch = p[1]; continue; }
     const h = line.match(/^hero(?:\s+talents?)?\s*:\s*(.+)$/i);
     if (h) { hero = h[1].trim(); continue; }
+    // A wrapped "(...)" line continues the previous row's source.
+    if (/^\([^)]*\)$/.test(line) && entries.length) {
+      const prev = entries.at(-1);
+      if (prev.id === null) { prev.source = prev.source ? `${prev.source} ${line}` : line; continue; }
+    }
     const cols = line.split(/\t+|\s{2,}/).map((c) => c.trim()).filter(Boolean);
     // "<tier piece> (Catalyzed from <drop>)": keep the tier piece as a non-drop
     // and badge the drop you catalyze it from.

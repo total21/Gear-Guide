@@ -3832,10 +3832,179 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/monk/brewmaster/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Weapon",
+            "name": "Abyssal Broodfiend's Bardiche",
+            "id": 268215,
+            "lists": [
+              "Overall"
+            ],
+            "note": "2h"
+          },
+          {
+            "slot": "Weapons",
+            "name": "Aman'muso, Warlord's Vengeance",
+            "id": 268209,
+            "lists": [
+              "Overall"
+            ],
+            "note": "1h"
+          },
+          {
+            "slot": "One-Hand",
+            "name": "Slithering Savage's Gavel",
+            "id": 268206,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Head",
+            "name": "Monkey King's Unyielding Visage",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Catalyst · Mythic+ · Vault"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Tassels of the Monkey King",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Catalyst · Mythic+ · Vault"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Battle Gi of the Monkey King",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Catalyst · Mythic+ · Vault"
+          },
+          {
+            "slot": "Wrist",
+            "name": "Silvermoon Agent's Deflectors",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Leatherworking"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Monkey King's Fighting Fists",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Catalyst · Mythic+ · Vault"
+          },
+          {
+            "slot": "Belt",
+            "name": "Sash of the Forlorn Vessel",
+            "id": 268256,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Legs",
+            "name": "Pantaloons of the Monkey King",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Catalyst · Raid · Vault"
+          },
+          {
+            "slot": "Boots",
+            "name": "Miststalker's Striders",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Mythical Soul Fragment (Labyrinth of Kindo'jan)"
+          },
+          {
+            "slot": "Ring",
+            "name": "Pilfered Precious Band",
+            "id": 251148,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Loa Worshiper's Band",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Jewelcrafting"
+          },
+          {
+            "slot": "Trinket",
+            "name": "Voracious Heart of Ula'tek",
+            "id": 270175,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Damage"
+          },
+          {
+            "slot": "Trinket",
+            "name": "Twisted Horror's Tendril",
+            "id": 281215,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Damage"
+          },
+          {
+            "slot": "Trinket",
+            "name": "First Mate's Shellward",
+            "id": 270160,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Defense"
+          },
+          {
+            "slot": "Trinket",
+            "name": "Lustrous Golden Plumage",
+            "id": 159617,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Defense"
+          }
+        ]
       }
     },
     {
