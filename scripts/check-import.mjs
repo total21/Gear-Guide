@@ -111,6 +111,16 @@ eq("spec from id file name", specFromText("", "260.txt", specs)?.id, 260);
   eq("crafted with", r.entries.map((e) => [e.name, e.crafting, e.source]), [["Silvermoon Agent's Deflectors", ["Arcanoweave Lining"], "Crafting/Misc"]]);
 }
 
+// "<tier> (Catalyzed from <drop>)": tier piece kept as non-drop, source drop badged.
+{
+  const spec = specs.find((x) => x.id === 255);
+  const r = parsePasted("Head\tSkulking Viper's Weeping Fangs Skulking Viper's Weeping Fangs (Catalyzed from Sethraliss' Fanged Helm Sethraliss' Fanged Helm)\tTier Set|Temple of Sethraliss", spec, items);
+  eq("catalyst", r.entries.map((e) => [e.id, e.name, e.note ?? null, e.catalyzedFrom ?? null, e.source ?? null]), [
+    [239035, "Sethraliss' Fanged Helm", "Catalyze into Skulking Viper's Weeping Fangs", null, null],
+    [null, "Skulking Viper's Weeping Fangs", null, "Sethraliss' Fanged Helm", "Tier Set · Temple of Sethraliss"],
+  ]);
+}
+
 // Spec slugs resolve for every spec on every site.
 for (const s of specs) {
   const c = s.class.toLowerCase().replace(/ /g, "-"), n = s.spec.toLowerCase().replace(/ /g, "-");

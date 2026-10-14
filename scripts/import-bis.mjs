@@ -223,6 +223,7 @@ export function toBisItems(entries, items) {
       ...(e.source && !drop && { source: e.source }),
       ...(e.crafting?.length && { crafting: e.crafting }),
       ...(e.note && { note: e.note }),
+      ...(e.catalyzedFrom && { catalyzedFrom: e.catalyzedFrom }),
     };
     if (!m.lists.includes(e.list)) m.lists.push(e.list);
     merged.set(key, m);
@@ -316,9 +317,23 @@ export function parsePasted(text, spec, items) {
     if (p) { patch = p[1]; continue; }
     const h = line.match(/^hero(?:\s+talents?)?\s*:\s*(.+)$/i);
     if (h) { hero = h[1].trim(); continue; }
+    const cols = line.split(/\t+|\s{2,}/).map((c) => c.trim()).filter(Boolean);
+    // "<tier piece> (Catalyzed from <drop>)": keep the tier piece as a non-drop
+    // and badge the drop you catalyze it from.
+    const cat = cols.length > 1 && cols[1].match(/\(\s*catal[a-z]*\s+from\s+([^)]*)\)/i);
+    if (cat) {
+      const tier = noParens(cols[1]);
+      const fromName = undouble(cat[1]);
+      const from = byName.get(find(` ${norm(fromName)} `, byName.keys()));
+      const slot = noParens(cols[0]);
+      const source = cols.length > 2 ? undouble(cols.slice(2).join(" ")).replace(/\s*\|\s*/g, " · ") : null;
+      if (from) entries.push({ id: from.id, name: from.name, slot, list, note: `Catalyze into ${tier}` });
+      else skipped.push(`${line}  (catalyst source "${fromName}" is not a Season drop ${spec.spec} ${spec.class} can use)`);
+      entries.push({ id: null, name: tier, slot, list, ...(source && { source }), catalyzedFrom: from?.name ?? fromName });
+      continue;
+    }
     const n = ` ${norm(line)} `;
     const name = find(n, byName.keys());
-    const cols = line.split(/\t+|\s{2,}/).map((c) => c.trim()).filter(Boolean);
     if (name) {
       const it = byName.get(name);
       const before = n.slice(0, n.indexOf(` ${name} `)).trim();
@@ -343,7 +358,7 @@ export function parsePasted(text, spec, items) {
       const crafting = [...parens(slotCol), ...parens(itemPart), ...withParts.map(noParens).filter(Boolean)];
       entries.push({
         id: null, name: noParens(itemPart), slot: noParens(slotCol), list,
-        ...(cols.length > 2 && { source: undouble(cols.slice(2).join(" ")) }),
+        ...(cols.length > 2 && { source: undouble(cols.slice(2).join(" ")).replace(/\s*\|\s*/g, " · ") }),
         ...(crafting.length && { crafting }),
       });
       continue;
@@ -400,7 +415,7 @@ async function main() {
       console.log(`✓ ${name}: ${spec.spec} ${spec.class}${hero ? ` (${hero})` : ""}, pasted from ${cfg.bySpec?.[spec.id] ?? cfg.defaultSource}: ` +
         `${drops.length} Season drops, ${bisItems.length - drops.length} other, in ${lists.join(" / ")}`);
       for (const b of bisItems.filter((x) => !dropIds.has(x.id)))
-        console.log(`    not a drop: ${b.slot ?? "?"}: ${b.name}${b.crafting ? ` (${b.crafting.join("; ")})` : ""}${b.source ? ` [${b.source}]` : ""}`);
+        console.log(`    not a drop: ${b.slot ?? "?"}: ${b.name}${b.crafting ? ` (${b.crafting.join("; ")})` : ""}${b.catalyzedFrom ? ` (catalyzed from ${b.catalyzedFrom})` : ""}${b.source ? ` [${b.source}]` : ""}`);
       for (const l of skipped) console.log(`    skipped: ${l}`);
       const source = cfg.bySpec?.[spec.id] ?? cfg.defaultSource;
       const bis = {

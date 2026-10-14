@@ -2,7 +2,7 @@
   "region": "us",
   "locale": "en_US",
   "season": "Midnight Season 2",
-  "generatedAt": "2026-10-14T01:34:02.157Z",
+  "generatedAt": "2026-10-14T01:56:55.676Z",
   "specs": [
     {
       "id": 250,
@@ -2993,13 +2993,17 @@
       "primaryStat": "Agility",
       "weapons": {
         "slots": [
-          "Two-Hand"
+          "Two-Hand",
+          "One-Hand",
+          "Main Hand"
         ],
         "types": [
           "Polearm",
           "Staff",
           "Axe",
-          "Sword"
+          "Sword",
+          "Dagger",
+          "Fist Weapon"
         ]
       },
       "heroTalents": [
@@ -3023,10 +3027,195 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/hunter/survival/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Main Hand",
+            "name": "Aman'muso, Warlord's Vengeance",
+            "id": 268209,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Off Hand",
+            "name": "Zatha'tek, Breath of Corruption",
+            "id": 271093,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "2-Hand",
+            "name": "Maze-roa, Warlord's Fury",
+            "id": 268213,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Head",
+            "name": "Sethraliss' Fanged Helm",
+            "id": 239035,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Skulking Viper's Weeping Fangs"
+          },
+          {
+            "slot": "Head",
+            "name": "Skulking Viper's Weeping Fangs",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set · Temple of Sethraliss",
+            "catalyzedFrom": "Sethraliss' Fanged Helm"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Soulslither Spaulders",
+            "id": 268231,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Jaws of the Skulking Viper"
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Jaws of the Skulking Viper",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set · The Coiled Altar",
+            "catalyzedFrom": "Soulslither Spaulders"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Awoken Dreadfang Cuirass",
+            "id": 271876,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Wrist",
+            "name": "Farstrider's Plated Bracers",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Aberrant Commander's Gauntlets",
+            "id": 281238,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Skulking Viper's Hidepiercers"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Skulking Viper's Hidepiercers",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set · Kith'ix",
+            "catalyzedFrom": "Aberrant Commander's Gauntlets"
+          },
+          {
+            "slot": "Belt",
+            "name": "Farstrider's Trophy Belt",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting"
+          },
+          {
+            "slot": "Legs",
+            "name": "Cuisses of the Uncoiled Union",
+            "id": 268237,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Catalyze into Skulking Viper's Coiled Legwraps"
+          },
+          {
+            "slot": "Legs",
+            "name": "Skulking Viper's Coiled Legwraps",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set · The Coiled Altar",
+            "catalyzedFrom": "Cuisses of the Uncoiled Union"
+          },
+          {
+            "slot": "Boots",
+            "name": "Boots of the Reckless Wayfarer",
+            "id": 268258,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Apex Brute's Claw Ring",
+            "id": 268252,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Band of the Swarmcaller",
+            "id": 281029,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Voracious Heart of Ula'tek",
+            "id": 270175,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Zul'jin's Guillotine Technique",
+            "id": 270173,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {

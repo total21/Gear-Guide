@@ -79,7 +79,8 @@ const SPEC_WEAPONS = {
   "Evoker|Preservation": EVOKER,
   "Hunter|Beast Mastery": weapons([RANGED], ["Bow", "Gun", "Crossbow"]),
   "Hunter|Marksmanship": weapons([RANGED], ["Bow", "Gun", "Crossbow"]),
-  "Hunter|Survival": weapons([TWO_H], ["Polearm", "Staff", "Axe", "Sword"]),
+  // Wowhead's Survival BiS (2026-10-14) dual-wields a one-hand axe and dagger.
+  "Hunter|Survival": weapons([TWO_H, ONE_H], ["Polearm", "Staff", "Axe", "Sword", "Dagger", "Fist Weapon"]),
   "Mage|Arcane": MAGE_LOCK,
   "Mage|Fire": MAGE_LOCK,
   "Mage|Frost": MAGE_LOCK,
