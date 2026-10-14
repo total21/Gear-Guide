@@ -182,3 +182,31 @@ export function bisSlotGroup(text) {
   const w = t.split(" ")[0];
   return words[w] ?? w;
 }
+
+// The BiS list as worn: the Overall list's first pick per slot (two rings,
+// two trinkets), in paper-doll order. Weapons: the first two-hander alone
+// (plus an off-hand when the next pick is labeled one, e.g. Titan's Grip),
+// or the first one-hander plus the next one-hand or off-hand pick. Later
+// picks for a slot are Wowhead's alternates (situational trinkets, a second
+// weapon setup) and are left out, as are catalyst sources (see resolve-bis).
+export function trueBis(bisItems, items) {
+  const byId = new Map(items.map((i) => [i.id, i]));
+  const picks = (bisItems ?? []).filter((b) => !b.addedBy && (b.lists ?? ["Overall"]).includes("Overall"));
+  const twoHand = (b) => byId.get(b.id)?.slot === "Two-Hand" || /\b2 ?h\b|2-hand|two-hand/i.test(b.slot ?? "");
+  const offLabel = (b) => /off.?hand|shield/i.test(b.slot ?? "");
+  const out = [];
+  for (const [key] of SLOT_GROUPS) {
+    if (key === "offhand") continue;
+    if (key === "weapon") {
+      const hands = picks.filter((b) => ["weapon", "offhand"].includes(bisSlotGroup(b.slot)));
+      const [first, ...rest] = hands;
+      if (!first) continue;
+      out.push(first);
+      const second = twoHand(first) ? rest.find(offLabel) : rest.find((b) => !twoHand(b) || offLabel(b));
+      if (second && (!twoHand(first) || rest[0] === second)) out.push(second);
+      continue;
+    }
+    out.push(...picks.filter((b) => bisSlotGroup(b.slot) === key).slice(0, ["ring", "trinket"].includes(key) ? 2 : 1));
+  }
+  return out;
+}

@@ -1,4 +1,4 @@
-import { SHORT, SLOT_GROUPS, groupForSpec, rankedPairs, typeLabel, slotGroup, bisFor, priorityForHero, itemStats, catalystOptions, splitOffDrops, bisSlotGroup, statOrder, toggleStat, effectTags } from "./gear.js?v=9";
+import { trueBis, SHORT, SLOT_GROUPS, groupForSpec, rankedPairs, typeLabel, slotGroup, bisFor, priorityForHero, itemStats, catalystOptions, statOrder, toggleStat, effectTags } from "./gear.js?v=10";
 
 const $ = (id) => document.getElementById(id);
 const esc = (x) => String(x).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -7,14 +7,14 @@ const STORE = "gear-guide:v1";
 // Last spec, build per spec, and filters. Storage can be unavailable (private
 // mode, blocked site data), so every access is guarded and defaults still work.
 // `stats`: the secondary stats an item must carry (none = all items).
-let state = { spec: null, hero: {}, variant: {}, stats: null, slot: "all", source: "all", sort: "boss" };
+let state = { spec: null, hero: {}, variant: {}, stats: null, slot: "all", source: "all" };
 try { Object.assign(state, JSON.parse(localStorage.getItem(STORE)) ?? {}); } catch {}
 delete state.pair; // replaced by `stats`
+delete state.sort; // sort buttons removed
 const save = () => { try { localStorage.setItem(STORE, JSON.stringify(state)); } catch {} };
 
 const ROLE = { TANK: "Tank", HEALER: "Healer", DAMAGE: "DPS" };
 const SOURCES = [["all", "M+ and raid"], ["DUNGEON", "Mythic+"], ["RAID", "Raid"], ["BIS", "★ Best in Slot"]];
-const SORTS = [["boss", "Boss order"], ["stats", "Best stats"]];
 
 let items = [], specs = [], meta = {};
 
@@ -58,10 +58,17 @@ function syncHash() {
   history.replaceState(null, "", `#spec=${state.spec}`);
 }
 
+// Best in Slot shows the whole list: it clears the stat and slot filters, and
+// choosing a stat or slot afterwards goes back to all Season drops.
+function pick(key) {
+  if (key === "source" && state.source === "BIS") { state.stats = []; state.slot = "all"; }
+  if ((key === "stats" || key === "slot") && state.source === "BIS") state.source = "all";
+}
+
 function chips(el, list, key) {
   el.innerHTML = list.map(([v, label, n, off]) =>
     `<button class="chip" data-v="${esc(v)}" aria-pressed="${state[key] === v}"${off ? " disabled" : ""}>${label}${n != null ? `<span class="n">${n}</span>` : ""}</button>`).join("");
-  el.querySelectorAll("button").forEach((b) => (b.onclick = () => { state[key] = b.dataset.v; save(); render(); }));
+  el.querySelectorAll("button").forEach((b) => (b.onclick = () => { state[key] = b.dataset.v; pick(key); save(); render(); }));
 }
 
 // All stats, then each secondary in the spec's priority order. Stats toggle;
@@ -73,7 +80,7 @@ function statButtons(prio, counts) {
     statOrder(prio).map((x) => `<button class="chip" data-v="${esc(x)}" aria-pressed="${sel.includes(x)}">${SHORT[x]}<span class="n">${counts[x] ?? 0}</span></button>`).join("");
   el.querySelectorAll("button").forEach((b) => (b.onclick = () => {
     state.stats = b.dataset.v ? toggleStat(state.stats, b.dataset.v) : [];
-    save(); render();
+    pick("stats"); save(); render();
   }));
 }
 
@@ -87,8 +94,6 @@ const searchLink = (name) => `<a href="https://www.wowhead.com/search?q=${encode
 const bestBadge = (pair, ctx) => pair && pair === ctx.topPair ? `<span class="badge b-top" title="${esc(ctx.bestTitle)}">Best stats</span>` : "";
 const listsLabel = (b) => (b.lists?.length && b.lists.join() !== "Overall" ? ` · ${esc(b.lists.join(" / "))}` : "");
 const fxList = (lines) => (lines.length ? `<ul class="fx">${lines.map((l) => `<li>${l}</li>`).join("")}</ul>` : "");
-const section = (title, list, row, ctx) => list.length
-  ? `<section><h2>${title}<span>${list.length} item${list.length === 1 ? "" : "s"}</span></h2><ul>${list.map((b) => row(b, ctx)).join("")}</ul></section>` : "";
 
 // A Season drop to put in the Catalyst, with its stats (the Catalyst keeps them).
 function catalystSource(i, ctx) {
@@ -132,7 +137,7 @@ function otherRow(b) {
     <div class="type">${esc(b.slot ?? "")}${listsLabel(b)}${b.source ? ` · ${esc(b.source)}` : ""}</div></li>`;
 }
 
-function itemRow(it, topPair, spec, bestTitle) {
+function itemRow(it, topPair, spec, bestTitle, where = "") {
   const top = topPair && it.pair === topPair;
   // Trinkets carry the spec's primary stat as a base stat; show it next to any secondaries.
   const prim = it.slot === "Trinket" && it.primaryStats.includes(spec.primaryStat)
@@ -145,7 +150,7 @@ function itemRow(it, topPair, spec, bestTitle) {
   return `<li class="${top ? "top" : ""}${it.bis ? " bis" : ""}">
     <div class="name">${itemLink(it.id, it.name)}${top ? `<span class="badge b-top" title="${esc(bestTitle)}">Best stats</span>` : ""}${it.bis ? `<span class="badge b-bis" title="Best in slot (${esc(it.bis.join(", "))})">${it.bis.includes("Overall") ? "BiS" : `BiS · ${esc(it.bis.join(" / "))}`}</span>` : ""}</div>
     <div class="stats">${prim}${it.stats.map(statChip).join("")}${tags}${missing}</div>
-    <div class="type">${esc(type)}</div>
+    <div class="type">${esc(type)}${where ? ` · ${esc(where)}` : ""}</div>
     ${it.bisNote ? `<div class="craft">BiS: ${esc(it.bisNote)}</div>` : ""}
   </li>`;
 }
@@ -185,14 +190,18 @@ function render() {
   const topPair = prio.length >= 2 ? pairs[0].id : null;
   const bestTitle = topPair ? `Has ${label}'s two best secondary stats, ${pairs[0].stats.join(" and ")}` : "";
   const flat = (groups) => groups.flatMap((g) => g.bosses.flatMap((b) => b.items));
-  // BiS items that aren't Season drops get their own sections in the BiS view.
-  const split = splitOffDrops(bisList?.items, new Set(items.map((i) => i.id)));
-  const offDrops = [...split.tier, ...split.crafted, ...split.other];
-  const nBis = flat(groupForSpec(items, spec, { priority: prio, source: "BIS", bis: bisList })).length + offDrops.length;
-  if (state.source === "BIS" && !nBis) state.source = "all";
+  // The BiS list as worn (one pick per slot), plus the drops to catalyze into its tier pieces.
+  const worn = trueBis(bisList?.items, items);
+  const wornNames = new Set(worn.map((b) => b.name));
+  const bisBadges = { items: [...worn, ...(bisList?.items ?? []).filter((b) => b.addedBy && wornNames.has(b.note?.replace(/^Catalyze into /, "")))] };
+  const isBis = state.source === "BIS" && !home && worn.length;
+  if (state.source === "BIS" && !worn.length) state.source = "all";
   // The landing page counts every drop; the list counts within its filters.
-  const opts = home ? { priority: prio } : { priority: prio, source: state.source, sort: state.sort, bis: bisList };
+  // Best in Slot ignores the filters, so its buttons count all Season drops.
+  const opts = { priority: prio, source: home || isBis ? "all" : state.source, bis: bisBadges };
+  if (isBis) { state.stats = []; state.slot = "all"; }
   const slot = home ? "all" : state.slot;
+  const stats = state.stats;
 
   // Button counts ignore their own filter so you can see what each choice yields.
   const forStats = flat(groupForSpec(items, spec, { ...opts, slot }));
@@ -210,33 +219,35 @@ function render() {
   $("title").textContent = label;
   $("sub").textContent = `${meta.season} · ${spec.armorType} · ${spec.primaryStat}`;
 
-  const forSlots = flat(groupForSpec(items, spec, { ...opts, stats: state.stats }));
-  const slotCount = Object.groupBy(forSlots, slotGroup);
-  // BiS items that aren't drops have no fixed stats, so the stat filter doesn't hide them.
-  if (state.source === "BIS") for (const b of offDrops) (slotCount[bisSlotGroup(b.slot)] ??= []).push(b);
+  const slotCount = Object.groupBy(flat(groupForSpec(items, spec, { ...opts, stats })), slotGroup);
   const avail = SLOT_GROUPS.filter(([k]) => slotCount[k]);
   if (state.slot !== "all" && !avail.some(([k]) => k === state.slot)) state.slot = "all";
 
   chips($("slots"), [["all", "All slots", null], ...avail.map(([k, l]) => [k, l, slotCount[k].length])], "slot");
-  chips($("sources"), SOURCES.map(([k, l]) => k === "BIS" ? [k, l, nBis, !nBis] : [k, l, null]), "source");
-  chips($("sorts"), SORTS.map(([k, l]) => [k, l, null]), "sort");
+  chips($("sources"), SOURCES.map(([k, l]) => k === "BIS" ? [k, l, worn.length, !worn.length] : [k, l, null]), "source");
 
-  const groups = groupForSpec(items, spec, { ...opts, stats: state.stats, slot: state.slot });
   let n = 0, html = "";
-  for (const g of groups) {
-    const shown = g.bosses.reduce((k, b) => k + b.items.length, 0);
-    if (!shown) continue;
-    n += shown;
-    html += `<section><h2>${esc(g.instance)}<span>${g.type === "RAID" ? "Raid · " : ""}${shown} item${shown === 1 ? "" : "s"}</span></h2>`;
-    html += g.bosses.filter((b) => b.items.length).map((b) => `<h3>${esc(b.boss)}</h3><ul>${b.items.map((i) => itemRow(i, topPair, spec, bestTitle)).join("")}</ul>`).join("");
-    html += `</section>`;
-  }
-  if (state.source === "BIS") {
+  if (isBis) {
+    // One row per slot in paper-doll order, wherever the item comes from.
     const ctx = { items, spec, prio, pairs, topPair, bestTitle };
-    const inSlot = (b) => state.slot === "all" || bisSlotGroup(b.slot) === state.slot;
-    const [tier, crafted, other] = [split.tier, split.crafted, split.other].map((l) => l.filter(inSlot));
-    n += tier.length + crafted.length + other.length;
-    html += section("Tier set", tier, tierRow, ctx) + section("Crafted", crafted, craftedRow, ctx) + section("Other sources", other, otherRow, ctx);
+    const byId = new Map(items.map((i) => [i.id, i]));
+    const rows = worn.map((b) => {
+      const drop = b.id != null && byId.get(b.id);
+      if (drop) return itemRow({ ...drop, ...itemStats(drop, prio), bis: null, bisNote: null }, topPair, spec, bestTitle, `${drop.instance} · ${drop.boss}`);
+      return b.tier ? tierRow(b, ctx) : b.crafted ? craftedRow(b) : otherRow(b);
+    });
+    n = rows.length;
+    html = `<section><h2>Best in Slot<span>${n} items</span></h2><ul>${rows.join("")}</ul></section>`;
+  } else {
+    const groups = groupForSpec(items, spec, { ...opts, stats, slot: state.slot });
+    for (const g of groups) {
+      const shown = g.bosses.reduce((k, b) => k + b.items.length, 0);
+      if (!shown) continue;
+      n += shown;
+      html += `<section><h2>${esc(g.instance)}<span>${g.type === "RAID" ? "Raid · " : ""}${shown} item${shown === 1 ? "" : "s"}</span></h2>`;
+      html += g.bosses.filter((b) => b.items.length).map((b) => `<h3>${esc(b.boss)}</h3><ul>${b.items.map((i) => itemRow(i, topPair, spec, bestTitle)).join("")}</ul>`).join("");
+      html += `</section>`;
+    }
   }
   $("list").innerHTML = html || `<div class="none">No drops match these filters.</div>`;
   $("count").textContent = `${n} item${n === 1 ? "" : "s"} shown`;

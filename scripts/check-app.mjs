@@ -6,7 +6,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { STATS, SLOT_GROUPS, groupForSpec, usableBy, rankedPairs, dropAzeriteTwins, bisSlotGroup, statOrder, toggleStat, effectTags } from "../docs/gear.js";
+import { STATS, SLOT_GROUPS, groupForSpec, usableBy, rankedPairs, dropAzeriteTwins, bisSlotGroup, statOrder, toggleStat, effectTags, trueBis } from "../docs/gear.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = async (f) => JSON.parse(await readFile(path.join(ROOT, f), "utf8"));
@@ -110,6 +110,19 @@ for (const s of specs) {
   for (const i of flat(groupForSpec(items, s, { stats: want })))
     if (!want.every((x) => i.secondaryStats.includes(x))) fail(`${name(s)}: stat filter kept ${i.name}`);
 }
+
+// Best in Slot as worn: one pick per slot, two rings and trinkets, one or two weapons.
+for (const s of specs)
+  for (const [h, list] of [["shared", s.bis], ...Object.entries(s.bisByHero ?? {})]) {
+    if (!list?.items?.length) continue;
+    const worn = trueBis(list.items, items);
+    const by = Object.groupBy(worn, (b) => bisSlotGroup(b.slot));
+    const hands = (by.weapon?.length ?? 0) + (by.offhand?.length ?? 0);
+    if (worn.some((b) => b.addedBy)) fail(`${name(s)} (${h}): worn BiS includes a catalyst source`);
+    if (hands < 1 || hands > 2) fail(`${name(s)} (${h}): worn BiS has ${hands} weapons`);
+    for (const [k, v] of Object.entries(by)) if (v.length > (["ring", "trinket"].includes(k) ? 2 : k === "weapon" ? 2 : 1)) fail(`${name(s)} (${h}): ${v.length} ${k} picks`);
+    if (worn.length < 15) fail(`${name(s)} (${h}): worn BiS has only ${worn.length} items`);
+  }
 
 // Every effect is labeled On use or Proc, except the raid's Deadly Venom reduction.
 for (const i of items)

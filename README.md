@@ -181,12 +181,13 @@ The page uses a dark theme.
 **Filters.**
 - **Stat buttons:** All stats, then the four secondaries in the spec's priority order. Each button toggles; with two selected the list shows items with both, and a third choice replaces the oldest.
 - Then slot, and Mythic+, raid or Best in Slot.
-- Sort by boss order or by best stats.
 
-**Best in Slot view.** BiS items that aren't Season drops are split into three sections:
-- **Tier set:** each piece is badged Token or Catalyst, whichever the BiS list prefers. For the Catalyst it shows the drop to convert and that drop's stats. When any drop in the slot will do, it suggests the drops with the best stats. It also lists the raid token or curio as the other route.
-- **Crafted:** the item and its profession. The resolver also keeps the recipe's embellishments and reagents in `crafted` for a later gems, enchants and embellishments section.
-- **Other sources.**
+**Best in Slot view.** Picking Best in Slot clears the stat and slot filters. Choosing a stat or slot afterwards goes back to all Season drops. The view shows the list as worn, one row per slot in paper-doll order: two rings, two trinkets, and one two-hander or a main hand plus off hand. It takes the first pick per slot from Wowhead's Overall list. Later picks are Wowhead's alternates, such as situational trinkets or a second weapon setup, and are left out.
+- **Season drops** show their stats and where they drop.
+- **Tier pieces** are badged Token or Catalyst, whichever the BiS list prefers. For the Catalyst they show the drop to convert and that drop's stats; when any drop in the slot will do, they suggest the drops with the best stats. The raid token or curio is listed as the other route.
+- **Crafted items** show their profession. The resolver also keeps the recipe's embellishments and reagents in `crafted` for a later gems, enchants and embellishments section.
+
+In the other views, BiS badges mark the worn items and the drops to catalyze into their tier pieces.
 
 **Links and memory.** The last spec, build choice and filters are remembered in the browser. A link like `.../#spec=260` opens a spec's list directly; the "Gear Guide" link goes back to the landing page. Spec IDs are listed in `data/specs.json`.
 
