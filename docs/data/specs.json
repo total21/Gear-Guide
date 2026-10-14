@@ -4427,10 +4427,156 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/paladin/holy/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Weapon",
+            "name": "Baleful Hexblade",
+            "id": 268211,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shield",
+            "name": "Bubblefin Splash Guard",
+            "id": 268262,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Head",
+            "name": "Warhelm of the Consecrated Flame",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Kith'ix"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Pauldrons of the Consecrated Flame",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Murder Row"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Bulwark of the Consecrated Flame",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "The Coiled Altar"
+          },
+          {
+            "slot": "Wrist",
+            "name": "Shellbound Bracers",
+            "id": 268239,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Gloves",
+            "name": "Gauntlets of the Consecrated Flame",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Entombed Sentinels"
+          },
+          {
+            "slot": "Belt",
+            "name": "Girdle of Toxic Regret",
+            "id": 268259,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Legs",
+            "name": "Greaves of the Consecrated Flame",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Ula'tek"
+          },
+          {
+            "slot": "Boots",
+            "name": "Scaled Fiend's Warboots",
+            "id": 268260,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Vile Alchemist's Band",
+            "id": 268249,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Band of the Swarmcaller",
+            "id": 281029,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket 1",
+            "name": "Soulcoiler Ritual Vessel",
+            "id": 270162,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket 2",
+            "name": "Gebbo's Bottomless Bag",
+            "id": 270164,
+            "lists": [
+              "Overall"
+            ],
+            "note": "for Raid"
+          },
+          {
+            "slot": "Trinket 2",
+            "name": "Twisted Horror's Tendril",
+            "id": 281215,
+            "lists": [
+              "Overall"
+            ],
+            "note": "for M+"
+          }
+        ]
       }
     },
     {
