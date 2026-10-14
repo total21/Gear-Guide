@@ -2665,10 +2665,149 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/hunter/beast-mastery/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Weapon",
+            "name": "Caustic Repose Greatbow",
+            "id": 268207,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Head",
+            "name": "Skulking Viper's Weeping Fangs",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "The Twin Fangs"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Jaws of the Skulking Viper",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "The Coiled Altar"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Skulking Viper's Scuteplate",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Ula'tek"
+          },
+          {
+            "slot": "Wrist",
+            "name": "Farstrider's Plated Bracers",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Leatherworking"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Skulking Viper's Hidepiercers",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Kith'ix"
+          },
+          {
+            "slot": "Belt",
+            "name": "Farstrider's Trophy Belt",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Leatherworking"
+          },
+          {
+            "slot": "Legs",
+            "name": "Skulking Viper's Coiled Legwraps",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "The Coiled Altar"
+          },
+          {
+            "slot": "Boots",
+            "name": "Sabatons of Coruscating Energy",
+            "id": 159388,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Vile Alchemist's Band",
+            "id": 268249,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Band of the Swarmcaller",
+            "id": 281029,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Twisted Horror's Tendril",
+            "id": 281215,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Voracious Heart of Ula'tek",
+            "id": 270175,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Font of Venomous Rage",
+            "id": 270168,
+            "lists": [
+              "Overall"
+            ],
+            "note": "Situationally"
+          }
+        ]
       }
     },
     {
