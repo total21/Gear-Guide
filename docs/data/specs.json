@@ -5185,10 +5185,147 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/priest/holy/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Weapon",
+            "name": "Jan'thrazet, the Soul Fang",
+            "id": 271092,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Offhand",
+            "name": "Frostscale's Mystic Frond",
+            "id": 268263,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Head",
+            "name": "Venomkeeper's Horrific Cowl",
+            "id": 271874,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Cosmic Penitent's Echoing Screams",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Mor'zahi"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Speakeasy Shroud",
+            "id": 251132,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Cosmic Penitent's Eclipsing Robes",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Nymrissa Wavecaller"
+          },
+          {
+            "slot": "Wrist",
+            "name": "Martyr's Bindings",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Cosmic Penitent's Celestial Grips",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Breath of Ula'tek"
+          },
+          {
+            "slot": "Belt",
+            "name": "Martyr's Waistwrap",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Crafting"
+          },
+          {
+            "slot": "Legs",
+            "name": "Enveloping Legwraps of the Cosmic Penitent",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Kings' Rest"
+          },
+          {
+            "slot": "Boots",
+            "name": "Nek'zali's Spiritwalkers",
+            "id": 268218,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Apex Brute's Claw Ring",
+            "id": 268252,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Pilfered Precious Band",
+            "id": 251148,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Gebbo's Bottomless Bag",
+            "id": 270164,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Soulcoiler Ritual Vessel",
+            "id": 270162,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {
