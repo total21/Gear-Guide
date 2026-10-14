@@ -97,7 +97,8 @@ export function priorityForHero(spec, hero) {
 // `bis` is the BiS list to use (see bisFor); defaults to the spec's shared list.
 // Group usable items as [{ instance, type, bosses: [{ boss, items }] }], keeping
 // journal order (items.json is written instance by instance, boss by boss).
-export function groupForSpec(items, spec, { priority, pair = "all", slot = "all", source = "all", sort = "boss", bis: bisList } = {}) {
+// `stats` keeps items carrying every listed secondary stat (the stat buttons).
+export function groupForSpec(items, spec, { priority, pair = "all", stats = [], slot = "all", source = "all", sort = "boss", bis: bisList } = {}) {
   const prio = priority ?? spec.statPriority;
   const bis = new Map(((bisList ?? spec.bis)?.items ?? []).filter((b) => b.id != null).map((b) => [b.id, b]));
   const out = [];
@@ -115,6 +116,7 @@ export function groupForSpec(items, spec, { priority, pair = "all", slot = "all"
     g.total++;
     const st = itemStats(item, prio);
     if (pair !== "all" && st.pair !== pair) continue;
+    if (stats.length && !stats.every((x) => item.secondaryStats.includes(x))) continue;
     if (slot !== "all" && slotGroup(item) !== slot) continue;
     let b = g.bosses.find((x) => x.boss === item.boss);
     if (!b) g.bosses.push((b = { boss: item.boss, items: [] }));
@@ -124,6 +126,30 @@ export function groupForSpec(items, spec, { priority, pair = "all", slot = "all"
   if (sort === "stats") for (const g of out) for (const b of g.bosses) b.items.sort((x, y) => y.score - x.score);
   if (source === "BIS") return out.filter((g) => g.bosses.length);
   return out.filter((g) => source === "all" || g.type === source);
+}
+
+// Stat buttons: the four secondaries in the spec's priority order, unranked last.
+export function statOrder(priority) {
+  return [...priority.filter((x) => STATS.includes(x)), ...STATS.filter((x) => !priority.includes(x))];
+}
+
+// Stat filter after clicking a stat button: toggles it, keeping at most two
+// (items have two secondaries), so a third choice drops the oldest.
+export function toggleStat(selected, stat) {
+  if (selected.includes(stat)) return selected.filter((x) => x !== stat);
+  return [...selected, stat].slice(-2);
+}
+
+// "On use" / "Proc" labels for an item's effects, in place of their text
+// (the Wowhead tooltip has the details). Equip effects that only reduce the
+// raid's Deadly Venom damage are skipped.
+export function effectTags(item) {
+  const tags = [];
+  for (const e of item.effects ?? []) {
+    const tag = /^Use:/.test(e.text) ? "On use" : /Deadly Venom/.test(e.text) ? null : "Proc";
+    if (tag && !tags.some((t) => t.tag === tag)) tags.push({ tag, text: e.text });
+  }
+  return tags;
 }
 
 // Season drops this spec could put in the Catalyst for a set piece in `slot`,

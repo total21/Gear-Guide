@@ -167,12 +167,28 @@ npm run serve   # http://localhost:8000
 
 Opening `docs/index.html` straight from disk will not work: browsers block loading the JSON from `file://`.
 
-The page uses a dark theme. Pick a spec and hero talent to see every Season 2 Mythic+ and raid drop it can use: its armor type, its primary stat (or no primary, e.g. jewelry), and weapons and off-hands it can equip. Each item's secondary stats are tagged #1 to #4 by the spec's priority. Items with the spec's two best stats are highlighted and badged "Best stats". Trinkets show the base primary stat they give the spec and their effect text. BiS items are badged (with "Mythic+" or "Raid" when they're only on that list). Filter by stat pair, slot, and Mythic+, raid or Best in Slot, and sort by boss order or by best stats. In the Best in Slot view, BiS items that aren't Season drops are split into three sections:
+The page uses a dark theme.
+
+**Landing page.** It opens on a landing page with the name, the spec, hero talent and build pickers, the spec's stat priority, and the stat buttons. The stat buttons start on the spec's two best stats. **Show gear** opens the list.
+
+**The list.** It shows every Season 2 Mythic+ and raid drop the spec can use: its armor type, its primary stat (or no primary, e.g. jewelry), and the weapons and off-hands it can equip.
+- **Stats:** each item's secondary stats are tagged #1 to #4 by the spec's priority. Items with the two best stats are highlighted and badged "Best stats".
+- **Trinkets** show the base primary stat they give the spec.
+- **Effects** are labeled "On use" or "Proc" rather than spelled out.
+- **Tooltips:** item links get Wowhead's hover tooltips and icons from Wowhead's tooltip script (`wow.zamimg.com/js/tooltips.js`). Without it, the links still open Wowhead.
+- **BiS items** are badged, with "Mythic+" or "Raid" when they're only on that list.
+
+**Filters.**
+- **Stat buttons:** All stats, then the four secondaries in the spec's priority order. Each button toggles; with two selected the list shows items with both, and a third choice replaces the oldest.
+- Then slot, and Mythic+, raid or Best in Slot.
+- Sort by boss order or by best stats.
+
+**Best in Slot view.** BiS items that aren't Season drops are split into three sections:
 - **Tier set:** each piece is badged Token or Catalyst, whichever the BiS list prefers. For the Catalyst it shows the drop to convert and that drop's stats. When any drop in the slot will do, it suggests the drops with the best stats. It also lists the raid token or curio as the other route.
-- **Crafted:** each item shows its profession, embellishment (named, built in, or an open slot), the secondary stats to pick when crafting, base reagents and optional slots.
+- **Crafted:** the item and its profession. The resolver also keeps the recipe's embellishments and reagents in `crafted` for a later gems, enchants and embellishments section.
 - **Other sources.**
 
-The last spec, build choice and filters are remembered in the browser. A link like `.../#spec=260` opens a spec directly. Spec IDs are listed in `data/specs.json`.
+**Links and memory.** The last spec, build choice and filters are remembered in the browser. A link like `.../#spec=260` opens a spec's list directly; the "Gear Guide" link goes back to the landing page. Spec IDs are listed in `data/specs.json`.
 
 ### Publishing with GitHub Pages
 
