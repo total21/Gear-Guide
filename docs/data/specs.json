@@ -6316,10 +6316,148 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/shaman/enhancement/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Main Hand",
+            "name": "Aman'muso, Warlord's Vengeance",
+            "id": 268209,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Off Hand",
+            "name": "Farstrider's Chopper",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Blacksmithing"
+          },
+          {
+            "slot": "Head",
+            "name": "Serpent Crown of the Ophidian Oracle",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Twin Fangs"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Hissing Mantle of the Ophidian Oracle",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Catalyst – The Coiled Altar"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Fanged Raiment of the Ophidian Oracle",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Catalyst – Ula'tek"
+          },
+          {
+            "slot": "Wrist",
+            "name": "Farstrider's Plated Bracers",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Leatherworking"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Hexing Grips of the Ophidian Oracle",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Catalyst – Kith'ix"
+          },
+          {
+            "slot": "Belt",
+            "name": "Serpentine Mixing Belt",
+            "id": 268254,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Legs",
+            "name": "Leggings of the Ophidian Oracle",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Catalyst – The Coiled Altar"
+          },
+          {
+            "slot": "Boots",
+            "name": "Boots of the Reckless Wayfarer",
+            "id": 268258,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring 1",
+            "name": "Band of the Swarmcaller",
+            "id": 281029,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring 2",
+            "name": "Apex Brute's Claw Ring",
+            "id": 268252,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket 1",
+            "name": "Voracious Heart of Ula'tek",
+            "id": 270175,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket 2",
+            "name": "Zul'jin's Guillotine Technique",
+            "id": 270173,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {

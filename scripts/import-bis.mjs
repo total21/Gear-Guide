@@ -277,7 +277,8 @@ export function specFromText(text, file, specs) {
 // Wowhead's copied tables repeat each name (icon text + link text):
 // "Spellbreaker's Bracers Spellbreaker's Bracers" -> "Spellbreaker's Bracers".
 export function undouble(s) {
-  const w = s.trim().split(/\s+/);
+  // Trailing separators ("Name Name – ") come from Wowhead's source column layout.
+  const w = s.trim().replace(/\s*[–—-]+$/, "").split(/\s+/);
   const h = w.length / 2;
   return w.length % 2 === 0 && w.slice(0, h).join(" ") === w.slice(h).join(" ") ? w.slice(0, h).join(" ") : w.join(" ");
 }
