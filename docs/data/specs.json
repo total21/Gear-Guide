@@ -4810,10 +4810,140 @@
         "via": "web search (site not reachable from the build environment)"
       },
       "bis": {
-        "source": null,
-        "url": null,
-        "date": null,
-        "items": []
+        "source": "Wowhead",
+        "url": "https://www.wowhead.com/guide/classes/paladin/retribution/bis-gear",
+        "date": "2026-10-14",
+        "patch": null,
+        "via": "pasted text",
+        "items": [
+          {
+            "slot": "Weapon",
+            "name": "Maze-roa, Warlord's Fury",
+            "id": 268213,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Head",
+            "name": "Warhelm of the Consecrated Flame",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Neck",
+            "name": "Aqirbane Reliquary",
+            "id": 268265,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Shoulders",
+            "name": "Pauldrons of the Consecrated Flame",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Cloak",
+            "name": "Silken Voodoo Drape",
+            "id": 268253,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Chest",
+            "name": "Bulwark of the Consecrated Flame",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Wrist",
+            "name": "Spellbreaker's Bracers",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Blacksmithing"
+          },
+          {
+            "slot": "Gloves",
+            "name": "Gauntlets of the Consecrated Flame",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Tier Set"
+          },
+          {
+            "slot": "Belt",
+            "name": "Girdle of Toxic Regret",
+            "id": 268259,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Legs",
+            "name": "Greaves of the Consecrated Flame",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Ula'tek"
+          },
+          {
+            "slot": "Boots",
+            "name": "Scaled Fiend's Warboots",
+            "id": 268260,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Band of the Swarmcaller",
+            "id": 281029,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Ring",
+            "name": "Loa Worshiper's Band",
+            "id": null,
+            "lists": [
+              "Overall"
+            ],
+            "source": "Jewelcrafting"
+          },
+          {
+            "slot": "Trinket",
+            "name": "Zul'jin's Guillotine Technique",
+            "id": 270173,
+            "lists": [
+              "Overall"
+            ]
+          },
+          {
+            "slot": "Trinket",
+            "name": "Voracious Heart of Ula'tek",
+            "id": 270175,
+            "lists": [
+              "Overall"
+            ]
+          }
+        ]
       }
     },
     {
