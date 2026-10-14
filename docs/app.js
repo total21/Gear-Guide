@@ -1,4 +1,5 @@
-import { trueBis, situationalBis, SHORT, SLOT_GROUPS, groupForSpec, rankedPairs, typeLabel, slotGroup, bisFor, priorityForHero, itemStats, catalystOptions, statOrder, toggleStat, effectTags } from "./gear.js?v=12";
+import { trueBis, situationalBis, SHORT, SLOT_GROUPS, groupForSpec, rankedPairs, typeLabel, slotGroup, bisFor, priorityForHero, itemStats, catalystOptions, statOrder, toggleStat, effectTags } from "./gear.js?v=13";
+import { parseSimc, specOf, realmSlug, withImport, farmPlan, ownKey } from "./character.js?v=13";
 
 const $ = (id) => document.getElementById(id);
 const esc = (x) => String(x).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -7,16 +8,30 @@ const STORE = "gear-guide:v1";
 // Last spec, build per spec, and filters. Storage can be unavailable (private
 // mode, blocked site data), so every access is guarded and defaults still work.
 // `stats`: the secondary stats an item must carry (none = all items).
-let state = { spec: null, hero: {}, variant: {}, stats: null, slot: "all", source: "all" };
+// `tab`: the farm list or the character page; `showOwned`: list gear you already have.
+let state = { spec: null, hero: {}, variant: {}, stats: null, slot: "all", source: "all", tab: "list", showOwned: false };
 try { Object.assign(state, JSON.parse(localStorage.getItem(STORE)) ?? {}); } catch {}
 delete state.pair; // replaced by `stats`
 delete state.sort; // sort buttons removed
 const save = () => { try { localStorage.setItem(STORE, JSON.stringify(state)); } catch {} };
 
+// The player's character and the gear they have (see character.js).
+const CHAR_STORE = "gear-guide:character:v1";
+let char = null;
+try { char = JSON.parse(localStorage.getItem(CHAR_STORE)); } catch {}
+const saveChar = () => { try { localStorage.setItem(CHAR_STORE, JSON.stringify(char)); } catch {} };
+const owned = () => char?.items ?? {};
+const has = (b) => !!owned()[ownKey(b)];
+// Toggle button marking an item as acquired (or not).
+const ownButton = (b) => {
+  const have = has(b);
+  return `<button class="own${have ? " have" : ""}" type="button" data-own="${esc(ownKey(b))}" data-name="${esc(b.name)}" data-slot="${esc(b.slot ?? "")}" aria-pressed="${have}" title="${have ? "You have this. Click to unmark." : "Mark as acquired"}">${have ? "✓ Have" : "+ Have"}</button>`;
+};
+
 const ROLE = { TANK: "Tank", HEALER: "Healer", DAMAGE: "DPS" };
 const SOURCES = [["all", "M+ and raid"], ["DUNGEON", "Mythic+"], ["RAID", "Raid"], ["BIS", "★ Best in Slot"]];
 
-let items = [], specs = [], meta = {};
+let items = [], specs = [], meta = {}, config = {};
 
 async function load() {
   const [i, s] = await Promise.all(["data/items.json", "data/specs.json"].map((u) =>
@@ -24,6 +39,8 @@ async function load() {
   items = i.items;
   specs = s.specs;
   meta = { season: i.season, generatedAt: i.generatedAt };
+  // Optional: the Armory lookup's address (worker/armory.js).
+  config = await fetch("config.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
 }
 
 const currentSpec = () => specs.find((s) => s.id === state.spec) ?? specs[0];
@@ -119,7 +136,7 @@ function tierRow(b, ctx) {
   if (token) lines.push(b.catalyst ? `<span class="alt">Or token: ${token}</span>` : `<b>Token:</b> ${token}`);
   const route = b.catalyst ? `<span class="badge b-route" title="Convert a Season drop at the Catalyst; it keeps that drop's secondary stats">Catalyst</span>`
     : `<span class="badge b-route" title="Raid token, or the any-slot curio">Token</span>`;
-  return `<li><div class="name">${b.id ? itemLink(b.id, b.name) : searchLink(b.name)}${route}</div>
+  return `<li class="${has(b) ? "got" : ""}"><div class="name">${b.id ? itemLink(b.id, b.name) : searchLink(b.name)}${route}${ownButton(b)}</div>
     <div class="type">${esc(b.slot ?? "")}${b.offSet ? " · off-set piece" : ""}${listsLabel(b)}</div>
     ${fxList(lines)}</li>`;
 }
@@ -127,13 +144,13 @@ function tierRow(b, ctx) {
 // Crafted item: name and profession. (Embellishments, gems and enchants may
 // get their own section later; the resolver keeps that data in `crafted`.)
 function craftedRow(b) {
-  return `<li><div class="name">${itemLink(b.id, b.name)}<span class="badge b-route">${esc(b.crafted.profession)}</span></div>
+  return `<li class="${has(b) ? "got" : ""}"><div class="name">${itemLink(b.id, b.name)}<span class="badge b-route">${esc(b.crafted.profession)}</span>${ownButton(b)}</div>
     <div class="type">${esc(b.slot ?? "")}${listsLabel(b)}</div></li>`;
 }
 
 // Anything else (vendor, currency, world drop...).
 function otherRow(b) {
-  return `<li><div class="name">${b.id ? itemLink(b.id, b.name) : searchLink(b.name)}</div>
+  return `<li class="${has(b) ? "got" : ""}"><div class="name">${b.id ? itemLink(b.id, b.name) : searchLink(b.name)}${ownButton(b)}</div>
     <div class="type">${esc(b.slot ?? "")}${listsLabel(b)}${b.source ? ` · ${esc(b.source)}` : ""}</div></li>`;
 }
 
@@ -147,8 +164,8 @@ function itemRow(it, topPair, spec, bestTitle, where = "") {
   const missing = !it.secondaryStats.length && (it.notes.includes("no-stats-in-api") || it.notes.includes("azerite-no-secondaries-in-api"))
     ? `<span class="stat r0" title="Secondary stats aren't in the game data API; check the tooltip">Stats ?</span>` : "";
   const type = typeLabel(it) + (it.tag ? ` · ${it.tag}` : "");
-  return `<li class="${top ? "top" : ""}${it.bis ? " bis" : ""}">
-    <div class="name">${itemLink(it.id, it.name)}${top ? `<span class="badge b-top" title="${esc(bestTitle)}">Best stats</span>` : ""}${it.bis ? `<span class="badge b-bis" title="Best in slot (${esc(it.bis.join(", "))})">${it.bis.includes("Overall") ? "BiS" : `BiS · ${esc(it.bis.join(" / "))}`}</span>` : ""}</div>
+  return `<li class="${top ? "top" : ""}${it.bis ? " bis" : ""}${has(it) ? " got" : ""}">
+    <div class="name">${itemLink(it.id, it.name)}${top ? `<span class="badge b-top" title="${esc(bestTitle)}">Best stats</span>` : ""}${it.bis ? `<span class="badge b-bis" title="Best in slot (${esc(it.bis.join(", "))})">${it.bis.includes("Overall") ? "BiS" : `BiS · ${esc(it.bis.join(" / "))}`}</span>` : ""}${ownButton(it)}</div>
     <div class="stats">${prim}${it.stats.map(statChip).join("")}${tags}${missing}</div>
     <div class="type">${esc(type)}${where ? ` · ${esc(where)}` : ""}</div>
     ${it.bisNote ? `<div class="craft">${esc(it.noteLabel ?? "BiS")}: ${esc(it.bisNote)}</div>` : ""}
@@ -200,6 +217,11 @@ function render() {
     ...alternates.map((b) => ({ ...b, lists: ["Situational"], note: b.note ? `Situational (${b.note})` : "Situational" })),
   ] };
   const isBis = state.source === "BIS" && !home && worn.length;
+  const charTab = !home && state.tab === "char";
+  document.body.classList.toggle("charview", charTab);
+  // Gear you have drops out of the farm list unless you ask to see it.
+  const nOwned = Object.keys(owned()).length;
+  const pool = home || isBis || state.showOwned ? items : items.filter((i) => !owned()[i.id]);
   if (state.source === "BIS" && !worn.length) state.source = "all";
   // The landing page counts every drop; the list counts within its filters.
   // Best in Slot ignores the filters, so its buttons count all Season drops.
@@ -224,12 +246,20 @@ function render() {
   $("title").textContent = label;
   $("sub").textContent = `${meta.season} · ${spec.armorType} · ${spec.primaryStat}`;
 
-  const slotCount = Object.groupBy(flat(groupForSpec(items, spec, { ...opts, stats })), slotGroup);
+  $("tabs").innerHTML = [["list", "Farm list"], ["char", char?.name ? `My character · ${esc(char.name)}` : "My character"]].map(([k, l]) =>
+    `<button class="tab" role="tab" data-tab="${k}" aria-selected="${state.tab === k}">${l}</button>`).join("");
+  $("tabs").querySelectorAll("button").forEach((b) => (b.onclick = () => { state.tab = b.dataset.tab; save(); render(); }));
+  if (charTab) { renderChar(spec, hero, worn, label); return; }
+
+  const slotCount = Object.groupBy(flat(groupForSpec(pool, spec, { ...opts, stats })), slotGroup);
   const avail = SLOT_GROUPS.filter(([k]) => slotCount[k]);
   if (state.slot !== "all" && !avail.some(([k]) => k === state.slot)) state.slot = "all";
 
   chips($("slots"), [["all", "All slots", null], ...avail.map(([k, l]) => [k, l, slotCount[k].length])], "slot");
   chips($("sources"), SOURCES.map(([k, l]) => k === "BIS" ? [k, l, worn.length, !worn.length] : [k, l, null]), "source");
+  $("ownedrow").innerHTML = nOwned && !isBis
+    ? `<button class="chip" id="hideowned" aria-pressed="${!state.showOwned}" title="Gear you have, from your character or ticked here">Hide owned<span class="n">${nOwned}</span></button>` : "";
+  if ($("hideowned")) $("hideowned").onclick = () => { state.showOwned = !state.showOwned; save(); render(); };
 
   let n = 0, html = "";
   if (isBis) {
@@ -242,14 +272,15 @@ function render() {
       return b.tier ? tierRow(b, ctx) : b.crafted ? craftedRow(b) : otherRow(b);
     };
     n = worn.length + alternates.length;
-    html = `<section><h2>Best in Slot<span>${worn.length} items</span></h2><ul>${worn.map((b) => row(b)).join("")}</ul></section>`;
+    const got = worn.filter(has).length;
+    html = `<section><h2>Best in Slot<span>${nOwned ? `${got} of ${worn.length} collected` : `${worn.length} items`}</span></h2><ul>${worn.map((b) => row(b)).join("")}</ul></section>`;
     // Wowhead's alternates for a slot, e.g. defensive trinkets or a second weapon setup.
     if (alternates.length)
       html += `<section><h2>Situational BiS<span>${alternates.length} item${alternates.length === 1 ? "" : "s"}</span></h2>` +
         `<div class="none">Wowhead lists these as alternatives for a slot. Sim your character (e.g. on Raidbots) to find which combination is best for you.</div>` +
         `<ul>${alternates.map((b) => row(b, true)).join("")}</ul></section>`;
   } else {
-    const groups = groupForSpec(items, spec, { ...opts, stats, slot: state.slot });
+    const groups = groupForSpec(pool, spec, { ...opts, stats, slot: state.slot });
     for (const g of groups) {
       const shown = g.bosses.reduce((k, b) => k + b.items.length, 0);
       if (!shown) continue;
@@ -259,7 +290,7 @@ function render() {
       html += `</section>`;
     }
   }
-  $("list").innerHTML = html || `<div class="none">No drops match these filters.</div>`;
+  $("list").innerHTML = html || `<div class="none">No drops match these filters${nOwned && !state.showOwned ? " (owned gear is hidden)" : ""}.</div>`;
   $("count").textContent = `${n} item${n === 1 ? "" : "s"} shown`;
 
   const bis = bisList ?? {};
@@ -272,6 +303,106 @@ function render() {
     `Drops from the Blizzard Game Data API, ${esc(meta.generatedAt?.slice(0, 10) ?? "")}.</p>`;
   refreshTooltips();
 }
+
+// The character page: load gear from the Armory or a SimC export, then the
+// BiS checklist, where to farm what's missing, and everything acquired.
+function renderChar(spec, hero, worn, label) {
+  const byId = new Map(items.map((i) => [i.id, i]));
+  const own = owned();
+  const theirSpec = char?.className ? specOf(specs, char.className, char.specName) : null;
+  const armory = !!config.armoryProxy;
+  let html = `<section><h2>Your character${char?.name ? `<span>${esc(char.source === "armory" ? "Armory" : char.source === "simc" ? "SimC import" : "Ticked by hand")}${char.updated ? `, ${esc(char.updated)}` : ""}</span>` : ""}</h2><div class="pad">`;
+  if (char?.name) {
+    html += `<p class="who"><b>${esc(char.name)}</b>${char.realm ? ` · ${esc(char.realm)}` : ""}${char.region ? ` (${esc(char.region.toUpperCase())})` : ""}${theirSpec ? ` · ${esc(theirSpec.spec)} ${esc(theirSpec.class)}` : char.className ? ` · ${esc(char.className)}` : ""}</p>`;
+    if (theirSpec && theirSpec.id !== spec.id)
+      html += `<p class="warn">The list is showing ${esc(label)}. <button class="btn" type="button" id="usespec">Show ${esc(theirSpec.spec)} ${esc(theirSpec.class)}</button></p>`;
+  }
+  html += `<form id="armory" class="form"><label>Region <select id="a-region">${["us", "eu", "kr", "tw"].map((r) => `<option value="${r}"${(char?.region ?? "us") === r ? " selected" : ""}>${r.toUpperCase()}</option>`).join("")}</select></label>` +
+    `<label>Realm <input id="a-realm" autocomplete="off" placeholder="e.g. Kil'rogg" value="${esc(char?.realm ?? "")}"></label>` +
+    `<label>Character <input id="a-name" autocomplete="off" placeholder="Name" value="${esc(char?.name ?? "")}"></label>` +
+    `<button class="btn" type="submit"${armory ? "" : " disabled"}>Load from Armory</button></form>` +
+    (armory ? "" : `<p class="help">Armory lookup isn't switched on for this site yet. Use a SimC import below, or tick items with + Have.</p>`) +
+    `<details class="simc"${armory ? "" : " open"}><summary>Import from the SimulationCraft addon</summary>` +
+    `<p class="help">In game, type <code>/simc</code>, copy the text, and paste it here. Equipped gear and gear in your bags count as acquired.</p>` +
+    `<textarea id="simc" rows="5" placeholder="Paste the /simc text here"></textarea><button class="btn" type="button" id="simcgo">Import</button></details>` +
+    `<p class="msg" id="charmsg" role="status"></p>` +
+    (char ? `<p class="help"><button class="btn quiet" type="button" id="charclear">Clear character</button> Forgets the character and every item marked as acquired.</p>` : "") +
+    `</div></section>`;
+
+  // BiS checklist for the spec and hero talent the list shows.
+  const got = worn.filter(has).length;
+  html += `<section><h2>Best in Slot checklist<span>${got} of ${worn.length}${hero ? ` · ${esc(hero)}` : ""}</span></h2><ul>` +
+    worn.map((b) => {
+      const drop = b.id != null && byId.get(b.id);
+      const where = drop ? `${drop.instance} · ${drop.boss}` : b.tier ? (b.catalyst ? "Tier · Catalyst" : `Tier · ${b.token?.boss ?? "raid token"}`) : b.crafted ? `Crafted · ${b.crafted.profession}` : b.source ?? "";
+      const mine = own[ownKey(b)];
+      return `<li class="${mine ? "got" : ""}"><div class="name">${b.id ? itemLink(b.id, b.name) : searchLink(b.name)}${ownButton(b)}</div>` +
+        `<div class="type">${esc(b.slot ?? "")} · ${esc(where)}${mine?.ilvl ? ` · yours: item level ${mine.ilvl}` : ""}</div></li>`;
+    }).join("") + `</ul></section>`;
+
+  // Missing BiS by where it drops, most first.
+  const plan = farmPlan(worn, own, items);
+  html += `<section><h2>Where to farm<span>${worn.length - got} BiS item${worn.length - got === 1 ? "" : "s"} left</span></h2>` +
+    (plan.length ? `<ul>${plan.map((g) => `<li><div class="name">${esc(g.place)}${g.raid ? `<span class="badge b-route">Raid</span>` : ""}<span class="badge b-bis">${g.items.length}</span></div>` +
+      `<div class="type">${g.items.map((b) => `${b.id ? itemLink(b.id, b.name) : esc(b.name)} <span class="where">${esc(b.detail)}</span>`).join(" · ")}</div></li>`).join("")}</ul>`
+      : `<div class="none">Every Best in Slot item is collected.</div>`) + `</section>`;
+
+  // Everything acquired.
+  const mine = Object.entries(own);
+  const HOW = { equipped: "Equipped", bags: "In bags", manual: "Ticked" };
+  html += `<section><h2>Acquired<span>${mine.length} item${mine.length === 1 ? "" : "s"}</span></h2>` +
+    (mine.length ? `<ul>${mine.map(([k, v]) => {
+      const drop = byId.get(+k);
+      return `<li class="got"><div class="name">${/^\d+$/.test(k) ? itemLink(+k, v.name ?? drop?.name ?? `Item ${k}`) : esc(v.name)}${ownButton({ id: /^\d+$/.test(k) ? +k : null, name: v.name, slot: v.slot })}</div>` +
+        `<div class="type">${esc(v.slot ?? drop?.slot ?? "")}${v.ilvl ? ` · item level ${v.ilvl}` : ""} · ${HOW[v.how] ?? ""}${drop ? ` · ${esc(drop.instance)}` : ""}</div></li>`;
+    }).join("")}</ul>` : `<div class="none">Nothing yet. Load your character above, or tick items with + Have in the farm list.</div>`) + `</section>`;
+
+  $("list").innerHTML = html;
+  $("count").textContent = "";
+  $("foot").innerHTML = `<p>Your character and acquired gear are saved in this browser only.</p>`;
+  const msg = (t) => ($("charmsg").textContent = t);
+  const imported = (data, source) => {
+    char = withImport(char, data, source);
+    saveChar();
+    const sp = specOf(specs, char.className, char.specName);
+    if (sp) { state.spec = sp.id; state.stats = bestStats(); syncHash(); }
+    save();
+    render();
+    $("charmsg").textContent = `Loaded ${data.items.length} items for ${data.name}.`;
+  };
+  $("armory").onsubmit = async (e) => {
+    e.preventDefault();
+    const name = $("a-name").value.trim(), realm = realmSlug($("a-realm").value), region = $("a-region").value;
+    if (!name || !realm) return msg("Enter a realm and character name.");
+    msg("Loading from the Armory…");
+    try {
+      const r = await fetch(`${config.armoryProxy.replace(/\/$/, "")}/character/${region}/${realm}/${encodeURIComponent(name)}`);
+      const data = await r.json();
+      if (!r.ok) return msg(data.error ?? `Armory lookup failed (HTTP ${r.status}).`);
+      imported({ ...data, items: data.items.map((i) => ({ ...i, how: "equipped" })) }, "armory");
+    } catch (err) { msg(`Armory lookup failed (${err.message}).`); }
+  };
+  $("simcgo").onclick = () => {
+    const data = parseSimc($("simc").value);
+    if (!data) return msg("That doesn't look like a SimulationCraft export. In game, type /simc and copy all of the text.");
+    imported(data, "simc");
+  };
+  if ($("charclear")) $("charclear").onclick = () => { if (confirm("Forget this character and all acquired gear?")) { char = null; saveChar(); render(); } };
+  if ($("usespec")) $("usespec").onclick = () => { state.spec = theirSpec.id; state.stats = bestStats(); save(); syncHash(); render(); };
+  refreshTooltips();
+}
+
+// "+ Have" buttons anywhere in the list mark an item acquired, or unmark it.
+document.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-own]");
+  if (!b) return;
+  const k = b.dataset.own;
+  char ??= { name: null, source: "manual", items: {} };
+  if (char.items[k]) delete char.items[k];
+  else char.items[k] = { name: b.dataset.name, slot: b.dataset.slot || null, ilvl: null, how: "manual" };
+  saveChar();
+  render();
+});
 
 // Wowhead's tooltip script (index.html) adds hover tooltips and icons to item
 // links; links rendered after it loads need a refresh. Without it (blocked or

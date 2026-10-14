@@ -6,6 +6,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { parseSimc, specOf, realmSlug, withImport, farmPlan, ownKey } from "../docs/character.js";
 import { STATS, SLOT_GROUPS, slotGroup, groupForSpec, usableBy, rankedPairs, dropAzeriteTwins, bisSlotGroup, statOrder, toggleStat, effectTags, trueBis, situationalBis } from "../docs/gear.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -134,6 +135,31 @@ for (const i of items.filter((i) => i.itemClass === "Weapon" || /Off/.test(i.slo
   const want = i.slot === "Two-Hand" || ["Bow", "Gun", "Crossbow"].includes(i.weaponType) ? "twohand"
     : i.itemClass === "Weapon" ? "onehand" : "offhand";
   if (k !== want) fail(`${i.name} (${i.slot} ${i.weaponType ?? ""}) filed under ${k}, want ${want}`);
+}
+
+// Character: SimC import (equipped and bag gear, not the Great Vault), realm
+// slugs, re-imports keeping hand-ticked items, and the farm plan.
+{
+  const simc = parseSimc(await readFile(path.join(ROOT, "scripts/fixtures/simc/blood-dk.simc"), "utf8"));
+  const got = simc?.items.map((i) => [i.id, i.slot, i.ilvl, i.how]);
+  if (!same([simc?.name, simc?.className, simc?.specName, simc?.realm, simc?.region], ["Mourn", "deathknight", "blood", "Kil'rogg", "us"])) fail(`parseSimc header: ${JSON.stringify(simc)}`);
+  if (!same(got, [[271474, "Head", 321, "equipped"], [268265, "Neck", 334, "equipped"], [240949, "Finger", 330, "equipped"], [268253, "Back", 316, "bags"], [999999, "Hands", 210, "bags"]])) fail(`parseSimc items: ${JSON.stringify(got)}`);
+  if (specOf(specs, simc.className, simc.specName)?.id !== 250) fail("specOf(deathknight, blood)");
+  if (specOf(specs, "Demon Hunter", "Devourer")?.id !== 1480 || specOf(specs, "hunter", "beast_mastery")?.id !== 253) fail("specOf names");
+  if (parseSimc("hello") !== null) fail("parseSimc accepts junk");
+  if (!same(["Kil'rogg", "Area 52", " Azjol-Nerub "].map(realmSlug), ["kilrogg", "area-52", "azjol-nerub"])) fail("realmSlug");
+  let c = withImport(null, simc, "simc");
+  c.items["268253"].how = "manual"; // pretend this one was ticked by hand
+  c = withImport(c, { ...simc, items: simc.items.slice(0, 1) }, "simc");
+  if (!same(Object.keys(c.items).sort(), ["268253", "271474"])) fail(`withImport keeps manual items: ${Object.keys(c.items)}`);
+  const t = withImport(null, { name: "X", items: [{ id: 1, slot: "Tabard" }, { id: 2, slot: "Shirt" }, { id: 3, slot: "Head" }] }, "armory");
+  if (!same(Object.keys(t.items), ["3"])) fail("withImport keeps tabards or shirts");
+  const blood = specs.find((s) => s.id === 250);
+  const worn = trueBis(blood.bisByHero.Deathbringer.items, items);
+  const plan = farmPlan(worn, { [ownKey(worn[1])]: {} }, items);
+  const left = plan.reduce((n, g) => n + g.items.length, 0);
+  if (left !== worn.length - 1) fail(`farmPlan leaves ${left} of ${worn.length}`);
+  if (plan.some((g, i) => i && g.items.length > plan[i - 1].items.length)) fail("farmPlan not sorted by count");
 }
 
 // Every effect is labeled On use or Proc, except the raid's Deadly Venom reduction.

@@ -106,6 +106,33 @@ body.home .prio{margin-top:14px}
 body.home .bar{position:static;border:0;background:none;margin:18px 0 0;padding:0;align-items:center}
 body.home #stats{flex-wrap:wrap;justify-content:center;overflow:visible}
 body.home .go{display:inline-block}
+/* Tabs: the farm list and the character page. */
+.tabs{display:flex;gap:4px;margin-top:14px;border-bottom:1px solid var(--line)}
+.tab{font:600 .95rem var(--body);color:var(--muted);background:none;border:0;border-bottom:2px solid transparent;padding:8px 12px;cursor:pointer;margin-bottom:-1px}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tab:focus-visible,.own:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+body.home .tabs,body.charview .bar{display:none}
+body.charview .list{columns:1}
+/* "+ Have" toggles; acquired rows are dimmed. */
+.own{font:600 .68rem var(--body);letter-spacing:.04em;text-transform:uppercase;margin-left:8px;padding:1px 7px;border-radius:999px;border:1px dashed var(--muted);background:none;color:var(--muted);cursor:pointer;vertical-align:1px;white-space:nowrap}
+.own.have{border:1px solid var(--r2);color:var(--r2)}
+li.got>.name>a,li.got>.type{opacity:.6}
+/* Character page. */
+.pad{padding:12px 14px}
+.who{margin:0 0 10px}
+.warn{color:var(--gold);margin:0 0 10px}
+.form{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:flex-end}
+.form label{display:flex;flex-direction:column;gap:4px;font-size:.85rem;font-weight:600}
+input,textarea{font:400 1rem var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-width:0}
+input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+textarea{width:100%;font-family:ui-monospace,monospace;font-size:.8rem;margin:6px 0}
+.btn{font:600 .9rem var(--body);padding:8px 14px;border-radius:8px;border:0;background:var(--accent);color:var(--surface);cursor:pointer}
+.btn[disabled]{opacity:.45;cursor:default}
+.btn.quiet{background:none;border:1px solid var(--line);color:var(--ink);padding:4px 10px;font-size:.8rem}
+.help{color:var(--muted);font-size:.85rem;margin:8px 0}
+.simc{margin-top:12px}
+.simc summary{cursor:pointer;font-weight:600}
+.msg{min-height:1.2em;margin:8px 0 0;color:var(--gold)}
 </style>
 </head>
 <body>
@@ -123,12 +150,14 @@ body.home .go{display:inline-block}
     <select id="variant" hidden></select>
   </div>
   <div class="prio" id="prio"></div>
+  <div class="tabs only-list" role="tablist" aria-label="View" id="tabs"></div>
 
   <div class="bar">
     <div class="row" role="group" aria-label="Secondary stats" id="stats"></div>
     <div class="row only-list" role="group" aria-label="Slot" id="slots"></div>
     <div class="meta only-list">
       <div class="row" role="group" aria-label="Content" id="sources"></div>
+      <div class="row" role="group" aria-label="Owned gear" id="ownedrow"></div>
     </div>
     <div class="count" id="count" aria-live="polite"></div>
   </div>
@@ -138,6 +167,6 @@ body.home .go{display:inline-block}
 
   <footer id="foot"></footer>
 </div>
-<script type="module" src="app.js?v=12"></script>
+<script type="module" src="app.js?v=13"></script>
 </body>
 </html>
