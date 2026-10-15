@@ -15,31 +15,51 @@
           "id": 271477,
           "name": "Baleful Grave-Knight's Breastplate",
           "slot": "Chest",
-          "armorType": "Plate"
+          "armorType": "Plate",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271475,
           "name": "Baleful Grave-Knight's Deathgrips",
           "slot": "Hands",
-          "armorType": "Plate"
+          "armorType": "Plate",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271474,
           "name": "Baleful Grave-Knight's Casque",
           "slot": "Head",
-          "armorType": "Plate"
+          "armorType": "Plate",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271473,
           "name": "Baleful Grave-Knight's Greaves",
           "slot": "Legs",
-          "armorType": "Plate"
+          "armorType": "Plate",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271472,
           "name": "Baleful Grave-Knight's Gibbets",
           "slot": "Shoulder",
-          "armorType": "Plate"
+          "armorType": "Plate",
+          "secondaryStats": [
+            "Haste",
+            "Versatility"
+          ]
         }
       ]
     },
@@ -54,31 +74,51 @@
           "id": 271540,
           "name": "Abyssal Doomhound's Coreguard",
           "slot": "Chest",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Haste",
+            "Versatility"
+          ]
         },
         {
           "id": 271538,
           "name": "Abyssal Doomhound's Studded Gauntlets",
           "slot": "Hands",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271537,
           "name": "Abyssal Doomhound's Relentless Stare",
           "slot": "Head",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271536,
           "name": "Abyssal Doomhound's Legwraps",
           "slot": "Legs",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271535,
           "name": "Abyssal Doomhound's Jaws",
           "slot": "Shoulder",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Critical Strike",
+            "Versatility"
+          ]
         }
       ]
     },
@@ -93,31 +133,51 @@
           "id": 271531,
           "name": "Enigmatic Dreamwatcher's Lunar Raiment",
           "slot": "Chest",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Critical Strike",
+            "Haste"
+          ]
         },
         {
           "id": 271529,
           "name": "Enigmatic Dreamwatcher's Gauntlets",
           "slot": "Hands",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Versatility",
+            "Mastery"
+          ]
         },
         {
           "id": 271528,
           "name": "Enigmatic Dreamwatcher's Somnolent Stare",
           "slot": "Head",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Haste",
+            "Versatility"
+          ]
         },
         {
           "id": 271527,
           "name": "Enigmatic Dreamwatcher's Leggings",
           "slot": "Legs",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Critical Strike",
+            "Haste"
+          ]
         },
         {
           "id": 271526,
           "name": "Enigmatic Dreamwatcher's Plumage",
           "slot": "Shoulder",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         }
       ]
     },
@@ -132,31 +192,51 @@
           "id": 271504,
           "name": "Searing Caldera of Calamity",
           "slot": "Chest",
-          "armorType": "Mail"
+          "armorType": "Mail",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271502,
           "name": "Calamitous Echo's Ebon Greathorns",
           "slot": "Hands",
-          "armorType": "Mail"
+          "armorType": "Mail",
+          "secondaryStats": [
+            "Haste",
+            "Mastery"
+          ]
         },
         {
           "id": 271501,
           "name": "Calamitous Echo's Magmashapers",
           "slot": "Head",
-          "armorType": "Mail"
+          "armorType": "Mail",
+          "secondaryStats": [
+            "Haste",
+            "Versatility"
+          ]
         },
         {
           "id": 271500,
           "name": "Earthen Pillars of Calamity",
           "slot": "Legs",
-          "armorType": "Mail"
+          "armorType": "Mail",
+          "secondaryStats": [
+            "Critical Strike",
+            "Haste"
+          ]
         },
         {
           "id": 271499,
           "name": "Calamitous Echo's Sundered Peaks",
           "slot": "Shoulder",
-          "armorType": "Mail"
+          "armorType": "Mail",
+          "secondaryStats": [
+            "Critical Strike",
+            "Versatility"
+          ]
         }
       ]
     },
@@ -171,31 +251,51 @@
           "id": 271495,
           "name": "Skulking Viper's Scuteplate",
           "slot": "Chest",
-          "armorType": "Mail"
+          "armorType": "Mail",
+          "secondaryStats": [
+            "Haste",
+            "Mastery"
+          ]
         },
         {
           "id": 271493,
           "name": "Skulking Viper's Hidepiercers",
           "slot": "Hands",
-          "armorType": "Mail"
+          "armorType": "Mail",
+          "secondaryStats": [
+            "Haste",
+            "Versatility"
+          ]
         },
         {
           "id": 271492,
           "name": "Skulking Viper's Weeping Fangs",
           "slot": "Head",
-          "armorType": "Mail"
+          "armorType": "Mail",
+          "secondaryStats": [
+            "Haste",
+            "Mastery"
+          ]
         },
         {
           "id": 271491,
           "name": "Skulking Viper's Coiled Legwraps",
           "slot": "Legs",
-          "armorType": "Mail"
+          "armorType": "Mail",
+          "secondaryStats": [
+            "Haste",
+            "Mastery"
+          ]
         },
         {
           "id": 271490,
           "name": "Jaws of the Skulking Viper",
           "slot": "Shoulder",
-          "armorType": "Mail"
+          "armorType": "Mail",
+          "secondaryStats": [
+            "Critical Strike",
+            "Haste"
+          ]
         }
       ]
     },
@@ -210,31 +310,51 @@
           "id": 271567,
           "name": "Crest of the Primal Leywarden",
           "slot": "Chest",
-          "armorType": "Cloth"
+          "armorType": "Cloth",
+          "secondaryStats": [
+            "Critical Strike",
+            "Haste"
+          ]
         },
         {
           "id": 271565,
           "name": "Primal Leywarden's Manashapers",
           "slot": "Hands",
-          "armorType": "Cloth"
+          "armorType": "Cloth",
+          "secondaryStats": [
+            "Haste",
+            "Mastery"
+          ]
         },
         {
           "id": 271564,
           "name": "Crown of the Primal Leywarden",
           "slot": "Head",
-          "armorType": "Cloth"
+          "armorType": "Cloth",
+          "secondaryStats": [
+            "Haste",
+            "Mastery"
+          ]
         },
         {
           "id": 271563,
           "name": "Primal Leywarden's Tailored Legwraps",
           "slot": "Legs",
-          "armorType": "Cloth"
+          "armorType": "Cloth",
+          "secondaryStats": [
+            "Critical Strike",
+            "Versatility"
+          ]
         },
         {
           "id": 271562,
           "name": "Primal Leywarden's Manaflux",
           "slot": "Shoulder",
-          "armorType": "Cloth"
+          "armorType": "Cloth",
+          "secondaryStats": [
+            "Critical Strike",
+            "Haste"
+          ]
         }
       ]
     },
@@ -249,31 +369,51 @@
           "id": 271522,
           "name": "Battle Gi of the Monkey King",
           "slot": "Chest",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Haste",
+            "Mastery"
+          ]
         },
         {
           "id": 271520,
           "name": "Monkey King's Fighting Fists",
           "slot": "Hands",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Haste",
+            "Versatility"
+          ]
         },
         {
           "id": 271519,
           "name": "Monkey King's Unyielding Visage",
           "slot": "Head",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271518,
           "name": "Pantaloons of the Monkey King",
           "slot": "Legs",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Critical Strike",
+            "Versatility"
+          ]
         },
         {
           "id": 271517,
           "name": "Tassels of the Monkey King",
           "slot": "Shoulder",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Haste",
+            "Mastery"
+          ]
         }
       ]
     },
@@ -288,31 +428,51 @@
           "id": 271468,
           "name": "Bulwark of the Consecrated Flame",
           "slot": "Chest",
-          "armorType": "Plate"
+          "armorType": "Plate",
+          "secondaryStats": [
+            "Haste",
+            "Mastery"
+          ]
         },
         {
           "id": 271466,
           "name": "Gauntlets of the Consecrated Flame",
           "slot": "Hands",
-          "armorType": "Plate"
+          "armorType": "Plate",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271465,
           "name": "Warhelm of the Consecrated Flame",
           "slot": "Head",
-          "armorType": "Plate"
+          "armorType": "Plate",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271464,
           "name": "Greaves of the Consecrated Flame",
           "slot": "Legs",
-          "armorType": "Plate"
+          "armorType": "Plate",
+          "secondaryStats": [
+            "Critical Strike",
+            "Haste"
+          ]
         },
         {
           "id": 271463,
           "name": "Pauldrons of the Consecrated Flame",
           "slot": "Shoulder",
-          "armorType": "Plate"
+          "armorType": "Plate",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         }
       ]
     },
@@ -327,31 +487,51 @@
           "id": 271556,
           "name": "Cosmic Penitent's Celestial Grips",
           "slot": "Hands",
-          "armorType": "Cloth"
+          "armorType": "Cloth",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271555,
           "name": "Cosmic Penitent's Truesight",
           "slot": "Head",
-          "armorType": "Cloth"
+          "armorType": "Cloth",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271554,
           "name": "Enveloping Legwraps of the Cosmic Penitent",
           "slot": "Legs",
-          "armorType": "Cloth"
+          "armorType": "Cloth",
+          "secondaryStats": [
+            "Haste",
+            "Versatility"
+          ]
         },
         {
           "id": 271558,
           "name": "Cosmic Penitent's Eclipsing Robes",
           "slot": "Chest",
-          "armorType": "Cloth"
+          "armorType": "Cloth",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271553,
           "name": "Cosmic Penitent's Echoing Screams",
           "slot": "Shoulder",
-          "armorType": "Cloth"
+          "armorType": "Cloth",
+          "secondaryStats": [
+            "Critical Strike",
+            "Haste"
+          ]
         }
       ]
     },
@@ -366,31 +546,51 @@
           "id": 271513,
           "name": "Chosen Bloodslayer's Banded Poncho",
           "slot": "Chest",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Haste",
+            "Versatility"
+          ]
         },
         {
           "id": 271511,
           "name": "Chosen Bloodslayer's Fanged Grips",
           "slot": "Hands",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271510,
           "name": "Chosen Bloodslayer's Spirit Shroud",
           "slot": "Head",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271509,
           "name": "Chosen Bloodslayer's Reinforced Pants",
           "slot": "Legs",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Critical Strike",
+            "Haste"
+          ]
         },
         {
           "id": 271508,
           "name": "Chosen Bloodslayer's Voodoo Guards",
           "slot": "Shoulder",
-          "armorType": "Leather"
+          "armorType": "Leather",
+          "secondaryStats": [
+            "Haste",
+            "Versatility"
+          ]
         }
       ]
     },
@@ -405,31 +605,51 @@
           "id": 271486,
           "name": "Fanged Raiment of the Ophidian Oracle",
           "slot": "Chest",
-          "armorType": "Mail"
+          "armorType": "Mail",
+          "secondaryStats": [
+            "Critical Strike",
+            "Haste"
+          ]
         },
         {
           "id": 271484,
           "name": "Hexing Grips of the Ophidian Oracle",
           "slot": "Hands",
-          "armorType": "Mail"
+          "armorType": "Mail",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271483,
           "name": "Serpent Crown of the Ophidian Oracle",
           "slot": "Head",
-          "armorType": "Mail"
+          "armorType": "Mail",
+          "secondaryStats": [
+            "Critical Strike",
+            "Haste"
+          ]
         },
         {
           "id": 271482,
           "name": "Leggings of the Ophidian Oracle",
           "slot": "Legs",
-          "armorType": "Mail"
+          "armorType": "Mail",
+          "secondaryStats": [
+            "Haste",
+            "Versatility"
+          ]
         },
         {
           "id": 271481,
           "name": "Hissing Mantle of the Ophidian Oracle",
           "slot": "Shoulder",
-          "armorType": "Mail"
+          "armorType": "Mail",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         }
       ]
     },
@@ -444,31 +664,51 @@
           "id": 271547,
           "name": "Damned Necrolyte's Charred Grasps",
           "slot": "Hands",
-          "armorType": "Cloth"
+          "armorType": "Cloth",
+          "secondaryStats": [
+            "Critical Strike",
+            "Haste"
+          ]
         },
         {
           "id": 271546,
           "name": "Skull of the Damned Necrolyte",
           "slot": "Head",
-          "armorType": "Cloth"
+          "armorType": "Cloth",
+          "secondaryStats": [
+            "Versatility",
+            "Mastery"
+          ]
         },
         {
           "id": 271545,
           "name": "Damned Necrolyte's Leg Bindings",
           "slot": "Legs",
-          "armorType": "Cloth"
+          "armorType": "Cloth",
+          "secondaryStats": [
+            "Haste",
+            "Mastery"
+          ]
         },
         {
           "id": 271549,
           "name": "Damned Necrolyte's Rattling Robes",
           "slot": "Chest",
-          "armorType": "Cloth"
+          "armorType": "Cloth",
+          "secondaryStats": [
+            "Haste",
+            "Mastery"
+          ]
         },
         {
           "id": 271544,
           "name": "Spires of the Damned Necrolyte",
           "slot": "Shoulder",
-          "armorType": "Cloth"
+          "armorType": "Cloth",
+          "secondaryStats": [
+            "Haste",
+            "Versatility"
+          ]
         }
       ]
     },
@@ -483,31 +723,51 @@
           "id": 271459,
           "name": "Cuirass of the Jade Warlord",
           "slot": "Chest",
-          "armorType": "Plate"
+          "armorType": "Plate",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         },
         {
           "id": 271457,
           "name": "Jeweled Gauntlets of the Jade Warlord",
           "slot": "Hands",
-          "armorType": "Plate"
+          "armorType": "Plate",
+          "secondaryStats": [
+            "Critical Strike",
+            "Haste"
+          ]
         },
         {
           "id": 271456,
           "name": "Tempered Horns of the Jade Warlord",
           "slot": "Head",
-          "armorType": "Plate"
+          "armorType": "Plate",
+          "secondaryStats": [
+            "Critical Strike",
+            "Haste"
+          ]
         },
         {
           "id": 271455,
           "name": "Greaves of the Jade Warlord",
           "slot": "Legs",
-          "armorType": "Plate"
+          "armorType": "Plate",
+          "secondaryStats": [
+            "Versatility",
+            "Mastery"
+          ]
         },
         {
           "id": 271454,
           "name": "Raging Pauldrons of the Jade Warlord",
           "slot": "Shoulder",
-          "armorType": "Plate"
+          "armorType": "Plate",
+          "secondaryStats": [
+            "Critical Strike",
+            "Mastery"
+          ]
         }
       ]
     }

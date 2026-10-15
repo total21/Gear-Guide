@@ -127,6 +127,8 @@ export function resolveSpec(spec, items, tier, aliases = {}, crafting = null) {
         b.id = piece.id;
         b.slot = piece.slot;
         b.tier = set.name;
+        // Stats the piece has from a token or curio (a catalyzed one keeps the source's).
+        b.tokenStats = piece.secondaryStats ?? [];
         const token = tier.tokens.find((t) => t.slot === piece.slot && t.classes?.includes(spec.class));
         const curio = tier.tokens.find((t) => !t.slot);
         b.token = token ? { name: token.name, id: token.id, boss: token.boss } : null;

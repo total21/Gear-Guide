@@ -220,3 +220,22 @@ export function situationalBis(bisItems, items) {
   const worn = new Set(trueBis(bisItems, items));
   return (bisItems ?? []).filter((b) => !b.addedBy && (b.lists ?? ["Overall"]).includes("Overall") && !worn.has(b));
 }
+
+// How to get a BiS tier piece, for the spec's stat priority:
+//   { route: "token", stats }: the raid token or curio; the piece comes with `stats`.
+//   { route: "catalyst", from }: catalyze one of these Season drops (best stats
+//     first); the piece keeps that drop's secondary stats.
+// Wowhead's pick decides, except where it allows any drop in the slot: then the
+// best-stat drops, or the token when its own stats are as good.
+export function tierRoute(b, items, spec, priority) {
+  const byId = new Map(items.map((i) => [i.id, i]));
+  const tokenStats = b.tokenStats ?? [];
+  if (!b.catalyst && !b.offSet) return { route: "token", stats: tokenStats };
+  const named = (b.catalyst?.from ?? []).map((f) => byId.get(f.id)).filter(Boolean);
+  if (named.length) return { route: "catalyst", from: named.map((i) => ({ ...i, ...itemStats(i, priority) })) };
+  const opts = catalystOptions(items, spec, b.slot, priority);
+  const top = opts[0]?.score ?? -1;
+  if (!b.offSet && tokenStats.length && itemStats({ secondaryStats: tokenStats }, priority).score >= top)
+    return { route: "token", stats: tokenStats };
+  return { route: "catalyst", from: opts.filter((o) => o.score === top).slice(0, 2) };
+}
