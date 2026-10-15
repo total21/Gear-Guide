@@ -1,5 +1,5 @@
-import { trueBis, situationalBis, SHORT, SLOT_GROUPS, groupForSpec, rankedPairs, typeLabel, slotGroup, bisFor, priorityForHero, itemStats, catalystOptions, statOrder, toggleStat, effectTags } from "./gear.js?v=15";
-import { parseSimc, specOf, withImport, farmPlan, ownKey } from "./character.js?v=15";
+import { trueBis, situationalBis, SHORT, SLOT_GROUPS, groupForSpec, rankedPairs, typeLabel, slotGroup, bisFor, priorityForHero, itemStats, statOrder, toggleStat, effectTags, tierRoute } from "./gear.js?v=17";
+import { parseSimc, specOf, withImport, farmPlan, ownKey } from "./character.js?v=17";
 
 const $ = (id) => document.getElementById(id);
 const esc = (x) => String(x).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -122,24 +122,20 @@ function catalystSource(i, ctx) {
 // Tier piece or off-set piece: the route the BiS list prefers (Catalyst from
 // a drop with the right stats, or the raid token / curio), then the other.
 function tierRow(b, ctx) {
-  const lines = [];
-  const byId = new Map(ctx.items.map((i) => [i.id, i]));
-  const token = b.token
-    ? `${itemLink(b.token.id, b.token.name)} <span class="where">${esc(b.token.boss)}</span>${b.curio ? ` or ${itemLink(b.curio.id, b.curio.name)} <span class="where">${esc(b.curio.boss)}</span>` : ""}`
-    : null;
-  if (b.catalyst?.from?.length) {
-    lines.push(`<b>Catalyze:</b> ${b.catalyst.from.map((f) => byId.has(f.id) ? catalystSource(byId.get(f.id), ctx) : itemLink(f.id, f.name)).join(" <i>or</i> ")}`);
-  } else if (b.catalyst?.any) {
-    const opts = catalystOptions(ctx.items, ctx.spec, b.slot, ctx.prio);
-    const best = opts.filter((o) => o.score === opts[0]?.score).slice(0, 4);
-    lines.push(`<b>Catalyze:</b> any ${esc(b.catalyst.any)}${best.length ? `, best: ${best.map((o) => catalystSource(o, ctx)).join(" <i>or</i> ")}` : ""}`);
-  }
-  if (token) lines.push(b.catalyst ? `<span class="alt">Or token: ${token}</span>` : `<b>Token:</b> ${token}`);
-  const route = b.catalyst ? `<span class="badge b-route" title="Convert a Season drop at the Catalyst; it keeps that drop's secondary stats">Catalyst</span>`
-    : `<span class="badge b-route" title="Raid token, or the any-slot curio">Token</span>`;
+  // One route: the token or curio when the BiS piece comes from it, otherwise
+  // the exact drop to catalyze and the stats the piece keeps from it.
+  const r = tierRoute(b, ctx.items, ctx.spec, ctx.prio);
+  const line = r.route === "token"
+    ? `<b>Token:</b> ${itemLink(b.token.id, b.token.name)} <span class="where">${esc(b.token.boss)}</span>` +
+      (b.curio ? ` or ${itemLink(b.curio.id, b.curio.name)} <span class="where">${esc(b.curio.boss)}</span>` : "") +
+      ` ${itemStats({ secondaryStats: r.stats }, ctx.prio).stats.map(statChip).join(" ")}${bestBadge(itemStats({ secondaryStats: r.stats }, ctx.prio).pair, ctx)}`
+    : `<b>Catalyze:</b> ${r.from.map((i) => catalystSource(i, ctx)).join(" <i>or</i> ")}`;
+  const route = r.route === "catalyst"
+    ? `<span class="badge b-route" title="Catalyze the drop named below; the tier piece keeps its secondary stats">Catalyst</span>`
+    : `<span class="badge b-route" title="Comes from the raid token or the any-slot curio">Token</span>`;
   return `<li class="${has(b) ? "got" : ""}"><div class="name">${b.id ? itemLink(b.id, b.name) : searchLink(b.name)}${route}${ownButton(b)}</div>
     <div class="type">${esc(b.slot ?? "")}${b.offSet ? " · off-set piece" : ""}${listsLabel(b)}</div>
-    ${fxList(lines)}</li>`;
+    ${fxList([line])}</li>`;
 }
 
 // Crafted item: name and profession. (Embellishments, gems and enchants may
@@ -210,11 +206,15 @@ function render() {
   const flat = (groups) => groups.flatMap((g) => g.bosses.flatMap((b) => b.items));
   // The BiS list as worn (one pick per slot), plus the drops to catalyze into its tier pieces.
   const worn = trueBis(bisList?.items, items);
-  const wornNames = new Set(worn.map((b) => b.name));
   const alternates = situationalBis(bisList?.items, items);
+  // Drops to catalyze into the worn tier pieces get the BiS badge too.
+  const catalyzed = worn.filter((b) => b.tier).flatMap((b) => {
+    const r = tierRoute(b, items, spec, prio);
+    return r.route === "catalyst" ? r.from.map((i) => ({ id: i.id, name: i.name, slot: i.slot, lists: b.lists, note: `Catalyze into ${b.name}` })) : [];
+  });
   const bisBadges = { items: [
     ...worn,
-    ...(bisList?.items ?? []).filter((b) => b.addedBy && wornNames.has(b.note?.replace(/^Catalyze into /, ""))),
+    ...catalyzed,
     ...alternates.map((b) => ({ ...b, lists: ["Situational"], note: b.note ? `Situational (${b.note})` : "Situational" })),
   ] };
   const isBis = state.source === "BIS" && !home && worn.length;
@@ -310,6 +310,7 @@ function render() {
 function renderChar(spec, hero, worn, label) {
   const byId = new Map(items.map((i) => [i.id, i]));
   const own = owned();
+  const prio = priorityFor(spec);
   const theirSpec = char?.className ? specOf(specs, char.className, char.specName) : null;
   let html = `<section><h2>Your character${char?.name ? `<span>${esc(char.source === "simc" ? "SimC import" : "Ticked by hand")}${char.updated ? `, ${esc(char.updated)}` : ""}</span>` : ""}</h2><div class="pad">`;
   if (char?.name) {
@@ -329,14 +330,18 @@ function renderChar(spec, hero, worn, label) {
   html += `<section><h2>Best in Slot checklist<span>${got} of ${worn.length}${hero ? ` · ${esc(hero)}` : ""}</span></h2><ul>` +
     worn.map((b) => {
       const drop = b.id != null && byId.get(b.id);
-      const where = drop ? `${drop.instance} · ${drop.boss}` : b.tier ? (b.catalyst ? "Tier · Catalyst" : `Tier · ${b.token?.boss ?? "raid token"}`) : b.crafted ? `Crafted · ${b.crafted.profession}` : b.source ?? "";
+      const r = b.tier ? tierRoute(b, items, spec, prio) : null;
+      const where = drop ? `${drop.instance} · ${drop.boss}`
+        : r?.route === "catalyst" ? `Tier · catalyze ${r.from[0].name} (${r.from[0].boss})`
+        : r ? `Tier · token from ${b.token?.boss ?? "the raid"} or curio`
+        : b.crafted ? `Crafted · ${b.crafted.profession}` : b.source ?? "";
       const mine = own[ownKey(b)];
       return `<li class="${mine ? "got" : ""}"><div class="name">${b.id ? itemLink(b.id, b.name) : searchLink(b.name)}${ownButton(b)}</div>` +
         `<div class="type">${esc(b.slot ?? "")} · ${esc(where)}${mine?.ilvl ? ` · yours: item level ${mine.ilvl}` : ""}</div></li>`;
     }).join("") + `</ul></section>`;
 
   // Missing BiS by where it drops, most first.
-  const plan = farmPlan(worn, own, items);
+  const plan = farmPlan(worn, own, items, (b) => tierRoute(b, items, spec, prio));
   html += `<section><h2>Where to farm<span>${worn.length - got} BiS item${worn.length - got === 1 ? "" : "s"} left</span></h2>` +
     (plan.length ? `<ul>${plan.map((g) => `<li><div class="name">${esc(g.place)}${g.raid ? `<span class="badge b-route">Raid</span>` : ""}<span class="badge b-bis">${g.items.length}</span></div>` +
       `<div class="type">${g.items.map((b) => `${b.id ? itemLink(b.id, b.name) : esc(b.name)} <span class="where">${esc(b.detail)}</span>`).join(" · ")}</div></li>`).join("")}</ul>`

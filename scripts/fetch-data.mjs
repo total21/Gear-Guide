@@ -6,7 +6,7 @@
 // Also writes data/tier.json (class sets, raid tokens) and data/crafting.json
 // (the expansion's crafting recipes and which reagents are embellishments).
 //
-// Usage: node scripts/fetch-data.mjs [--season config/season.json] [--specs-only | --crafting-only]
+// Usage: node scripts/fetch-data.mjs [--season config/season.json] [--specs-only | --crafting-only | --tier-only]
 //
 // Auth: if BLIZZARD_CLIENT_ID and BLIZZARD_CLIENT_SECRET are set they are sent
 // as Basic auth to the token endpoint. Otherwise the request is sent without
@@ -26,6 +26,7 @@ const argVal = (name, def) => {
 const SEASON_FILE = path.resolve(ROOT, argVal("--season", "config/season.json"));
 const SPECS_ONLY = args.includes("--specs-only");
 const CRAFTING_ONLY = args.includes("--crafting-only");
+const TIER_ONLY = args.includes("--tier-only");
 
 const season = JSON.parse(await readFile(SEASON_FILE, "utf8"));
 const REGION = season.region ?? "us";
@@ -268,7 +269,12 @@ async function fetchTierSets() {
     sets.push({
       id, name: set.name,
       classes: pieces[0]?.preview_item?.requirements?.playable_classes?.links?.map((c) => c.name) ?? [],
-      items: pieces.map((it) => ({ id: it.id, name: it.name, slot: it.inventory_type?.name ?? null, armorType: it.item_subclass?.name ?? null })),
+      // secondaryStats: what the piece has from a token or curio; a catalyzed
+      // piece keeps the stats of the item that went in instead.
+      items: pieces.map((it) => ({
+        id: it.id, name: it.name, slot: it.inventory_type?.name ?? null, armorType: it.item_subclass?.name ?? null,
+        secondaryStats: parseStats(it.preview_item?.stats).secondaryStats,
+      })),
     });
   }
   return sets;
@@ -371,6 +377,15 @@ async function buildSpecs() {
 
 await mkdir(path.join(ROOT, "data"), { recursive: true });
 const meta = { region: REGION, locale: LOCALE, season: season.name, generatedAt: new Date().toISOString() };
+
+if (TIER_ONLY) {
+  // Refresh the tier sets alone, keeping the tokens from the last full fetch.
+  const old = JSON.parse(await readFile(path.join(ROOT, "data/tier.json"), "utf8"));
+  const sets = await fetchTierSets();
+  await writeFile(path.join(ROOT, "data/tier.json"), JSON.stringify({ ...old, sets }, null, 2) + "\n");
+  console.log(`Wrote data/tier.json (${sets.length} tier sets)`);
+  process.exit(0);
+}
 
 if (!SPECS_ONLY && !CRAFTING_ONLY) {
   const { records: items, tokens } = await fetchItems();

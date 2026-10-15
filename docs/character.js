@@ -68,13 +68,13 @@ export const ownKey = (b) => (b.id != null ? String(b.id) : `n:${b.name}`);
 
 // Where each worn BiS item comes from, for the checklist and the farm plan:
 // { kind: "drop" | "tier" | "crafted" | "other", place, detail }.
-export function bisSource(b, byId) {
+// `route` is the tier piece's tierRoute (gear.js), when it has one.
+export function bisSource(b, byId, route = null) {
   const drop = b.id != null && byId.get(b.id);
   if (drop) return { kind: "drop", place: drop.instance, detail: drop.boss, raid: drop.instanceType === "RAID" };
   if (b.tier) {
-    const from = b.catalyst?.from?.[0];
-    if (from) return { kind: "tier", place: from.instance, detail: `${from.boss} (catalyze ${from.name})`, raid: byId.get(from.id)?.instanceType === "RAID" };
-    if (b.catalyst?.any) return { kind: "tier", place: "Catalyst", detail: `any ${b.catalyst.any}` };
+    const from = route?.route === "catalyst" ? route.from[0] : null;
+    if (from) return { kind: "tier", place: from.instance, detail: `${from.boss} (catalyze ${from.name})`, raid: from.instanceType === "RAID" };
     if (b.token) {
       const place = [...byId.values()].find((i) => i.boss === b.token.boss)?.instance ?? "Raid";
       return { kind: "tier", place, detail: `${b.token.boss} (${b.token.name})`, raid: true };
@@ -85,12 +85,13 @@ export function bisSource(b, byId) {
 }
 
 // Missing worn BiS items grouped by where to farm them, most items first.
-export function farmPlan(worn, owned, items) {
+// `routeOf(b)` gives a tier piece's route (token or which drop to catalyze).
+export function farmPlan(worn, owned, items, routeOf = () => null) {
   const byId = new Map(items.map((i) => [i.id, i]));
   const groups = new Map();
   for (const b of worn) {
     if (owned[ownKey(b)]) continue;
-    const src = bisSource(b, byId);
+    const src = bisSource(b, byId, b.tier ? routeOf(b) : null);
     if (!groups.has(src.place)) groups.set(src.place, { place: src.place, raid: !!src.raid, items: [] });
     groups.get(src.place).items.push({ ...b, detail: src.detail });
   }

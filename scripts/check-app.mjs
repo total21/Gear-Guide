@@ -7,7 +7,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseSimc, specOf, withImport, farmPlan, ownKey } from "../docs/character.js";
-import { STATS, SLOT_GROUPS, slotGroup, groupForSpec, usableBy, rankedPairs, dropAzeriteTwins, bisSlotGroup, statOrder, toggleStat, effectTags, trueBis, situationalBis } from "../docs/gear.js";
+import { STATS, SLOT_GROUPS, slotGroup, groupForSpec, usableBy, rankedPairs, dropAzeriteTwins, bisSlotGroup, statOrder, toggleStat, effectTags, trueBis, situationalBis, tierRoute, priorityForHero } from "../docs/gear.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = async (f) => JSON.parse(await readFile(path.join(ROOT, f), "utf8"));
@@ -159,6 +159,29 @@ for (const i of items.filter((i) => i.itemClass === "Weapon" || /Off/.test(i.slo
   const left = plan.reduce((n, g) => n + g.items.length, 0);
   if (left !== worn.length - 1) fail(`farmPlan leaves ${left} of ${worn.length}`);
   if (plan.some((g, i) => i && g.items.length > plan[i - 1].items.length)) fail("farmPlan not sorted by count");
+}
+
+// Tier routes: the token (with the token piece's stats) or a usable Season
+// drop in the same slot to catalyze.
+{
+  let token = 0, catalyst = 0;
+  for (const s of specs)
+    for (const [h, list] of [["shared", s.bis], ...Object.entries(s.bisByHero ?? {})]) {
+      if (!list?.items?.length) continue;
+      const prio = priorityForHero(s, h === "shared" ? s.heroTalents[0] : h);
+      for (const b of trueBis(list.items, items).filter((b) => b.tier)) {
+        const r = tierRoute(b, items, s, prio);
+        if (r.route === "token") {
+          token++;
+          if (!b.token || r.stats.length !== 2) fail(`${name(s)} (${h}): ${b.name} token route without a token or its stats`);
+        } else {
+          catalyst++;
+          if (!r.from.length) fail(`${name(s)} (${h}): ${b.name} has no drop to catalyze`);
+          for (const i of r.from) if (!usableBy(s, i) || i.slot !== b.slot) fail(`${name(s)} (${h}): can't catalyze ${i.name} into ${b.name}`);
+        }
+      }
+    }
+  if (!token || !catalyst) fail(`tier routes: ${token} token, ${catalyst} catalyst`);
 }
 
 // Every effect is labeled On use or Proc, except the raid's Deadly Venom reduction.
